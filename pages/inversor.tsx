@@ -49,7 +49,7 @@ export default function App() {
   return (
     <>
       <Header />
-      {home_data.home_data.map((item) => (
+      {home_data.home_data.map((item, key) => (
         <HomeSection id={item.id} imageUrl={item.imageUrl} key={key}/>
       ))}
       <motion.div className={styles.progress}  style={{ scaleX }} />
