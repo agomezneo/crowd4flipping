@@ -1,15 +1,16 @@
 import React from 'react'
-import styles from '../../styles/Home.module.scss'
+import styles from '../../styles/Investor&Owner_pages.module.scss'
+
 
 function HomeSection() {
   return (
-    <div className={styles.home_section}>
-        <div className={styles.home_section_container}>
-            <div className={styles.home_section_header}>
+    <div className={styles.page_section}>
+        <div className={styles.page_section_container}>
+            <div className={styles.page_section_header}>
                 <h1>Section 5</h1>
             </div>
-            <div className={styles.home_section_body}></div>
-            <div className={styles.home_section_footer}></div>
+            <div className={styles.page_section_body}></div>
+            <div className={styles.page_section_footer}></div>
         </div>
     </div>
   )

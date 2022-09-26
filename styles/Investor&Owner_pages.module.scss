@@ -1,0 +1,157 @@
+  .page{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }  
+  
+  .section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    scroll-snap-align: center;
+    perspective: 500px;
+    background-color: var(--white);
+    padding-top: 50px;
+
+  }
+  
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .progress {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--blue);
+    bottom: 10px;
+  }
+
+  .back_btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background-color: var(--blue);
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    margin: 20px;
+    min-width: 300px;
+  }
+
+
+  .page_section{
+    width: 90vw;
+    height: 80vh;
+  }
+
+  .page_section_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70vh;
+  }
+
+  .arrow_icon_container{
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+  }
+
+  .arrow_icon{
+    font-size: 3rem;
+    color: var(--blue);
+  }
+
+  .page_section_header{
+    margin-bottom: 1rem;
+    & h1{
+      color: var(--black);
+      & span{
+        color: var(--blue);
+      }
+    }
+  }
+
+  .page_section_body{
+    min-height: 70vh;
+  }
+
+  .page_section_footer{
+    & h1{
+      font-size: 3rem;
+      color: var(--white);
+      & span{
+        color: var(--blue);
+      }
+    }
+  }
+  .s1{
+    background-image: url('../public/images/pages_images/view-of-palma-mallorca-cathedral-by-night-spain-europe.jpg');
+    background-size: cover;
+    background-position-y: top;
+  }
+
+  .s2{
+    background-color: var(--white);
+  }
+
+  .page_section_body_grid{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+   
+  }
+
+  .simple_card_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 800px;
+    gap: 2rem;
+    flex-wrap: wrap;
+   
+  }
+
+  .steps_container{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    place-content: cnter;
+    padding-left: 1rem;
+    & h2{
+      color: var(--black);
+      font-size: 1.5em;
+      & span{
+        color: var(--blue);
+      }
+    }
+
+    & svg{
+      color: var(--blue);
+    }
+  }
+
+
+  .s3{
+    /* background-image: url('../public/images/pages_images/invesment.jpeg');
+    
+    background-repeat: no-repeat; */
+    background: url("../public/images/pages_images/invesment.jpeg") no-repeat center, linear-gradient(90deg, rgba(190,55,52,1) 0%, rgba(0,49,96,1) 35%, rgba(0,49,98,1) 100%);
+    background-size: cover;
+  }
+
+  
+
+  @media only screen and (min-width: 360px) and (max-width: 991px){
+    .simple_card_container{
+      width: calc(100% + 300px);
+    }
+  }
+
+  
+  

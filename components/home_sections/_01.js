@@ -1,18 +1,20 @@
 import React from 'react'
-import styles from '../../styles/Home.module.scss'
-import Link from 'next/link'
-import Image from 'next/image'
+import styles from '../../styles/Investor&Owner_pages.module.scss'
+
+
+
 
 function HomeSection() {
   return (
-    <div className={styles.home_section}>
-        <div className={styles.home_section_container}>
-            <div className={styles.home_section_header}>
-                <h1>Section 1</h1>
-                <Link href={'/example'}><span>Example</span></Link>
+    <div className={styles.page_section}>
+        <div className={styles.page_section_container}>
+            <div className={styles.page_section_header}>
             </div>
-            <div className={styles.home_section_body}></div>
-            <div className={styles.home_section_footer}></div>
+            <div className={styles.page_section_body}>
+            </div>
+            <div className={styles.page_section_footer}>
+              <h1><strong>Invierte en inmuebles en Mallorca <span>desde 500€</span></strong></h1>
+            </div>
         </div>
     </div>
   )

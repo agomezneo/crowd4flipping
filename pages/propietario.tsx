@@ -1,4 +1,4 @@
-import styles from '../styles/frame.module.css'
+import styles from '../styles/Investor&Owner_pages.module.scss'
 import { useRef } from "react";
 import Image from 'next/image';
 import {

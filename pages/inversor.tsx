@@ -1,43 +1,61 @@
-import styles from '../styles/frame.module.css'
+import styles from '../styles/Investor&Owner_pages.module.scss'
 import { useRef } from "react";
-import Image from 'next/image';
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  MotionValue
-} from "framer-motion";
-import  home_data  from '../data/home/home';
-import Link from "next/link";
+import {  motion, useScroll, useSpring, useTransform, MotionValue} from "framer-motion";
 import Header from '../components/header_pages';
+import Section01 from '../components/home_sections/_01';
+import Section02 from '../components/home_sections/_02';
+import Section03 from '../components/home_sections/_03';
+import Section04 from '../components/home_sections/_04';
+import Section05 from '../components/home_sections/_05';
+import Section06 from '../components/home_sections/_06';
+import Section07 from '../components/home_sections/_07';
+import {BsFillArrowDownSquareFill, BsFillArrowUpSquareFill, BsFillSignpostSplitFill} from 'react-icons/bs'
 
 function useParallax(value: MotionValue<number>, distance: number) { 
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-function HomeSection({id, imageUrl} ) {
+function HomeSection({id, css, children}) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
 
   return (
-    <section className={styles.section} id={id}>
+    <section className={`${styles.section} ${css}`} id={id}>
       <div ref={ref}>
-        <h1>Inversor</h1>
-        <Link href="/">
-          <a className={styles.back_btn}>Home</a>
-        </Link>
-        <Image src={`${imageUrl}`} alt="A London skyscraper" className={styles.img}  width={1000} height={ 500 }/>
+          {children}
       </div>
-      <motion.h2 style={{ y }}>{`#00${id}`}</motion.h2>
+      <motion.h2 style={{ y }}> 
+
+        {id === 1 ? 
+        (
+          <a href={`#${id + 1}`}> <BsFillArrowDownSquareFill className={styles.arrow_icon} /> </a>
+        )
+          : 
+        (
+          id != 7 ? 
+            (
+              <div className={styles.arrow_icon_container}>
+                <a href={`#${id - 1}`}> <BsFillArrowUpSquareFill className={styles.arrow_icon} /> </a>
+                <a href={`#${id + 1}`}> <BsFillArrowDownSquareFill className={styles.arrow_icon} /> </a>
+              </div>
+            )
+            :
+            (
+             <div className={styles.arrow_icon_container} >
+               <a href={`#${id - 1}`}> <BsFillArrowUpSquareFill className={styles.arrow_icon} /> </a>
+               <a href={`#${1}`}> <BsFillSignpostSplitFill className={styles.arrow_icon} /> </a>
+             </div>
+            )
+        )
+        } 
+
+      </motion.h2>
     </section>
   );
 }
 
 export default function App() {
-
-  console.log(home_data)
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -47,12 +65,30 @@ export default function App() {
   });
 
   return (
-    <>
+    <div className={styles.page}>
       <Header />
-      {home_data.home_data.map((item, key) => (
-        <HomeSection id={item.id} imageUrl={item.imageUrl} key={key}/>
-      ))}
+      <HomeSection id={1} css={styles.s1}>
+        <Section01 />
+      </HomeSection>
+      <HomeSection id={2} css={styles.s2}>
+        <Section02 />
+      </HomeSection>
+      <HomeSection id={3} css={styles.s3}>
+        <Section03 />
+      </HomeSection>
+      <HomeSection id={4} css={styles.s2}>
+        <Section04 />
+      </HomeSection>
+      <HomeSection id={5} css={styles.s2}>
+        <Section05 />
+      </HomeSection>
+      <HomeSection id={6} css={styles.s2}>
+        <Section06 />
+      </HomeSection>
+      <HomeSection id={7} css={styles.s2}>
+        <Section07 />
+      </HomeSection>
       <motion.div className={styles.progress}  style={{ scaleX }} />
-    </>
+    </div>
   );
 }
