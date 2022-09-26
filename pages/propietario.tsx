@@ -10,6 +10,7 @@ import {
 } from "framer-motion";
 import  home_data  from '../data/home/home'
 import Link from "next/link";
+import Header from '../components/header_pages';
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -21,7 +22,7 @@ function HomeSection({id, imageUrl} ) {
   const y = useParallax(scrollYProgress, 300);
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id={id}>
       <div ref={ref}>
         <h1>Propietario</h1>
         <Link href="/">
@@ -47,6 +48,7 @@ export default function App() {
 
   return (
     <>
+    <Header />
       {home_data.home_data.map((item) => (
         <HomeSection id={item.id} imageUrl={item.imageUrl} />
       ))}

@@ -56,12 +56,12 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -10vh;
+    bottom: -5vh;
     z-index: 0;
     background-image: url('../public/images/brand/backgorund_buildings.png');
-    background-size: contain;
-    mix-blend-mode:multiply;
-    height: 80%;
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
   }
   
   .mountain {

@@ -11,8 +11,7 @@ import { motion, useScroll } from "framer-motion"
 import Link from "next/link";
 import { BsFillTreeFill } from "react-icons/bs";
 import Image from 'next/image';
-import Logo from '../public/images/brand/crowd4flipping/SVG_Vector_Files/Original_Logo.svg'
-import bg_buildings from '../public/images/brand/backgorund_buildings.png'
+import Logo from '../public/images/brand/crowd4flipping/SVG_Vector_Files/Transparent_Logo.svg'
 
 export default function Home() {
   return (
@@ -94,51 +93,5 @@ const Mountains = () => (
     }}
     className={styles.mountains}
   >
-
-  {/*   <Image src={bg_buildings} width={2000} height={750} alt='dibujo de edificios' /> */}
-   {/*  <svg
-      id="visual"
-      viewBox="0 0 900 600"
-      className={styles.mountain}
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M0 485L82 454L164 489L245 453L327 485L409 525L491 464L573 524L655 444L736 492L818 480L900 508L900 601L818 601L736 601L655 601L573 601L491 601L409 601L327 601L245 601L164 601L82 601L0 601Z"
-        fill="#00c3ff"
-      />
-    </svg>
-    <svg
-      id="visual"
-      viewBox="0 0 900 600"
-      className={styles.mountain}
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M0 510L82 493L164 504L245 544L327 531L409 506L491 530L573 476L655 506L736 484L818 474L900 496L900 601L818 601L736 601L655 601L573 601L491 601L409 601L327 601L245 601L164 601L82 601L0 601Z"
-        fill="#0081a9"
-      />
-    </svg>
-    <svg
-      id="visual"
-      viewBox="0 0 900 600"
-      className={styles.mountain}
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M0 558L82 565L164 543L245 518L327 567L409 541L491 557L573 554L655 562L736 563L818 518L900 505L900 601L818 601L736 601L655 601L573 601L491 601L409 601L327 601L245 601L164 601L82 601L0 601Z"
-        fill="#002834"
-      />
-    </svg>
-    <svg
-      id="visual"
-      viewBox="0 0 900 600"
-      className={styles.mountain}
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M0 555L82 548L164 550L245 585L327 547L409 550L491 550L573 544L655 568L736 553L818 558L900 583L900 601L818 601L736 601L655 601L573 601L491 601L409 601L327 601L245 601L164 601L82 601L0 601Z"
-        fill="#00c3ff"
-      />
-    </svg> */}
   </motion.div>
 );
