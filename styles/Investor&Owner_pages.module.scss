@@ -1,19 +1,24 @@
-  .page{
+ .page{
     display: flex;
     flex-direction: column;
-    height: fit-content;
   }  
   
   .section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    scroll-snap-align: center;
     perspective: 500px;
     background-color: var(--white);
-    padding-top: 50px;
+    padding-top: 20px;
+
+    & .section_arrows{
+      position: absolute;
+      right: 1vw;
+      display: none;
+    }
 
   }
   
@@ -46,16 +51,14 @@
   }
 
 
-  .page_section{
-    width: 90vw;
-    height: 80vh;
-  }
-
   .page_section_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 70vh;
+    display: grid;
+    width: 100%;
+    grid-template: 
+      "header" 10vh
+      "body"  auto
+      "footer" 5vh
+    ;
   }
 
   .arrow_icon_container{
@@ -65,14 +68,22 @@
   }
 
   .arrow_icon{
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--blue);
   }
 
+
   .page_section_header{
+    grid-area: header;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    
     & h1{
       color: var(--black);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
       & span{
         color: var(--blue);
       }
@@ -80,52 +91,44 @@
   }
 
   .page_section_body{
-    min-height: 70vh;
-  }
-
-  .page_section_footer{
-    & h1{
-      font-size: 3rem;
-      color: var(--white);
-      & span{
-        color: var(--blue);
-      }
-    }
-  }
-  .s1{
-    background-image: url('../public/images/pages_images/view-of-palma-mallorca-cathedral-by-night-spain-europe.jpg');
-    background-size: cover;
-    background-position-y: top;
-  }
-
-  .s2{
-    background-color: var(--white);
-  }
-
-  .page_section_body_grid{
+    grid-area: body;
     display: grid;
-    grid-template-columns: 3fr 2fr;
-   
+    grid-template:
+      'left' 
+      'right' 
+    ;
+  }
+  .page_section_body_01{
+    grid-area: body;
+    display: grid;
+    grid-template:
+      'left' 
+      'right' 
+    ;
   }
 
   .simple_card_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 800px;
-    gap: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
     flex-wrap: wrap;
-   
+    grid-area: left;
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: center;
+    background-repeat: no-repeat;
   }
 
   .steps_container{
-    width: 80%;
     height: 100%;
+    grid-area: right;
     display: grid;
-    place-content: cnter;
+    place-content: start;
     padding-left: 1rem;
     & h2{
       color: var(--black);
-      font-size: 1.5em;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
       & span{
         color: var(--blue);
       }
@@ -136,20 +139,180 @@
     }
   }
 
+  .s1{
+    background-image: url('../public/images/pages_images/view-of-palma-mallorca-cathedral-by-night-spain-europe.jpg');
+    background-size: cover;
+    background-position-y: top;
+  }
 
-  .s3{
-    /* background-image: url('../public/images/pages_images/invesment.jpeg');
-    
-    background-repeat: no-repeat; */
+  .page_section_footer{
+    grid-area: footer;
+    & h1{
+      font-size: 3rem;
+      color: var(--white);
+      & span{
+        color: var(--blue);
+      }
+    }
+  }
+
+  .s2, .s3, .s4, .s5, .s6{
+    background-color: var(--whitegray);
+  }
+
+  .horizontal_steper_container{
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px;
+    min-height: 70vh;
+  }
+
+  .s3_empty_div{
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../public/images/pages_images/grow_invesment_02_01.png');
+    background-size: contain;
+    background-position-y: bottom;
+    background-position-x: left;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 50vh;
+  }
+
+  .empty_div{
+    width: 100%;
+    background-image: url('../public/images/pages_images/increase_invesment_01.png');
+    background-size: cover;
+    background-position-y: bottom;
+    background-position-x: left;
+    background-repeat: no-repeat;
+    height: 50vh;
+    grid-area: left;
+  }
+
+  .right{
+    grid-area: right;
+  }
+
+  .s5_body_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 5px;
+  }
+
+  .by_refcon_container{
+    display: flex;
+    align-content: center;
+    width: 100%;
+    justify-content: flex-end;
+    & span{
+      font-size: 1.3rem;
+      text-shadow: 1px 1px 2px #000000;
+      margin-right: 1rem;
+    }
+  }
+
+  .form_container{
+    display: flex;
+    flex-direction: column;
+    & h2{
+      color: var(--black);
+      margin-bottom: 1rem;
+
+      & span{
+        color: var(--blue);
+      }
+    }
+  }
+  .empty_s6{
+    width: 100%;
+    background-image: url('../public/images/pages_images/increase_invesment_02_01.png');
+    background-size: contain;
+    background-position-y: top;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    min-height: 70vh; 
+  }
+
+  .s7{
     background: url("../public/images/pages_images/invesment.jpeg") no-repeat center, linear-gradient(90deg, rgba(190,55,52,1) 0%, rgba(0,49,96,1) 35%, rgba(0,49,98,1) 100%);
     background-size: cover;
   }
 
-  
+  @media only screen and (min-width: 600px) and (max-width: 991px){
+    .section{
+      padding-top: 50px;
+    }
+    .page_section_header{
+      & h1{
+        text-align: left;
+        font-size: 1.5rem;
+      }
+    }
+    .steps_container{
+      & h2{
+        text-align: left;
+        font-size: 1.5rem;
+      }
+    }
+    .empty_div{
+      height: 100%;
+    }
 
-  @media only screen and (min-width: 360px) and (max-width: 991px){
+    .s5_body_container{
+      padding: 15px;
+    }
+  }
+
+  @media only screen and (min-width: 992px){
+    .section{
+      padding-top: 12vh;
+
+      & .section_arrows{
+         display: block;
+      }
+    }
+    
+    .page_section_header{
+      text-align: left;
+      padding-left: 0;
+
+      & h1{
+        font-size: 1.5rem;
+      }
+    }
+    .page_section_body{
+      width: 80vw;
+      grid-template: "left right"/ 800px auto;
+    }   
+
+    .page_section_body_01{
+      width: 80vw;
+      grid-template: "left right" / 500px auto;
+    }
+
+    .steps_container{
+      & h2{
+        text-align: left;
+        font-size: 1.5rem;
+      }
+    }
+
     .simple_card_container{
-      width: calc(100% + 300px);
+      min-height: 75vh;
+      background-image: url('../public/images/pages_images/grow_invesment_01.png');
+    }
+    .empty_div{
+      height: 100%;
+    }
+    .s5_body_container{
+      padding: 1.5rem;
     }
   }
 

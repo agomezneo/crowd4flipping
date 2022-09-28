@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '../styles/Header.module.scss';
+import styles from '../../styles/Header.module.scss';
 import Image from 'next/image';
-import Logo from '../public/images/brand/crowd4flipping/SVG_Vector_Files/Transparent_Logo.svg'
+import Logo from '../../public/images/brand/crowd4flipping/SVG_Vector_Files/Transparent_Logo.svg'
 
 function Header() {
   return (

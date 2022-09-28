@@ -6,9 +6,6 @@ import {Data} from '../../data/cards/SimpleCardData';
 import {StepsData} from '../../data/cards/StepCardsData';
 import VerticalSteper from '../../components/stepers/VerticalSteper';
 
-
-
-
 function HomeSection() {
   return (
     <div className={styles.page_section}>
@@ -16,7 +13,8 @@ function HomeSection() {
             <div className={styles.page_section_header}>
                 <h1>¿Por qué <strong>invertir en inmuebles con  <span>Crowd</span>4<span>Flipping</span></strong> ? </h1>
             </div>
-            <div className={`${styles.page_section_body} ${styles.page_section_body_grid}`}>
+            <div className={styles.page_section_body}>
+              
               <div className={styles.simple_card_container}>
                   {Data.map((item, key) =>{
                     return(
@@ -29,10 +27,12 @@ function HomeSection() {
                     )
                   } )}
               </div>
+
               <div className={styles.steps_container}>
                     <h2> Sácale partido a tu dinero con estos sencillos pasos</h2>
                     <VerticalSteper steps={StepsData}/>
               </div>
+              
             </div>
             <div className={styles.page_section_footer}></div>
         </div>

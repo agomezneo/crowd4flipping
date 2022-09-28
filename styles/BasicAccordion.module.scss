@@ -1,0 +1,82 @@
+.acordion{
+    width: 100%;
+    overflow-y: scroll;
+    height: 70vh;
+    box-shadow: -1.5px -1.5px 3px rgba($color: #000000, $alpha: .3);
+    border-radius: 5px;
+}
+
+.acordionContainer{
+    width: 750px;
+    padding-top: 3rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.acordionContainer > h2, 
+.preciosPro_subtitle{
+    color: var(--blue);
+    font-size: 2rem;
+    margin-bottom: 3rem !important;
+    text-align: center;
+    border-radius: 10px;
+    padding: .5rem !important;
+}
+
+.acordionContainer > h3{
+    color: #d0e919;
+}
+
+.acordionItem{
+    background-color: var(--white);
+    padding: 0.3rem !important;
+    width: 100%;
+}
+
+.acordionLink{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--blue);
+    text-decoration: none;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0 1rem 1.3rem !important;
+    cursor: pointer;
+    text-align: left;
+}
+
+
+.acordionTextContent{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.showTextContent{
+    height: auto;
+    max-height: 9999px;
+    transition: all 0.5s;
+    background-color: var(--whitegray);
+    color: var(--black);
+    padding: 7px !important;
+}
+
+.showTextContent >p{
+    margin-bottom: 10px !important;
+    text-align: left;
+    color: var(--black) !important;
+}
+
+.acordionInsideItemSecundary{
+    color: #3dae2b;
+    padding-left: 15px !important;
+}
+
+.showTextContent h4{
+    font-size: 2rem;
+    color: #3dae2b;
+}

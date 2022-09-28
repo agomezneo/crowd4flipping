@@ -26,4 +26,28 @@ const StepsData = [
     },
 ]
 
-export {StepsData}
+
+const HorizontalStepsData = [
+    {
+        image : '/images/icons/grafico-de-velas.png',
+        title: 'Análisis y viabilidad',
+        text: 'Estudiamos la oportunidad y analizamos a cada detalle el proyecto para garantizar que cumpla los estándares de nuestros inversores.'
+    },
+    {
+        image : '/images/icons/ubicacion-del-mapa-01.png',
+        title: 'Financiación',
+        text: 'A través del Crowlending, cualquier persona desde 500€ puede participar en la financiación.'
+    },
+    {
+        image : '/images/icons/archivo-de-datos.png',
+        title: 'Ejecución e información',
+        text: 'Una vez completada la financiación, el proyecto será ejecutado por Crowd4Flipping, proporcionando información puntual sobre su evolución.'
+    },
+    {
+        image : '/images/icons/grafico-de-negocios.png',
+        title: 'Abono',
+        text: 'Al finalizar el proyecto, se reembolsará el capital aportado y se repartirán las plusvalías generadas.'
+    },
+]
+
+export {StepsData, HorizontalStepsData}

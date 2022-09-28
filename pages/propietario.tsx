@@ -10,7 +10,7 @@ import {
 } from "framer-motion";
 import  home_data  from '../data/home/home'
 import Link from "next/link";
-import Header from '../components/header_pages';
+import Header from '../components/headers/header_pages';
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);

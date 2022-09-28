@@ -1,15 +1,20 @@
 import React from 'react'
 import styles from '../../styles/Investor&Owner_pages.module.scss'
-
+import BasicAccordion from '../../components/accordions/BasicAccordion';
 
 function HomeSection() {
   return (
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
-            <div className={styles.page_section_header}>
-                <h1>Section 4</h1>
+            <div className={`${styles.page_section_header} ${styles.header_s4}`}>
+                <h1>Sin complicaciones <span>ni letra pequeña</span>. <br/> Te lo podemos decir más alto, <span> pero no más claro. </span> [FAQS]</h1>
             </div>
-            <div className={styles.page_section_body}></div>
+            <div className={styles.page_section_body_01}>
+              <div className={styles.empty_div} />
+              <div className={styles.right}>
+                <BasicAccordion />
+              </div>
+            </div>
             <div className={styles.page_section_footer}></div>
         </div>
     </div>
