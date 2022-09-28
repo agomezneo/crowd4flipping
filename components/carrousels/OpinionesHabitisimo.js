@@ -93,7 +93,6 @@ const data = [
               className={styles.paper}
           >
               <h2>{props.item.name}</h2>
-              <br/>
               <p>{props.item.text}</p>  
           </Paper>
       )
