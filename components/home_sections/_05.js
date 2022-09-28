@@ -42,8 +42,8 @@ function HomeSection() {
                 <Opiniones />
               </div>
               <div className={styles.s5_body_container}>
-                <Image src={Logo} width={1802} height={745} alt='Crowd for Flipping logo'/>
-                <div className={styles.by_refcon_container}>
+                <div className={styles.logo_container}>
+                  <Image src={Logo} width={900} height={372} alt='Crowd for Flipping logo'/>
                   <RefconLogo />
                 </div>
               </div>
