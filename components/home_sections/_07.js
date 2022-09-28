@@ -7,7 +7,6 @@ function HomeSection() {
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
             <div className={styles.page_section_header}>
-                <h1>Section 7</h1>
             </div>
             <div className={styles.page_section_body}></div>
             <div className={styles.page_section_footer}></div>

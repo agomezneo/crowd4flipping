@@ -279,23 +279,22 @@
     }
   }
 
- 
-
   .empty_s6{
     width: 100%;
-    background-image: url('../public/images/pages_images/increase_invesment_02_01.png');
+    background-image: url('../public/images/pages_images/close_investment_01.png');
     background-size: contain;
     background-position-y: top;
-    background-position-x: right;
+    background-position-x: center;
     background-repeat: no-repeat;
     min-height: 40vh; 
   }
 
   .s7{
-    background: url("../public/images/pages_images/invesment.jpeg"); 
-    background-size: cover;
+    background: url("../public/images/pages_images/close_investment_01.png"); 
+    background-size: contain;
     background-repeat: no-repeat;
-    height: 30vh !important;
+    background-position-y: top;
+    background-position-x: center;
   }
 
   @media only screen and (min-width: 600px) and (max-width: 991px){
@@ -370,7 +369,7 @@
 
     .simple_card_container{
       min-height: 75vh;
-      background-image: url('../public/images/pages_images/grow_invesment_01.png');
+      background-image: url('../public/images/pages_images/grow_invesment_01_01.png');
     }
     .empty_div{
       height: 100%;
@@ -387,6 +386,10 @@
       & h2{
         text-align: left;
       }
+    }
+
+    .s7{
+      height: 30vh !important;
     }
   }
 

@@ -7,7 +7,7 @@ function HomeSection() {
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
             <div className={styles.page_section_header}>
-                <h1>Sin complicaciones <span>ni letra pequeña</span>. <br/><br/> Te lo podemos decir más alto, <span> pero no más claro. </span> [FAQS]</h1>
+                <h1>Sin complicaciones <span>ni letra pequeña</span>. <br/> Te lo podemos decir más alto, <span> pero no más claro. </span> [FAQS]</h1>
             </div>
             <div className={styles.page_section_body_02}>
               <div className={styles.empty_div} />
