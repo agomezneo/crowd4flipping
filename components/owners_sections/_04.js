@@ -10,7 +10,7 @@ function HomeSection() {
             <div className={styles.page_section_header}>
               <h1> ¿Cómo funciona? </h1>
             </div>
-            <div className={styles.page_section_body}></div>
+            <div className={styles.page_section_body_01}></div>
             <div className={styles.page_section_footer}></div>
         </div>
     </div>
