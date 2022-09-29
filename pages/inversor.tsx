@@ -2,13 +2,13 @@ import styles from '../styles/Investor&Owner_pages.module.scss'
 import { useRef } from "react";
 import {  motion, useScroll, useSpring, useTransform, MotionValue} from "framer-motion";
 import Header from '../components/headers/header_pages';
-import Section01 from '../components/home_sections/_01';
-import Section02 from '../components/home_sections/_02';
-import Section03 from '../components/home_sections/_03';
-import Section04 from '../components/home_sections/_04';
-import Section05 from '../components/home_sections/_05';
-import Section06 from '../components/home_sections/_06';
-import Section07 from '../components/home_sections/_07';
+import Section01 from '../components/investors_sections/_01';
+import Section02 from '../components/investors_sections/_02';
+import Section03 from '../components/investors_sections/_03';
+import Section04 from '../components/investors_sections/_04';
+import Section05 from '../components/investors_sections/_05';
+import Section06 from '../components/investors_sections/_06';
+import Section07 from '../components/investors_sections/_07';
 import {BsFillArrowDownSquareFill, BsFillArrowUpSquareFill, BsFillSignpostSplitFill} from 'react-icons/bs'
 
 function useParallax(value: MotionValue<number>, distance: number) { 

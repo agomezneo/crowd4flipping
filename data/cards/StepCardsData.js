@@ -50,4 +50,23 @@ const HorizontalStepsData = [
     },
 ]
 
-export {StepsData, HorizontalStepsData}
+const CardsData = [
+    {
+        image : '/images/icons/grafico-de-velas.png',
+        title: 'Compramos en cualquier estado',
+        text: 'Después de haber valorado tu propiedad y haber llegado a un acuerdo, realizamos la compra en menos de 30 días.'
+    },
+    {
+        image : '/images/icons/ubicacion-del-mapa-01.png',
+        title: 'Gana más dinero por tu vivienda',
+        text: 'Con Crowd4Flipping ganarás más dinero ya que no hay intermediarios por en medio.'
+    },
+    {
+        image : '/images/icons/archivo-de-datos.png',
+        title: 'No pierdes el tiempo',
+        text: 'En menos de 2 llamadas con nuestros expertos, podrás vender tu propiedad.'
+    },
+   
+]
+
+export {StepsData, HorizontalStepsData, CardsData}

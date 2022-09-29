@@ -1,12 +1,5 @@
 import styles from '../styles/Home.module.scss';
 import Layout from "../components/layouts/Layout";
-import SectionOne from '../components/home_sections/_01';
-import SectionTwo from '../components/home_sections/_02';
-import SectionThree from '../components/home_sections/_03';
-import SectionFour from '../components/home_sections/_04';
-import SectionFive from '../components/home_sections/_05';
-import SectionSix from '../components/home_sections/_06';
-import SectionSeven from '../components/home_sections/_07';
 import { motion, useScroll } from "framer-motion"
 import Link from "next/link";
 import { BsFillTreeFill } from "react-icons/bs";

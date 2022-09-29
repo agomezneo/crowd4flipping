@@ -1,5 +1,4 @@
 .InvestmentForm{
-    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -27,6 +26,7 @@
         border-radius: 5px;
         padding: 10px 20px;
         font-size: 1rem;
+        background-color: var(--white);
         & input:focus{
             border: none; 
         }
@@ -45,5 +45,40 @@
         cursor: pointer;
         margin-top: 1.2rem;
     }
-
 }
+.OwnerForm{
+    height: 50vh;
+    display: grid;
+    place-items: end;
+
+    & h1{
+        text-align: left;
+        width: 100%;
+    }
+}
+
+.owner_form_container{
+    width: 100%;
+}
+
+.radio_group{
+    padding: 1rem;
+    width: 100%;
+}
+
+.option{
+    height: 50px;
+    width: 100%;
+    border: .5px solid var(--blue);
+    border-radius: 5px;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+}
+
+.bgFull{
+    box-shadow: -1.5px -1.5px 3px rgba($color: #000000, $alpha: .5);
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+
