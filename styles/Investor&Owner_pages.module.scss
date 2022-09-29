@@ -178,6 +178,15 @@
     justify-content: space-around;
     padding: 15px;
     min-height: 70vh;
+
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+
+    box-shadow:  20px 20px 60px #d3d3d3,
+                 -20px -20px 60px #ffffff;
+
+        
   }
 
   .s3_empty_div{
@@ -192,6 +201,8 @@
     background-repeat: no-repeat;
     width: 100%;
     min-height: 50vh;
+
+
   }
 
   .empty_div{
@@ -250,6 +261,8 @@
     align-items: flex-end;
     display: flex;
     flex-direction: column;
+    padding: 2rem;
+    
   }
 
   .by_refcon_container{
@@ -361,9 +374,11 @@
       }
     }
     .steps_container{
+      border-radius: 15px;
       & h2{
         text-align: left;
         font-size: 1.5rem;
+        padding: .5rem;
       }
     }
 
@@ -379,7 +394,9 @@
     }
     .logo_container{
       width: 500px;
-      
+      border-radius: 10px;
+      box-shadow:  20px 20px 60px #d3d3d3,
+                  -20px -20px 60px #ffffff;
     }
 
     .form_container{
