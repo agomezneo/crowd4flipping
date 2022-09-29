@@ -1,10 +1,13 @@
 .acordion{
-    width: 100%;
+    width: 90%;
     overflow-y: scroll; 
     height: 70vh;
-    box-shadow: -1.5px -1.5px 3px rgba($color: #000000, $alpha: .3);
-    border-radius: 5px;
+    border-radius: 10px;
 }
+
+.acordion::-webkit-scrollbar {
+    display: none;
+  } 
 
 .acordionContainer{
     width: 750px;
@@ -12,6 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--whitegray);
 }
 
 .acordionContainer > h2, 
@@ -29,7 +33,7 @@
 }
 
 .acordionItem{
-    background-color: var(--white);
+    background-color: var(--whitegray);
     padding: 0.3rem !important;
     width: 100%;
 }
@@ -39,7 +43,7 @@
     font-weight: 600;
     color: var(--blue);
     text-decoration: none;
-    background-color: var(--white);
+    background-color: var(--whitegray);
     display: flex;
     align-items: center;
     justify-content: space-between;

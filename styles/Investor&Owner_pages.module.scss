@@ -212,12 +212,22 @@
     background-position-y: bottom;
     background-position-x: left;
     background-repeat: no-repeat;
-    height: 50vh;
     grid-area: left;
+    z-index: 10;
   }
 
   .right{
     grid-area: right;
+    display: grid;
+    place-items: end;
+
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+
+    box-shadow:  18px 18px 36px #cecece,
+             -18px -18px 36px #ffffff;
+
   }
 
   .s5_body_container{
@@ -308,6 +318,7 @@
     background-repeat: no-repeat;
     background-position-y: top;
     background-position-x: center;
+    background-color: var(--whitegray);
   }
 
   @media only screen and (min-width: 600px) and (max-width: 991px){
@@ -395,8 +406,8 @@
     .logo_container{
       width: 500px;
       border-radius: 10px;
-      box-shadow:  20px 20px 60px #d3d3d3,
-                  -20px -20px 60px #ffffff;
+      box-shadow:  20px 20px 60px #dadada,
+      -20px -20px 60px #ffffff;
     }
 
     .form_container{

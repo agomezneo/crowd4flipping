@@ -6,6 +6,7 @@
     border-radius: 5px;
     padding: 1rem;
     background-color: #ecf0f0;
+  
 }
 
 .input_container{
@@ -47,9 +48,13 @@
     }
 }
 .OwnerForm{
-    height: 50vh;
+    height: 60vh;
     display: grid;
     place-items: end;
+    box-shadow:  20px 20px 60px #d3d3d3,
+    -20px -20px 60px #ffffff;
+    padding: 1rem;
+    border-radius: 5px;
 
     & h1{
         text-align: left;
