@@ -27,6 +27,18 @@
     }
 }
 
+
+.step{
+    position: relative;
+}
+
+.step_image{
+    position: absolute;
+    top: -100px;
+    left: 25%;
+}
+
+
 @media only screen and (min-width: 360px) and (max-width: 991px){
     .HorizontalSteper_step{
         grid-template-columns: .7fr 3fr;

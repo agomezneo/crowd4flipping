@@ -1,3 +1,5 @@
+import { HiOfficeBuilding } from "react-icons/hi";
+
 const StepsData = [
     {
         image : '/images/icons/grafico-de-negocios.png',
@@ -69,4 +71,20 @@ const CardsData = [
    
 ]
 
-export {StepsData, HorizontalStepsData, CardsData}
+const MaterialHorizontalData = [
+    {
+        image : '/images/icons/conversacion.png',
+        text: 'Háblanos un poco de tu propiedad, da igual el estado, será rápido.'
+    },
+    {
+        image : '/images/icons/presentacion.png',
+        text: 'Obten una valoración profesional.'
+    },
+    {
+        image : '/images/icons/residencial.png',
+        text: 'Vende tu propiedad en menos de lo que piensas.'
+    },
+   
+]
+
+export {StepsData, HorizontalStepsData, CardsData, MaterialHorizontalData}

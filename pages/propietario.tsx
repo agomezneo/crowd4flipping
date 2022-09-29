@@ -48,12 +48,12 @@ export default function App() {
       <HomeSection id={4} css={styles.s4}>
         <Section04 />
       </HomeSection>
-      <HomeSection id={5} css={styles.s5}>
+   {/*    <HomeSection id={5} css={styles.s5}>
         <Section05 />
       </HomeSection>
       <HomeSection id={6} css={styles.s6}>
         <Section06 />
-      </HomeSection>
+      </HomeSection> */}
       <motion.div className={styles.progress}  style={{ scaleX }} />
     </div>
   );
