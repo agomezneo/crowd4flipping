@@ -178,15 +178,6 @@
     justify-content: space-around;
     padding: 15px;
     min-height: 70vh;
-
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-
-
-    box-shadow:  20px 20px 60px #d3d3d3,
-                 -20px -20px 60px #ffffff;
-
-        
   }
 
   .s3_empty_div{
@@ -367,7 +358,7 @@
 
     .page_section_body_01{
       width: 80vw;
-      grid-template: "left right" / 500px auto;
+      grid-template: "left right" / 1fr auto;
     }
     .page_section_body_02{
       width: 80vw;
@@ -396,22 +387,14 @@
       height: 100%;
     }
     .s5_body_container{
-      padding: 1.5rem;
       justify-content: flex-end;
-    }
-
-    .right{
-      border-top-right-radius: 15px;
-      border-bottom-right-radius: 15px;
-      box-shadow:  18px 18px 36px #cecece,
-              -18px -18px 36px #ffffff;
     }
 
     .logo_container{
       width: 500px;
       border-radius: 10px;
-      box-shadow:  20px 20px 60px #dadada,
-      -20px -20px 60px #ffffff;
+      box-shadow:  10px 10px 30px #dadada,
+      -10px -10px 30px #ffffff;
     }
 
     .form_container{
