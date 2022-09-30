@@ -194,7 +194,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url('../public/images/pages_images/grow_invesment_02_01.png');
+    background-image: url('../public/images/pages_images/grow_invesment_02_03.png');
     background-size: cover;
     background-position-y: bottom;
     background-position-x: right;
@@ -207,7 +207,7 @@
 
   .empty_div{
     width: 100%;
-    background-image: url('../public/images/pages_images/increase_invesment_01.png');
+    background-image: url('../public/images/pages_images/increase_invesment_01_01.png');
     background-size: cover;
     background-position-y: bottom;
     background-position-x: left;
@@ -221,12 +221,6 @@
     display: grid;
     place-items: end;
 
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-
-
-    box-shadow:  18px 18px 36px #cecece,
-             -18px -18px 36px #ffffff;
 
   }
 
@@ -344,6 +338,7 @@
     .s5_body_container{
       padding: 15px;
       width: 500px;
+      justify-content: flex-start;
     }
   }
 
@@ -402,7 +397,16 @@
     }
     .s5_body_container{
       padding: 1.5rem;
+      justify-content: flex-end;
     }
+
+    .right{
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      box-shadow:  18px 18px 36px #cecece,
+              -18px -18px 36px #ffffff;
+    }
+
     .logo_container{
       width: 500px;
       border-radius: 10px;
