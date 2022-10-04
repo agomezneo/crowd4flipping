@@ -14,7 +14,7 @@ function HomeSection() {
               <div className={styles.call_to_action_container_s1}>
                 <h1><strong>Inversión inmobiliaria <span>desde 500€</span></strong></h1>
                 <h2> Recibe una rentabilidad por proyecto y <span>beneficiate de la plusvalía inmobiliaria.</span> </h2>
-                <a href='#6' className={styles.call_to_action_button}>
+                <a href='#7' className={styles.call_to_action_button}>
                     <span>¡ Quiero invertir !</span>
                 </a>
               </div>

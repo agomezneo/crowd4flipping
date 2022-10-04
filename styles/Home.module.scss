@@ -169,6 +169,14 @@
       }
     }
 
+    .page_grid_container{
+      grid-template: 
+        "left"
+      ;
+      width: initial;
+      place-content: space-evenly;
+    }
+
     .header_content{
       height: 100vh;
       display: flex;
@@ -181,9 +189,25 @@
       justify-content: flex-end;
 
       & .back_btn{
-        font-size: 1.5rem;
-        padding: 15px;
+        font-size: 1.2rem;
+        padding: 10px;
       }
+    }
+
+    .explore_page_hero_container{
+      padding: 0;
+    }
+
+    .logo_container{
+      width: 100vw;
+      padding: 5px;
+    }
+
+    .buttons_container{
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 1rem;
     }
 
     .title_text{
