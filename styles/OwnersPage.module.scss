@@ -80,7 +80,21 @@
 
 .page_section_footer{
     grid-area: footer;
+    position: relative;
     padding: 1rem;
+    
+
+    display: grid;
+    grid-template: 
+        "footerleft footerright" / 1fr 1fr
+    ;
+}
+
+.footer_left{
+    grid-area: footerleft;
+}
+.footer_right{
+    grid-area: footerright;
 }
 
 .s1{
@@ -202,5 +216,5 @@
     .page_section_body_s2{
         width: 80vw;
     }
-
+    
 }

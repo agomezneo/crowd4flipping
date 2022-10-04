@@ -23,9 +23,14 @@ function HomeSection() {
               
             </div>
             <div className={styles.page_section_footer}>
-              <ModalButton > 
-                <Form />
-              </ModalButton>
+              <div className={styles.footer_left}>
+                <ModalButton > 
+                  <Form />
+                </ModalButton>
+              </div>
+              <div className={styles.footer_right}>
+
+              </div>
             </div>
         </div>
     </div>

@@ -96,6 +96,9 @@ export default function App() {
       <HomeSection id={7} css={styles.s7}>
         <Section07 />
       </HomeSection> 
+      <HomeSection id={8} css={styles.s8}>
+        <Section08 />
+      </HomeSection> 
       <Footer />
       <motion.div className={styles.progress}  style={{ scaleX }} />
     </div>

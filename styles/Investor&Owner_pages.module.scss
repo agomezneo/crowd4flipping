@@ -350,6 +350,16 @@
     }
   }
 
+  .swiper_container{
+    grid-area: left;
+    position: relative;
+    height: fit-content;
+  }
+
+  .page_section_header_swiper{
+    justify-content: flex-end !important;
+  }
+
   .empty_s6{
     width: 100%;
     background-image: url('../public/images/pages_images/close_investment_01.png');
@@ -361,12 +371,12 @@
   }
 
   .s8{
-    background: url("../public/images/pages_images/close_investment_01.png"); 
+    /* background: url("../public/images/pages_images/close_investment_01.png"); 
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: top;
     background-position-x: center;
-    background-color: var(--whitegray);
+    background-color: var(--whitegray); */
   }
 
   @media only screen and (min-width: 600px) and (max-width: 991px){
