@@ -10,6 +10,7 @@ import Section05 from '../components/investors_sections/_05';
 import Section06 from '../components/investors_sections/_06';
 import Section07 from '../components/investors_sections/_07';
 import Section08 from '../components/investors_sections/_08';
+import Footer from '../components/footers';
 
 import {BsFillArrowDownSquareFill, BsFillArrowUpSquareFill, BsFillSignpostSplitFill} from 'react-icons/bs'
 
@@ -95,6 +96,7 @@ export default function App() {
       <HomeSection id={7} css={styles.s7}>
         <Section07 />
       </HomeSection> 
+      <Footer />
       <motion.div className={styles.progress}  style={{ scaleX }} />
     </div>
   );

@@ -1,0 +1,54 @@
+.footer{
+    min-height: 50vh;
+    width: 100%;
+    background-image: url('../public/images/brand/backgorund_buildings.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    display: grid;
+    place-items: center;
+}
+
+.footer_container{
+    width: 80vw;
+    height: 40vh;
+    border-radius: 10px;
+    backdrop-filter: blur( 10px );
+
+    display: grid;
+    place-content: center;
+    grid-template: 
+        "logo content" /  2fr 4fr
+     ;
+}
+
+.footer_logo_container{
+    grid-area: logo;
+}
+
+.footer_content{
+    grid-area: content;
+    display: flex;
+    align-items: center;
+
+    & h4{
+        font-size: 1rem;
+
+        & span{
+            color: var(--blue);
+        }
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 991px){
+    .footer_container{
+        grid-template: 
+            "logo"
+            "content" / 1fr
+        ;
+    }
+
+    .footer_content{
+        text-align: center;
+    }
+}
