@@ -26,12 +26,32 @@
 
 .step{
     position: relative;
+    border-right: .5px solid var(--blue);
+    min-height: 200px;
+
+}
+
+.step_no_border{
+    border-right: none !important;
+}
+
+.step_title{
+    color: var(--blue);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.step_p{
+    font-size: .8rem;
+    text-align: center;
 }
 
 .step_image{
     position: absolute;
-    top: -100px;
-    left: 25%;
+    top: -80px;
+    left: 35%;
+    height: 70px;
+    width: 70px;
 }
 
 
@@ -43,6 +63,9 @@
     .image_container{
         height: 50px;
         width: 50px;
+    }
+    .step{
+        min-width: 250px;
     }
     .step_image{
         top: -50px;

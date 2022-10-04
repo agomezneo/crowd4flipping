@@ -11,6 +11,27 @@
     height: 100vh;
     background: var(--base-green);
   }
+
+  .page_grid_container{
+    z-index: 10;
+    height: 100%;
+
+    display: grid;
+    grid-template:
+      "left right " / 1fr 1fr
+    ;
+    width: 100vw;
+  }
+
+  .right{
+    grid-area: right;
+  }
+  .left{
+    grid-area: left;
+    border-radius: 0% 100% 75% 25% / 50% 75% 25% 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
   
   .explore_btn {
     display: block;
@@ -20,6 +41,7 @@
     font-size: 36px;
     font-weight: bold;
     font-family: var(--title-font);
+    border-radius: 10px;
   }
   
   .base_page_size {
@@ -35,7 +57,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 100px;
   }
   
   .mountains {
@@ -73,12 +94,22 @@
     font-size: 1.2rem;
   }
   
-  .header_content {
+  .explore_page_hero_container {
     padding: 18px;
     text-align: center;
     position: relative;
     z-index: 1;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .buttons_container{
+    display: flex;
+    width: 700px;
+    justify-content: space-around;
   }
   
   .back_btn {
@@ -86,10 +117,11 @@
     padding: 12px 18px;
     background-color: var(--blue);
     color: white;
-    font-size: 28px;
+    font-size: 1.5rem;
     cursor: pointer;
-    margin: 20px;
     min-width: 300px;
+    border-radius: 5px;
+    box-shadow: -2px -2px 4px rgba(0, 0, 0, .3);  
   }
   
   .nav_bar {
@@ -111,6 +143,21 @@
     cursor: pointer;
   }
 
+
+  .logo_container{
+    height: fit-content;
+    width: fit-content;
+    margin-bottom: 1rem;
+  }
+
+  .text_container{
+    & h1{
+      color: var(--black);
+      & span{
+        color: var(--blue);
+      }
+    }
+  }
   @media only screen and (min-width: 360px) and (max-width: 991px){
     .nav_bar{
       height: 10vh;

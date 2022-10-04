@@ -6,7 +6,7 @@ function Layout({children}) {
   return (
     <div>
          <Head>
-            <title>Crowd4Flipping | Academia de Criptomonedas en Mallorca</title>
+            <title>Crowd4Flipping</title>
             <meta name="description" content="Academia de Criptomonedas en Mallorca. Recorremos juntos el mundo de la Blockchain. ¡Apúntate a nuestras charlas de Cripto gratuitas cada semana." />
             <link rel="icon" href="/images/brand/crowd4flipping/Favicon/favicon_transparent.png" />
         </Head>

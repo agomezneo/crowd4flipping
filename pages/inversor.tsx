@@ -8,7 +8,7 @@ import Section03 from '../components/investors_sections/_03';
 import Section04 from '../components/investors_sections/_04';
 import Section05 from '../components/investors_sections/_05';
 import Section06 from '../components/investors_sections/_06';
-import Section07 from '../components/investors_sections/_07';
+import Section07 from '../components/investors_sections/_08';
 import {BsFillArrowDownSquareFill, BsFillArrowUpSquareFill, BsFillSignpostSplitFill} from 'react-icons/bs'
 
 function useParallax(value: MotionValue<number>, distance: number) { 

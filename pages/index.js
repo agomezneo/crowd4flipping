@@ -4,13 +4,14 @@ import { motion, useScroll } from "framer-motion"
 import Link from "next/link";
 import { BsFillTreeFill } from "react-icons/bs";
 import Image from 'next/image';
-import Logo from '../public/images/brand/crowd4flipping/SVG_Vector_Files/Transparent_Logo.svg'
+import Logo from '../public/images/brand/crowd4flipping/PNG_Files/Transparent_Logo_02.png'
 import Header from '../components/headers/header_pages';
 export default function Home() {
+
   return (
     <>
       <Layout>
-        <Header />
+        {/* <Header /> */}
         <Hero />
       </Layout>
 
@@ -21,28 +22,42 @@ export default function Home() {
 const Hero = () => {
   return (
     <div className={styles.explore_page_hero}>
-      <motion.div
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          delay: 0.2,
-          duration: 0.75,
-        }}
-        className={styles.header_content}
-      >
-        <h1 className={styles.title_text}>Explore <span>Crowd</span>4<span>Flipping</span> </h1>
-        <p className={styles.sub_text}>
-          Explore todas las opciones que te ofrece Crowd4Flipping en el mercado inmobiliario.
-        </p>
-        <div className={styles.buttons_container}>
-          <Link href="/inversor">
-            <a className={styles.back_btn}>Soy un inversor</a>
-          </Link>
-          <Link href="/propietario">
-            <a className={styles.back_btn}>Soy un propietario</a>
-          </Link>
-        </div>
-      </motion.div>
+      <div className={styles.page_grid_container}>
+        <motion.div
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            duration: 0.75,
+          }}
+          className={`${styles.explore_page_hero_container} ${styles.left}`}
+        >
+          <div className={styles.logo_container}>
+            <Image src={Logo} width={700} height={300} alt='Crowd for Flipping' />
+            <div className={styles.text_container}>
+            <h1>La inversión inmobiliaria <span>al alcance de todos</span> </h1>
+            </div>
+          </div>
+          <div className={styles.buttons_container}>
+            <Link href="/inversor">
+              <a className={styles.back_btn}>Quiero invertir</a>
+            </Link>
+            <Link href="/propietario">
+              <a className={styles.back_btn}>Ofrece tu propiedad</a>
+            </Link>
+          </div>
+        </motion.div>   
+        <motion.div
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            duration: 0.75,
+          }}
+          className={`${styles.explore_page_hero_container} ${styles.right}`}
+        >
+        </motion.div>   
+      </div>
       <Mountains />
     </div>
   );

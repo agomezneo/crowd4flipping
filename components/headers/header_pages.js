@@ -12,7 +12,7 @@ function Header() {
             </div>
         </section>
         <section>
-          <a className={styles.back_btn}>Solicite una entrevista</a>
+         {/*  <a className={styles.back_btn}>Solicite una entrevista</a> */}
         </section>
     </nav>
   )

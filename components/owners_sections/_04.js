@@ -2,9 +2,13 @@ import React from 'react';
 import styles from '../../styles/OwnersPage.module.scss';
 import Steper from '../stepers/MaterialHorizontal';
 import Form from '../forms/OwnerForm';
+import {MaterialHorizontalData} from '../../data/cards/StepCardsData'
 
 
 function HomeSection() {
+
+  console.log(MaterialHorizontalData)
+
   return (
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
@@ -13,7 +17,7 @@ function HomeSection() {
             </div>
             <div className={styles.page_section_body}>
                 <div className={styles.steper_container}>
-                  <Steper />
+                  <Steper data={MaterialHorizontalData}/>
                 </div>
                 <div className={styles.form_container}>
                   <Form />

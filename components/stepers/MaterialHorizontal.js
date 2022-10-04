@@ -9,22 +9,24 @@ import Image from 'next/image';
 import SettingsIcon from '@mui/icons-material/Settings';
 
 
-export default function HorizontalLabelPositionBelowStepper() {
+export default function HorizontalLabelPositionBelowStepper({data}) {
   return (
     <Box sx={{ width: '100%' }}>
       <Stepper activeStep={10} alternativeLabel>
-        {MaterialHorizontalData.map((item, key) => {
+        {data.map((item, key) => {
             return(
                 <Step 
                     key={key}
+                    className={key === data.length - 1 ? `${styles.step} ${styles.step_no_border}` : styles.step}
                 >
 
                     <div className={styles.step_image}>
                         <Image src={item.image} width={100} height={100} alt={item.text} />
                     </div>
-
+                   
                     <StepLabel >
-                        {item.text}
+                        <span className={styles.step_title}> {item.title} </span><br/>
+                        <p className={styles.step_p}> {item.text} </p>
                     </StepLabel>
 
                 </Step>

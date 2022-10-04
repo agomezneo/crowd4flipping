@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../../styles/OwnersPage.module.scss';
 import Cards from '../stepers/HorizontalSteper';
 import {CardsData} from '../../data/cards/StepCardsData'
-
+ 
 
 function HomeSection() {
   return (
