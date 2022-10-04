@@ -22,6 +22,6 @@ function HomeSection() {
         </div>
     </div>
   )
-}
+} 
 
 export default HomeSection

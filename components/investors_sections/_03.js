@@ -25,7 +25,9 @@ function HomeSection() {
               </div>
               <div className={styles.s3_empty_div} />
             </div>
-            <div className={styles.page_section_footer}></div>
+            <div className={styles.page_section_footer}>
+             
+            </div>
         </div>
     </div>
   )

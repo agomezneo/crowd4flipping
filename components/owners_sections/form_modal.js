@@ -1,27 +1,18 @@
 import React from 'react';
 import styles from '../../styles/OwnersPage.module.scss';
-import Steper from '../stepers/MaterialHorizontal';
 import Form from '../forms/OwnerForm';
-import {MaterialHorizontalData} from '../../data/cards/StepCardsData'
-
 
 function HomeSection() {
-
-  console.log(MaterialHorizontalData)
-
   return (
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
             <div className={styles.page_section_header}>
-              <h1> ¿Cómo funciona? </h1>
             </div>
             <div className={styles.page_section_body}>
-                <div className={styles.steper_container}>
-                  <Steper data={MaterialHorizontalData}/>
-                </div>
-                <div className={styles.form_container}>
-                  <Form />
-                </div>
+              <div className={styles.box_1}>
+                <Form />
+              </div>
+              <div className={`${styles.box_2} ${styles.image_s2}`} />
             </div>
             <div className={styles.page_section_footer}></div>
         </div>
@@ -29,4 +20,4 @@ function HomeSection() {
   )
 }
 
-export default HomeSection  
+export default HomeSection

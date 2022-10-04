@@ -52,6 +52,7 @@
 
     & h1{
         color: var(--black);
+        padding-left: 10px;
 
         & span{
             color: var(--blue);
@@ -79,6 +80,7 @@
 
 .page_section_footer{
     grid-area: footer;
+    padding: 1rem;
 }
 
 .s1{
@@ -92,6 +94,21 @@
         place-content: end;
         padding: 5px;
     }
+}
+
+.call_to_action_bootom_s1_owner{
+    display: grid;
+    place-content: center;
+    padding: 12px 18px;
+    background-color: var(--blue);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    min-width: 300px;
+    border-radius: 5px;
+    box-shadow: -2px -2px 4px rgba(0, 0, 0, .3);  
+    margin-top: 1rem;
 }
 
 .box_1{
@@ -128,11 +145,33 @@
     height: 100%;
 }
 
+.empty_div_s3_owner{
+    background-image: url('../public/images/pages_images/grow_invesment_01.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-area: image;
+}
 .steper_container{
     display: grid;
     place-items: center;
     min-height: 50vh;
+    overflow: scroll;
+    width: 100%;
+
 }
+
+.horizontal_steper_container{
+    grid-area: box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px;
+    min-height: 70vh;
+    overflow: scroll;
+}
+.horizontal_steper_container::-webkit-scrollbar {
+    display: none;
+} 
 
 
 @media only screen and (min-width: 600px) and (max-width: 991px){
@@ -145,6 +184,12 @@
         width: 80vw;
     }
 
+    .page_section_header{
+        & h1{
+            padding-left: 0;
+        }
+    }
+   
     .page_section_body{
         place-content: end;
         padding:0;
@@ -157,7 +202,5 @@
     .page_section_body_s2{
         width: 80vw;
     }
-
-    
 
 }
