@@ -9,6 +9,7 @@ import Section03 from '../components/owners_sections/_03';
 import Section04 from '../components/owners_sections/_04';
 import Section05 from '../components/owners_sections/_05';
 import Section06 from '../components/owners_sections/_06';
+import Footer from '../components/footers';
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -48,6 +49,7 @@ export default function App() {
       <HomeSection id={4} css={styles.s4}>
         <Section04 />
       </HomeSection>
+      <Footer />
    {/*    <HomeSection id={5} css={styles.s5}>
         <Section05 />
       </HomeSection>
