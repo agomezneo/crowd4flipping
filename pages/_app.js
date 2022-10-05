@@ -1,4 +1,5 @@
 import '../styles/globals.scss';
+import styles from '../styles/globals.scss'
 import  { motion, AnimatePresence } from 'framer-motion';
 import {useRouter} from 'next/router';
 
@@ -7,6 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <AnimatePresence exitBeforeEnter>
       <motion.div
+        className={styles.back_ground_traslate}
         key={router.route}
         initial="initialState"
         animate="animateState"
@@ -22,6 +24,7 @@ function MyApp({ Component, pageProps }) {
           animateState: {
             opacity: 1,
             clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+            backgroundImage: 'inherit'
           },
           exitState: {
             opacity: 0,

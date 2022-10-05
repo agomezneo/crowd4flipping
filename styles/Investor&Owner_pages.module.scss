@@ -4,7 +4,6 @@
   }  
   
   .section {
-    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -28,9 +27,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-
     & video{
       width: 100%;
+      object-fit: cover;
+      overflow: hidden;
+      height: 105vh;
     }
   }
 
@@ -305,7 +306,7 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 15px;
-    min-height: 70vh;
+    min-height: 50vh;
   }
 
   .s3_empty_div{
@@ -317,10 +318,9 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: bottom;
+    background-position-x: right;
     width: 100%;
-    min-height: 50vh;
-
-
+    min-height: 40vh;
   }
 
   .empty_div{
@@ -331,7 +331,6 @@
     background-position-x: left;
     background-repeat: no-repeat;
     grid-area: left;
-    z-index: 10;
     border-radius: 5px;
   }
 
@@ -341,7 +340,7 @@
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
-    min-height: 50vh;
+    min-height: 35vh;
     grid-area: right;
   }
 
@@ -349,8 +348,6 @@
     grid-area: right;
     display: grid;
     place-items: end;
-
-
   }
 
   .s5_body_container{
@@ -395,7 +392,7 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    
+     
   }
 
   .by_refcon_container{
@@ -437,13 +434,11 @@
 
   .empty_s6{
     width: 100%;
-    background-image: url('../public/images/pages_images/real-state_06.png');
-    background-size: cover;
+    background-image: url('../public/images/pages_images/real-state_08.png');
+    background-size: contain;
     background-position-y: center;
     background-position-x: center;
     background-repeat: no-repeat;
-    /* height: 100%; */
-   /*  border: 1px solid rebeccapurple; */
   }
 
   @media only screen and (min-width: 600px) and (max-width: 991px){
@@ -475,6 +470,7 @@
 
   @media only screen and (min-width: 992px){
     .section{
+      min-height: 80vh;
       & .section_arrows{
          display: block;
       }
@@ -542,7 +538,8 @@
 
  
     .empty_div{
-      height: 100%;
+      background-size: 100%;
+      background-position: center;
     }
     .empty_div_s4{
       background-position-y: bottom;
@@ -551,6 +548,7 @@
     .s5_body_container{
       justify-content: flex-end;
     }
+
 
     .logo_container{
       width: 100%;
@@ -564,8 +562,9 @@
       }
     }
 
-    .s7{
-      height: 30vh !important;
+    .empty_s6{
+      background-position-x: right;
+      background-size: 80%;
     }
   }
 
