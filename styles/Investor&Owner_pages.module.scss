@@ -157,8 +157,8 @@
     grid-area: body;
     display: grid;
     grid-template:
-      'right'
-      'left' 
+      'right' 1fr
+      'left' 1fr
     ;
   }
 
@@ -199,11 +199,13 @@
   }
 }
 .steps_container{
-  height: 100%;
+  
+  min-height: 50vh;
   overflow-x: scroll;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  grid-area: left;
   & h2{
     color: var(--black);
     font-size: 1.2rem;
@@ -265,6 +267,8 @@
 
   .page_section_footer{
     grid-area: footer;
+    display: grid;
+    
     & h1{
       font-size: 2rem;
       color: var(--white);
@@ -275,8 +279,19 @@
     }
   }
 
-  .s2, .s3, .s4, .s5, .s6, .s7, .s8{
+     .s5,  .s7{
     background-color: var(--whitegray);
+  }
+  .s2, .s4{
+    background-color: var(--white);
+  }
+
+  /* .s3{
+    background-color: var(--black);
+  }
+ */
+  .s6, .s8{
+    background-color: var(--whitegray_);
   }
 
   .s7{
@@ -298,9 +313,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url('../public/images/pages_images/grow_invesment_02_03.png');
+    background-image: url('../public/images/pages_images/real-state_04.jpg');
     background-size: contain;
     background-repeat: no-repeat;
+    background-position-y: bottom;
     width: 100%;
     min-height: 50vh;
 
@@ -309,20 +325,24 @@
 
   .empty_div{
     width: 100%;
-    background-image: url('../public/images/pages_images/increase_invesment_01_01.png');
-    background-size: cover;
-    background-position-y: bottom;
+    background-image: url('../public/images/pages_images/real-state_05_01.png');
+    background-size: contain;
+    background-position-y: center;
     background-position-x: left;
     background-repeat: no-repeat;
     grid-area: left;
     z-index: 10;
+    border-radius: 5px;
   }
 
   .empty_div_s4{
-    background-image: url('../public/images/pages_images/grow_invesment_01_01.png');
-    background-size: cover;
+    background-image: url('../public/images/pages_images/real-state.png');
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
     min-height: 50vh;
+    grid-area: right;
   }
 
   .right{
@@ -417,12 +437,13 @@
 
   .empty_s6{
     width: 100%;
-    background-image: url('../public/images/pages_images/close_investment_01.png');
-    background-size: contain;
-    background-position-y: top;
+    background-image: url('../public/images/pages_images/real-state_06.png');
+    background-size: cover;
+    background-position-y: center;
     background-position-x: center;
     background-repeat: no-repeat;
-    min-height: 40vh; 
+    /* height: 100%; */
+   /*  border: 1px solid rebeccapurple; */
   }
 
   @media only screen and (min-width: 600px) and (max-width: 991px){
@@ -484,7 +505,8 @@
 
     .page_section_body_01{
       width: 80vw;
-      grid-template: "left right" / 500px auto;
+      grid-template: " right left" /  .8fr 1fr;
+      gap: 2rem;
     }
     .page_section_body_02{
       width: 80vw;
@@ -521,6 +543,10 @@
  
     .empty_div{
       height: 100%;
+    }
+    .empty_div_s4{
+      background-position-y: bottom;
+      background-position-x: right;
     }
     .s5_body_container{
       justify-content: flex-end;

@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--whitegray);
+    background-color: var(--whitegray_);
 }
 
 .acordionContainer > h2, 
@@ -33,7 +33,7 @@
 }
 
 .acordionItem{
-    background-color: var(--whitegray);
+    background-color: var(--whitegray_);
     padding: 0.3rem !important;
     width: 100%;
 }
@@ -43,7 +43,7 @@
     font-weight: 600;
     color: var(--blue);
     text-decoration: none;
-    background-color: var(--whitegray);
+    background-color: var(--whitegray_);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,7 +64,7 @@
     height: auto;
     max-height: 9999px;
     transition: all 0.5s;
-    background-color: var(--whitegray);
+    background-color: var(--whitegray_);
     color: var(--black);
     padding: .3rem 0 .3rem 1rem;
 }

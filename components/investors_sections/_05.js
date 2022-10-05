@@ -42,7 +42,7 @@ function HomeSection() {
                 > */}
                   <div className={styless.swiper_slide}>
                     <div className={styless.swiper_slide_header}>
-                      <Image src={Img} width={300} height={200}  />
+                      <Image src={Img} width={300} height={200} className={styles.swiper_image} />
                     </div>
                     <div className={styless.swiper_slide_body}>
                       <h1>Chalet en Palma</h1>
@@ -54,7 +54,7 @@ function HomeSection() {
                   </div>
                   <div className={styless.swiper_slide}>
                     <div className={styless.swiper_slide_header}>
-                      <Image src={Img2} width={300} height={200}  />
+                      <Image src={Img2} width={300} height={200} className={styles.swiper_image} />
                     </div>
                     <div className={styless.swiper_slide_body}>
                       <h1>Chalet en Palma</h1>
@@ -66,7 +66,7 @@ function HomeSection() {
                   </div>
                   <div className={styless.swiper_slide}>
                     <div className={styless.swiper_slide_header}>
-                      <Image src={Img3} width={300} height={200}  />
+                      <Image src={Img3} width={300} height={200} className={styles.swiper_image} />
                     </div>
                     <div className={styless.swiper_slide_body}>
                       <h1>Chalet en Palma</h1>

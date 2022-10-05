@@ -19,7 +19,10 @@ function HomeSection() {
               </div>
               
             </div>
-            <div className={styles.page_section_footer}></div>
+            <div className={styles.page_section_footer}>
+                <div className={styles.footer_left_side}></div>
+                <div className={styles.footer_right_side}></div>
+            </div>
         </div>
     </div>
   )
