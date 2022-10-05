@@ -1,20 +1,15 @@
 import styles from '../../styles/Investor&Owner_pages.module.scss';
-
 import React, { useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-cube";
+import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-
-// import required modules
-import { EffectCube, Pagination } from "swiper";
-
+import { EffectCoverflow, Pagination } from "swiper";
 import styless from '../../styles/swiper.module.scss'
 import Image from 'next/image';
-import Image_ from '../../public/images/obras/foto_casa_example.png'
+import Img from '../../public/images/obras/foto_casa_example_01.png'
+import Img2 from '../../public/images/obras/foto_casa_example_02.jpg'
+import Img3 from '../../public/images/obras/foto_casa_example_03.jpeg'
 
 function HomeSection() {
 
@@ -24,29 +19,30 @@ function HomeSection() {
   return (
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
-            <div className={`${styles.page_section_header} ${styles.page_section_header_swiper}`}>
+            <div className={styles.page_section_header} >
               <h1>Invierta en proyectos inmobiliarios<strong> con  <span>Crowd</span>4<span>Flipping</span></strong> </h1>
             </div>
-            <div className={styles.page_section_body}>
-
+            <div className={styles.page_section_body_flex}>
               <div className={styles.swiper_container}>
-                <Swiper
-                  effect={"cube"}
+               {/*  <Swiper
+                  effect={"coverflow"}
                   grabCursor={true}
-                  cubeEffect={{
-                    shadow: true,
+                  centeredSlides={true}
+                  slidesPerView={"auto"}
+                  coverflowEffect={{
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
                     slideShadows: true,
-                    shadowOffset: 20,
-                    shadowScale: 0.94,
                   }}
                   pagination={true}
-                  modules={[EffectCube, Pagination]}
+                  modules={[EffectCoverflow, Pagination]}
                   className={styless.swiper}
-                >
-                  
+                > */}
                   <SwiperSlide className={styless.swiper_slide}>
                     <div className={styless.swiper_slide_header}>
-                      <Image src={Image_} width={300} height={200}  />
+                      <Image src={Img} width={300} height={200}  />
                     </div>
                     <div className={styless.swiper_slide_body}>
                       <h1>Chalet en Palma</h1>
@@ -55,16 +51,10 @@ function HomeSection() {
                       <span>11,5%</span>
                       <p>Financiado por  <stron>2552</stron> inversores</p>
                     </div>
-                    <div className={styless.swiper_slide_footer}>
-                      <div className={styless.swiper_button}>
-                        <span>Ver proyecto</span>
-                      </div>
-                    </div>
                   </SwiperSlide>
-                  
                   <SwiperSlide className={styless.swiper_slide}>
                     <div className={styless.swiper_slide_header}>
-                      <Image src={Image_} width={300} height={200}  />
+                      <Image src={Img2} width={300} height={200}  />
                     </div>
                     <div className={styless.swiper_slide_body}>
                       <h1>Chalet en Palma</h1>
@@ -73,16 +63,10 @@ function HomeSection() {
                       <span>11,5%</span>
                       <p>Financiado por  <stron>2552</stron> inversores</p>
                     </div>
-                    <div className={styless.swiper_slide_footer}>
-                      <div className={styless.swiper_button}>
-                        <span>Ver proyecto</span>
-                      </div>
-                    </div>
                   </SwiperSlide>
-                  
                   <SwiperSlide className={styless.swiper_slide}>
                     <div className={styless.swiper_slide_header}>
-                      <Image src={Image_} width={300} height={200}  />
+                      <Image src={Img3} width={300} height={200}  />
                     </div>
                     <div className={styless.swiper_slide_body}>
                       <h1>Chalet en Palma</h1>
@@ -91,38 +75,9 @@ function HomeSection() {
                       <span>11,5%</span>
                       <p>Financiado por  <stron>2552</stron> inversores</p>
                     </div>
-                    <div className={styless.swiper_slide_footer}>
-                      <div className={styless.swiper_button}>
-                        <span>Ver proyecto</span>
-                      </div>
-                    </div>
                   </SwiperSlide>
-                  
-                  <SwiperSlide className={styless.swiper_slide}>
-                    <div className={styless.swiper_slide_header}>
-                      <Image src={Image_} width={300} height={200}  />
-                    </div>
-                    <div className={styless.swiper_slide_body}>
-                      <h1>Chalet en Palma</h1>
-                      <h2>1.360.000 €</h2>
-                      <h3>Rentabilidad</h3>
-                      <span>11,5%</span>
-                      <p>Financiado por  <stron>2552</stron> inversores</p>
-                    </div>
-                    <div className={styless.swiper_slide_footer} onClick={go}>
-                      <div className={styless.swiper_button} >
-                        <span>Ver proyecto</span>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  
-
-                  
-                </Swiper>
-              </div>
-
-              <div className={styles.empty_div_s4}>
-
+                 
+       {/*          </Swiper> */}
               </div>
             </div>
             <div className={styles.page_section_footer}></div>
