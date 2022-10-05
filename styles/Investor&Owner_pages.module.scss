@@ -4,10 +4,10 @@
   }  
   
   .section {
-    min-height: 100vh;
+    min-height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
     perspective: 500px;
@@ -53,7 +53,6 @@
   .page_section_container{
     display: grid;
     width: 100%;
-    min-height: 70vh;
     grid-template: 
       "header" auto
       "body"  auto
@@ -181,6 +180,8 @@
     background-image: url('../public/images/pages_images/view-of-palma-mallorca-cathedral-by-night-spain-europe.jpg');
     background-size: cover;
     background-position-y: top;
+    min-height: 100vh;
+    justify-content: flex-end;
   }
 
   .call_to_action_container_s1{
@@ -226,8 +227,12 @@
     }
   }
 
-  .s2, .s3, .s4, .s5, .s6, .s7{
+  .s2, .s3, .s4, .s5, .s6, .s7, .s8{
     background-color: var(--whitegray);
+  }
+
+  .s7{
+    min-height: 100vh;
   }
 
 
@@ -401,8 +406,6 @@
 
   @media only screen and (min-width: 992px){
     .section{
-      padding-top: 12vh;
-
       & .section_arrows{
          display: block;
       }
@@ -418,13 +421,13 @@
       justify-content: flex-start;
       text-align: left;
       & h1{
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
     }
 
     .page_section_body{
       width: 80vw;
-      grid-template: "left right"/ 700px auto;
+      grid-template: "left right" / 700px auto;
     }   
 
     .page_section_body_s2{
@@ -433,7 +436,7 @@
 
     .page_section_body_01{
       width: 80vw;
-      grid-template: "left right" / 1fr auto;
+      grid-template: "left right" / 500px auto;
     }
     .page_section_body_02{
       width: 80vw;
@@ -468,11 +471,9 @@
     }
 
     .logo_container{
-      width: 500px;
+      width: 100%;
       border-radius: 10px;
-      background-color: #fff;
-      box-shadow:  10px 10px 30px #dadada,
-      -10px -10px 30px #ffffff;
+      background-color: var(--whitegray);
     }
 
     .form_container{

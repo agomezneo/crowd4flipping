@@ -8,7 +8,7 @@ function HomeSection() {
         <div className={styles.page_section_container}>
             <div className={styles.page_section_header}>
             </div>
-            <div className={styles.page_section_body}>
+            <div className={`${styles.page_section_body} ${styles.page_section_body_form} `}>
               <div className={styles.box_1}>
                 <Form />
               </div>
@@ -20,4 +20,4 @@ function HomeSection() {
   )
 }
 
-export default HomeSection
+export default HomeSection 
