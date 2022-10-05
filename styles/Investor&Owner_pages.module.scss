@@ -4,7 +4,7 @@
   }  
   
   .section {
-    min-height: fit-content;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -177,11 +177,12 @@
 
 
   .s1{
-    background-image: url('../public/images/pages_images/view-of-palma-mallorca-cathedral-by-night-spain-europe.jpg');
+   /*  background-image: url('../public/images/pages_images/view-of-palma-mallorca-cathedral-by-night-spain-europe.jpg'); */
     background-size: cover;
     background-position-y: top;
     min-height: 100vh;
     justify-content: flex-end;
+    background-color: #000000;
   }
 
   .call_to_action_container_s1{
@@ -365,6 +366,8 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 1rem;
+    min-height: 70vh;
+    align-items: center;
   }
 
   .empty_s6{
