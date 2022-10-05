@@ -4,10 +4,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--white);
+    background-color: var(--whitegray);
+    padding: 10px;
 }
 
 .paper{
+    background-color: var(--whitegray);
+    box-shadow: none;
     padding: 10px;
     & h2{
         color: var(--blue);

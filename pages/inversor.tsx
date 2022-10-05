@@ -21,13 +21,44 @@ function useParallax(value: MotionValue<number>, distance: number) {
 function HomeSection({id, css, children}) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 200);
+  const y = useParallax(scrollYProgress, 300);
+
+  console.log(y)
 
   return (
     <section className={`${styles.section} ${css}`} id={id}>  
       <div ref={ref}>
           {children}
       </div>
+      <motion.div 
+        style={{ y }}
+        className={styles.section_arrows}
+      > 
+
+        {id === 1 ? 
+        (
+          <a href={`#${id + 1}`}> <BsFillArrowDownSquareFill className={styles.arrow_icon} /> </a>
+        )
+          : 
+        (
+          id != 8 ? 
+            (
+              <div className={styles.arrow_icon_container}>
+                <a href={`#${id - 1}`}> <BsFillArrowUpSquareFill className={styles.arrow_icon} /> </a>
+                <a href={`#${id + 1}`}> <BsFillArrowDownSquareFill className={styles.arrow_icon} /> </a>
+              </div>
+            )
+            :
+            (
+             <div className={styles.arrow_icon_container} >
+               <a href={`#${id - 1}`}> <BsFillArrowUpSquareFill className={styles.arrow_icon} /> </a>
+               <a href={`#${1}`}> <BsFillSignpostSplitFill className={styles.arrow_icon} /> </a>
+             </div>
+            )
+        )
+        } 
+
+      </motion.div>
     </section>
   );
 }

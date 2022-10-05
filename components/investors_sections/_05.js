@@ -40,7 +40,7 @@ function HomeSection() {
                   modules={[EffectCoverflow, Pagination]}
                   className={styless.swiper}
                 > */}
-                  <SwiperSlide className={styless.swiper_slide}>
+                  <div className={styless.swiper_slide}>
                     <div className={styless.swiper_slide_header}>
                       <Image src={Img} width={300} height={200}  />
                     </div>
@@ -51,8 +51,32 @@ function HomeSection() {
                       <span>11,5%</span>
                       <p>Financiado por  <stron>2552</stron> inversores</p>
                     </div>
-                  </SwiperSlide>
-                  <SwiperSlide className={styless.swiper_slide}>
+                  </div>
+                  <div className={styless.swiper_slide}>
+                    <div className={styless.swiper_slide_header}>
+                      <Image src={Img2} width={300} height={200}  />
+                    </div>
+                    <div className={styless.swiper_slide_body}>
+                      <h1>Chalet en Palma</h1>
+                      <h2>1.360.000 €</h2>
+                      <h3>Rentabilidad</h3>
+                      <span>11,5%</span>
+                      <p>Financiado por  <stron>2552</stron> inversores</p>
+                    </div>
+                  </div>
+                  <div className={styless.swiper_slide}>
+                    <div className={styless.swiper_slide_header}>
+                      <Image src={Img3} width={300} height={200}  />
+                    </div>
+                    <div className={styless.swiper_slide_body}>
+                      <h1>Chalet en Palma</h1>
+                      <h2>1.360.000 €</h2>
+                      <h3>Rentabilidad</h3>
+                      <span>11,5%</span>
+                      <p>Financiado por  <stron>2552</stron> inversores</p>
+                    </div>
+                  </div>
+                  {/* <SwiperSlide className={styless.swiper_slide}>
                     <div className={styless.swiper_slide_header}>
                       <Image src={Img2} width={300} height={200}  />
                     </div>
@@ -75,7 +99,7 @@ function HomeSection() {
                       <span>11,5%</span>
                       <p>Financiado por  <stron>2552</stron> inversores</p>
                     </div>
-                  </SwiperSlide>
+                  </SwiperSlide> */}
                  
        {/*          </Swiper> */}
               </div>

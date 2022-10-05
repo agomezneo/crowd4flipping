@@ -7,7 +7,7 @@ function HomeSection() {
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
             <div className={styles.page_section_header}>
-                <h1>¿Quieres ser el primero en enterarte de la <span>próxima oportunidad inmobiliaria</span> ?</h1>
+                <h1>¿Quieres ser el primero en enterarte de la <br/> <span>próxima oportunidad inmobiliaria</span> ?</h1>
             </div>
             <div className={styles.page_section_body}>
               <div className={styles.form_container}>

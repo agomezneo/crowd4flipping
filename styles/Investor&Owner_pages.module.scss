@@ -12,13 +12,55 @@
     position: relative;
     perspective: 500px;
     background-color: var(--white);
-    border-top: 5px solid var(--white);
     padding-top: 20px;
     & .section_arrows{
       position: absolute;
-      right: 1vw;
+      right: 5vw;
       display: none;
+      bottom: 0;
     }
+  }
+
+
+  .video_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    & video{
+      width: 100%;
+    }
+  }
+
+  .page_grid_container{
+    z-index: 10;
+    height: 100%;
+
+    display: grid;
+    grid-template:
+      "leftcontainer "
+      "rightcontainer "
+    ;
+    width: 100vw;
+  }
+
+  .right_container{
+    height: 20vh;
+    background-color: #ffb100;
+    grid-area: rightcontainer;
+    z-index: 100000;
+   
+  }
+  
+  .left_container{
+    grid-area: leftcontainer;
+    border-radius: 0% 100% 75% 25% / 50% 75% 25% 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    z-index: 100000;
+
   }
   
   .img {
@@ -49,6 +91,11 @@
     min-width: 300px;
   }
 
+  .page_section{
+    /* min-height: 100vh; */
+    display: grid;
+    place-content: center;
+  }
 
   .page_section_container{
     display: grid;
@@ -252,9 +299,7 @@
     flex-direction: column;
     justify-content: center;
     background-image: url('../public/images/pages_images/grow_invesment_02_03.png');
-    background-size: cover;
-    background-position-y: bottom;
-    background-position-x: right;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     min-height: 50vh;
@@ -293,7 +338,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 5px;
+    padding: 15px;
     width: 100%;
   }
 
@@ -445,6 +490,14 @@
       width: 80vw;
       grid-template: "left right" / 500px auto;
     }
+
+    .page_grid_container{
+      width: 80vw;
+      grid-template:
+      "leftcontainer rightcontainer" / 500px auto
+    ;
+    }
+  
 
     .page_section_body_flex{
       width: 80vw;

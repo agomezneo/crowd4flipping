@@ -19,14 +19,13 @@ function HomeSection() {
                 </div>
                 <div className={styles.horizontal_steper_container}>
                   <Steper data={MaterialHorizontalData}/>
+                  <ModalButton > 
+                    <Form />
+                  </ModalButton>
                 </div>
-              
             </div>
             <div className={styles.page_section_footer}>
               <div className={styles.footer_left}>
-                <ModalButton > 
-                  <Form />
-                </ModalButton>
               </div>
               <div className={styles.footer_right}>
 

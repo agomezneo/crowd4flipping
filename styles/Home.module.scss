@@ -26,11 +26,12 @@
   .right{
     grid-area: right;
   }
+
   .left{
     grid-area: left;
-    border-radius: 0% 100% 75% 25% / 50% 75% 25% 50%;
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+    height: 100vh;
   }
   
   .explore_btn {
