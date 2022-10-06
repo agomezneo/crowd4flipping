@@ -13,17 +13,12 @@ function HomeSection() {
                 <h1>¿Por qué <strong>invertir en inmuebles con  <span>Crowd</span>4<span>Flipping</span></strong> ? </h1>
             </div>
             <div className={styles.page_section_body_01}>
-
               <div className={styles.empty_div_s4} />
               <div className={styles.steps_container}>
-                 
-                   
-                      <Steper 
-                        data={Data}
-                      />
-                
+                <Steper 
+                  data={Data}
+                />
               </div>
-
             </div>
             <div className={styles.page_section_footer}></div>
         </div>

@@ -9,11 +9,11 @@ function HomeSection() {
             <div className={styles.page_section_header}>
                 <h1>Sin complicaciones <span>ni letra pequeña</span>. <br/> Te lo podemos decir más alto, <span> pero no más claro. </span> [FAQS]</h1>
             </div>
-            <div className={styles.page_section_body_02}>
-              <div className={styles.empty_div} />
-              <div className={styles.right}>
+            <div className={styles.page_section_body}>
+              <div className={styles.acordion_container}>
                 <BasicAccordion />
               </div>
+              <div className={styles.empty_div} />
             </div>
             <div className={styles.page_section_footer}></div>
         </div>

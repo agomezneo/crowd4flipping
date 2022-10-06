@@ -14,7 +14,6 @@ function HomeSection() {
                 <h2>Te lo haremos saber de <span>inmediato</span>.</h2>
                 <InvestmentForm  />
               </div>
-
               <div className={styles.empty_s6}/>
             </div>
             <div className={styles.page_section_footer}></div>

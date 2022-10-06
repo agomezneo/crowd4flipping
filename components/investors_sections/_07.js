@@ -14,7 +14,15 @@ function HomeSection() {
             <div className={styles.page_section_header}>
                 <h1>¿Qué dicen <span>nuestros clientes</span>?</h1>
             </div>
-            <div className={styles.page_section_body_01}>
+            <div className={styles.page_section_body}>
+
+              <div className={styles.s5_body_container_left}>
+                <div className={styles.logo_container}>
+                  <Image src={Logo} width={900} height={372} alt='Crowd for Flipping logo'/>
+                  <RefconLogo />
+                </div>
+              </div>
+              
               <div className={styles.s5_body_container}>
                 <div className={styles.container_habitisimo}>
                   <div className={styles.call_to_action_habitisshmo}>
@@ -41,12 +49,7 @@ function HomeSection() {
                 </div>
                 <Opiniones />
               </div>
-              <div className={styles.s5_body_container}>
-                <div className={styles.logo_container}>
-                  <Image src={Logo} width={900} height={372} alt='Crowd for Flipping logo'/>
-                  <RefconLogo />
-                </div>
-              </div>
+
             </div>
             <div className={styles.page_section_footer}>
               

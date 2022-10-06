@@ -11,6 +11,7 @@ function HomeSection() {
                 <h1>¿Qué hacemos en <span>Crowd</span>4<span>Flipping</span>?</h1>
             </div>
             <div className={styles.page_section_body}>
+
               <div className={styles.horizontal_steper_container}>
                 {HorizontalStepsData.map((item, index) =>{
                   return(
@@ -23,7 +24,9 @@ function HomeSection() {
                   )
                 } )}
               </div>
+
               <div className={styles.s3_empty_div} />
+              
             </div>
             <div className={styles.page_section_footer}>
              
