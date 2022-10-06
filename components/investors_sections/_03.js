@@ -3,6 +3,10 @@ import styles from '../../styles/Investor&Owner_pages.module.scss'
 import HorizontalSteper from '../../components/stepers/HorizontalSteper'
 import { HorizontalStepsData } from '../../data/cards/StepCardsData'
 
+import Steper from '../stepers/VerticalMUI';
+
+
+
 function HomeSection() {
   return (
    <div className={styles.page_section}>
@@ -13,7 +17,8 @@ function HomeSection() {
             <div className={styles.page_section_body}>
 
               <div className={styles.horizontal_steper_container}>
-                {HorizontalStepsData.map((item, index) =>{
+
+                {/* {HorizontalStepsData.map((item, index) =>{
                   return(
                     <HorizontalSteper
                       key={index} 
@@ -22,7 +27,11 @@ function HomeSection() {
                       text={item.text}
                     />
                   )
-                } )}
+                } )} */}
+
+
+                <Steper data={HorizontalStepsData} />
+
               </div>
 
               <div className={styles.s3_empty_div} />

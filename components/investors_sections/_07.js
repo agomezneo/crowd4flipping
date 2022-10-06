@@ -24,9 +24,19 @@ function HomeSection() {
               </div>
               
               <div className={styles.s5_body_container}>
+                <Opiniones />
                 <div className={styles.container_habitisimo}>
                   <div className={styles.call_to_action_habitisshmo}>
                     <div className={styles.rate_opnions}>
+                      <a 
+                        className={styles.habitissimo_link}
+                        href='https://empresas.habitissimo.es/pro/refcon/opiniones'
+                        target="_blank" 
+                        rel="noreferrer"
+                      >
+                        <span> Ver 119 opiniones</span> 
+                        <Image src={habitissimo_img} width={200} height={30} alt='Logo Habitissimo' />
+                      </a>
                       <h3>4.8/5</h3>
                       <div className={styles.stars_container}>
                         <FaStar className={styles.star}/>
@@ -35,19 +45,10 @@ function HomeSection() {
                         <FaStar className={styles.star}/>
                         <FaStar className={styles.star}/>
                       </div>
-                      <a 
-                        className={styles.habitissimo_link}
-                        href='https://empresas.habitissimo.es/pro/refcon/opiniones'
-                        target="_blank" 
-                        rel="noreferrer"
-                      >
-                        <span> Ver 119 opiniones</span> 
-                        <Image src={habitissimo_img} width={170} height={30} alt='Logo Habitissimo' />
-                      </a>
+                     
                     </div>
                   </div>
                 </div>
-                <Opiniones />
               </div>
 
             </div>

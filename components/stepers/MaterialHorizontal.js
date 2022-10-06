@@ -12,7 +12,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 export default function HorizontalLabelPositionBelowStepper({data}) {
   return (
     <Box sx={{ width: '100%' }}>
-      <Stepper activeStep={10} alternativeLabel>
+      <Stepper activeStep={10} alternativeLabel >
         {data.map((item, key) => {
             return(
                 <Step 

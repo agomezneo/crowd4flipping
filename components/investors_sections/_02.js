@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../../styles/Investor&Owner_pages.module.scss'
 import {StepsData} from '../../data/cards/StepCardsData';
-import Steper from '../stepers/MaterialHorizontal';
+import Steper from '../stepers/MaterialHorizontal'; 
 
 
 function HomeSection() {

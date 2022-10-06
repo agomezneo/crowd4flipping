@@ -14,16 +14,13 @@ function InvestmentForm({type}) {
     <div className={styles.InvestmentForm}>
         <div className={styles.investment_form_container}>
             <div className={styles.input_container}>
-                <span>Nombre</span>
-                <input type='text' name='name' value={state.name} />
+                <input type='text' name='name' value={state.name} placeholder='Nombre...' />
             </div>
             <div className={styles.input_container}>
-                <span>Email</span>
-                <input type='text' name='name' value={state.email} />
+                <input type='text' name='name' value={state.email} placeholder='Email...' />
             </div>
             <div className={styles.input_container}>
-                <span>Número</span>
-                <input type='text' name='name' value={state.phone} />
+                <input type='text' name='name' value={state.phone} placeholder='Número...' />
             </div>
             <div className={styles.input_container}>
                 <div className={styles.button}>Enviar </div>
