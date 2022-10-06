@@ -3,7 +3,7 @@ import styles from '../../styles/Investor&Owner_pages.module.scss'
 import Logo from '../../public/images/brand/crowd4flipping/PNG_Files/Transparent_Logo_02.png';
 import Image from 'next/image';
 import Opiniones from '../../components/carrousels/OpinionesHabitisimo';
-import habitissimo_img from '../../public/images/habitissimo.jpeg'
+import habitissimo_img from '../../public/images/brand/habitissimo_logo.png'
 import { FaStar } from "react-icons/fa";
 import RefconLogo from '../logos/RefconLogo';
 
@@ -26,7 +26,6 @@ function HomeSection() {
               <div className={styles.s5_body_container}>
                 <div className={styles.container_habitisimo}>
                   <div className={styles.call_to_action_habitisshmo}>
-                    <Image src={habitissimo_img} height={70} width={300} alt='Logo Habitissimo' />
                     <div className={styles.rate_opnions}>
                       <h3>4.8/5</h3>
                       <div className={styles.stars_container}>
@@ -42,7 +41,8 @@ function HomeSection() {
                         target="_blank" 
                         rel="noreferrer"
                       >
-                        <span> Ver 119 opiniones  </span>
+                        <span> Ver 119 opiniones</span> 
+                        <Image src={habitissimo_img} width={170} height={30} alt='Logo Habitissimo' />
                       </a>
                     </div>
                   </div>
