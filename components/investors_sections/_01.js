@@ -23,7 +23,7 @@ function HomeSection() {
                 delay: 0.2,
                 duration: 0.75,
               }}
-              className={`${styless.explore_page_hero_container} ${styless.left}`}
+              className={`${styless.explore_page_hero_container} ${styless.left} ${styles.s1_background}`}
             >
               <div className={styless.logo_container}>
                 <Image src={Logo} width={700} height={300} alt='Crowd for Flipping' />
@@ -48,35 +48,6 @@ function HomeSection() {
             >
           </motion.div>   
         </div>
-        {/* <div className={styles.page_grid_container}>
-            <div className={styles.left_container}>
-              <div className={styles.page_section_header}>
-              </div>
-              <div className={styles.page_section_body}>
-                <div className={styles.call_to_action_container_s1}>
-                  <h1><strong>Inversión inmobiliaria <span>desde 500€</span></strong></h1>
-                  <h2> Recibe una rentabilidad por proyecto y <span>beneficiate de la plusvalía inmobiliaria.</span> </h2>
-                  <a href='#8' className={styles.call_to_action_button}>
-                      <span>¡ Quiero invertir !</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className={styles.right_container}>
-              <div className={styles.page_section_header}>
-              </div>
-              <div className={styles.page_section_body}>
-                <div className={styles.call_to_action_container_s1}>
-                  <h1><strong>Inversión inmobiliaria <span>desde 500€</span></strong></h1>
-                  <h2> Recibe una rentabilidad por proyecto y <span>beneficiate de la plusvalía inmobiliaria.</span> </h2>
-                  <a href='#8' className={styles.call_to_action_button}>
-                      <span>¡ Quiero invertir !</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-        </div> */}
       </div>
     </>
   )
