@@ -6,8 +6,6 @@ import Logo from '../../public/images/brand/crowd4flipping/PNG_Files/Transparent
 import Link from 'next/link';
 import Image from 'next/image';
 
-/* import background_video from '../../public/videos/real_state.mp4'; */
-
 function HomeSection() {
   return (
     <>
@@ -46,7 +44,7 @@ function HomeSection() {
               }}
               className={`${styless.explore_page_hero_container} ${styless.right}`}
             >
-          </motion.div>   
+            </motion.div>   
         </div>
       </div>
     </>

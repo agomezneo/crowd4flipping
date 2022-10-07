@@ -4,7 +4,7 @@
   }  
   
   .section {
-    display: flex;
+    display: flex; 
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -12,11 +12,19 @@
     perspective: 500px;
     background-color: var(--white);
     padding-top: 20px;
+
     & .section_arrows{
       position: absolute;
       right: 5vw;
       display: none;
       bottom: 0;
+    }
+
+    & .parallax_buttons{
+      bottom: -40vh;
+      right: 10vw;
+      background-color: #ffb100;
+      position: absolute;
     }
   }
 
@@ -268,7 +276,10 @@
   .page_section_footer{
     grid-area: footer;
     display: grid;
-    
+    grid-template: 
+      "footer_left_side"
+      "footer_right_side"
+    ;
     & h1{
       font-size: 2rem;
       color: var(--white);
@@ -277,6 +288,32 @@
         color: var(--blue);
       }
     }
+  }
+
+  .footer_left_side{
+    grid-area: footer_left_side;
+    
+
+  }
+  .footer_right_side{
+    grid-area: footer_right_side;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .modal_button_secundary{
+    width: fit-content;
+    padding: 0 10px 0 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 500;
+    border-radius: 5px;
+    box-shadow: -1px -1px 2px rgba(0, 0, 0, .3); 
+    & span{
+        font-size: 1.2rem;
+    } 
   }
 
   .s2, .s4, .s5,  .s7{
@@ -516,6 +553,9 @@
     }
 
     .page_section_footer{
+      grid-template: 
+      "footer_left_side footer_right_side" / 1fr 1fr
+    ;
       & h1{
         font-size: 3rem;
       }
@@ -546,7 +586,7 @@
     .logo_container{
       width: 100%;
       border-radius: 10px;
-      padding: 2rem 3rem 2rem 0rem;
+      padding: 2rem 5rem 2rem 0rem;
     }
 
     .form_container{

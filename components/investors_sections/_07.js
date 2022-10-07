@@ -34,8 +34,8 @@ function HomeSection() {
                         target="_blank" 
                         rel="noreferrer"
                       >
-                        <span> Ver 119 opiniones</span> 
                         <Image src={habitissimo_img} width={200} height={30} alt='Logo Habitissimo' />
+                        <span> Ver 119 opiniones</span> 
                       </a>
                       <h3>4.8/5</h3>
                       <div className={styles.stars_container}>

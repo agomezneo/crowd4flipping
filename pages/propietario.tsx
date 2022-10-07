@@ -29,7 +29,9 @@ function HomeSection({id, css, children}) {
 
         {id === 1 ? 
         (
-          <a href={`#${id + 1}`}> <BsFillArrowDownSquareFill className={styles.arrow_icon} /> </a>
+          <div className={styles.arrow_icon_container}>
+            <a href={`#${id + 1}`}> <BsFillArrowDownSquareFill className={styles.arrow_icon} /> </a>
+          </div>
         )
           : 
         (
@@ -49,8 +51,8 @@ function HomeSection({id, css, children}) {
             )
         )
         } 
-
       </motion.div>
+     
     </section>
   );
 }

@@ -26,8 +26,8 @@ export default function ModalButton({children}) {
 
   return (
     <>
-        <div className={styles.modal_button} onClick={open}>
-            <span>Infórmate gratis</span>
+        <div className={styles.modal_button_secundary} onClick={open}>
+            <span>Lista de espera</span>
         </div>
         <motion.div 
             className={styles.modal_container}

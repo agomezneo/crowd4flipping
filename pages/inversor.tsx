@@ -21,9 +21,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
 function HomeSection({id, css, children}) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 300);
-
-  console.log(y)
+  const y = useParallax(scrollYProgress, 250);
 
   return (
     <section className={`${styles.section} ${css}`} id={id}>  
@@ -36,8 +34,10 @@ function HomeSection({id, css, children}) {
       > 
 
         {id === 1 ? 
-        (
-          <a href={`#${id + 1}`}> <BsFillArrowDownSquareFill className={styles.arrow_icon} /> </a>
+        ( 
+          <div className={styles.arrow_icon_container}>
+            <a href={`#${id + 1}`}> <BsFillArrowDownSquareFill className={styles.arrow_icon} /> </a>
+          </div>
         )
           : 
         (
@@ -57,7 +57,9 @@ function HomeSection({id, css, children}) {
             )
         )
         } 
+        <motion.div>
 
+        </motion.div>
       </motion.div>
     </section>
   );
