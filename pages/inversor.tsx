@@ -11,8 +11,7 @@ import Section06 from '../components/investors_sections/_06';
 import Section07 from '../components/investors_sections/_07';
 import Section08 from '../components/investors_sections/_08';
 import Footer from '../components/footers';
-
-import { BsArrowBarUp, BsArrowBarDown,  BsFillArrowDownSquareFill, BsFillSignpostSplitFill} from 'react-icons/bs';
+import { BsArrowBarUp, BsArrowBarDown,  BsFillArrowDownSquareFill,  BsFillSignpostSplitFill} from 'react-icons/bs';
 import {RiWhatsappLine, RiPhoneLine, RiCalendarEventFill} from 'react-icons/ri'
 
 function useParallax(value: MotionValue<number>, distance: number) { 
@@ -128,11 +127,9 @@ export default function App() {
       <HomeSection id={4} css={styles.s4}>
         <Section04 />
       </HomeSection>
-
       <HomeSection id={5} css={styles.s5}>
         <Section05 />
       </HomeSection>
-
       <HomeSection id={6} css={styles.s6}>
         <Section06 />
       </HomeSection>

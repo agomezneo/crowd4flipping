@@ -7,7 +7,7 @@ function Layout({children}) {
     <div>
          <Head>
             <title>Crowd4Flipping</title>
-            <meta name="description" content="Academia de Criptomonedas en Mallorca. Recorremos juntos el mundo de la Blockchain. ¡Apúntate a nuestras charlas de Cripto gratuitas cada semana." />
+            <meta name="description" content="La inversión inmobiliaria al alcance de todos" />
             <link rel="icon" href="/images/brand/crowd4flipping/Favicon/favicon_transparent.png" />
         </Head>
         <div className={styles.Layout}>
