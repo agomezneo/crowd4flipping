@@ -299,8 +299,8 @@
     grid-area: footer;
     display: grid;
     grid-template: 
-      "footer_left_side"
-      "footer_right_side"
+      "footer_left_side" 1fr
+      "footer_right_side" 1fr
     ;
     & h1{
       font-size: 2rem;
@@ -320,12 +320,12 @@
   .footer_right_side{
     grid-area: footer_right_side;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .modal_button_secundary{
     width: fit-content;
-    padding: 0 10px 0 10px;
+    padding: 5px 10px 5px 10px;
     display: flex;
     align-items: center;
     background-color: var(--blue);
@@ -581,6 +581,10 @@
       & h1{
         font-size: 3rem;
       }
+    }
+
+    .footer_right_side{
+      justify-content: flex-end;
     }
     .steps_container{
       border-radius: 15px;

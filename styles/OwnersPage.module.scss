@@ -90,7 +90,8 @@
 
     display: grid;
     grid-template: 
-        "footerleft footerright" / 1fr 1fr
+        "footerleft" 1fr
+        "footerright" 1fr
     ;
 }
 
@@ -227,6 +228,12 @@
 
     .page_section_body_s2{
         width: 80vw;
+    }
+
+    .page_section_footer{
+        grid-template: 
+        "footerleft footerright" / 1fr 1fr
+    ;
     }
     
 }
