@@ -12,7 +12,8 @@ import Section07 from '../components/investors_sections/_07';
 import Section08 from '../components/investors_sections/_08';
 import Footer from '../components/footers';
 
-import {BsFillArrowDownSquareFill, BsFillArrowUpSquareFill, BsFillSignpostSplitFill} from 'react-icons/bs'
+import { BsArrowBarUp, BsArrowBarDown,  BsFillArrowDownSquareFill, BsFillSignpostSplitFill} from 'react-icons/bs';
+import {RiWhatsappLine, RiPhoneLine, RiCalendarEventFill} from 'react-icons/ri'
 
 function useParallax(value: MotionValue<number>, distance: number) { 
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -44,15 +45,53 @@ function HomeSection({id, css, children}) {
           id != 8 ? 
             (
               <div className={styles.arrow_icon_container}>
-                <a href={`#${id - 1}`}> <BsFillArrowUpSquareFill className={styles.arrow_icon} /> </a>
-                <a href={`#${id + 1}`}> <BsFillArrowDownSquareFill className={styles.arrow_icon} /> </a>
+
+                <a href={`#${id - 1}`}> 
+                  <BsArrowBarUp className={styles.arrow_icon} /> 
+                </a>
+
+                <a href={`#${id - 1}`}> 
+                  <RiPhoneLine className={`${styles.arrow_icon} ${styles.arrow_icon_phone}`} /> 
+                </a>
+
+                <a href={`#${id + 1}`}> 
+                  <RiCalendarEventFill className={styles.arrow_icon} /> 
+                </a>
+
+                <a href={`#${id - 1}`}> 
+                  <RiWhatsappLine className={`${styles.arrow_icon} ${styles.arrow_icon_whatsapp}`} /> 
+                </a>
+
+                <a href={`#${id + 1}`}> 
+                  <BsArrowBarDown className={styles.arrow_icon} /> 
+                </a>
+
               </div>
             )
             :
             (
              <div className={styles.arrow_icon_container} >
-               <a href={`#${id - 1}`}> <BsFillArrowUpSquareFill className={styles.arrow_icon} /> </a>
-               <a href={`#${1}`}> <BsFillSignpostSplitFill className={styles.arrow_icon} /> </a>
+
+              <a href={`#${id - 1}`}> 
+                <BsArrowBarUp  className={styles.arrow_icon} />
+              </a>
+
+              <a href={`#${id - 1}`}> 
+                <RiPhoneLine className={`${styles.arrow_icon} ${styles.arrow_icon_phone}`} /> 
+              </a>
+
+              <a href={`#${id + 1}`}> 
+                <RiCalendarEventFill className={styles.arrow_icon} /> 
+              </a>
+
+              <a href={`#${id - 1}`}> 
+                <RiWhatsappLine className={`${styles.arrow_icon} ${styles.arrow_icon_whatsapp}`} /> 
+              </a>
+
+              <a href={`#${1}`}> 
+                <BsFillSignpostSplitFill className={styles.arrow_icon} />
+              </a>
+
              </div>
             )
         )

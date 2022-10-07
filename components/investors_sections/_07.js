@@ -53,7 +53,7 @@ function HomeSection() {
 
             </div>
             <div className={styles.page_section_footer}>
-              
+                
             </div>
         </div>
     </div>

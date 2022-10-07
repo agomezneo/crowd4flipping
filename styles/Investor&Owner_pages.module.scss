@@ -15,16 +15,48 @@
 
     & .section_arrows{
       position: absolute;
-      right: 5vw;
+      right: 3vw;
       display: none;
       bottom: 0;
+      font-size: 2rem;
     }
 
-    & .parallax_buttons{
-      bottom: -40vh;
-      right: 10vw;
-      background-color: #ffb100;
-      position: absolute;
+    & .arrow_icon_container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      height: fit-content;
+      padding: .5rem;
+      width: fit-content;
+      border-radius: 10px;
+      background: linear-gradient(315deg, #ffffff, #e4e4e4);
+      box-shadow:  -5px -5px 12px #e6e6e6,
+                   5px 5px 12px #ffffff;
+    }
+  
+    & .arrow_icon{
+      font-size: 2rem;
+      color: var(--white);
+      box-shadow: -1.5px -1.5px 3px rgba($color: #000000, $alpha: .3);
+      border-radius: 5px;
+      background-color: var(--blue);
+      padding: 3px;
+      transition: .3s all;
+    }
+    & .arrow_icon_whatsapp{
+      color: var(--white);
+      background-color: #25d366;
+    }
+    & .arrow_icon_phone{
+      background-color: var(--white);
+      color: var(--blue);
+    }
+
+    & .arrow_icon:hover{
+      box-shadow: -.5px -.5px 1px rgba($color: #000000, $alpha: .3);
+      padding: 5px;
     }
   }
 
@@ -118,17 +150,7 @@
     ;
   }
 
-  .arrow_icon_container{
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-  }
-
-  .arrow_icon{
-    font-size: 2rem;
-    color: var(--blue);
-  }
-
+  
 
   .page_section_header{
     grid-area: header;
