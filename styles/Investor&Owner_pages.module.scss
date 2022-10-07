@@ -135,7 +135,6 @@
   }
 
   .page_section{
-    /* min-height: 100vh; */
     display: grid;
     place-content: center;
   }
@@ -251,9 +250,13 @@
   }
 }
 
-.steps_container::-webkit-scrollbar {
-  display: none;
-} 
+.steps_container::-webkit-scrollbar{
+    height: 3px;
+}
+.steps_container::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  border-radius: 20px;
+}
 
 
   .s1{

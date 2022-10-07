@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from '../../styles/Investor&Owner_pages.module.scss';
 import {StepsData} from '../../data/cards/StepCardsData';
 import Steper from '../stepers/MaterialHorizontal'; 
-
+import {motion} from 'framer-motion'
 import ModalButton from '../buttons/ModalButtonSecundary';
 import InvestmentForm from '../forms/InvestmentForm';
 
 function HomeSection() {
+
+
 
   return (
     <div className={styles.page_section}>
@@ -15,9 +17,15 @@ function HomeSection() {
                 <h1><span>Sácale partido  a tu dinero </span> con estos sencillos pasos</h1>
             </div>
             <div className={styles.page_section_body_s2}>
-              <div className={styles.steps_container}>
+              <motion.div 
+                className={styles.steps_container} 
+                id='step_container'
+               /*  initial={{x: '100vw'}}
+                animate={{x: 0}}
+                transition={{type: 'spring', delay: 0.6}} */
+              >
                 <Steper data={StepsData} /> 
-              </div>
+              </motion.div>
             </div>
             <div className={styles.page_section_footer}>
                 <div className={styles.footer_left_side}></div>
