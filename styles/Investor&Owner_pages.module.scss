@@ -31,9 +31,9 @@
       padding: .5rem;
       width: fit-content;
       border-radius: 10px;
-      background: linear-gradient(315deg, #ffffff, #e4e4e4);
-      box-shadow:  -5px -5px 12px #e6e6e6,
-                   5px 5px 12px #ffffff;
+      background: #fdfdfd;
+      box-shadow:  5px 5px 12px #e6e6e6,
+             -5px -5px 12px #ffffff;
     }
   
     & .arrow_icon{
@@ -61,7 +61,7 @@
   }
 
   .s1_background{
-    background: rgba(255, 255, 255, 0.2);
+    background-color: rgb(0, 0, 0, 0.3);
   }
   .video_container{
     position: absolute;
@@ -536,6 +536,10 @@
       & .section_arrows{
          display: block;
       }
+    }
+
+    .s1_background{
+    background: rgba(255, 255, 255, 0.8);
     }
 
     .page_section_container_s2{

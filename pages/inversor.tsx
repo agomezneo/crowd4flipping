@@ -109,7 +109,7 @@ export default function App() {
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 1000,
     damping: 70,
-    restDelta: 0.01
+    restDelta: 0.1
   });
 
   return (
