@@ -7,12 +7,19 @@ import {MaterialHorizontalData} from '../../data/cards/StepCardsData'
 import styles from '../../styles/Steper.module.scss';
 import Image from 'next/image';
 import SettingsIcon from '@mui/icons-material/Settings';
+import  {BsArrowBarRight} from 'react-icons/bs'
 
 
 export default function HorizontalLabelPositionBelowStepper({data}) {
+
   return (
     <Box sx={{ width: '100%' }}>
-      <Stepper activeStep={10} alternativeLabel >
+     {/*    <div className={styles.arrow_steper_container}>
+            <BsArrowBarRight />
+        </div> */}
+      <Stepper activeStep={10} alternativeLabel 
+      >
+      
         {data.map((item, key) => {
             return(
                 <Step 
@@ -23,7 +30,7 @@ export default function HorizontalLabelPositionBelowStepper({data}) {
                     <div className={styles.step_image}>
                         <Image src={item.image} width={100} height={100} alt={item.text} />
                     </div>
-                   
+                  
                     <StepLabel >
                         <span className={styles.step_title}> {item.title} </span><br/>
                         <p className={styles.step_p}> {item.text} </p>

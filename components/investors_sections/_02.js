@@ -5,10 +5,40 @@ import Steper from '../stepers/MaterialHorizontal';
 import {motion} from 'framer-motion'
 import ModalButton from '../buttons/ModalButtonSecundary';
 import InvestmentForm from '../forms/InvestmentForm';
-
 function HomeSection() {
 
+  const [eleTarget, setEletarget] = useState(null);
+  const [active, setActive] = useState(false);
+  useEffect(()=>{
+    const doc = window.document;
+    setEletarget(doc.getElementById('steps_container'))
+  },[]);
 
+  const setElementEffect = (ele, setActive) =>{
+    let ele_hight = ele?.offsetTop;
+    window.addEventListener("scroll", ()=>{
+      if(window.scrollY < ele_hight){return setActive(false)}
+      if(window.scrollY > ele_hight - 200){
+        return setActive(true);
+      }
+    })
+  }
+
+  useEffect(()=>{
+    if(eleTarget === null)return
+    setElementEffect(eleTarget, setActive)
+  },[eleTarget])
+
+  const effectVariants = {
+    opened: {
+        opacity: 1,
+        y: 0
+    },
+    closed: {
+        opacity: 0,
+        y: 100
+    },
+}
 
   return (
     <div className={styles.page_section}>
@@ -18,13 +48,15 @@ function HomeSection() {
             </div>
             <div className={styles.page_section_body_s2}>
               <motion.div 
-                className={styles.steps_container} 
-                id='step_container'
-               /*  initial={{x: '100vw'}}
-                animate={{x: 0}}
-                transition={{type: 'spring', delay: 0.6}} */
+                className={active ? `${styles.steps_container} ${styles.steps_container_active}` : styles.steps_container} 
+                id='steps_container'
+                initial={active}
+                variants={effectVariants}
+                animate= {active ? "opened" : "closed"}
+                transition={{delay: .5, duration: .5,  type: 'spring', stiffness: 100}}
               >
-                <Steper data={StepsData} /> 
+                
+                <Steper data={StepsData} activeEffect={active}/> 
               </motion.div>
             </div>
             <div className={styles.page_section_footer}>

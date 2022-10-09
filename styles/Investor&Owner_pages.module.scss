@@ -237,7 +237,7 @@
   min-height: 50vh;
   overflow-x: scroll;
   display: flex;
-  justify-content: flex-start;
+  position: relative;
   align-items: center;
   & h2{
     color: var(--black);
@@ -251,14 +251,28 @@
   & svg{
     color: var(--blue);
   }
+
+  
+
+}
+
+.arrow_steper_container{
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  z-index: 10000;
+}
+
+.steps_container_active{
+  justify-content: flex-start;
 }
 
 .steps_container::-webkit-scrollbar{
-    height: 3px;
+    height: 3px !important;
 }
 .steps_container::-webkit-scrollbar-thumb {
-  background-color: var(--blue);
-  border-radius: 20px;
+  background-color: var(--blue) !important;
+  border-radius: 20px !important;
 }
 
 
