@@ -26,7 +26,7 @@ function HomeSection() {
               <div className={styless.logo_container}>
                 <Image src={Logo} width={700} height={300} alt='Crowd for Flipping' />
                 <div className={styless.text_container}>
-                <h1>La inversión inmobiliaria <span>al alcance de todos</span> </h1>
+                <h1 className={styles.s1_pages_title}>La inversión inmobiliaria <span>al alcance de todos</span> </h1>
                 </div>
               </div>
               <div className={styless.buttons_container}>
