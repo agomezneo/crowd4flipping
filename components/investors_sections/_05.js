@@ -20,7 +20,7 @@ function HomeSection() {
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
             <div className={styles.page_section_header} >
-              <h1>Invierta en proyectos inmobiliarios<strong> con  <span>Crowd</span>4<span>Flipping</span></strong> </h1>
+              <h1>Algunos de los <span> proyectos realizados </span></h1>
             </div>
             <div className={styles.page_section_body_flex}>
               <div className={styles.swiper_container}>
