@@ -4,17 +4,16 @@ import Form from '../forms/OwnerForm';
 
 function HomeSection() {
   return (
-    <div className={styles.page_section}>
-        <div className={styles.page_section_container}>
-            <div className={styles.page_section_header}>
-            </div>
-            <div className={`${styles.page_section_body} ${styles.page_section_body_form} `}>
-              <div className={styles.box_1}>
+    <div className={styles.page_section_form}>
+        <div className={styles.page_section_container_form}>
+            <div className={`${styles.page_section_body_form} `}>
+              <div className={styles.form_left}>
                 <Form />
               </div>
-              <div className={`${styles.box_2} ${styles.image_s2}`} />
+              <div className={styles.form_right}>
+                <div className={`${styles.image_s2}`} />
+              </div>
             </div>
-            <div className={styles.page_section_footer}></div>
         </div>
     </div>
   )

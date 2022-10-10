@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import styles from '../../styles/buttons.module.scss'
 import {motion} from 'framer-motion';
+import { Router } from 'next/router';
 
 export default function ModalButton({children}) {
 
@@ -11,7 +12,8 @@ export default function ModalButton({children}) {
           left: "0",
           position: "fixed",
           display: "flex",
-          opacity: 1 
+          opacity: 1,
+
       },
       closed: {
           top: "-100vh", 
@@ -24,9 +26,14 @@ export default function ModalButton({children}) {
         setIsOpen(state => !state)
     }
 
+    useEffect(()=>{
+        if(!isOpen)return
+        window.scrollBy(0, 500)
+    },[isOpen])
+
   return (
     <>
-        <div className={styles.modal_button} onClick={open}>
+        <div href='#2' className={styles.modal_button} onClick={open}>
             <span>Infórmate gratis</span>
         </div>
         <motion.div 
@@ -34,12 +41,11 @@ export default function ModalButton({children}) {
             initial={false}
             variants={menuVariants}
             animate= {isOpen ? "opened" : "closed"}
-        >
-            
-            {children}
+        >   
             <div className={styles.close_button} onClick={open}>
                 <span>Salir</span>
             </div>
+            <div className={styles.modal_content} >{children}</div>
         </motion.div>
     </>
   )

@@ -11,7 +11,6 @@ import Form from './form_modal';
 
 function HomeSection() {
   return (
-    <>
       <div className={styles.page_section}>
         <div className={styless.page_grid_container}>
             <motion.div
@@ -21,7 +20,7 @@ function HomeSection() {
                 delay: 0.2,
                 duration: 0.75,
               }}
-              className={`${styless.explore_page_hero_container} ${styless.left} ${styles.s1_background}`}
+              className={`${styless.explore_page_hero_container} ${styless.left}`}
             >
               <div className={styless.logo_container}>
                 <Image src={Logo} width={700} height={300} alt='Crowd for Flipping' />
@@ -35,19 +34,8 @@ function HomeSection() {
                   </ModalButton> 
               </div>
             </motion.div>   
-            <motion.div
-              initial={{ y: 25, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{
-                delay: 0.2,
-                duration: 0.75,
-              }}
-              className={`${styless.explore_page_hero_container} ${styless.right}`}
-            >
-            </motion.div>   
         </div>
       </div>
-    </>
   )
 } 
 

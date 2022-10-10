@@ -40,6 +40,8 @@
     height: 100%;
 }
 
+
+
 .page_section_container{
     display: grid;
     width: 100vw;
@@ -53,6 +55,7 @@
 
 .page_section_header{
     grid-area: header;
+    text-align: center;
 
     & h1{
         color: var(--black);
@@ -69,9 +72,8 @@
     display: grid;
     padding: 15px;
     grid-template: 
-        "box"
-        "image"
-        ""
+        "box"   1fr
+        "image" 1fr
     ;
     & h1{
         color: var(--black);
@@ -80,6 +82,27 @@
             color: var(--blue);
         }
     }
+}
+
+.page_section_body_form{
+    display: grid;
+    grid-template:
+        "form_left" 1.5fr
+        "form_right" .5fr
+    ;
+    gap: 1rem;
+    z-index: 10000;
+    padding: 1rem;
+    height: 100vh;
+
+}
+
+.form_left{
+    grid-area: form_left;
+}
+
+.form_right{
+    grid-area: form_right;
 }
 
 .page_section_footer{
@@ -100,11 +123,14 @@
     grid-area: footerright;
 }
 
+
 .s1{
     background-image: url('../public/images/pages_images/real-state.png');
     background-size: contain; 
     background-repeat: no-repeat;
     background-position-x: right;
+    background-position-y: bottom;
+
 
     & .page_section_body{
         min-height: 80vh ;
@@ -140,7 +166,7 @@
 .box_1{
     grid-area: box;
     width: 100%;
-    min-height: 50vh;
+    min-height: 33vh;
 } 
 
 .box_2{
@@ -150,10 +176,12 @@
 }
 
 .image_s2{
-    background-image: url('../public/images/pages_images/real-state_09.jpg');
+    background-image: url('../public/images/pages_images/real-state.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
+    background-position-y: top;
+    height: 100%;
 }
 
 .cards_container{
@@ -167,7 +195,8 @@
     background-image: url('../public/images/pages_images/real-state_09.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position-x: left;  
+    background-position-x: left; 
+    background-position-y: center; 
     height: 100%;
 }
 
@@ -177,6 +206,7 @@
     background-repeat: no-repeat;
     background-position-x: right;  
     grid-area: image;
+
 }
 .steper_container{
     display: grid;
@@ -193,15 +223,11 @@
     flex-direction: column;
     justify-content: flex-end;
     overflow: scroll;
+    min-height: 40vh;
 }
 .horizontal_steper_container::-webkit-scrollbar {
     display: none;
 } 
-
-
-@media only screen and (min-width: 600px) and (max-width: 991px){
-
-}
 
 
 @media only screen and (min-width: 992px){
@@ -210,6 +236,7 @@
     }
 
     .page_section_header{
+        text-align: left;
         & h1{
             font-size: 2.5rem;
             padding-left: 0;

@@ -22,7 +22,7 @@ function HomeSection({id, css, children}) {
       <div >
           {children}
       </div>
-      <motion.div 
+     {/*  <motion.div 
         style={{ y }}
         className={styles.section_arrows}
       > 
@@ -51,7 +51,7 @@ function HomeSection({id, css, children}) {
             )
         )
         } 
-      </motion.div>
+      </motion.div> */}
      
     </section>
   );

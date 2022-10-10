@@ -9,7 +9,7 @@
     cursor: pointer;
     min-width: 300px;
     border-radius: 5px;
-    box-shadow: -2px -2px 4px rgba(0, 0, 0, .3);  
+    box-shadow: -2px -2px 4px rgba(0, 0, 0, .3);   
     margin-top: 1rem; 
     height: 50px;
 }
@@ -33,24 +33,38 @@
 .modal_container{
     background-color: var(--white);
     width: 100%;
-    z-index: 10000;
     display: grid;
     place-content: center;
     min-height: 100vh;
+    z-index: 100;
 
+   
+
+}
+
+.modal_content{
+    width: 500px;
+    border-radius: 10px;
+    background: #fdfdfd;
+    box-shadow: inset -12px -12px 24px #dcdcdc,
+                inset 12px 12px 24px #ffffff;
 }
 
 .close_button{
     border: 1px solid var(--blue);
     position: absolute;
-    bottom: 3vh;
     right: 3vw;
+    bottom: 0;
     width: fit-content;
     padding: .2rem 1rem .2rem 1rem;
     border-radius: 5px;
     cursor: pointer;
+    background-color: var(--black);
     & span{
-        color: var(--black);
-        z-index: 10000;
+        color: var(--blue);
     }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 991px){
+   
 }
