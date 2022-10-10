@@ -6,7 +6,8 @@ import { BsFillTreeFill } from "react-icons/bs";
 import Image from 'next/image';
 import Logo from '../public/images/brand/crowd4flipping/PNG_Files/Transparent_Logo_02.png'
 import Header from '../components/headers/header_pages';
-export default function Home() {
+
+export default function InvesmentThanksPage() {
 
   return (
     <>
