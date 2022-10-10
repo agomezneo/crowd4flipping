@@ -14,7 +14,14 @@ function HomeSection() {
                 <h2>Te lo haremos saber de <span>inmediato</span>.</h2>
                 <InvestmentForm  />
               </div>
-              <div className={styles.empty_s6}/>
+              <div className={styles.clientService_card_container}>
+                <div className={styles.clientService_card}>
+                  <h1>Servicio al cliente</h1>
+                  <p>Lunes a viernes de 9h a 19h</p>
+                  <p>+34 xxxxxxxxxx</p>
+                  <p>info@crowd4flipping.com</p>
+                </div>
+              </div>
             </div>
             <div className={styles.page_section_footer}></div>
         </div>
