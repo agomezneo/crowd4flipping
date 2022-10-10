@@ -530,8 +530,8 @@
     padding: 1rem;
     border-radius: 10px;
     background: linear-gradient(145deg, #00d1ff, #00b0e6);
-    box-shadow:  11px 11px 22px #e0e0e0,
-    -11px -11px 22px #ffffff;
+    box-shadow:  -11px -11px 22px #f2f2f2,
+    11px 11px 22px #ffffff;
     color: var(--white);
     & p{
       font-size: 1.2rem;
