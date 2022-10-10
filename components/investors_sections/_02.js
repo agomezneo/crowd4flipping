@@ -3,8 +3,8 @@ import styles from '../../styles/Investor&Owner_pages.module.scss';
 import {StepsData} from '../../data/cards/StepCardsData';
 import Steper from '../stepers/MaterialHorizontal'; 
 import {motion} from 'framer-motion'
-import ModalButton from '../buttons/ModalButtonSecundary';
-import InvestmentForm from '../forms/InvestmentForm';
+import  { BsArrowBarRight } from 'react-icons/bs'
+
 function HomeSection() {
 
   const [eleTarget, setEletarget] = useState(null);
@@ -47,6 +47,9 @@ function HomeSection() {
                 <h1><span>Sácale partido  a tu dinero </span> con estos sencillos pasos</h1>
             </div>
             <div className={styles.page_section_body_s2}>
+              <div className={styles.arrow_steper_container}>
+                <BsArrowBarRight />
+              </div>
               <motion.div 
                 className={active ? `${styles.steps_container} ${styles.steps_container_active}` : styles.steps_container} 
                 id='steps_container'
