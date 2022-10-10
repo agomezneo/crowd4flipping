@@ -43,7 +43,7 @@
 .page_section_container{
     display: grid;
     width: 100vw;
-    min-height: 50vh;
+    min-height: 70vh;
     grid-template:
         "header" 10vh
         "body"  auto
@@ -57,7 +57,7 @@
     & h1{
         color: var(--black);
         padding-left: 10px;
-
+ 
         & span{
             color: var(--blue);
         }
@@ -66,12 +66,12 @@
 
 .page_section_body{
     grid-area: body;
-    min-height: 50vh;
     display: grid;
     padding: 15px;
     grid-template: 
         "box"
         "image"
+        ""
     ;
     & h1{
         color: var(--black);
@@ -85,8 +85,6 @@
 .page_section_footer{
     grid-area: footer;
     position: relative;
-    padding: 1rem;
-    
 
     display: grid;
     grid-template: 

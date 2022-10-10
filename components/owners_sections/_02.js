@@ -5,7 +5,10 @@ import {CardsData} from '../../data/cards/StepCardsData'
 import ModalButton from '../buttons/ModalButton';
 import Form from './form_modal';
 
-function HomeSection() {
+import Steper from '../stepers/VerticalMUI';
+
+
+function HomeSection() { 
   return (
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
@@ -19,7 +22,8 @@ function HomeSection() {
               </div>
               <div className={styles.box_2}>
                 <div className={styles.cards_container}>
-                  {CardsData.map((item, key) =>{
+                  <Steper data={CardsData} />
+                  {/* {CardsData.map((item, key) =>{
                     return(
                       <Cards 
                         key={key}
@@ -28,14 +32,21 @@ function HomeSection() {
                         image={item.image}
                       />
                     )
-                  })}
-                  <ModalButton>
-                    <Form />
-                  </ModalButton>
+                  })} */}
+                  
                 </div>
               </div>
             </div>
-            <div className={styles.page_section_footer}></div>
+            <div className={styles.page_section_footer}>
+                  <div className={styles.owner_left_footer_section}>
+                    
+                  </div>
+                  <div className={styles.owner_right_footer_section}>
+                    <ModalButton>
+                      <Form />
+                    </ModalButton>
+                  </div>
+            </div>
         </div>
     </div>
   )

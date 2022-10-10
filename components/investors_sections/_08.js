@@ -17,9 +17,9 @@ function HomeSection() {
               <div className={styles.clientService_card_container}>
                 <div className={styles.clientService_card}>
                   <h1>Servicio al cliente</h1>
-                  <p>Lunes a viernes de 9h a 19h</p>
-                  <p>+34 xxxxxxxxxx</p>
-                  <p>info@crowd4flipping.com</p>
+                  <p>De lunes a viernes, de 09:00h a 18:00h </p>
+                  <p>+34 672 126 268</p>
+                  <p>contacto@crowd4flipping.com</p>
                 </div>
               </div>
             </div>

@@ -1,17 +1,17 @@
 .modal_button{
     display: grid;
     place-content: center;
-    padding: 12px 18px;
+    padding: 10px;
     background-color: var(--blue);
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     cursor: pointer;
     min-width: 300px;
     border-radius: 5px;
     box-shadow: -2px -2px 4px rgba(0, 0, 0, .3);  
     margin-top: 1rem; 
-
+    height: 50px;
 }
 
 .modal_button_secundary{
@@ -31,7 +31,7 @@
 }
 
 .modal_container{
-    background-color: var(--black);
+    background-color: var(--white);
     width: 100%;
     z-index: 10000;
     display: grid;

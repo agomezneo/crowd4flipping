@@ -38,7 +38,7 @@ const HorizontalStepsData = [
     {
         image : '/images/icons/ubicacion-del-mapa-01.png',
         title: 'Financiación',
-        text: 'A través del Crowlending, cualquier persona desde 500€ puede participar en la financiación.'
+        text: 'A través del Crowdlending, cualquier persona desde 500€ puede participar en la financiación.'
     },
     {
         image : '/images/icons/archivo-de-datos.png',

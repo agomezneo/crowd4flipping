@@ -1,11 +1,7 @@
 import React from 'react'
 import styles from '../../styles/Investor&Owner_pages.module.scss'
-import HorizontalSteper from '../../components/stepers/HorizontalSteper'
 import { HorizontalStepsData } from '../../data/cards/StepCardsData'
-
 import Steper from '../stepers/VerticalMUI';
-
-
 
 function HomeSection() {
   return (

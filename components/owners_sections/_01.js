@@ -6,7 +6,7 @@ import Logo from '../../public/images/brand/crowd4flipping/PNG_Files/Transparent
 import Link from 'next/link';
 import Image from 'next/image';
 import ModalButton from '../buttons/ModalButton';
-import Form from './form_modal';
+import Form from './form_modal'; 
 
 
 function HomeSection() {
