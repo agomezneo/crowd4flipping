@@ -513,8 +513,9 @@
     align-items: center;
   }
   .clientService_card_container{
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
   }
 
   .clientService_card{
@@ -527,13 +528,15 @@
     justify-content: space-around;
     align-items: flex-start;
     padding: 1rem;
-    box-shadow: -1px -1px 2px rgba(0, 0, 0, .3); 
+    border-radius: 10px;
+    background: linear-gradient(145deg, #00d1ff, #00b0e6);
+    box-shadow:  11px 11px 22px #e0e0e0,
+    -11px -11px 22px #ffffff;
     color: var(--white);
     & p{
       font-size: 1.2rem;
       font-weight: 500;
     }
-
   }
 
   @media only screen and (min-width: 600px) and (max-width: 991px){
