@@ -520,7 +520,7 @@
 
   .clientService_card{
     height: 40vh;
-    width: 50%;
+    width: 100%;
     border-radius: 10px;
     background-color: var(--blue);
     display: flex;
@@ -642,6 +642,18 @@
     .arrow_steper_container{
       display: none;
     }
+    .arrow_icon_container_row{
+      display: flex;
+      flex-direction: row;
+      width: 20rem;
+      justify-content: space-around;
+      position: absolute;
+      right: 5vw;
+      bottom: 0;
+      & .arrow_icon{
+        font-size: 3rem;
+      }
+    }
 
  
     .empty_div{
@@ -672,6 +684,12 @@
       background-position-x: right;
       background-size: 80%;
     }
+
+    .clientService_card{
+      width: 50%;
+    }
+
+
   }
 
   

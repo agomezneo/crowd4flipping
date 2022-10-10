@@ -69,7 +69,7 @@ function HomeSection({id, css, children}) {
             )
             :
             (
-             <div className={styles.arrow_icon_container} >
+             <div className={styles.arrow_icon_container_row} >
 
               <a href={`#${id - 1}`}> 
                 <BsArrowBarUp  className={styles.arrow_icon} />
