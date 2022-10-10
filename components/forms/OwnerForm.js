@@ -34,7 +34,7 @@ switch(state.step){
     case 0: 
     return(
         <div className={styles.OwnerForm}>
-            <h1> ¿Cuando quieres vender? </h1>
+            <h1> ¿Cuando quieres <span>vender</span>?</h1>
             <motion.div 
                 className={styles.radio_group}
                 initial={{ y: 25, opacity: 0 }}
@@ -102,19 +102,16 @@ switch(state.step){
                 duration: 0.75,
                 }}
             >
-                <h1> ¿Cómo podemos contactar? </h1>
+                <h1> ¿Cómo podemos <span>contactar</span>? </h1>
                 <div className={styles.owner_form_container}>
                     <div className={styles.input_container}>
-                        <span>Nombre</span>
-                        <input type='text' name='name' value={state.name} />
+                        <input type='text' name='name' value={state.name} placeholder='Nombre...'/>
                     </div>
                     <div className={styles.input_container}>
-                        <span>Email</span>
-                        <input type='text' name='name' value={state.email} />
+                        <input type='text' name='name' value={state.email} placeholder='Email...'/>
                     </div>
                     <div className={styles.input_container}>
-                        <span>Número</span>
-                        <input type='text' name='name' value={state.phone} />
+                        <input type='text' name='name' value={state.phone} placeholder='Número...'/>
                     </div>
                     <div className={styles.input_container}>
                         <div 

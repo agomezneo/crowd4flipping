@@ -12,7 +12,7 @@
     flex-direction: column;
     height: 70px;
     width: 100%;
-
+    text-align: left;
     & span{
         font-size: 1.2rem;
         color: var(--blue);
@@ -52,15 +52,20 @@
     }
 }
 .OwnerForm{
-    height: 60vh;
+    height: 100%;    
     display: grid;
-    place-items: end;
+    place-items: start;
     padding: 1rem;
     border-radius: 5px;
 
     & h1{
         text-align: left;
         width: 100%;
+        color: var(--black);
+
+        & span{
+            color: var(--blue);
+        }
     }
 }
 
