@@ -31,12 +31,12 @@ const Hero = () => {
           }}
           className={`${styles.explore_page_hero_container} ${styles.left}`}
         >
-          <a href='/' className={styles.logo_container}>
+          <Link href='/' className={styles.logo_container}>
             <Image src={Logo} width={700} height={300} alt='Crowd for Flipping' />
             <div className={styles.text_container}>
                 <h1>La inversión inmobiliaria <span>al alcance de todos</span></h1>
             </div>
-          </a>
+          </Link>
           <div className={styles.thanks_message_container}>
             <h2>Tú solicitud ha sido recibida con éxito.<span>Uno de nuestros agentes se pondrá en contacto contigo en breve.</span></h2>
             
