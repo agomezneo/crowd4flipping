@@ -51,7 +51,7 @@ switch(state.step){
                     onChange={handleChange}
                     style={{
                         flexDirection: "column",
-                        justifyContent: "center",
+                        justifyContent: "space-around",
                         alignItems: "left",
                         gap: "1rem",
                     }}
@@ -84,7 +84,7 @@ switch(state.step){
                         className={state.saleDate === "5" ? `${styles.option} ${styles.bgFull}` : styles.option}
                         value="5"
                         control={<GreenRadio/>} 
-                        label="Qusiera asesorarme primero"
+                        label="Quisiera asesorarme primero"
                     />
                 </RadioGroup>
             </motion.div>

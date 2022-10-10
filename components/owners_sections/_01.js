@@ -28,6 +28,7 @@ function HomeSection() {
                 <h1>La inversión inmobiliaria <span>al alcance de todos</span> </h1>
                 </div>
               </div>
+              
               <div className={styless.buttons_container}>
                   <ModalButton > 
                     <Form />

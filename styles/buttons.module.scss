@@ -46,13 +46,14 @@
     background: #fdfdfd;
     box-shadow: inset -12px -12px 24px #dcdcdc,
                 inset 12px 12px 24px #ffffff;
-    }
+    height: 100%;
+}
 
 .close_button{
     border: 1px solid var(--blue);
     position: absolute;
     right: 3vw;
-    bottom: 10px;
+    bottom: 20px;
     width: fit-content;
     padding: .2rem 1rem .2rem 1rem;
     border-radius: 5px;
