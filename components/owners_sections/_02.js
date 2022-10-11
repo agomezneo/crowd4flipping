@@ -3,7 +3,6 @@ import styles from '../../styles/OwnersPage.module.scss';
 import {CardsData} from '../../data/cards/StepCardsData'
 import ModalButton from '../buttons/ModalButton';
 import Form from './form_modal';
-
 import Steper from '../stepers/VerticalMUI';
 
 

@@ -3,34 +3,57 @@ import styles from '../../styles/forms.module.scss';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import GreenRadio from './inputs/InputRadio';
-import {motion} from 'framer-motion';
-
+import { motion } from 'framer-motion';
+import { postal_codes } from '../../data/postal_codes';
+import EllipsisLoader from '../loaders/ellipsisLoaderWhite';
+import axios from 'axios';
+import Router from 'next/router';
+ 
 const OwnerForm =  () => {
 
+    const api = 'http://localhost:5000/c4f-backend-c3e81/us-central1/app/api';
+    const [sendData, setSendData] = useState(false);
     const [state, setState] = useState({
         name: '', 
         email: '',
         phone: '',
+        created: new Date(),
         saleDate: '',
+        zip: '', 
         step: 0
-    })
+    });
 
     const handleChange = (e) =>{
+        console.log(e.target.name)
         let value = e.target.value;
         setState({
             ...state,
             [e.target.name]: value,
             step: state.step === 0 ? state.step + 1 : state.step
         })
+        console.log(state)
+    };
 
-    }
+    const sendContact = async (data) =>{
+        try {
+            let res = await axios.post(`${api}/owner-contact`, data);
+            console.log(res)
+            if(res.data.status === 200){
+                setSendData(false)
+                Router.push('/thanks-owner')
+            }
+        } catch (error) {
+            console.log(error.message);
+            setSendData(false)
+        }
+    };
 
-    console.log(state)
-
-  
+    useEffect(()=>{
+        if(!sendData)return
+        sendContact(state);
+    },[sendData]);
 
 switch(state.step){
-
     case 0: 
     return(
         <div className={styles.OwnerForm}>
@@ -57,32 +80,32 @@ switch(state.step){
                     }}
                 >
                     <FormControlLabel
-                        className={state.saleDate === "1" ? `${styles.option} ${styles.bgFull}` : styles.option}
-                        value="1"
+                        className={state.saleDate === "Ya está a la venta" ? `${styles.option} ${styles.bgFull}` : styles.option}
+                        value="Ya está a la venta"
                         control={<GreenRadio/>} 
                         label="Ya está a la venta"
                     />
                     <FormControlLabel
-                        className={state.saleDate === "2" ? `${styles.option} ${styles.bgFull}` : styles.option}
-                        value="2"
+                        className={state.saleDate === "Lo antes posible" ? `${styles.option} ${styles.bgFull}` : styles.option}
+                        value="Lo antes posible"
                         control={<GreenRadio/>} 
                         label="Lo antes posible"
                     />
                     <FormControlLabel
-                        className={state.saleDate === "3" ? `${styles.option} ${styles.bgFull}` : styles.option}
-                        value="3"
+                        className={state.saleDate === "En 3 meses" ? `${styles.option} ${styles.bgFull}` : styles.option}
+                        value="En 3 meses"
                         control={<GreenRadio/>} 
                         label="En 3 meses"
                     />
                     <FormControlLabel
-                        className={state.saleDate === "4" ? `${styles.option} ${styles.bgFull}` : styles.option}
-                        value="4"
+                        className={state.saleDate === "En 6 meses o más" ? `${styles.option} ${styles.bgFull}` : styles.option}
+                        value="En 6 meses o más"
                         control={<GreenRadio/>} 
                         label="En 6 meses o más"
                     />
                     <FormControlLabel
-                        className={state.saleDate === "5" ? `${styles.option} ${styles.bgFull}` : styles.option}
-                        value="5"
+                        className={state.saleDate === "Quisiera asesorarme primero" ? `${styles.option} ${styles.bgFull}` : styles.option}
+                        value="Quisiera asesorarme primero"
                         control={<GreenRadio/>} 
                         label="Quisiera asesorarme primero"
                     />
@@ -103,22 +126,64 @@ switch(state.step){
                 }}
             >
                 <h1> ¿Cómo podemos <span>contactar</span>? </h1>
+                <br/>
                 <div className={styles.owner_form_container}>
                     <div className={styles.input_container}>
-                        <input type='text' name='name' value={state.name} placeholder='Nombre...'/>
+                        <input 
+                            type='text' 
+                            name='name' 
+                            value={state.name}  
+                            onChange={handleChange}
+                            placeholder='Nombre...'
+                        />
                     </div>
                     <div className={styles.input_container}>
-                        <input type='text' name='name' value={state.email} placeholder='Email...'/>
+                        <input 
+                            type='text'
+                            name='email'
+                            value={state.email}
+                            onChange={handleChange}
+                            placeholder='Email...'
+                        />
                     </div>
                     <div className={styles.input_container}>
-                        <input type='text' name='name' value={state.phone} placeholder='Número...'/>
+                        <input 
+                            type='text'
+                            name='phone'
+                            value={state.phone} 
+                            onChange={handleChange}
+                            placeholder='Número...'
+                        />
+                    </div>
+                    <div className={styles.input_container}>
+                        <input 
+                            type="text"
+                            list="zip_list" 
+                            name='zip' 
+                            value={state.zip} 
+                            onChange={handleChange} 
+                        placeholder='Cosdigo postal'
+                        /> 
+                        <datalist id="zip_list">
+                            {postal_codes.map((zip, index) =>{
+                                return(
+                                    <option key={index} value={zip} />
+                                )
+                            })}
+                        </datalist>
                     </div>
                     <div className={styles.input_container}>
                         <div 
                             className={styles.button} 
-                            onClick={() => setState({...state, step: 0}) } 
+                            onClick={() => setSendData(true)}
                         >
-                                Enviar
+                            {!sendData ? 
+                                'Enviar' 
+                            : 
+                            <>
+                                <EllipsisLoader/>
+                            </>
+                            }
                         </div>
                     </div>
                 </div>

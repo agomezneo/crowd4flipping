@@ -41,7 +41,7 @@
 }
 
 
-
+ 
 .page_section_container{
     display: grid;
     width: 100vw;
@@ -108,7 +108,7 @@
 .page_section_footer{
     grid-area: footer;
     position: relative;
-
+    place-content: center;
     display: grid;
     grid-template: 
         "footerleft" 1fr
@@ -259,6 +259,11 @@
         grid-template: 
         "footerleft footerright" / 1fr 1fr
     ;
+    place-items: end;
+    }
+
+    .image_s3{
+        background-position-x: right;
     }
     
 }

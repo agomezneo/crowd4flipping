@@ -25,13 +25,13 @@
         border-radius: 5px;
         padding: 10px 20px;
         font-size: 1rem;
-        background-color: var(--whitegray);
+        background-color: var(--bluegray);
         outline: none;
         &:focus {
             border: none;
         }
 
-        &:active {
+        &:active { 
             border: none;
         }
        

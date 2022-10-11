@@ -17,7 +17,7 @@ export default function VerticalLinearStepper({data}) {
     <Box className={styles.vertical_steper_container}>
       <Stepper activeStep={10} orientation="vertical">
         {data.map((step, index) => (
-          <Step key={step.index} className={ index === data.length - 1 ? `${styles.vertical_step} ${styles.step_no_border_v}` : styles.vertical_step}>
+          <Step key={index} className={ index === data.length - 1 ? `${styles.vertical_step} ${styles.step_no_border_v}` : styles.vertical_step}>
             <div className={styles.v_step_imagen_container}>
                 <Image src={step.image} width={70} height={70} alt={`${step.title} - Imagen`} className={styles.image}/>
             </div>
