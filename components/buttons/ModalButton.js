@@ -31,7 +31,7 @@ export default function ModalButton({children}) {
         window.scrollBy(0, 500)
     },[isOpen])
 
-  return (
+  return ( 
     <>
         <div  className={styles.modal_button} onClick={open}>
             <span>Infórmate gratis</span>
@@ -41,11 +41,14 @@ export default function ModalButton({children}) {
             initial={false}
             variants={menuVariants}
             animate= {isOpen ? "opened" : "closed"}
-        >   
+    >   
             <div className={styles.close_button} onClick={open}>
                 <span>Salir</span>
             </div>
-            <div className={styles.modal_content} >{children}</div>
+            <div className={styles.modal_content}>
+                {children}
+            </div>
+          
         </motion.div>
     </>
   )
