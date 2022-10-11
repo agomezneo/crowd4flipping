@@ -29,8 +29,8 @@ export default function ThanksInvestment() {
                 </div>
               </Link>
               <div className={styles.thanks_message_container}>
-                <h2>Tú solicitud ha sido recibida con éxito.<span>Uno de nuestros agentes se pondrá en contacto contigo en breve.</span></h2>
                 < BsCheck2Circle className={styles.BsCheck2Circle}/>
+                <h2>Tú solicitud ha sido recibida con éxito.<span>Uno de nuestros agentes se pondrá en contacto contigo en breve.</span></h2>
               </div>
             </motion.div>   
             <motion.div

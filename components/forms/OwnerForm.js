@@ -11,7 +11,8 @@ import Router from 'next/router';
  
 const OwnerForm =  () => {
 
-    const api = 'http://localhost:5000/c4f-backend-c3e81/us-central1/app/api';
+   /*  const api = 'http://localhost:5000/c4f-backend-c3e81/us-central1/app/api'; */
+    const api = 'https://us-central1-c4f-backend-c3e81.cloudfunctions.net/app/api';
     const [sendData, setSendData] = useState(false);
     const [state, setState] = useState({
         name: '', 
