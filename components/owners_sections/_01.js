@@ -3,11 +3,9 @@ import styles from '../../styles/Investor&Owner_pages.module.scss';
 import styless from '../../styles/Home.module.scss';
 import {motion} from 'framer-motion';
 import Logo from '../../public/images/brand/crowd4flipping/PNG_Files/Transparent_Logo_02.png';
-import Link from 'next/link';
 import Image from 'next/image';
 import ModalButton from '../buttons/ModalButton';
 import Form from './form_modal'; 
-
 
 function HomeSection() {
   return (
