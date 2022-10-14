@@ -95,9 +95,9 @@ function HomeSection({id, css, children}) {
             )
         )
         } 
-        <motion.div>
+      <motion.div>
 
-        </motion.div>
+      </motion.div>
       </motion.div>
     </section>
   );

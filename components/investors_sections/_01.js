@@ -30,7 +30,7 @@ function HomeSection() {
                 </div>
               </div>
               <div className={styless.buttons_container}>
-                <a href="#8">
+                <a href="#7">
                   <div className={styless.back_btn}>Quiero invertir</div>
                 </a>
               </div>
