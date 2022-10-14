@@ -66,7 +66,7 @@ function HomeSection() {
                 <div className={styles.footer_left_side}></div>
                 <div className={styles.footer_right_side}>
 
-                    <a href='#8' className={styles.modal_button_secundary}>
+                    <a href='#7' className={styles.modal_button_secundary}>
                       <span>Lista de espera</span>
                     </a>
 
