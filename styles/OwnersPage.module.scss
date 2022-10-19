@@ -107,8 +107,8 @@
 
 .page_section_footer{
     grid-area: footer;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .s1{
