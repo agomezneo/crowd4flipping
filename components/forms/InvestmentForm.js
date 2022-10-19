@@ -50,13 +50,13 @@ function InvestmentForm({type}) {
     <div className={styles.InvestmentForm}>
         <div className={styles.investment_form_container}>
             <div className={styles.input_container}>
-                <input type='text' name='name' value={state.name} placeholder='Nombre...' onChange={handleChange} />
+                <input type='text' name='name' value={state.name} placeholder='Nombre' onChange={handleChange} />
             </div>
             <div className={styles.input_container}>
-                <input type='text' name='email' value={state.email} placeholder='Email...' onChange={handleChange} />
+                <input type='text' name='email' value={state.email} placeholder='Email' onChange={handleChange} />
             </div>
             <div className={styles.input_container}>
-                <input type='text' name='phone' value={state.phone} placeholder='Número...' onChange={handleChange} />
+                <input type='text' name='phone' value={state.phone} placeholder='Teléfono' onChange={handleChange} />
             </div>
             <div className={styles.input_container}>
                 <input type="text" list="range_list" name='investmentRange' value={state.investmentRange} onChange={handleChange} placeholder='¿Qué cantidad te gustaría invertir?'/> 

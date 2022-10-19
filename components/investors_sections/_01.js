@@ -26,12 +26,12 @@ function HomeSection() {
               <div className={styless.logo_container}>
                 <Image src={Logo} width={700} height={300} alt='Crowd for Flipping' />
                 <div className={styless.text_container}>
-                <h1 className={styles.s1_pages_title}>La inversión inmobiliaria <span>al alcance de todos</span> </h1>
+                <h1 className={styles.s1_pages_title}>Ahorradores que <span>invierten en inmuebles desde 500€ </span></h1>
                 </div>
               </div>
               <div className={styless.buttons_container}>
                 <a href="#7">
-                  <div className={styless.back_btn}>Quiero invertir</div>
+                  <div className={`${styless.back_btn} ${styless.principal_button}`}>Quiero invertir</div>
                 </a>
               </div>
             </motion.div>   

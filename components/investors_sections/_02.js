@@ -2,13 +2,15 @@ import React, {useEffect, useState} from 'react';
 import styles from '../../styles/Investor&Owner_pages.module.scss';
 import {StepsData} from '../../data/cards/StepCardsData';
 import Steper from '../stepers/MaterialHorizontal'; 
+import Vsteper from '../stepers/VerticalMUI';
 import {motion} from 'framer-motion'
-import  { BsArrowBarRight } from 'react-icons/bs'
 
 function HomeSection() {
 
   const [eleTarget, setEletarget] = useState(null);
   const [active, setActive] = useState(false);
+  const [screen, setScreen] = useState(false)
+
   useEffect(()=>{
     const doc = window.document;
     setEletarget(doc.getElementById('steps_container'))
@@ -35,10 +37,19 @@ function HomeSection() {
         y: 0
     },
     closed: {
-        opacity: 0,
+        opacity: 0, 
         y: 100
     },
 }
+
+useEffect(() => {
+    let document = window.screen.width;
+    if(document < 991){
+        setScreen(true)
+        return
+    }
+}, [])
+
 
   return (
     <div className={styles.page_section}>
@@ -47,9 +58,6 @@ function HomeSection() {
                 <h1><span>Sácale partido  a tu dinero </span> con estos sencillos pasos</h1>
             </div>
             <div className={styles.page_section_body_s2}>
-              <div className={styles.arrow_steper_container}>
-                <BsArrowBarRight />
-              </div>
               <motion.div 
                 className={active ? `${styles.steps_container} ${styles.steps_container_active}` : styles.steps_container} 
                 id='steps_container'
@@ -59,24 +67,22 @@ function HomeSection() {
                 transition={{delay: .5, duration: .5,  type: 'spring', stiffness: 100}}
               >
                 
-                <Steper data={StepsData} activeEffect={active}/> 
+                {!screen ? 
+                (
+                  <Steper data={StepsData} activeEffect={active}/> 
+                )
+                  :
+
+                (
+                  <Vsteper data={StepsData} />
+                )
+                }
               </motion.div>
             </div>
             <div className={styles.page_section_footer}>
-                <div className={styles.footer_left_side}></div>
-                <div className={styles.footer_right_side}>
-
-                    <a href='#7' className={styles.modal_button_secundary}>
-                      <span>Lista de espera</span>
-                    </a>
-
-                    {
-                    /* 
-                     TODO 
-                    <ModalButton>
-                      <InvestmentForm />
-                    </ModalButton> */}
-                </div>
+                <a href='#7' className={styles.modal_button_secundary}>
+                  <span>¡Quiero invertir!</span>
+                </a>
             </div>
         </div>
     </div>

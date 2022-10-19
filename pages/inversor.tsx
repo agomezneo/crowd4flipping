@@ -36,63 +36,16 @@ function HomeSection({id, css, children}) {
         {id === 1 ? 
         ( 
           <div className={styles.arrow_icon_container}>
-            <a href={`#${id + 1}`}> <BsFillArrowDownSquareFill className={styles.arrow_icon} /> </a>
+            <a href={`https://wa.me/34671246091?text=Hola, estoy interesad@ en participar en proyectos inmobiliarios. ¿Podrías darme más infomación?`}> <BsFillArrowDownSquareFill className={styles.arrow_icon} /> </a>
           </div>
         )
           : 
         (
-          id != 7 ? 
-            (
-              <div className={styles.arrow_icon_container}>
-
-                <a href={`#${id - 1}`}> 
-                  <BsArrowBarUp className={styles.arrow_icon} /> 
-                </a>
-
-                <a href={`#${id - 1}`}> 
-                  <RiPhoneLine className={`${styles.arrow_icon} ${styles.arrow_icon_phone}`} /> 
-                </a>
-
-                <a href={`#${id + 1}`}> 
-                  <RiCalendarEventFill className={styles.arrow_icon} /> 
-                </a>
-
-                <a href={`#${id - 1}`}> 
-                  <RiWhatsappLine className={`${styles.arrow_icon} ${styles.arrow_icon_whatsapp}`} /> 
-                </a>
-
-                <a href={`#${id + 1}`}> 
-                  <BsArrowBarDown className={styles.arrow_icon} /> 
-                </a>
-
-              </div>
-            )
-            :
-            (
-             <div className={styles.arrow_icon_container_row} >
-
-              <a href={`#${id - 1}`}> 
-                <BsArrowBarUp  className={styles.arrow_icon} />
-              </a>
-
-              <a href={`#${id - 1}`}> 
-                <RiPhoneLine className={`${styles.arrow_icon} ${styles.arrow_icon_phone}`} /> 
-              </a>
-
-              <a href={`#${id + 1}`}> 
-                <RiCalendarEventFill className={styles.arrow_icon} /> 
-              </a>
-
-              <a href={`#${id - 1}`}> 
-                <RiWhatsappLine className={`${styles.arrow_icon} ${styles.arrow_icon_whatsapp}`} /> 
-              </a>
-
-              <a href={`#${1}`}> 
-                <BsFillSignpostSplitFill className={styles.arrow_icon} />
-              </a>
-
-             </div>
-            )
+          <div className={styles.arrow_icon_container}>
+            <a href={`https://wa.me/34671246091?text=Hola, estoy interesad@ en participar en proyectos inmobiliarios. ¿Podrías darme más infomación?`}> 
+              <RiWhatsappLine className={`${styles.arrow_icon} ${styles.arrow_icon_whatsapp}`} /> 
+            </a>
+          </div>
         )
         } 
       <motion.div>

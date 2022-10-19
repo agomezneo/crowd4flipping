@@ -34,7 +34,7 @@ const Hero = () => {
           </div>
           <div className={styles.buttons_container}>
             <Link href="/inversor">
-              <a className={styles.back_btn}>Quiero invertir</a>
+              <a className={`${styles.back_btn} ${styles.principal_button}`}>Quiero invertir</a>
             </Link>
             <Link href="/propietario">
               <a className={styles.back_btn}>Ofrece tu propiedad</a>

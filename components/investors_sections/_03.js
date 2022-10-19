@@ -14,17 +14,6 @@ function HomeSection() {
 
               <div className={styles.horizontal_steper_container}>
 
-                {/* {HorizontalStepsData.map((item, index) =>{
-                  return(
-                    <HorizontalSteper
-                      key={index} 
-                      image={item.image}
-                      title={item.title}
-                      text={item.text}
-                    />
-                  )
-                } )} */}
-
 
                 <Steper data={HorizontalStepsData} />
 
@@ -34,20 +23,7 @@ function HomeSection() {
               
             </div>
             <div className={styles.page_section_footer}>
-                <div className={styles.footer_left_side}></div>
-                <div className={styles.footer_right_side}>
-
-                    <a href='#7' className={styles.modal_button_secundary}>
-                      <span>Quiero invertir</span>
-                    </a>
-
-                    {
-                    /* 
-                     TODO 
-                    <ModalButton>
-                      <InvestmentForm />
-                    </ModalButton> */}
-                </div>
+             
             </div>
         </div>
     </div>
