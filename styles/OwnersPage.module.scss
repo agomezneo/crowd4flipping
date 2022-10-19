@@ -107,22 +107,9 @@
 
 .page_section_footer{
     grid-area: footer;
-    position: relative;
-    place-content: center;
     display: grid;
-    grid-template: 
-        "footerleft" 1fr
-        "footerright" 1fr
-    ;
+    place-items: center;
 }
-
-.footer_left{
-    grid-area: footerleft;
-}
-.footer_right{
-    grid-area: footerright;
-}
-
 
 .s1{
     background-image: url('../public/images/pages_images/real-state.png');
@@ -224,11 +211,27 @@
     justify-content: flex-end;
     overflow: scroll;
     min-height: 40vh;
+    padding: 15px;
 }
 .horizontal_steper_container::-webkit-scrollbar {
     display: none;
 } 
 
+.whatsApp_cta{
+    width: 300px;
+    color: var(--white);
+    background-color: var(--green);
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    height: 3rem;
+    padding: 0 10px 0 10px;
+    & span{
+        margin-left: .3rem;
+    }
+}
 
 @media only screen and (min-width: 992px){
     .page_section_container{

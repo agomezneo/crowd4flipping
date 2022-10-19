@@ -27,9 +27,6 @@ function HomeSection() {
               </div>
             </div>
             <div className={styles.page_section_footer}>
-                  <div className={styles.owner_left_footer_section}>
-                    
-                  </div>
                   <div className={styles.owner_right_footer_section}>
                     <ModalButton>
                       <Form />

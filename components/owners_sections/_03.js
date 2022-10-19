@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styles from '../../styles/OwnersPage.module.scss';
 import Steper from '../stepers/MaterialHorizontal';
+import Vsteper from '../stepers/VerticalMUI';
 import {MaterialHorizontalData} from '../../data/cards/StepCardsData'
-import ModalButton from '../buttons/ModalButton';
-import Form from './form_modal';
-
+import { RiWhatsappLine } from 'react-icons/ri'
 
 function HomeSection() {
+  const [screen, setScreen] = useState(false)
+  useEffect(() => {
+    let document = window.screen.width;
+    if(document < 991){
+        setScreen(true)
+        return
+    }
+  }, [])
 
   return (
-    <div className={styles.page_section}>
+    <div className={styles.page_section}> 
         <div className={styles.page_section_container}>
             <div className={styles.page_section_header}>
                 <br/>
@@ -19,18 +26,25 @@ function HomeSection() {
                 <div className={styles.empty_div_s3_owner}>
                 </div>
                 <div className={styles.horizontal_steper_container}>
-                  <Steper data={MaterialHorizontalData}/>
+                {!screen ? 
+                (
+                  <Steper data={MaterialHorizontalData} /> 
+                )
+                  :
+
+                (
+                  <Vsteper data={MaterialHorizontalData} />
+                )
+                }
                 </div>
             </div>
             <div className={styles.page_section_footer}>
-              <div className={styles.footer_left}>
-                <ModalButton > 
-                  <Form />
-                </ModalButton>
-              </div>
-              <div className={styles.footer_right}>
-
-              </div>
+              <a 
+                href={`https://wa.me/34671246091?text=Hola, estoy interesad@ en ofrecer mi propiedad para ver que posibilidades tengo. ¿Podrías darme más información?`}
+                className={styles.whatsApp_cta}
+              > 
+                <span>¡Contactanos!</span>
+              </a>
             </div>
         </div>
     </div>

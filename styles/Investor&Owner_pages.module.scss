@@ -76,6 +76,10 @@
     }
   }
 
+  .video_container_invert{
+    transform: rotateY(180deg);
+  }
+
   .page_grid_container{
     z-index: 10;
     height: 100%;

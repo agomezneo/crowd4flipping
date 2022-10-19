@@ -19,7 +19,7 @@ export default function VerticalLinearStepper({data}) {
         {data.map((step, index) => (
           <Step key={index} className={ index === data.length - 1 ? `${styles.vertical_step} ${styles.step_no_border_v}` : styles.vertical_step}>
             <div className={styles.v_step_imagen_container}>
-                <Image src={step.image} width={70} height={70} alt={`${step.title} - Imagen`} className={styles.image}/>
+                <Image src={step.image} width={50} height={50} alt={`${step.title} - Imagen`} className={styles.image}/>
             </div>
             <StepLabel
             >
