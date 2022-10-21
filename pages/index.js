@@ -3,7 +3,7 @@ import Layout from "../components/layouts/Layout";
 import { motion } from "framer-motion"
 import Link from "next/link";
 import Image from 'next/image';
-import Logo from '../public/images/brand/crowd4flipping/PNG_Files/Transparent_Logo_02.png';
+import Logo from '../public/images/brand/crowd4flipping/SVG_Vector_Files/Original_Logo.svg';
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
   );
 };
 
-const Hero = () => {
+const Hero = () => { 
   return (
     <div className={styles.explore_page_hero}>
       <div className={styles.page_grid_container}>
@@ -27,7 +27,7 @@ const Hero = () => {
           className={`${styles.explore_page_hero_container} ${styles.left}`}
         >
           <div className={styles.logo_container}>
-            <Image src={Logo} width={700} height={300} alt='Crowd for Flipping' />
+            <Image src={Logo} width={900} height={500} alt='Crowd for Flipping' />
             <div className={styles.text_container}>
             <h1>La inversión inmobiliaria <span>al alcance de todos</span> </h1>
             </div>
