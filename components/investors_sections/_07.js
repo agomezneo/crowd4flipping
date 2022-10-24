@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../../styles/Investor&Owner_pages.module.scss'
-import Logo from '../../public/images/brand/crowd4flipping/PNG_Files/Transparent_Logo_02.png';
+import Logo from '../../public/images/brand/crowd4flipping/logo/Crowd4Flipping.png';
 import Image from 'next/image';
 import Opiniones from '../../components/carrousels/OpinionesHabitisimo';
 import habitissimo_img from '../../public/images/brand/habitissimo_logo.png'

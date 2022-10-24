@@ -2,7 +2,8 @@ import React from 'react';
 import styles from '../../styles/Investor&Owner_pages.module.scss';
 import styless from '../../styles/Home.module.scss';
 import {motion} from 'framer-motion';
-import Logo from '../../public/images/brand/crowd4flipping/PNG_Files/Transparent_Logo_02.png';
+import Logo from '../../public/images/brand/crowd4flipping/logo/Crowd4Flipping.png';
+
 import Link from 'next/link';
 import Image from 'next/image';
 
