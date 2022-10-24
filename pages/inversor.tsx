@@ -1,5 +1,5 @@
 import styles from '../styles/Investor&Owner_pages.module.scss'
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {  motion, useScroll, useSpring, useTransform, MotionValue} from "framer-motion";
 import Header from '../components/headers/header_pages';
 import Section01 from '../components/investors_sections/_01';
@@ -11,8 +11,7 @@ import Section06 from '../components/investors_sections/_06';
 import Section07 from '../components/investors_sections/_07';
 import Section08 from '../components/investors_sections/_08';
 import Footer from '../components/footers';
-import { BsArrowBarUp, BsArrowBarDown,  BsFillArrowDownSquareFill,  BsFillSignpostSplitFill} from 'react-icons/bs';
-import {RiWhatsappLine, RiPhoneLine, RiCalendarEventFill} from 'react-icons/ri'
+import { RiWhatsappLine } from 'react-icons/ri'
 
 function useParallax(value: MotionValue<number>, distance: number) { 
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -21,37 +20,22 @@ function useParallax(value: MotionValue<number>, distance: number) {
 function HomeSection({id, css, children}) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 250);
+  const y = useParallax(scrollYProgress, 500);
+  const [screen, setScreen] = useState(false)
+
+  useEffect(() => {
+    let screenWidth = window.screen.width;
+    if(screenWidth < 991){
+        setScreen(true)
+        return
+    }
+}, [])
 
   return (
     <section className={`${styles.section} ${css}`} id={id}>  
       <div ref={ref}>
           {children}
       </div>
-      <motion.div 
-        style={{ y }}
-        className={styles.section_arrows}
-      > 
-
-        {id === 1 ? 
-        ( 
-          <div className={styles.arrow_icon_container}>
-            <a href={`https://wa.me/34671246091?text=Hola, estoy interesad@ en participar en proyectos inmobiliarios. ¿Podrías darme más infomación?`}> <BsFillArrowDownSquareFill className={styles.arrow_icon} /> </a>
-          </div>
-        )
-          : 
-        (
-          <div className={styles.arrow_icon_container}>
-            <a href={`https://wa.me/34671246091?text=Hola, estoy interesad@ en participar en proyectos inmobiliarios. ¿Podrías darme más infomación?`}> 
-              <RiWhatsappLine className={`${styles.arrow_icon} ${styles.arrow_icon_whatsapp}`} /> 
-            </a>
-          </div>
-        )
-        } 
-      <motion.div>
-
-      </motion.div>
-      </motion.div>
     </section>
   );
 }
@@ -67,6 +51,18 @@ export default function App() {
 
   return (
     <div className={styles.page}>
+
+      <div className={styles.section_arrows_movil}> 
+        <div className={styles.arrow_icon_container}>
+          <a 
+            href={`https://wa.me/34672126268?text=Hola, estoy interesad@ en participar en proyectos inmobiliarios. ¿Podrías darme más infomación?`}
+            target="_blank"
+          > 
+            <RiWhatsappLine className={`${styles.arrow_icon} ${styles.arrow_icon_whatsapp}`} /> 
+          </a>
+        </div>
+      </div>
+
       <Header />
       <HomeSection id={1} css={styles.s1}> 
         <Section01 />
