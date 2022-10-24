@@ -35,6 +35,7 @@ export default function App() {
           <a 
             href={`https://wa.me/34672126268?text=Hola, estoy interesad@ en participar en proyectos inmobiliarios. ¿Podrías darme más infomación?`}
             target="_blank"
+            rel="noreferrer" 
           > 
             <RiWhatsappLine className={`${styles.arrow_icon} ${styles.arrow_icon_whatsapp}`} /> 
           </a>
