@@ -55,7 +55,7 @@ export default function App() {
       <div className={styles.section_arrows_movil}> 
         <div className={styles.arrow_icon_container}>
           <a 
-            href={`https://wa.me/34672126268?text= Hola, quisiera ofrecer mi propiedad en Crowd4Flipiing. ¿Podrías darme más infomación?`}
+            href={`https://wa.me/34672126268?text=Hola, quiero participar en proyectos inmobiliarios con Crowd4Flipping. ¿Podrías darme más información?`}
             target="_blank"
             rel="noreferrer" 
           > 
