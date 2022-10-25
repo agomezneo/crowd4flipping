@@ -8,7 +8,7 @@ function Layout({children}) {
          <Head>
             <title>Crowd4Flipping</title>
             <meta name="description" content="La inversión inmobiliaria al alcance de todos" />
-            <link rel="icon" href="/images/brand/crowd4flipping/Favicon/favicon_transparent.png" />
+            <link rel="icon" href="/images/brand/crowd4flipping/Favicon/favicon_0.png" />
         </Head>
         <div className={styles.Layout}>
             {children}
