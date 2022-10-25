@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import styles from '../../styles/BasicAccordion.module.scss'
-import {FaAngleDoubleDown, FaAngleDoubleUp, FaEthereum, FaArrowLeft, FaTelegramPlane, FaBitcoin, FaCheckDouble, FaExclamationTriangle, FaWhatsapp} from "react-icons/fa"; 
+import {FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa"; 
 function BasicAccordion() {
 
     const [selected, setSelected] = useState(null);
@@ -77,39 +77,23 @@ function BasicAccordion() {
                 {selected === "title7" ? <FaAngleDoubleUp/> : <FaAngleDoubleDown/>} 
             </div>
             <div className={selected === "title7" ? styles.showTextContent  : styles.acordionTextContent}>
-                <p className={styles.acordionTextTitle}> **********<br/></p>
+                <p className={styles.acordionTextTitle}>Personas físicas, mayores de edad con nacionalidad española.
+                <br/>
+                Personas físicas, mayores de edad, en posesión de un número de identificación de extranjero (NIE).
+                <br/>
+                Cualquier sociedad con CIF español.<br/>
+                </p>
             </div>
         </div>
         <div className={styles.acordionItem} id="title8">
             <div className={styles.acordionLink} onClick={() => toggle("title8")}>
-                ¿Cuál es el procedimiento para registrarse?
+                ¿Si tengo alguna duda con quién puedo contactar?
                 {selected === "title8" ? <FaAngleDoubleUp/> : <FaAngleDoubleDown/>} 
             </div>
             <div className={selected === "title8" ? styles.showTextContent  : styles.acordionTextContent}>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
-                    <p className={styles.acordionTextTitle}>**********</p>
+                    <p className={styles.acordionTextTitle}>Si tienes alguna duda puedes contactar con nosotros a contact@crowd4flipping.com o en el +34 672 126 268.<br/><br/>
+                    Estaremos encantados de poder ayudarte.<br/>
+                </p>
             </div>
         </div>
     </div> 
