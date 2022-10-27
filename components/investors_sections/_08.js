@@ -18,7 +18,7 @@ function HomeSection() {
                 <div className={styles.clientService_card}>
                   <h1>Servicio al cliente</h1>
                   <p>De lunes a viernes, de 09:00h a 18:00h </p>
-                  <p>+34 672 126 268</p>
+                  <p>+34 971 105 648</p>
                   <p>contacto@crowd4flipping.com</p>
                 </div>
               </div>
