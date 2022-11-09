@@ -21,104 +21,97 @@ function HomeSection() {
         <div className={styles.page_section_container}>
             <div className={styles.page_section_header} >
               <h1>Algunos de los <span> proyectos realizados </span></h1>
-            </div>
+            </div> 
             <div className={styles.page_section_body_flex}>
+
               <div className={styles.swiper_container}>
-               {/*  <Swiper
-                  effect={"coverflow"}
-                  grabCursor={true}
-                  centeredSlides={true}
-                  slidesPerView={"auto"}
-                  coverflowEffect={{
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                    slideShadows: true,
-                  }}
-                  pagination={true}
-                  modules={[EffectCoverflow, Pagination]}
-                  className={styless.swiper}
-                > */}
+               
                   <div className={styless.swiper_slide}>
                     <div className={styless.swiper_slide_header}>
-                      <Image src={Img} width={300} height={200} className={styles.swiper_image} />
+                      <Image src={Img} width={320} height={200} className={styles.swiper_image} />
                     </div>
                     <div className={styless.swiper_slide_body}>
-                      <h1>Chalet en Palma</h1>
-                      <h2>1.360.000 €</h2>
-                      <h3>Rentabilidad</h3>
-                      <span>11,5%</span>
-                      <p>Financiado por  <stron>2552</stron> inversores</p>
+                      <h1>Chalet Cala Viñas</h1>
+                      <h2> 740.000 €</h2>
+
+                      <div className={styless.swiper_slide_body_items_container}> 
+                        <div className={styless.swiper_slide_body_item}>
+                          <h2>Rentabilidad</h2>
+                          <span>14%</span>
+                        </div>
+                        <div className={styless.swiper_slide_body_item}>
+                          <h2>Tipo de operación</h2>
+                          <span>House Flipping</span>
+                        </div>
+                        <div className={styless.swiper_slide_body_item}>
+                          <h2>Número inversores</h2>
+                          <span>4</span>
+                        </div>
+                        <div className={styless.swiper_slide_body_item}>
+                          <h2>Plazo de inversión</h2>
+                          <span>8 meses</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className={styless.swiper_slide}>
                     <div className={styless.swiper_slide_header}>
-                      <Image src={Img2} width={300} height={200} className={styles.swiper_image} />
+                      <Image src={Img2} width={320} height={200} className={styles.swiper_image} />
                     </div>
                     <div className={styless.swiper_slide_body}>
                       <h1>Chalet en Palma</h1>
-                      <h2>1.360.000 €</h2>
-                      <h3>Rentabilidad</h3>
-                      <span>11,5%</span>
-                      <p>Financiado por  <stron>2552</stron> inversores</p>
+                      <h2> 1.390.000 €</h2>
+
+                      <div className={styless.swiper_slide_body_items_container}> 
+                        <div className={styless.swiper_slide_body_item}>
+                          <h2>Rentabilidad</h2>
+                          <span>11%</span>
+                        </div>
+                        <div className={styless.swiper_slide_body_item}>
+                          <h2>Tipo de operación</h2>
+                          <span>House Flipping</span>
+                        </div>
+                        <div className={styless.swiper_slide_body_item}>
+                          <h2>Número inversores</h2>
+                          <span>7</span>
+                        </div>
+                        <div className={styless.swiper_slide_body_item}>
+                          <h2>Plazo de inversión</h2>
+                          <span>10 meses</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className={styless.swiper_slide}>
                     <div className={styless.swiper_slide_header}>
-                      <Image src={Img3} width={300} height={200} className={styles.swiper_image} />
+                      <Image src={Img3} width={320} height={200} className={styles.swiper_image} />
                     </div>
                     <div className={styless.swiper_slide_body}>
-                      <h1>Chalet en Palma</h1>
-                      <h2>1.360.000 €</h2>
-                      <h3>Rentabilidad</h3>
-                      <span>11,5%</span>
-                      <p>Financiado por  <stron>2552</stron> inversores</p>
+                      <h1>Chalet en Costitx</h1>
+                      <h2> 360.000 €</h2>
+
+                      <div className={styless.swiper_slide_body_items_container}> 
+                        <div className={styless.swiper_slide_body_item}>
+                          <h2>Rentabilidad</h2>
+                          <span>12%</span>
+                        </div>
+                        <div className={styless.swiper_slide_body_item}>
+                          <h2>Tipo de operación</h2>
+                          <span>House Flipping</span>
+                        </div>
+                        <div className={styless.swiper_slide_body_item}>
+                          <h2>Número inversores</h2>
+                          <span>3</span>
+                        </div>
+                        <div className={styless.swiper_slide_body_item}>
+                          <h2>Plazo de inversión</h2>
+                          <span>5 meses</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  {/* <SwiperSlide className={styless.swiper_slide}>
-                    <div className={styless.swiper_slide_header}>
-                      <Image src={Img2} width={300} height={200}  />
-                    </div>
-                    <div className={styless.swiper_slide_body}>
-                      <h1>Chalet en Palma</h1>
-                      <h2>1.360.000 €</h2>
-                      <h3>Rentabilidad</h3>
-                      <span>11,5%</span>
-                      <p>Financiado por  <stron>2552</stron> inversores</p>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide className={styless.swiper_slide}>
-                    <div className={styless.swiper_slide_header}>
-                      <Image src={Img3} width={300} height={200}  />
-                    </div>
-                    <div className={styless.swiper_slide_body}>
-                      <h1>Chalet en Palma</h1>
-                      <h2>1.360.000 €</h2>
-                      <h3>Rentabilidad</h3>
-                      <span>11,5%</span>
-                      <p>Financiado por  <stron>2552</stron> inversores</p>
-                    </div>
-                  </SwiperSlide> */}
-                 
-       {/*          </Swiper> */}
               </div>
-            </div>
-            <div className={styles.page_section_footer}>
-              <div className={styles.footer_left_side}></div>
-                <div className={styles.footer_right_side}>
 
-                    <a href='#7' className={styles.modal_button_secundary}>
-                      <span>Quiero invertir</span>
-                    </a>
-
-                    {
-                    /* 
-                     TODO 
-                    <ModalButton>
-                      <InvestmentForm />
-                    </ModalButton> */}
-                </div>
             </div>
         </div>
     </div>
