@@ -38,7 +38,7 @@ function HomeSection() {
               </div>
             </div>
             <div className={styles.page_section_footer}>
-              <a href='#7' className={styles.modal_button_secundary}>
+              <a href='#8' className={styles.modal_button_secundary}>
                 <span>¡Descubrir la próxima oportunidad!</span>
               </a>
             </div>
