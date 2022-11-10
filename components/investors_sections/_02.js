@@ -4,7 +4,7 @@ import {StepsData} from '../../data/cards/StepCardsData';
 import Steper from '../stepers/MaterialHorizontal'; 
 import Vsteper from '../stepers/VerticalMUI';
 import {motion} from 'framer-motion'
-
+import Link from 'next/link';
 function HomeSection() {
 
   const [eleTarget, setEletarget] = useState(null);
@@ -80,9 +80,11 @@ useEffect(() => {
               </motion.div>
             </div>
             <div className={styles.page_section_footer}>
-                <a href='#8' className={styles.modal_button_secundary}>
-                  <span>¡Quiero invertir!</span>
-                </a>
+                <div className={styles.modal_button_secundary}>
+                  <Link href={'https://c4f.vercel.app/'} >
+                    <span>Regístrate gratis</span>
+                  </Link>
+                </div>
             </div>
         </div>
     </div>

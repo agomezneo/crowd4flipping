@@ -3,7 +3,7 @@ import styles from '../../styles/Investor&Owner_pages.module.scss'
 import {Data} from '../../data/cards/SimpleCardData';
 import Steper from '../stepers/MaterialHorizontal';
 import Vsteper from '../stepers/VerticalMUI';
-
+import Link from 'next/link';
 function HomeSection() {
 
   const [screen, setScreen] = useState(false);
@@ -38,9 +38,11 @@ function HomeSection() {
               </div>
             </div>
             <div className={styles.page_section_footer}>
-              <a href='#8' className={styles.modal_button_secundary}>
-                <span>¡Descubrir la próxima oportunidad!</span>
-              </a>
+              <div className={styles.modal_button_secundary}>
+                <Link href={'https://c4f.vercel.app/'} >
+                  <span>¡Descubrir la próxima oportunidad!</span>
+                </Link>
+              </div>
             </div>
         </div>
     </div>

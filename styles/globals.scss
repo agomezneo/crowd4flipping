@@ -19,13 +19,14 @@ body {
   --whitetransparent:#fdfdfd42; 
   --whitegray:  #f8f8f8;
   --whitegray_:  #ffffffff;
-  --orange: #ff4000;
+  --orange: linear-gradient(270deg, rgba(255,64,0,1) 0%, rgba(255,93,0,1) 100%);
   --green: #22cc88;
   --purple: #8855ff;
   --red: #ff0055;
   --yellow: #fcbe0a;
   --yellow1: #e98d00;
   --mustard: #ffaa00;
+  --backgroundButton:  linear-gradient(145deg, #00d1ff, #00b0e6);
 
 }
 

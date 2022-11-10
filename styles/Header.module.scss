@@ -49,6 +49,23 @@
     color: var(--blue);
 }
 
+.header_page_links_container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & a{
+        text-decoration: none;
+    }
+}
+
+.header_page_link{
+    border-bottom: 1px solid var(--blue);
+    cursor: pointer;
+    padding: 0 .5rem 0 .5rem;
+    border-radius: 5px;
+}
+
  
 @media only screen and (min-width: 360px) and (max-width: 991px){
     .links_list{

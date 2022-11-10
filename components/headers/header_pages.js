@@ -24,7 +24,13 @@ function Header() {
                 <Image src={Logo} width={120} height={50} alt='crowd for flipping logo' />
             </Link>
         </section>
-        <section>
+        <section  className={styles.header_page_links_container}>
+            <Link href={'/about'} >
+                <span className={styles.header_page_link}> Sobre de nosotros</span>
+            </Link>
+            <Link href={'/programa-transparencia'}>
+                <span className={styles.header_page_link}>Programa de transparencia</span>
+            </Link>
         </section>
     </nav>
   )

@@ -103,17 +103,21 @@
 .back_btn {
   display: inline-block;
   padding: 12px 18px;
-  background-color: var(--blue);
+  background: var(--backgroundButton);
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
   min-width: 300px;
   border-radius: 5px;
   box-shadow: -2px -2px 4px rgba(0, 0, 0, .3);  
+
+  & span{
+    color: var(--black);
+  }
 }
 
 .principal_button{
-  background-color: var(--orange);
+  background: var(--orange);
 }
 
 .nav_bar {

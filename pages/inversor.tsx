@@ -65,6 +65,7 @@ export default function App() {
       </div>
 
       <Header />
+      
       <HomeSection id={1} css={styles.s1}> 
         <Section01 />
       </HomeSection>

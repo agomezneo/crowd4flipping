@@ -34,13 +34,36 @@
         &:active { 
             border: none;
         }
-       
     }
+    & textarea{
+        height: 100px;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-family:  -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        scroll-behavior: smooth;;
+        background-color: var(--bluegray);
+        outline: none;
+        &:focus {
+            border: none;
+        }
+
+        &:active { 
+            border: none;
+        }
+    }
+
+    & input[type='checkbox']{
+        height: 2rem !important;
+        width:  2rem !important;    
+    }   
 
     .button{
         height: 50px;
         width: 100%;
-        background-color: var(--blue);
+        background: var(--backgroundButton);
         color: var(--white);
         display: grid;
         place-content: center;
@@ -49,6 +72,21 @@
         box-shadow: -1.5px -1.5px 3px rgba($color: #000000, $alpha: .5);
         cursor: pointer;
         margin-top: 1.2rem;
+    }
+}
+
+.input_container_checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; 
+
+    & p{
+        color: var(--black);
+
+        & a{
+            font-weight: 500;
+        }
     }
 }
 .OwnerForm{
