@@ -4,7 +4,7 @@ import axios from 'axios';
 import Router from 'next/router'
 import EllipsisLoader from '../loaders/ellipsisLoaderWhite';
 import ReCAPTCHA from "react-google-recaptcha";
-
+import Link from 'next/link';
 function InvestmentForm({type}) {
 
     const api = 'https://us-central1-c4f-backend-c3e81.cloudfunctions.net/app/api';
@@ -84,8 +84,7 @@ function InvestmentForm({type}) {
                     value={state.termsAndConditions} 
                     onChange={handleChange} 
                 />
-                <p>Autorizo el tratamiento de mis datos para recibir una respuesta a mi consulta según la <a href='#8'>Política de Privacidad</a>    
-                    
+                <p>Autorizo el tratamiento de mis datos para recibir una respuesta a mi consulta según la <Link href='/docs/aviso-legal'>Política de Privacidad</Link>    
                 </p>    
             </div>
             <div className={`${styles.input_container} ${styles.input_container_checkbox}`}>

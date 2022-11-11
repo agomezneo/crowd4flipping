@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../../styles/Footers.module.scss';
 import Image from 'next/image';
 import Logo from '../../public/images/brand/crowd4flipping/PNG_Files/Transparent_Logo.png';
+import Link from 'next/link';
 
 export default function index() {
   return (
@@ -12,7 +13,12 @@ export default function index() {
             </div>
             <div className={styles.footer_content}>
                 <h4> 
-                    <span> Obraplus S.L. </span> Todos los derechos reservados. | Política de privacidad | Aviso Legal | Política de Cookies
+                    <span> Obraplus S.L. </span> 
+                    Todos los derechos reservados. 
+                    | <Link href={'/docs/politica-privacidad'}> Política de privacidad </Link>
+                    | <Link href={'/docs/aviso-legal'}> Aviso Legal </Link>
+                    | <Link href={'/docs/politica-cookies'}> Política de Cookies </Link>
+                    | 
                 </h4>
             </div>
         </div>
