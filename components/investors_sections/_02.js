@@ -5,6 +5,7 @@ import Steper from '../stepers/MaterialHorizontal';
 import Vsteper from '../stepers/VerticalMUI';
 import {motion} from 'framer-motion'
 import Link from 'next/link';
+
 function HomeSection() {
 
   const [eleTarget, setEletarget] = useState(null);

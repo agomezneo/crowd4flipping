@@ -1,0 +1,164 @@
+.about_page{
+    padding-top: 10vh;
+}
+.about_page_section{
+    min-height: 100vh;
+}
+
+.about_page_s1{
+    display: grid;
+    grid-template: 
+        "left" 1fr
+        "right" 1fr
+    ;
+
+    height: 100vh;
+    background: url('/images/pages_images/team_work_01_01.png');
+    background-size : cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
+
+    & .left{
+        grid-area: left;
+        display: grid;
+        place-content: center;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 3rem;
+    }
+
+    & .right{
+        grid-area: right;
+    }
+}
+
+.text_container{
+    & h1{
+        color: var(--black);
+    }
+
+    & span{
+        color: var(--blue);
+    }
+}
+
+.about_page_s2{
+    display: grid;
+    grid-template: 
+        "s2_left" 1fr
+        "s2_right" 1fr
+    ;
+
+    & .s2_left{
+        grid-area: s2_left;
+        background: url('/images/pages_images/our_protection.jpg');
+        background-size : contain;
+        background-repeat: no-repeat;
+    }
+    & .s2_right{
+        grid-area: s2_right;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 3rem;
+
+        & h1{
+            color: var(--blue);
+        }
+    }
+}
+
+.s2_box_container_Title{
+    & h1{
+        width: 100%;
+    }
+    width: 50%;
+    text-align: justify;
+    
+}
+
+.s2_text_container{
+    & p{
+        font-size: 1.2rem;
+        color: var(--black);
+        & span{
+            color: var(--blue);
+        }
+    }
+}
+
+.s2_box{
+    display: flex;
+    align-items: center;
+    min-height: 50%;
+    gap: 1rem;
+}
+
+.about_page_s3{
+    min-height: 50vh;
+}
+
+.s3_text_container{
+    padding: 2rem;
+    & h1{
+        color: var(--blue);
+    }
+}
+
+.profile_card_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.profile_card{
+    text-align: center;
+    width: 200px;
+    border-radius: 5px;
+    padding: 1rem 0 1rem 0;
+    border: 1px solid var(--blue);
+}
+
+.profile_card_text{
+    & h1{
+        font-size: 1rem;
+        color: var(--black);
+        & span{
+            color: var(--blue);
+        }
+    }
+    & p{
+     font-size: .8rem;
+     font-weight: 500;
+    }
+}
+
+.about_page_s4{
+    background: url('/images/pages_images/team_work.jpg');
+    background-size : cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center; 
+    max-height: 30vh;  
+}
+
+@media only screen and (min-width: 900px){
+    
+.about_page_s1{
+    display: grid;
+    grid-template: 
+        "left right" / 1fr 1fr
+    ;
+    }
+.about_page_s2{
+    display: grid;
+    grid-template: 
+        "s2_right s2_left" / 1fr 1fr
+    ;
+    }
+}

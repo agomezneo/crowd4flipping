@@ -12,7 +12,7 @@ function HomeSection() {
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
             <div className={styles.page_section_header}>
-                <h1>¿Tienes alguna duda antes de empezar? <span>Estaremos encantados de atenderte.</span></h1>
+                <h1>¿Tienes alguna duda antes de empezar? <br/> <span>Estaremos encantados de atenderte.</span></h1>
             </div>
             <div className={styles.page_section_body_02}>
 
@@ -40,8 +40,20 @@ function HomeSection() {
                   <div className={styles.clientService_card_social_icons}>
                     <h3>Siguenos en redes</h3>
                     <div className={styles.clientService_card_social_icons_container}>
-                      <FaFacebookSquare className={styles.face_icon}/>
-                      <Image src={InstagramIcon} height={70} width={70} alt='instagram icon'/>
+                      <a 
+                        href='https://www.facebook.com/Crowd4Flipping' 
+                        target="_blank"
+                        rel="noreferrer" 
+                      >
+                       <FaFacebookSquare className={styles.face_icon}/>
+                      </a>
+                      <a
+                        href='https://www.instagram.com/crowd4flipping' 
+                        target="_blank"
+                        rel="noreferrer" 
+                      >
+                        <Image src={InstagramIcon} height={70} width={70} alt='instagram icon'/>
+                      </a>
                     </div>
                   </div>
                 </div>

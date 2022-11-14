@@ -26,11 +26,11 @@ function Header() {
         </section>
         <section  className={styles.header_page_links_container}>
             <Link href={'/about'} >
-                <span className={styles.header_page_link}> Sobre de nosotros</span>
+                <span className={styles.header_page_link}>Quienes somos</span>
             </Link>
-            <Link href={'/programa-transparencia'}>
+            {/* <Link href={'/programa-transparencia'}>
                 <span className={styles.header_page_link}>Programa de transparencia</span>
-            </Link>
+            </Link> */}
         </section>
     </nav>
   )
