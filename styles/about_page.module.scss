@@ -9,7 +9,6 @@
     display: grid;
     grid-template: 
         "left" 1fr
-        "right" 1fr
     ;
 
     height: 100vh;
@@ -24,7 +23,7 @@
         display: grid;
         place-content: center;
         background-color: rgba(255, 255, 255, 0.7);
-        padding: 3rem;
+        padding: 10px;
     }
 
     & .right{
@@ -35,6 +34,8 @@
 .text_container{
     & h1{
         color: var(--black);
+        text-align: center;
+        font-size: 1rem;
     }
 
     & span{
@@ -45,7 +46,7 @@
 .about_page_s2{
     display: grid;
     grid-template: 
-        "s2_left" 1fr
+        "s2_left" .5fr
         "s2_right" 1fr
     ;
 
@@ -57,7 +58,7 @@
     }
     & .s2_right{
         grid-area: s2_right;
-        padding: 2rem;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -71,12 +72,11 @@
 }
 
 .s2_box_container_Title{
+    width: 100%;
+    text-align: justify;
     & h1{
         width: 100%;
     }
-    width: 50%;
-    text-align: justify;
-    
 }
 
 .s2_text_container{
@@ -91,9 +91,14 @@
 
 .s2_box{
     display: flex;
+    flex-direction: column;
     align-items: center;
     min-height: 50%;
     gap: 1rem;
+}
+
+.s2_box_container{
+    padding: 10px;
 }
 
 .about_page_s3{
@@ -101,7 +106,7 @@
 }
 
 .s3_text_container{
-    padding: 2rem;
+    padding: 10px;
     & h1{
         color: var(--blue);
     }
@@ -149,16 +154,43 @@
 
 @media only screen and (min-width: 900px){
     
-.about_page_s1{
-    display: grid;
-    grid-template: 
-        "left right" / 1fr 1fr
-    ;
+    .about_page_s1{
+        display: grid;
+        grid-template: 
+            "left right" / 1fr 1fr
+        ;
+
+        & .left{
+            padding: 3rem;
+        }
+        }
+    .about_page_s2{
+        display: grid;
+        grid-template: 
+            "s2_right s2_left" / 1fr 1fr
+        ;
+
+        & .s2_right{
+            padding: 2rem;
+        }
+        }
+
+        .text_container{
+            & h1{
+                font-size: 1.5rem;
+            }
+        }
+
+    .s2_box{
+        flex-direction: row;
     }
-.about_page_s2{
-    display: grid;
-    grid-template: 
-        "s2_right s2_left" / 1fr 1fr
-    ;
+
+    .s2_box_container_Title{
+        width: 50% !important;
     }
+
+    .s3_text_container{
+        padding: 2rem;
+    }
+
 }

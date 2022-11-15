@@ -37,15 +37,18 @@ function HomeSection() {
                 </div>
               </div>
               <div className={styless.buttons_container}>
-                <div 
+                {/* <div 
                   className={`${styless.back_btn}`}
                   onClick={() => setShowModal(!showModal) }
                 >
                     Conoce Crowd<span>4</span>Flipping
-                </div>
-                <Link href={'https://c4f.vercel.app/'}>
+                </div> */}
+                <a href='#8' className={`${styless.back_btn} ${styless.principal_button}`}>
+                  ¡Quiero invertir!
+                </a>
+                {/* <Link href={'https://c4f.vercel.app/'}>
                   <div className={`${styless.back_btn} ${styless.principal_button}`}>Regístrate gratis</div>
-                </Link>
+                </Link> */}
               </div>
             </motion.div>   
             <motion.div

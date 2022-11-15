@@ -12,7 +12,8 @@ import Andres from '../public/images/profiles/andres_01.png'
 import Pedro from '../public/images/profiles/pedro_01.png'
 import Abogado from '../public/images/profiles/abogado_01.png'
 import Fiorela from '../public/images/profiles/fio_01.png'
-
+import Footer from '../components/footers';
+import Section_8 from '../components/investors_sections/_08';
 
 export default function About() {
   return (
@@ -124,9 +125,8 @@ export default function About() {
               </div>
             </div>
         </section>
-        <section className={`${styles.about_page_section} ${styles.about_page_s4}`}>
-        </section>
+        <Footer />
       </div>
     </>
   )
-}
+} 
