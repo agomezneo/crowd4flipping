@@ -49,7 +49,7 @@ export default function PoliticaPrivacidad() {
               <p>Cumplir con los requisitos para la ejecución y el mantenimiento de registros de evaluaciones de solvencia cuando así lo requiera la legislación aplicable.</p>
           </li>
           <li>
-              <p>Ejecutar, mantener, actualizar y mantener registros de los detalles de "conozca a su cliente" (Procedimiento KYC), verificaciones de identidad y riesgo, monitoreo de transacciones, e informes realizados de acuerdo con las reglas en materia de prevención de blanqueo de capitales y de financiación del terrorismo.</p>
+              <p>Ejecutar, mantener, actualizar y mantener registros de los detalles de conozca a su cliente (Procedimiento KYC), verificaciones de identidad y riesgo, monitoreo de transacciones, e informes realizados de acuerdo con las reglas en materia de prevención de blanqueo de capitales y de financiación del terrorismo.</p>
           </li>
           <li>
               <p>Garantizar la comunicación y las actividades adecuadas en relación con la presentación de informes y la recuperación de impagos.</p>
