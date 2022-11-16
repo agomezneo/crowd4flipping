@@ -136,13 +136,6 @@
 }
 
 .s1{
-    background-image: url('../public/images/pages_images/real-state.png');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: bottom;
-
-
     & .page_section_body{
         min-height: 80vh ;
         display: grid;
