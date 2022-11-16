@@ -33,7 +33,7 @@ export default function ModalButton({children}) {
 
   return ( 
     <>
-        <div  className={styles.modal_button} onClick={open}>
+        <div className={styles.modal_button} onClick={open}>
             <span>Solicitar información</span>
         </div>
         <motion.div 
