@@ -43,7 +43,7 @@ function HomeSection() {
                 href={`https://wa.me/34671246091?text=Hola, estoy interesad@ en ofrecer mi propiedad para ver que posibilidades tengo. ¿Podrías darme más información?`}
                 className={styles.whatsApp_cta}
               > 
-                <span>¡Contactanos!</span>
+                <span>¡Contáctanos!</span>
               </a>
             </div>
         </div>
