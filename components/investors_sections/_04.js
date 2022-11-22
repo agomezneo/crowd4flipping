@@ -4,9 +4,46 @@ import {Data} from '../../data/cards/SimpleCardData';
 import Steper from '../stepers/MaterialHorizontal';
 import Vsteper from '../stepers/VerticalMUI';
 import Link from 'next/link';
+import {motion} from 'framer-motion';
+
 function HomeSection() {
 
-  const [screen, setScreen] = useState(false);
+  const [eleTarget_, setEletarget_] = useState(null);
+  const [active, setActive] = useState(false);
+  const [screen, setScreen] = useState(false)
+
+  useEffect(()=>{
+    const doc = window.document;
+    setEletarget_(doc.getElementById('steps_container_2'))
+  },[]);
+
+  const setElementEffect = (ele, setActive) =>{
+    let ele_hight = ele?.offsetTop;
+    window.addEventListener("scroll", ()=>{
+      console.log(window.screenY)
+      if(window.scrollY < ele_hight){return setActive(false)}
+      if(window.scrollY > ele_hight - 200){
+        return setActive(true);
+      }
+    })
+  }
+
+  useEffect(()=>{
+    if(eleTarget_ === null)return
+    setElementEffect(eleTarget_, setActive)
+  },[eleTarget_])
+
+  const effectVariants = {
+    opened: {
+        opacity: 1,
+        y: 0
+    },
+    closed: {
+        opacity: 0, 
+        y: 100
+    },
+}
+
   useEffect(() => {
     let document = window.screen.width;
     if(document < 991){
@@ -14,6 +51,8 @@ function HomeSection() {
         return
     }
 }, [])
+
+console.log(eleTarget_)
 
   return (
     <div className={styles.page_section}>
@@ -23,11 +62,19 @@ function HomeSection() {
             </div>
             <div className={styles.page_section_body_01}>
               <div className={styles.empty_div_s4} />
-              <div className={styles.steps_container}>
+              <motion.div 
+                id='steps_container_2'
+                className={styles.steps_container}
+                initial={active}
+                variants={effectVariants}
+                animate= {active ? "opened" : "closed"}
+                transition={{delay: .5, duration: .5,  type: 'spring', stiffness: 100}}
+              >
                 {!screen ? 
                   (
                     <Steper 
                       data={Data}
+                      active={active}
                     />
                   )
                   :
@@ -35,7 +82,7 @@ function HomeSection() {
                     <Vsteper data={Data} />
                   )
                 }
-              </div>
+              </motion.div>
             </div>
             <div className={styles.page_section_footer}>
                 <a href='#8' className={styles.modal_button_secundary}>

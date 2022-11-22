@@ -262,6 +262,10 @@
   grid-template: 
       "steperbox"
   ;
+
+  & ::-webkit-scrollbar {
+    display: none;
+  } 
   & h1{
       color: var(--black);
 

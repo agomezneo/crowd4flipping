@@ -11,7 +11,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-        <meta name="facebook-domain-verification" content="s1jdwvgkd52qz97y64bh9fpls3zgn8" />
+            <meta name="facebook-domain-verification" content="s1jdwvgkd52qz97y64bh9fpls3zgn8" />
+            <link rel="icon" href="/images/brand/crowd4flipping/Favicon/favicon_0.png" />
         </Head>
         <body>
           <Main />

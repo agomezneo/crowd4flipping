@@ -43,7 +43,7 @@ function HomeSection() {
     },
 }
 
-useEffect(() => {
+useEffect(() => { 
     let document = window.screen.width;
     if(document < 991){
         setScreen(true)
@@ -70,7 +70,7 @@ useEffect(() => {
                 
                 {!screen ? 
                 (
-                  <Steper data={StepsData} activeEffect={active}/> 
+                  <Steper data={StepsData} activeEffect={active} active={active}/> 
                 )
                   :
 

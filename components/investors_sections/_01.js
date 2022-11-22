@@ -37,12 +37,12 @@ function HomeSection() {
                 </div>
               </div>
               <div className={styless.buttons_container}>
-                {/* <div 
+                <div 
                   className={`${styless.back_btn}`}
                   onClick={() => setShowModal(!showModal) }
                 >
                     Conoce Crowd<span>4</span>Flipping
-                </div> */}
+                </div>
                 <a href='#8' className={`${styless.back_btn} ${styless.principal_button}`}>
                   ¡Quiero invertir!
                 </a>
@@ -66,7 +66,7 @@ function HomeSection() {
         {showModal && (
           <Modal setShowModal={setShowModal}>
             <div className={styles.modal_video_container} >
-              <video src="/videos/real_state.mp4" controls autoPlay />
+              <video src="https://firebasestorage.googleapis.com/v0/b/c4f-backend-c3e81.appspot.com/o/videos-corporativos%2FCF4%20ANIMACION.mp4?alt=media&token=128f76af-c01b-41b8-94a1-61871b8d522a" controls autoPlay />
             </div>
           </Modal>
         )}
