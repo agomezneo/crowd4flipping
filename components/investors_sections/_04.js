@@ -52,8 +52,6 @@ function HomeSection() {
     }
 }, [])
 
-console.log(eleTarget_)
-
   return (
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>

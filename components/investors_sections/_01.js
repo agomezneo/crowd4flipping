@@ -8,11 +8,7 @@ import Image from 'next/image';
 import Modal from '../modals';
 import ModalButton from '../buttons/ModalButton';
 function HomeSection() {
-
   const [showModal, setShowModal] = useState(false)
-
-
-
   return (
     <>
       <div className={styles.video_container}>
