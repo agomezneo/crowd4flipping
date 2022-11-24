@@ -11,6 +11,7 @@ function HomeSection() {
   const [eleTarget_, setEletarget_] = useState(null);
   const [active, setActive] = useState(false);
   const [screen, setScreen] = useState(false)
+  const fromWeb = 'fw'
 
   useEffect(()=>{
     const doc = window.document;
@@ -20,7 +21,6 @@ function HomeSection() {
   const setElementEffect = (ele, setActive) =>{
     let ele_hight = ele?.offsetTop;
     window.addEventListener("scroll", ()=>{
-      console.log(window.screenY)
       if(window.scrollY < ele_hight){return setActive(false)}
       if(window.scrollY > ele_hight - 200){
         return setActive(true);
@@ -51,6 +51,7 @@ function HomeSection() {
         return
     }
 }, [])
+
 
   return (
     <div className={styles.page_section}>
@@ -83,14 +84,11 @@ function HomeSection() {
               </motion.div>
             </div>
             <div className={styles.page_section_footer}>
-                <a href='#8' className={styles.modal_button_secundary}>
-                  ¡Quiero invertir!
-                </a>
-              {/* <div className={styles.modal_button_secundary}>
-                <Link href={'https://c4f.vercel.app/'} >
+              <div className={styles.modal_button_secundary}>
+                <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}  >
                   <span>¡Descubrir la próxima oportunidad!</span>
                 </Link>
-              </div> */}
+              </div>
             </div>
         </div>
     </div>

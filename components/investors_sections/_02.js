@@ -11,6 +11,7 @@ function HomeSection() {
   const [eleTarget, setEletarget] = useState(null);
   const [active, setActive] = useState(false);
   const [screen, setScreen] = useState(false)
+  const fromWeb = 'fw'
 
   useEffect(()=>{
     const doc = window.document;
@@ -81,14 +82,11 @@ useEffect(() => {
               </motion.div>
             </div>
             <div className={styles.page_section_footer}>
-                <a href='#8' className={styles.modal_button_secundary}>
-                  ¡Quiero invertir!
-                </a>
-                {/* <div className={styles.modal_button_secundary}>
-                  <Link href={'https://c4f.vercel.app/'} >
+                <div className={styles.modal_button_secundary}>
+                  <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
                     <span>Regístrate gratis</span>
                   </Link>
-                </div> */}
+                </div>
             </div>
         </div>
     </div>

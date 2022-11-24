@@ -25,6 +25,9 @@ function Header() {
             </Link>
         </section>
         <section  className={styles.header_page_links_container}>
+            <Link href={'/transparencia'} >
+                <span className={styles.header_page_link}>Programa de transparencia</span>
+            </Link>
             <Link href={'/about'} >
                 <span className={styles.header_page_link}>Quienes somos</span>
             </Link>

@@ -9,6 +9,8 @@ import Modal from '../modals';
 import ModalButton from '../buttons/ModalButton';
 function HomeSection() {
   const [showModal, setShowModal] = useState(false)
+  const fromWeb = 'fw'
+
   return (
     <>
       <div className={styles.video_container}>
@@ -39,12 +41,9 @@ function HomeSection() {
                 >
                     Conoce Crowd<span>4</span>Flipping
                 </div>
-                <a href='#8' className={`${styless.back_btn} ${styless.principal_button}`}>
-                  ¡Quiero invertir!
-                </a>
-                {/* <Link href={'https://c4f.vercel.app/'}>
+                <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
                   <div className={`${styless.back_btn} ${styless.principal_button}`}>Regístrate gratis</div>
-                </Link> */}
+                </Link>
               </div>
             </motion.div>   
             <motion.div
