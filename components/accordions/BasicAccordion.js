@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import styles from '../../styles/BasicAccordion.module.scss'
 import {FaAngleDoubleDown, FaAngleDoubleUp } from "react-icons/fa"; 
+import Link from 'next/link';
+
 function BasicAccordion() {
 
     const [selected, setSelected] = useState(null);
@@ -45,7 +47,7 @@ function BasicAccordion() {
                 {selected === "title4" ? <FaAngleDoubleUp/> : <FaAngleDoubleDown/>} 
             </div>
             <div className={selected === "title4" ? styles.showTextContent  : styles.acordionTextContent}>
-                    <p className={styles.acordionTextTitle}>A través del programa de transparencia de Crowd4flipping, se realizará un seguimiento de todo el proyecto hasta su conclusión, informando puntualmente a los participantes de la evolución del mismo.<br/></p>
+                    <p className={styles.acordionTextTitle}>A través del <Link href={'/transparencia'}>programa de transparencia</Link> de Crowd4flipping, se realizará un seguimiento de todo el proyecto hasta su conclusión, informando puntualmente a los participantes de la evolución del mismo.<br/></p>
             </div>
         </div>
         <div className={styles.acordionItem} id="title5">
