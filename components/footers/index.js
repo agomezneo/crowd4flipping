@@ -18,6 +18,7 @@ export default function index() {
                     | <Link href={'/docs/politica-privacidad'}> Política de privacidad </Link>
                     | <Link href={'/docs/aviso-legal'}> Aviso Legal </Link>
                     | <Link href={'/docs/politica-cookies'}> Política de Cookies </Link>
+                    | <Link href={'/transparencia'}> Programa de transparencia </Link>
                     | 
                 </h4>
             </div>

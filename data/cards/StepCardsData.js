@@ -1,4 +1,4 @@
-import { HiOfficeBuilding } from "react-icons/hi";
+import Link from "next/link"
 
 const StepsData = [
     {
@@ -19,7 +19,7 @@ const StepsData = [
     {
         image : '/images/icons/informe-analisis.png',
         title: 'MONITOREA',
-        text: 'Con nuestro programa de transparencia Crowd4Flipping, podrás ver toda la evolución del proyecto desde la misma plataforma o incluso asistir presencialmente si lo deseas para ver la evolución del proyecto en el cual has invertido.'
+        text: `Con nuestro programa de transparencia Crowd4Flipping, podrás ver toda la evolución del proyecto desde la misma plataforma o incluso asistir presencialmente si lo deseas para ver la evolución del proyecto en el cual has invertido.`
     },
     {
         image : '/images/icons/tabla-de-crecimiento.png',

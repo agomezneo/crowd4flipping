@@ -41,9 +41,12 @@ function HomeSection() {
                 >
                     Conoce Crowd<span>4</span>Flipping
                 </div>
-                <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
+                {/* <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
                   <div className={`${styless.back_btn} ${styless.principal_button}`}>Regístrate gratis</div>
-                </Link>
+                </Link> */}
+                <a href={`#8`}>
+                  <div className={`${styless.back_btn} ${styless.principal_button}`}>Regístrate gratis</div>
+                </a>
               </div>
             </motion.div>   
             <motion.div

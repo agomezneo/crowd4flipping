@@ -46,7 +46,7 @@ export default function HorizontalLabelPositionBelowStepper({data, active}) {
                   
                     <StepLabel >
                         <span className={styles.step_title}> {item.title} </span><br/>
-                        <p className={styles.step_p}> {item.text} </p>
+                        <p className={styles.step_p}> {item.text}</p>
                     </StepLabel>
                 </motion.div>
 

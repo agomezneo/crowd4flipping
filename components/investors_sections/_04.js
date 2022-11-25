@@ -84,11 +84,16 @@ function HomeSection() {
               </motion.div>
             </div>
             <div className={styles.page_section_footer}>
-              <div className={styles.modal_button_secundary}>
+              {/* <div className={styles.modal_button_secundary}>
                 <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}  >
                   <span>¡Descubrir la próxima oportunidad!</span>
                 </Link>
-              </div>
+              </div> */}
+              <div className={styles.modal_button_secundary}>
+                  <a href={`#8`}>
+                    <span>¡Descubrir la próxima oportunidad!</span>
+                  </a>
+                </div>
             </div>
         </div>
     </div>
