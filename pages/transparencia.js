@@ -60,7 +60,7 @@ const S2 = () => {
   return (
       <div className={styless.transparency_s2}>
         <div className={styless.transparency_s2_texcontainer}>
-            <p>A menudo, se concibe la inversión como comprar un activo que se revaloriza. Pero, en realidad, <span>invertir es confiar en el trabajo de alguien</span>. No olvidemos que detrás de los índices bursátiles, fondos de inversión, bonos y acciones hay empresas. Estas empresas no son máquinas programadas para fabricar dinero, <span>sino organizaciones de personas que realizan un trabajo útil para otros: sus clientes</span>. 
+            <p>A menudo, se concibe la inversión como <span>comprar un activo que se revaloriza</span>. Pero, en realidad, <span>invertir es confiar en el trabajo de alguien</span>. No olvidemos que detrás de los índices bursátiles, fondos de inversión, bonos y acciones hay empresas. Estas empresas no son máquinas programadas para fabricar dinero, <span>sino organizaciones de personas que realizan un trabajo útil para otros: sus clientes</span>. 
             <br/>
             Si esto no fuera así, la empresa en la que invertimos no podría pagar y perderíamos nuestra inversión. Básicamente, estamos arriesgando nuestro capital a cambio de tener el derecho a <span>participar en el fruto de una actividad</span>. 
             <br/>

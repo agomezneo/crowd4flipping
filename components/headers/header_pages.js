@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import styles from '../../styles/Header.module.scss';
 import Image from 'next/image';
-import Logo from '../../public/images/brand/crowd4flipping/PNG_Files/Transparent_Logo_02.png'
+import Logo from '../../public/images/brand/crowd4flipping/logo/Crowd4Flipping.png';
 import Link from 'next/link';
 function Header() {
   const [activeFixedNav, setActiveFixedNav] = useState(false) 

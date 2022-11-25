@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../../styles/Footers.module.scss';
 import Image from 'next/image';
-import Logo from '../../public/images/brand/crowd4flipping/PNG_Files/Transparent_Logo.png';
+import Logo from '../../public/images/brand/crowd4flipping/logo/Crowd4Flipping.png';
 import Link from 'next/link';
 
 export default function index() {
@@ -9,7 +9,7 @@ export default function index() {
     <div className={styles.footer}>
         <div className={styles.footer_container}>
             <div className={styles.footer_logo_container}>
-                <Image src={Logo} width={350} height={200} alt='logo crowd4flipping' />
+                <Image src={Logo} width={350} height={140} alt='logo crowd4flipping' />
             </div>
             <div className={styles.footer_content}>
                 <h4> 

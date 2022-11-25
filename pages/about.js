@@ -7,11 +7,17 @@ import Logo from '../public/images/brand/crowd4flipping/logo/Crowd4Flipping.png'
 import Vsteper from '../components/stepers/VerticalMUI';
 import { Data } from '../data/cards/AboutCardData';
 import Jorge from '../public/images/profiles/jorge_01.png'
+import Jorge_ from '../public/images/profiles/jorge_02.png'
 import Alex from '../public/images/profiles/alex_01.png'
+import Alex_ from '../public/images/profiles/alex_02.png'
 import Andres from '../public/images/profiles/andres_01.png'
+import Andres_ from '../public/images/profiles/andres_02.png'
 import Pedro from '../public/images/profiles/pedro_01.png'
+import Pedro_ from '../public/images/profiles/pedro_02.png'
 import Abogado from '../public/images/profiles/abogado_01.png'
+import Abogado_ from '../public/images/profiles/abogado_02.png'
 import Fiorela from '../public/images/profiles/fio_01.png'
+import Fiorela_ from '../public/images/profiles/fio_02.png'
 import Footer from '../components/footers';
 import Section_8 from '../components/investors_sections/_08';
 
@@ -71,7 +77,10 @@ export default function About() {
             <div className={styles.profile_card_container}>
               <div className={styles.profile_card}>
                 <div className={styles.profile_image_container}>
-                  <Image src={Jorge} width={250} height={180} alt='Jorge Montosa Profile'/>
+                   <Image src={Jorge} width={250} height={180} alt='Jorge Montosa Profile'/>
+                </div>
+                <div className={styles.profile_image_container_}>
+                  <Image src={Jorge_} width={250} height={180} alt='Jorge Montosa Profile'/>
                 </div>
                 <div className={styles.profile_card_text}>
                   <h1>Jorge <span>Montosa</span> </h1>
@@ -82,6 +91,9 @@ export default function About() {
                 <div className={styles.profile_image_container}>
                   <Image src={Alex} width={250} height={180} alt='Alejandro Castells Profile'/>
                 </div>
+                <div className={styles.profile_image_container_}>
+                  <Image src={Alex_} width={250} height={180} alt='Alejandro Castells Profile'/>
+                </div>
                 <div className={styles.profile_card_text}>
                   <h1>Alex <span>Castells</span></h1>  
                   <p>CFO</p>
@@ -90,6 +102,9 @@ export default function About() {
               <div className={styles.profile_card}>
                 <div className={styles.profile_image_container}>
                   <Image src={Andres} width={250} height={180} alt='Andrés Gómez Profile'/>
+                </div>
+                <div className={styles.profile_image_container_}>
+                  <Image src={Andres_} width={250} height={180} alt='Andrés Gómez Profile'/>
                 </div>
                 <div className={styles.profile_card_text}>
                   <h1>Andrés <span>Gómez</span></h1>
@@ -100,6 +115,9 @@ export default function About() {
                 <div className={styles.profile_image_container}>
                   <Image src={Pedro} width={250} height={180} alt='Pedro Quintana Profile'/>
                 </div>
+                <div className={styles.profile_image_container_}>
+                  <Image src={Pedro_} width={250} height={180} alt='Pedro Quintana Profile'/>
+                </div>
                 <div className={styles.profile_card_text}>
                   <h1>Pedro <span>Quintana</span></h1>
                   <p>Arquitecto técnico</p>
@@ -109,6 +127,9 @@ export default function About() {
                 <div className={styles.profile_image_container}>
                   <Image src={Fiorela} width={250} height={180} alt='Fiorella Piazza Profile'/>
                 </div>
+                <div className={styles.profile_image_container_}>
+                  <Image src={Fiorela_} width={250} height={180} alt='Fiorella Piazza Profile'/>
+                </div>
                 <div className={styles.profile_card_text}>
                   <h1>Fiorella <span>Piazza</span></h1>
                   <p>Departamento administrativo</p>
@@ -117,6 +138,9 @@ export default function About() {
               <div className={styles.profile_card}>
                 <div className={styles.profile_image_container}>
                   <Image src={Abogado} width={250} height={180} alt='Daniel Profile'/>
+                </div>
+                <div className={styles.profile_image_container_}>
+                  <Image src={Abogado_} width={250} height={180} alt='Daniel Profile'/>
                 </div>
                 <div className={styles.profile_card_text}>
                   <h1> Daniel <span>Marqués</span></h1>
@@ -129,4 +153,4 @@ export default function About() {
       </div>
     </>
   )
-} 
+}  

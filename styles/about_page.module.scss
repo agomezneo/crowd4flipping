@@ -1,5 +1,7 @@
 .about_page{
     padding-top: 10vh;
+    display: grid;
+    place-items: center;
 }
 .about_page_section{
     min-height: 100vh;
@@ -120,6 +122,9 @@
     width: 100%;
     justify-content: center;
     padding: 2rem;
+    & :hover{
+        background-color: var(--black);
+    }
 }
 
 .profile_card{
@@ -128,6 +133,31 @@
     border-radius: 5px;
     padding: 1rem 0 1rem 0;
     border: 1px solid var(--blue);
+    cursor: pointer;
+}
+
+.profile_image_container{
+    transition: 1s all;
+}
+
+.profile_card:hover > .profile_card_text{
+    background-color: var(--blue);
+    & h1{
+        color: var(--white);
+    }
+    & span{
+        color: var(--white);
+    }
+}
+.profile_card:hover > .profile_image_container{
+    display: none;
+}
+
+.profile_image_container_{
+    display: none;
+}
+.profile_card:hover > .profile_image_container_{
+    display: contents;
 }
 
 .profile_card_text{
@@ -170,6 +200,7 @@
         grid-template: 
             "s2_right s2_left" / 1fr 1fr
         ;
+        width: 80vw;
 
         & .s2_right{
             padding: 2rem;
@@ -180,7 +211,7 @@
             & h1{
                 font-size: 1.5rem;
             }
-        }
+    }
 
     .s2_box{
         flex-direction: row;
