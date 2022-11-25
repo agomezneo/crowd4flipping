@@ -97,7 +97,6 @@ const S2 = () => {
       </div>
   );
 };
-
 const Mountains = () => (
   <motion.div
     initial={{ y: 25, opacity: 0 }}
