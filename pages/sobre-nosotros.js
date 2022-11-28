@@ -11,7 +11,7 @@ import Jorge_ from '../public/images/profiles/jorge_02.png'
 import Alex from '../public/images/profiles/alex_01.png'
 import Alex_ from '../public/images/profiles/alex_02.png'
 import Andres from '../public/images/profiles/andres_01.png'
-import Andres_ from '../public/images/profiles/andres_02.png'
+import Andres_ from '../public/images/profiles/andres_02.png' 
 import Pedro from '../public/images/profiles/pedro_01.png'
 import Pedro_ from '../public/images/profiles/pedro_02.png'
 import Abogado from '../public/images/profiles/abogado_01.png'
@@ -57,15 +57,11 @@ export default function About() {
               <p>El propósito es la razón de existir que define la contribución que cada uno realiza a la sociedad. El propósito de <span>Crowd</span>4<span>Flipping</span> es hacer accesible para cualquier persona con poco capital la inversión en proyectos inmobiliarios que hasta ahora ha estado reservado para unos pocos.</p>
             </div>
             <div className={styles.s2_box}> 
-
               <div className={styles.s2_box_container_Title}>
                 <h1>Nuestros Valores</h1>
               </div>
-
               <div className={styles.s2_box_container}>
-
                 <Vsteper data={Data} />
-
               </div>
             </div>
           </div>

@@ -52,6 +52,8 @@ useEffect(() => {
     }
 }, [])
 
+console.log('ele::', eleTarget)
+
 
   return (
     <div className={styles.page_section}>

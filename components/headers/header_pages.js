@@ -19,8 +19,8 @@ function Header() {
     }, [])
   return (
     <nav className={ activeFixedNav ? `${styles.header_page} ${styles.display_none}` : styles.header_page }>
-        <section>
-            <Link href={'/'} className={styles.logo_container}>
+        <section className={styles.logo_container}>
+            <Link href={'/'} >
                 <Image src={Logo} width={120} height={50} alt='crowd for flipping logo' />
             </Link>
         </section>
@@ -28,7 +28,7 @@ function Header() {
             <Link href={'/transparencia'} >
                 <span className={styles.header_page_link}>Programa de transparencia</span>
             </Link>
-            <Link href={'/about'} >
+            <Link href={'/sobre-nosotros'} >
                 <span className={styles.header_page_link}>Quienes somos</span>
             </Link>
             {/* <Link href={'/programa-transparencia'}>
