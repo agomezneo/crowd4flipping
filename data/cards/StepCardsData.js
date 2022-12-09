@@ -55,18 +55,18 @@ const HorizontalStepsData = [
 const CardsData = [
     {
         image : '/images/icons/grafico-de-velas.png',
-        title: 'Compramos en cualquier estado',
-        text: 'Después de haber valorado tu propiedad y haber llegado a un acuerdo, realizamos la compra en menos de 30 días.'
+        title: 'Obtén el máximo rendimiento',
+        text: 'Independiente del estado de tu propiedad, podrás sacarle la máxima rentabilidad posible. Sea vendiendo o alquilando, de la forma que más te interese.'
     },
     {
         image : '/images/icons/ubicacion-del-mapa-01.png',
-        title: 'Gana más dinero por tu vivienda',
-        text: 'Con Crowd4Flipping ganarás más dinero ya que no hay intermediarios por en medio.'
+        title: 'No sabes si vender o alquilar, ¡no te preocupes!',
+        text: 'Si dispones de una propiedad que no usas y estás pensando en sacarle rendimiento, siempre surgirá la duda de cómo puedes sacar mayor rendimiento. Habla con nosotros y te presentaremos las diferentes opciones para sacar el máximo provecho.'
     },
     {
         image : '/images/icons/archivo-de-datos.png',
         title: 'No pierdes el tiempo',
-        text: 'En menos de 2 llamadas con nuestros expertos, podrás vender tu propiedad.'
+        text: 'Vender o alquilar una propiedad no es una tarea fácil y más, si se necesita realizar algún tipo de reforma para aumentar el valor sin tener ninguna experiencia. ¡No pierdas el tiempo y contacta con nosotros!'
     },
    
 ]
@@ -74,15 +74,15 @@ const CardsData = [
 const MaterialHorizontalData = [
     {
         image : '/images/icons/conversacion.png',
-        text: 'Háblanos un poco de tu propiedad, da igual el estado, será rápido.'
+        text: 'Háblanos un poco de tu propiedad, da igual el estado en el que se encuentre. Cuéntanos cuáles serían tus intenciones, será rápido.'
     },
     {
         image : '/images/icons/presentacion.png',
-        text: 'Obten una valoración profesional.'
+        text: 'Obten una valoración profesional y qué posibilidades existen. Después, decide qué opción te conviene más.'
     },
     {
         image : '/images/icons/residencial.png',
-        text: 'Vende tu propiedad en menos de lo que piensas.'
+        text: 'Si te interesa alquilar tu propiedad sin encargarte de nada, podemos alquilarla pagando la anualidad por adelantado. En el caso que quieras vender, también te la podemos comprar. Tú decides.'
     },
    
 ]

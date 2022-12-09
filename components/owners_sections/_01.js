@@ -27,7 +27,7 @@ function HomeSection() {
                 <div className={styless.logo_container}>
                   <Image src={Logo} width={700} height={300} alt='Crowd4Flipping logo' />
                   <div className={styless.text_container}>
-                  <h1>Vende tu casa más rápido y <span>no pagues comisiones</span> </h1>
+                  <h1>Tanto si quieres vender como alquilar, <span> saca el máximo partido a tu propiedad.</span></h1>
                   </div>
                 </div>
                 
