@@ -12,12 +12,13 @@ function HomeSection() {
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
             <div className={styles.page_section_header}>
-                <h1>¿Tienes alguna duda antes de empezar? <br/> <span>Estaremos encantados de atenderte.</span></h1>
+                <h1>Solicita información y descubre<br/><span> la forma más rentable de sacar provecho de tu propiedad</span>. 
+                </h1>
             </div>
             <div className={styles.page_section_body_02}>
 
               <div className={styles.form_container}>
-                <InvestmentForm  type={'Investor'}/>
+                <InvestmentForm  type={'owner'}/>
               </div>
 
               <div className={styles.clientService_card_container}>

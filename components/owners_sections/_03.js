@@ -65,7 +65,7 @@ function HomeSection() {
             </div>
             <div className={styles.page_section_footer}>
               <a 
-                href={`https://wa.me/34671246091?text=Hola, estoy interesad@ en ofrecer mi propiedad para ver que posibilidades tengo. ¿Podrías darme más información?`}
+                href={`https://wa.me/34672126268?text=Hola, estoy interesad@ en ofrecer mi propiedad para ver que posibilidades tengo. ¿Podrías darme más información?`}
                 className={styles.whatsApp_cta}
               > 
                 <span>¡Contáctanos!</span>

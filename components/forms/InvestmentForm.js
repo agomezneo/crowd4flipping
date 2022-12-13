@@ -5,6 +5,7 @@ import Router from 'next/router'
 import EllipsisLoader from '../loaders/ellipsisLoaderWhite';
 import ReCAPTCHA from "react-google-recaptcha";
 import Link from 'next/link';
+
 function InvestmentForm({type}) {
 
     const api = 'https://us-central1-c4f-backend-c3e81.cloudfunctions.net/app/api';

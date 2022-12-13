@@ -4,6 +4,7 @@ import Header from '../components/headers/header_pages';
 import Section01 from '../components/owners_sections/_01';
 import Section02 from '../components/owners_sections/_02';
 import Section03 from '../components/owners_sections/_03';
+import Section04 from '../components/owners_sections/_04';
 import { RiWhatsappLine } from 'react-icons/ri'
 import Footer from '../components/footers';
 
@@ -50,6 +51,9 @@ export default function App() {
       </HomeSection>
       <HomeSection id={3} css={styles.s3}>
         <Section03 />
+      </HomeSection>
+      <HomeSection id={4} css={styles.s4}>
+        <Section04 />
       </HomeSection>
       <Footer />
       <motion.div className={styles.progress}  style={{ scaleX }} />

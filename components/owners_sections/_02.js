@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../styles/OwnersPage.module.scss';
+import styless from '../../styles/Home.module.scss';
 import {CardsData} from '../../data/cards/StepCardsData' 
 import ModalButton from '../buttons/ModalButton';
 import Form from './form_modal';
@@ -27,11 +28,11 @@ function HomeSection() {
               </div>
             </div>
             <div className={styles.page_section_footer}>
-                  <div className={styles.owner_right_footer_section}>
-                    <ModalButton>
-                      <Form />
-                    </ModalButton>
-                  </div>
+              <div className={styless.buttons_container}>
+                  <a href={`#4`}>
+                    <div className={`${styless.back_btn} ${styless.principal_button}`}>Solicitar información</div>
+                  </a>
+                </div>
             </div>
         </div>
     </div>

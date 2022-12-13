@@ -4,10 +4,8 @@ import styless from '../../styles/Home.module.scss';
 import {motion} from 'framer-motion';
 import Logo from '../../public/images/brand/crowd4flipping/PNG_Files/Transparent_Logo_02.png';
 import Image from 'next/image';
-import ModalButton from '../buttons/ModalButton';
-import Form from './form_modal'; 
 
-function HomeSection() {
+function HomeSection() { 
   return (
      <>
         <div className={`${styles.video_container} ${styles.video_container_invert}`}>
@@ -32,9 +30,9 @@ function HomeSection() {
                 </div>
                 
                 <div className={styless.buttons_container}>
-                    <ModalButton > 
-                      <Form />
-                    </ModalButton> 
+                    <a href={`#4`}>
+                      <div className={`${styless.back_btn} ${styless.principal_button}`}>Solicitar información</div>
+                    </a>
                 </div>
               </motion.div>   
           </div>
