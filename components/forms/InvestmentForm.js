@@ -19,7 +19,8 @@ function InvestmentForm({type}) {
         phone: '',
         comments: '',
         termsAndConditions: false,
-        type: type
+        type: type,
+        created: new Date()
     });
     
     const handleChange = (e) =>{
