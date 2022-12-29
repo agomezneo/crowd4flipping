@@ -93,7 +93,7 @@ function BasicAccordion() {
                 {selected === "title8" ? <FaAngleDoubleUp/> : <FaAngleDoubleDown/>} 
             </div>
             <div className={selected === "title8" ? styles.showTextContent  : styles.acordionTextContent}>
-                    <p className={styles.acordionTextTitle}>Si tienes alguna duda puedes contactar con nosotros a contact@crowd4flipping.com o en el +34 672 126 268.<br/><br/>
+                    <p className={styles.acordionTextTitle}>Si tienes alguna duda puedes contactar con nosotros a contacto@crowd4flipping.com o en el +34 672 126 268.<br/><br/>
                     Estaremos encantados de poder ayudarte.<br/>
                 </p>
             </div>

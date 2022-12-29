@@ -47,7 +47,7 @@ export default function App() {
     stiffness: 1000,
     damping: 70,
     restDelta: 0.1
-  });
+  }); 
 
   return (
     <div className={styles.page}>
