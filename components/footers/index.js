@@ -5,6 +5,7 @@ import Logo from '../../public/images/brand/crowd4flipping/logo/Crowd4Flipping.p
 import Link from 'next/link';
 
 export default function index() {
+  const fromWeb = 'fw'
   return (
     <div className={styles.footer}>
         <div className={styles.footer_container}>
@@ -19,6 +20,7 @@ export default function index() {
                     | <Link href={'/docs/aviso-legal'}> Aviso Legal </Link>
                     | <Link href={'/docs/politica-cookies'}> Política de Cookies </Link>
                     | <Link href={'/transparencia'}> Programa de transparencia </Link>
+                    | <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}> Area de clientes </Link>
                     | 
                 </h4>
             </div>

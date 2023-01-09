@@ -52,9 +52,6 @@ useEffect(() => {
     }
 }, [])
 
-console.log('ele::', eleTarget)
-
-
   return (
     <div className={styles.page_section}>
         <div className={`${styles.page_section_container} `}>
@@ -84,16 +81,10 @@ console.log('ele::', eleTarget)
               </motion.div>
             </div>
             <div className={styles.page_section_footer}>
-               {/*  <div className={styles.modal_button_secundary}>
+                <div className={styles.modal_button_secundary}>
                   <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
                     <span>Regístrate gratis</span>
                   </Link>
-                
-                </div> */}
-                <div className={styles.modal_button_secundary}>
-                  <a href={`#8`}>
-                    <span>Regístrate gratis</span>
-                  </a>
                 </div>
             </div>
         </div>

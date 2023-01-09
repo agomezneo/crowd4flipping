@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../../styles/Investor&Owner_pages.module.scss'
+import styless from '../../styles/Home.module.scss';
 import InvestmentForm from '../../components/forms/InvestmentForm';
 import { RiWhatsappLine } from 'react-icons/ri'
 import { GiRotaryPhone } from 'react-icons/gi'
@@ -8,6 +9,8 @@ import Image from 'next/image';
 import InstagramIcon from '../../public/images/icons/instagramIcon.webp';
 
 function HomeSection() {
+  const fromWeb = 'fw'
+
   return (
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
@@ -19,7 +22,6 @@ function HomeSection() {
               <div className={styles.form_container}>
                 <InvestmentForm  type={'Investor'}/>
               </div>
-
               <div className={styles.clientService_card_container}>
                 <div className={styles.clientService_card}>
 
@@ -57,10 +59,12 @@ function HomeSection() {
                     </div>
                   </div>
                 </div>
-                
               </div>
+             
             </div>
-            <div className={styles.page_section_footer}></div>
+            <div className={styles.page_section_footer}>
+              
+            </div>
         </div>
     </div>
   )
