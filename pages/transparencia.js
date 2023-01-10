@@ -94,6 +94,18 @@ const S2 = () => {
             <div className={`${styless.transparencia_card_image} ${styless.transparencia_card_image_04}` }></div>
         </div>
         </div>
+        <div className={styless.transparency_s2_texcontainer}>
+            <p>
+            <span>Crowd</span>4<span>Flipping</span> es una plataforma en la que publicitamos los proyectos que nosotros mismos tenemos a disposición para que tú también formes parte de ellos. Trabajamos de tal manera que, después de estudiar y negociar nosotros mismos los posibles proyectos de inversión existentes, ofrecemos la posibilidad de participar a cualquier persona interesada mediante la formalización de contratos de préstamo directos entre el interesado y Crowd4Flipping en los que fijamos las distintas condiciones remuneratorias y de devolución del préstamo. Todo perfectamente estudiado, transparente y realizado siempre pensando en el mayor beneficio del cliente.
+            <br/>
+            <br/>  
+            En <span>Crowd</span>4<span>Flipping</span> no mostramos ni damos acceso a proyectos de cualquier otro tercero, todos y cada uno de los que mostremos serán siempre ejecutados y administrados por nosotros mismos. Nuestra amplia experiencia en el sector y el equipo formado por expertos en sus respectivas áreas nos avala para poder gestionarlo de manera directa y siempre tratando de tú a tú con nuestro cliente.
+            <br/> 
+            <br/> 
+            Todo ello hace que la maquinaria funcione perfectamente, sin que haya información oculta, pérdidas de oportunidad o actuaciones sospechosas. Siempre sabrás en qué estado se encuentra la operación, su duración y los escenarios que se pueden dar gracias a la infraestructura organizativa creada y a la solidez legal de los contratos firmados entre las partes en cada proyecto. 
+
+            </p>
+        </div>
       </div>
   );
 };

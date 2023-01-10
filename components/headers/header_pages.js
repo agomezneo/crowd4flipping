@@ -31,9 +31,9 @@ function Header() {
             <Link href={'/sobre-nosotros'} >
                 <span className={styles.header_page_link}>Quienes somos</span>
             </Link>
-            {/* <Link href={'/programa-transparencia'}>
-                <span className={styles.header_page_link}>Programa de transparencia</span>
-            </Link> */}
+            <Link href={'https://app.crowd4flipping.com'}>
+                <span className={styles.header_page_link}>Acceso</span>
+            </Link>
         </section>
     </nav>
   )
