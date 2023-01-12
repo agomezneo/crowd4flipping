@@ -26,7 +26,7 @@ export default function Index() {
                 <div className={styles.text_container}>
                     <Image src={Logo} width={700} height={300} alt='Crowd for Flipping' />
                     <h1>La inversión inmobiliaria <span>al alcance de todos</span></h1>
-                    <h1>Proceso de <span>registro kyc</span></h1>
+                    <h1><span>Primera inversión</span></h1>
                 </div>
               </Link>
 
