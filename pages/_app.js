@@ -3,7 +3,7 @@ import styles from '../styles/globals.scss'
 import  { motion, AnimatePresence } from 'framer-motion';
 import {useRouter} from 'next/router';
 import Script from 'next/script';
-import {pageview, FB_PIXEL_ID} from '../../lib/fpixel'
+import {/* pageview, */ FB_PIXEL_ID} from '../../lib/fpixel'
 
 const handleRouteChange = () => {
   pageview()
