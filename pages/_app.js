@@ -1,3 +1,5 @@
+
+import React, {useEffect} from 'react';
 import '../styles/globals.scss';
 import styles from '../styles/globals.scss'
 import  { motion, AnimatePresence } from 'framer-motion';
