@@ -3,7 +3,6 @@ import styles from '../styles/globals.scss'
 import  { motion, AnimatePresence } from 'framer-motion';
 import {useRouter} from 'next/router';
 import Script from 'next/script';
-import {/* pageview, */ FB_PIXEL_ID} from '../../lib/fpixel'
 
 const handleRouteChange = () => {
   pageview()
@@ -41,7 +40,6 @@ function MyApp({ Component, pageProps }) {
         `}
     </Script>
 
-
     <Script id="facebook-pixel">
       {`
         !function(f,b,e,v,n,t,s)
@@ -56,6 +54,7 @@ function MyApp({ Component, pageProps }) {
         fbq('track', 'PageView');
       `}
     </Script>
+
 
     <AnimatePresence exitBeforeEnter>
       <motion.div
