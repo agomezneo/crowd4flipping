@@ -15,12 +15,8 @@ const pageview = () => {
 }
 
 function MyApp({ Component, pageProps }) {
-
-
   const router = useRouter();
-
   useEffect(() => {
-    // the below will only fire on route changes (not initial load - that is handled in the script below)
     router.events.on('routeChangeComplete', handleRouteChange)
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)

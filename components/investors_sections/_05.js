@@ -1,10 +1,7 @@
 import styles from '../../styles/Investor&Owner_pages.module.scss';
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { EffectCoverflow, Pagination } from "swiper";
 import styless from '../../styles/swiper.module.scss'
 import Image from 'next/image';
 import Img from '../../public/images/obras/foto_casa_example_01.png'
@@ -12,10 +9,7 @@ import Img2 from '../../public/images/obras/foto_casa_example_02.jpg'
 import Img3 from '../../public/images/obras/foto_casa_example_03.jpeg'
 
 function HomeSection() {
-
-  const go = () =>{
-    return alert('Hello C4F ¡A por ello!')
-  }
+ 
   return (
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
@@ -110,6 +104,7 @@ function HomeSection() {
                       </div>
                     </div>
                   </div>
+
               </div>
 
             </div>
