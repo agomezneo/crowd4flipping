@@ -6,16 +6,23 @@ import styless from '../../styles/swiper.module.scss'
 import Image from 'next/image';
 import Img from '../../public/images/obras/foto_casa_example_01.png'
 import Img2 from '../../public/images/obras/foto_casa_example_02.jpg'
-import Img3 from '../../public/images/obras/foto_casa_example_03.jpeg'
+import Img3 from '../../public/images/obras/foto_casa_example_03.jpeg';
+import axios from 'axios';
 
-function HomeSection() {
+function HomeSection({projectsInStudy, projectsFinished}) {
+
+  console.log(projectsInStudy)
+  console.log(projectsFinished)
  
   return (
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
-            <div className={styles.page_section_header} >
+
+            <div className={styles.page_section_header}>
               <h1>Algunos de los <span> proyectos realizados </span></h1>
             </div> 
+
+
             <div className={styles.page_section_body_flex}>
 
               <div className={styles.swiper_container}>
@@ -48,6 +55,7 @@ function HomeSection() {
                       </div>
                     </div>
                   </div>
+
                   <div className={styless.swiper_slide}>
                     <div className={styless.swiper_slide_header}>
                       <Image src={Img2} width={320} height={200} className={styles.swiper_image} />
@@ -76,6 +84,7 @@ function HomeSection() {
                       </div>
                     </div>
                   </div>
+                  
                   <div className={styless.swiper_slide}>
                     <div className={styless.swiper_slide_header}>
                       <Image src={Img3} width={320} height={200} className={styles.swiper_image} />
@@ -113,4 +122,12 @@ function HomeSection() {
   )
 }
 
-export default HomeSection
+export default HomeSection;
+
+
+
+
+
+
+
+

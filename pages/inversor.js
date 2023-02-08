@@ -13,14 +13,9 @@ import Section08 from '../components/investors_sections/_08';
 import Footer from '../components/footers';
 import { RiWhatsappLine } from 'react-icons/ri'
 
-function useParallax(value: MotionValue<number>, distance: number) { 
-  return useTransform(value, [0, 1], [-distance, distance]);
-}
 
 function HomeSection({id, css, children}) {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 500);
   const [screen, setScreen] = useState(false)
 
   useEffect(() => {
@@ -40,7 +35,7 @@ function HomeSection({id, css, children}) {
   );
 }
 
-export default function App() {
+export default function App({projectsInStudy, projectsFinished}) {
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -79,7 +74,7 @@ export default function App() {
         <Section04 />
       </HomeSection>
       <HomeSection id={5} css={styles.s5}>
-        <Section05 />
+        <Section05 projectsInStudy={projectsInStudy.data} projectsFinished={projectsFinished.data}/>
       </HomeSection>
       <HomeSection id={6} css={styles.s6}>
         <Section06 />
@@ -94,4 +89,20 @@ export default function App() {
       <motion.div className={styles.progress}  style={{ scaleX }} />
     </div>
   );
+}
+
+
+export async function getServerSideProps(){
+
+  const api = 'https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api/get-projects'
+  const projectsInStudy = await fetch(`${api}/IN_STUDY`).then((res) => res.json());
+  const projectsFinished = await fetch(`${api}/FINISHED`).then((res) => res.json());
+
+  return{
+      props: {
+        projectsInStudy,
+        projectsFinished
+      }
+  }
+
 }
