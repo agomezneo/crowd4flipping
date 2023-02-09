@@ -94,7 +94,7 @@ export default function App({projectsInStudy, projectsFinished}) {
 
 export async function getServerSideProps(){
 
-  const api = 'https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api/get-projects'
+  const api = 'https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api/get-projects-by-phase'
   const projectsInStudy = await fetch(`${api}/IN_STUDY`).then((res) => res.json());
   const projectsFinished = await fetch(`${api}/FINISHED`).then((res) => res.json());
 
