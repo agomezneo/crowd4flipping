@@ -6,6 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Map from '../../components/maps';
 import Modal from '../../components/modals/ProjectModal';
+import Logo from '../../public/images/brand/crowd4flipping/logo/Crowd4Flipping.png';
+
 
 function Index({project}) { 
 
@@ -27,8 +29,7 @@ function Index({project}) {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
-      }, [divHeight]);
-
+    }, [divHeight]);
     
   return (
     <div className={styles.project_page}>
@@ -80,7 +81,10 @@ function Index({project}) {
         {modalVisible && (
             <Modal>
                <div className={styles.modal_container}>
-                    <h1>Para ver la información detallada de este proyecto <span>debes iniciar sesión</span>.<br/> Si aún no tienes una cuenta, <span>¿a qué estás esperando?</span>.</h1>
+                    <div className={styles.footer_logo_container}>
+                        <Image src={Logo} width={350} height={140} alt='logo crowd4flipping' />
+                    </div>
+                    <h1>Para ver la información detallada de este proyecto <span>debes iniciar sesión</span>.<br/> Si aún no tienes una cuenta, <span>¿a qué estás esperando?</span></h1>
                     <h2></h2>
                     <Link href={`https://app.crowd4flipping.com/proyectos/${project.id}`}>
                         <div className={styles.button}>
