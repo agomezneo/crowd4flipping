@@ -16,7 +16,6 @@ function Index({project}) {
         const handleScroll = () => {
           const height = document.getElementById('main').offsetHeight;
           setDivHeight(height);
-            console.log(window.scrollY)
           if (window.scrollY >= divHeight) {
             setModalVisible(true);
           } else {
@@ -81,7 +80,7 @@ function Index({project}) {
         {modalVisible && (
             <Modal>
                <div className={styles.modal_container}>
-                    <h1>Para ver la información detallada de este proyecto <span>debes tener una cuenta</span>. Si aún no tienes una puedes crearla, <span>te tomará un par de minutos</span>. </h1>
+                    <h1>Para ver la información detallada de este proyecto <span>debes iniciar sesión</span>.<br/> Si aún no tienes una cuenta, <span>¿a qué estás esperando?</span>.</h1>
                     <h2></h2>
                     <Link href={`https://app.crowd4flipping.com/proyectos/${project.id}`}>
                         <div className={styles.button}>

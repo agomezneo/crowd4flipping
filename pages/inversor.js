@@ -1,6 +1,7 @@
 import styles from '../styles/Investor&Owner_pages.module.scss'
+import Head from 'next/head';
 import { useEffect, useRef, useState } from "react";
-import {  motion, useScroll, useSpring, useTransform, MotionValue} from "framer-motion";
+import {  motion, useScroll, useSpring} from "framer-motion";
 import Header from '../components/headers/header_pages';
 import Section01 from '../components/investors_sections/_01';
 import Section02 from '../components/investors_sections/_02';
@@ -35,7 +36,7 @@ function HomeSection({id, css, children}) {
   );
 }
 
-export default function App({projectsInStudy, projectsFinished}) {
+export default function App({projectsInStudy, projectsFinished}) { 
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -46,7 +47,10 @@ export default function App({projectsInStudy, projectsFinished}) {
 
   return (
     <div className={styles.page}>
-
+      <Head>
+          <title>Crowd4Flipping</title>
+          <meta name="description" content="Invierte en proyectos inmobiliarios de las Islas Baleares desde tan solo 500€ " />        
+      </Head>
       <div className={styles.section_arrows_movil}> 
         <div className={styles.arrow_icon_container}>
           <a 
