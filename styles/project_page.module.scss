@@ -10,15 +10,18 @@
 
 .project_page_header{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 1rem;
-    height: 12vh;
+    height: fit-content;
+    gap: 1rem;
     box-shadow: inset 7px 7px 14px #00a4d6,
     inset -7px -7px 14px #00e2ff;
     background-color: var(--blue);
     border-radius: 7px;
     margin-bottom: .2rem;
+    overflow: hidden;
     & h1{
         margin-bottom: 0;
         color: var(--white);
@@ -145,6 +148,7 @@
 @media only screen and (min-width: 992px){
 
     .project_page_header{
+        height: 12vh;
         & h1{
             font-size: 1.5rem;
         }

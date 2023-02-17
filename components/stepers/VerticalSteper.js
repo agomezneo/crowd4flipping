@@ -91,7 +91,7 @@ export default function VerticalLinearStepper({steps}) {
       </Stepper>
       {activeStep === steps.length && (
         <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography>Así de sencillo puedes rentabilizat tu dinero en un mercado solido.</Typography>
+          <Typography>Así de sencillo puedes rentabilizar tu dinero en un mercado solido.</Typography>
           <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
             Reset
           </Button>

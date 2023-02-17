@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Map from '../../components/maps';
 import Modal from '../../components/modals/ProjectModal';
 import Logo from '../../public/images/brand/crowd4flipping/logo/Crowd4Flipping.png';
-
+import SimpleHorizontal from '../../components/stepers/SimpleHorizontal';
 
 function Index({project}) { 
 
@@ -30,14 +30,21 @@ function Index({project}) {
           window.removeEventListener('scroll', handleScroll);
         };
     }, [divHeight]);
+
+    console.log(project.timeline)
     
   return (
     <div className={styles.project_page}>
+
         <div className={styles.project_page_header}>
             <div>
                 <h1> {project?.name} </h1>
                 <span> <MdLocationPin />{project?.address?.city}</span>
             </div> 
+
+            <SimpleHorizontal 
+                data={project.timeline}
+            />
         </div>
 
         <div className={styles.carousel_container}>
@@ -66,14 +73,13 @@ function Index({project}) {
             </div>
             <div className={styles.main_container}>   
                 <div className={styles.description}>
-                    {project.phase === 'IN_STUDY' ? (
-                        <p></p>
-                    ) : (
-                        <p>{project.description}</p>
-                    )}
+                    <p>{project.description}</p>
                 </div>
                 <div className={styles.map_container}>
-                        <Map />
+                        <Map 
+                            lat={project.address.positions.latitude ? parseFloat(project.address.positions.latitude) : 39.57766747597557}
+                            lng={project.address.positions.longitude ? parseFloat(project.address.positions.longitude) : 2.6414387504611745}
+                        />
                 </div>
             </div>
         </div>

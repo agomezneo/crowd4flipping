@@ -4,17 +4,19 @@ import styles from '../../styles/project_card.module.scss';
 import Image from 'next/image';
 import {MdLocationPin} from 'react-icons/md';
 import Carousel from 'react-material-ui-carousel' 
+import StudyImage from '../../public/images/pages_images/transparencia_cards/01.jpg'
 
-function ProjectCard({id, imgs, name, location, quantityFunded, estimatedRentability, finalProfit}) {
+function ProjectCard({id, imgs, name, location, quantityFunded, estimatedRentability, finalProfit, phase}) {
 
     const formatterEuro = new Intl.NumberFormat('de-DE', {
         style: 'currency',
         currency: 'EUR'
     });
 
+
   return (
     <motion.div
-        whileHover={{
+        whileHover={{ 
             y: -10,
             boxShadow: '1px 1px 4px #131515',
             zIndex: 1000
@@ -48,18 +50,32 @@ function ProjectCard({id, imgs, name, location, quantityFunded, estimatedRentabi
             </div>
             <hr />
             <div className={styles.financialInfo}>
-                <div className={styles.financialInfo_item}>
-                    <h2>Fondo recaudado</h2>
-                    <p> {formatterEuro.format(quantityFunded)} </p>
-                </div>
-                <div className={styles.financialInfo_item}>
-                    <h2>Rentabilidad estimada</h2>
-                    <p> {estimatedRentability}% </p>
-                </div>
-                <div className={styles.financialInfo_item}>
-                    <h2>Rentabilidad obtenida</h2>
-                    <p> {finalProfit || 'En proceso'}{finalProfit && '%'}</p>
-                </div>
+                {phase === 'IN_STUDY' ? (
+                    <>
+                        <h1>PROYECTO EN ESTUDIO</h1>
+                        <Image
+                            src={StudyImage}
+                            width={100}
+                            height={100}
+                        />
+                    </>
+                ) : 
+                (
+                   <>
+                   <div className={styles.financialInfo_item}>
+                        <h2>Fondo recaudado</h2>
+                        <p> {formatterEuro.format(quantityFunded)} </p>
+                    </div>
+                    <div className={styles.financialInfo_item}>
+                        <h2>Rentabilidad estimada</h2>
+                        <p> {estimatedRentability}% </p>
+                    </div>
+                    <div className={styles.financialInfo_item}>
+                        <h2>Rentabilidad obtenida</h2>
+                        <p> {finalProfit || 'En proceso'}{finalProfit && '%'}</p>
+                    </div>
+                   </> 
+                )}
             </div>
         </div>
 

@@ -22,28 +22,43 @@
     & p{
         color: var(--black);
         font-size: .9rem;
-    text-align: left;
+        text-align: left;
 
     }
 }
-
+ 
 .step{
     position: relative;
     border-right: .5px solid var(--blue);
     min-height: 200px;
 
 }
-/* .step_v{
-    position: relative;
-    border-right: .5px solid var(--blue);
-    display: grid;
-    grid-template-columns: 1fr 7fr;
-    width: 100%;
 
+.simple_step_container{
+    width: fit-content;
+    align-items: center;
+    display: flex;
+    height: 100%;
 }
- */
+.simple_step{
+    height: fit-content;
+    position: relative;
+    border-right: .5px solid var(--white);
+    width: 220px;
+    text-align: center;
+}
 .step_no_border{
     border-right: none !important;
+}
+
+.simple_step_label{
+    border: 1px solid  rebeccapurple;
+    text-align: center !important;
+}
+.simple_step_title{
+    font-size: 1rem !important;
+    width: auto;
+    text-align: center;
 }
 
 .step_title{
