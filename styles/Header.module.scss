@@ -61,6 +61,8 @@
     & a{
         text-decoration: none;
     }
+
+    
 }
 
 .header_page_link{
@@ -69,6 +71,13 @@
     padding: .1rem .5rem;
     border-radius: 5px;
 }
+
+.header_page_title{
+    color: var(--blue) !important;
+    font-size: 2rem;
+}
+
+
  
 @media only screen and (min-width: 360px) and (max-width: 991px){
     .links_list{
@@ -88,4 +97,10 @@
             font-size: .8rem;
         }
     }
+
+    .header_page_title{
+        font-size: .8rem;
+        text-align: center;
+    }
+    
 }    
