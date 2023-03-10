@@ -4,7 +4,7 @@ import Header from '../components/headers/header_pages_form';
 import Footer from '../components/footers/index';
 import ReCAPTCHA from "react-google-recaptcha";
 import Link from 'next/link';
-
+import EllipsisLoader from '../components/loaders/ellipsisLoaderWhite'
 function Index() {
 
     const [captchaa, setCaptchaa] = useState(false);
@@ -37,6 +37,7 @@ function Index() {
     };
 
     const handleSubmit = () =>{
+        setSendData(true)
         alert(`Hello form ${state.name}`)
     }
 
@@ -193,15 +194,16 @@ function Index() {
                 />,
                 </div>
                 <div className={styles.input_container}>
-                    <div className={styles.button} onClick={() => handleSubmit()} >
-                        {!sendData ? 
-                            'Enviar' 
-                        : 
-                        <>
+                    {!sendData ? (
+                        <div className={styles.button} onClick={() => handleSubmit()} >
+                            Enviar
+                        </div>
+                    ):
+                    (
+                        <div className={styles.button}>
                             <EllipsisLoader/>
-                        </>
-                        }
-                    </div>
+                        </div>
+                    )}
                 </div>
 
             </div>
