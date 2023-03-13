@@ -1,3 +1,4 @@
+import Layout from '../components/layouts/Layout';
 import styles from '../styles/Investor&Owner_pages.module.scss'
 import Head from 'next/head';
 import { useEffect, useRef, useState } from "react";
@@ -46,7 +47,8 @@ export default function App({projectsInStudy, projectsFinished}) {
   }); 
 
   return (
-    <div className={styles.page}>
+    <Layout>
+      <div className={styles.page}>
       <Head>
           <title>Crowd4Flipping</title>
           <meta name="description" content="Invierte en proyectos inmobiliarios de las Islas Baleares desde tan solo 500€ " />        
@@ -63,8 +65,6 @@ export default function App({projectsInStudy, projectsFinished}) {
         </div>
       </div>
 
-      <Header />
-      
       <HomeSection id={1} css={styles.s1}> 
         <Section01 />
       </HomeSection>
@@ -92,6 +92,7 @@ export default function App({projectsInStudy, projectsFinished}) {
       <Footer />
       <motion.div className={styles.progress}  style={{ scaleX }} />
     </div>
+    </Layout>
   );
 }
 

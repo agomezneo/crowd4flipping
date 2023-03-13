@@ -1,6 +1,6 @@
 import styles from '../styles/OwnersPage.module.scss';
 import { motion, useScroll, useSpring, } from "framer-motion";
-import Header from '../components/headers/header_pages';
+import Layout from '../components/layouts/Layout';
 import Section01 from '../components/owners_sections/_01';
 import Section02 from '../components/owners_sections/_02';
 import Section03 from '../components/owners_sections/_03';
@@ -29,34 +29,34 @@ export default function App() {
 }); 
 
   return (
-    <div className={styles.page}>
-
-      <div className={styles.section_arrows_movil}> 
-        <div className={styles.arrow_icon_container}>
-          <a 
-            href={`https://wa.me/34672126268?text= Hola, quisiera ofrecer mi propiedad en Crowd4Flipiing. ¿Podrías darme más información?`}
-            target="_blank"
-            rel="noreferrer" 
-          > 
-            <RiWhatsappLine className={`${styles.arrow_icon} ${styles.arrow_icon_whatsapp}`} /> 
-          </a>
+    <Layout>
+      <div className={styles.page}>
+        <div className={styles.section_arrows_movil}> 
+          <div className={styles.arrow_icon_container}>
+            <a 
+              href={`https://wa.me/34672126268?text= Hola, quisiera ofrecer mi propiedad en Crowd4Flipiing. ¿Podrías darme más información?`}
+              target="_blank"
+              rel="noreferrer" 
+            > 
+              <RiWhatsappLine className={`${styles.arrow_icon} ${styles.arrow_icon_whatsapp}`} /> 
+            </a>
+          </div>
         </div>
-      </div>
-      <Header />
-      <HomeSection id={1} css={styles.s1}>
-        <Section01 />
-      </HomeSection>
-      <HomeSection id={2} css={styles.s2}>
-        <Section02 />
-      </HomeSection>
-      <HomeSection id={3} css={styles.s3}>
-        <Section03 />
-      </HomeSection>
-      <HomeSection id={4} css={styles.s4}>
-        <Section04 />
-      </HomeSection>
-      <Footer />
-      <motion.div className={styles.progress}  style={{ scaleX }} />
-    </div>
+        <HomeSection id={1} css={styles.s1}>
+          <Section01 />
+        </HomeSection>
+        <HomeSection id={2} css={styles.s2}>
+          <Section02 />
+        </HomeSection>
+        <HomeSection id={3} css={styles.s3}>
+          <Section03 />
+        </HomeSection>
+        <HomeSection id={4} css={styles.s4}>
+          <Section04 />
+        </HomeSection>
+        <Footer />
+        <motion.div className={styles.progress}  style={{ scaleX }} />
+        </div>
+    </Layout>
   );
 }

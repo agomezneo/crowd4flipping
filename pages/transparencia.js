@@ -11,7 +11,6 @@ import Footer from '../components/footers';
 export default function Transparencia() {
   return (
       <Layout>
-        <Header />
        <div className={styless.transparency_page}>
         <S1 />
         <S2 />

@@ -1,4 +1,5 @@
 import React from 'react';
+import Layout from '../components/layouts/Layout';
 import Header from '../components/headers/header_pages';
 import styles from '../styles/about_page.module.scss';
 import { motion } from 'framer-motion';
@@ -19,12 +20,11 @@ import Abogado_ from '../public/images/profiles/abogado_02.png'
 import Fiorela from '../public/images/profiles/fio_01.png'
 import Fiorela_ from '../public/images/profiles/fio_02.png'
 import Footer from '../components/footers';
-import Section_8 from '../components/investors_sections/_08';
+
 
 export default function About() {
   return (
-    <>
-      <Header />
+    <Layout>
       <div className={styles.about_page}>
         <section className={`${styles.about_page_section} ${styles.about_page_s1}`}>
           <div className={styles.left}>
@@ -147,6 +147,6 @@ export default function About() {
         </section>
         <Footer />
       </div>
-    </>
+    </Layout>
   )
 }  

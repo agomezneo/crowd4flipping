@@ -3,7 +3,10 @@ import styles from '../../styles/Header.module.scss';
 import Image from 'next/image';
 import Logo from '../../public/images/brand/crowd4flipping/logo/Crowd4Flipping.png';
 import Link from 'next/link';
-function Header() {
+import {motion} from 'framer-motion';
+
+function Header({setOpen}) {
+
   const [activeFixedNav, setActiveFixedNav] = useState(false) 
     useEffect(() => {
     if(!document){
@@ -17,7 +20,20 @@ function Header() {
         }
     })
     }, [])
+
+    const [isOpen, setIsOpen] = useState(false);
+
+   
+   
+    const open = () =>{
+        setIsOpen(state => !state) 
+        setOpen(state => !state)
+    }
+
+
+
   return (
+    <>
     <nav className={ activeFixedNav ? `${styles.header_page} ${styles.display_none}` : styles.header_page }>
         <section className={styles.logo_container}>
             <Link href={'/'} >
@@ -35,8 +51,20 @@ function Header() {
                 <span className={styles.header_page_link}>Acceso</span>
             </Link>
         </section>
+        
+        <section  className={styles.header_page_links_container_burger_container}>
+            <div 
+                className={isOpen ? `${styles.header_page_burger} ${styles.open}` : styles.header_page_burger}
+                onClick={open}
+            >
+                    <div className={styles.heder_page_btn_burger}></div>
+            </div>
+        </section>
     </nav>
+
+       
+    </>
   )
 }
 
-export default Header
+export default Header 

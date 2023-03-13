@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../../styles/Investor&Owner_pages.module.scss'
 import BasicAccordion from '../accordions/BasicAccordion';
-
+import {motion} from 'framer-motion'
 function HomeSection() {
   return (
     <div className={styles.page_section}>
@@ -13,7 +13,16 @@ function HomeSection() {
               <div className={styles.acordion_container}>
                 <BasicAccordion />
               </div>
-              <div className={styles.empty_div} />
+              <motion.div 
+                className={styles.empty_div} 
+                animate={{ y: [-15, 15]}} 
+                transition={{
+                  duration: 2, 
+                  repeat: Infinity, 
+                  repeatType: "reverse", 
+                  ease: "easeInOut",
+                }}
+              />
             </div>
             <div className={styles.page_section_footer}>
             </div>

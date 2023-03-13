@@ -4,7 +4,7 @@ import {StepsData} from '../../data/cards/StepCardsData';
 import Steper from '../stepers/MaterialHorizontal'; 
 import Vsteper from '../stepers/VerticalMUI';
 import {motion} from 'framer-motion'
-import Link from 'next/link';
+import Link from 'next/link'; 
 
 function HomeSection() {
 
@@ -23,7 +23,7 @@ function HomeSection() {
     window.addEventListener("scroll", ()=>{
       if(window.scrollY < ele_hight){return setActive(false)}
       if(window.scrollY > ele_hight - 200){
-        return setActive(true);
+        return setActive(true); 
       }
     })
   }

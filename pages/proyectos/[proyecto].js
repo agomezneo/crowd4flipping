@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
 import styles from '../../styles/project_page.module.scss';
 import {MdLocationPin} from 'react-icons/md'
 import Carousel from 'react-material-ui-carousel' 
@@ -13,6 +14,7 @@ function Index({project}) {
 
     const [modalVisible, setModalVisible] = useState(false);
     const [divHeight, setDivHeight] = useState(0);
+    const [description, setDescription] = useState('')
 
     useEffect(() => {
         const handleScroll = () => {
@@ -31,11 +33,28 @@ function Index({project}) {
         };
     }, [divHeight]);
 
-    console.log(project.timeline)
-    
+    function shortenString(str) {
+        console.log(str)
+        let words = str.split(" ");
+        if (words.length > 20) {
+          words = words.slice(0, 20);
+          words.push("...");
+        }
+        return words.join(" ");
+    }
+
+    useEffect(() =>{
+        let shortString = shortenString(project?.description);
+        setDescription(shortString);
+    }, [])
+      
+
   return (
     <div className={styles.project_page}>
-
+        <Head>
+            <title>{project?.name}</title>
+            <meta name="description" content={`${description}`}/>  
+        </Head>
         <div className={styles.project_page_header}>
             <div>
                 <h1> {project?.name} </h1>

@@ -60,7 +60,16 @@ function HomeSection() {
                 <h1>¿Por qué <strong>invertir en inmuebles con  <span>Crowd</span>4<span>Flipping</span></strong>?</h1>
             </div>
             <div className={styles.page_section_body_01}>
-              <div className={styles.empty_div_s4} />
+              <motion.div 
+                className={styles.empty_div_s4} 
+                animate={{ y: [-15, 15]}} 
+                transition={{
+                  duration: 2, 
+                  repeat: Infinity, 
+                  repeatType: "reverse", 
+                  ease: "easeInOut",
+                }}
+              />
               <motion.div 
                 id='steps_container_2'
                 className={styles.steps_container}

@@ -1,10 +1,12 @@
 import React, {useState, useEffect, useRef} from 'react';
+import Head from 'next/head';
 import styles from '../styles/propiedades_form.module.scss';
 import Header from '../components/headers/header_pages_form';
 import Footer from '../components/footers/index';
 import ReCAPTCHA from "react-google-recaptcha";
 import Link from 'next/link';
-import EllipsisLoader from '../components/loaders/ellipsisLoaderWhite'
+import EllipsisLoader from '../components/loaders/ellipsisLoaderWhite';
+
 function Index() {
 
     const [captchaa, setCaptchaa] = useState(false);
@@ -41,10 +43,12 @@ function Index() {
         alert(`Hello form ${state.name}`)
     }
 
-    console.log(state)
- 
   return (
     <div className={styles.form_page}>
+        <Head>
+            <title>Descubre la forma más rentable de sacar provecho de tu propiedad.</title>
+            <meta name="description" content="Con unos simples clicks podrás acceder a las oportunidades que ofremos en Crowd4Flipping para tu propiedad." />  
+        </Head>
         <Header 
         />
        <div className={styles.body}>
@@ -176,7 +180,7 @@ function Index() {
                         </option>
                     </select>
                 </div>
-                <div className={`${styles.input_container} ${styles.input_container_checkbox}`}>
+                <div className={styles.input_container_checkbox}>
                     <input 
                         type="checkbox" 
                         name='termsAndConditions' 
@@ -186,7 +190,7 @@ function Index() {
                     <p>Autorizo el tratamiento de mis datos para recibir una respuesta a mi consulta según la <Link href='/docs/aviso-legal'>Política de Privacidad</Link>    
                     </p>    
                 </div>
-                <div className={`${styles.input_container} ${styles.input_container_checkbox}`}>
+                <div className={styles.input_container_checkbox}>
                 <ReCAPTCHA
                     ref={captcha}
                     sitekey="6LeW0vYiAAAAABvzPB2SSZrvaz3d7ptD70HNJak4"
