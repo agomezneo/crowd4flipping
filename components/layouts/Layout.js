@@ -77,7 +77,10 @@ function Layout({children}) {
 
           >
             {linksContent.map((item, key) => (
-              <Link href={item.url} >
+              <Link 
+                href={item.url}
+                key={key}
+              >
                 <motion.h3 
                   initial={open}
                   variants={effectsLink}
