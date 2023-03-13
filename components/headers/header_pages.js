@@ -3,7 +3,10 @@ import styles from '../../styles/Header.module.scss';
 import Image from 'next/image';
 import Logo from '../../public/images/brand/crowd4flipping/logo/Crowd4Flipping.png';
 import Link from 'next/link';
-import {motion} from 'framer-motion';
+import {linksContent} from './NavBarLinks';
+import { FaFacebookSquare, FaInstagram } from 'react-icons/fa'
+import InstagramIcon from '../../public/images/icons/instagramIcon.webp';
+import { motion } from 'framer-motion';
 
 function Header({setOpen}) {
 
@@ -41,15 +44,47 @@ function Header({setOpen}) {
             </Link>
         </section>
         <section  className={styles.header_page_links_container}>
-            <Link href={'/transparencia'} >
-                <span className={styles.header_page_link}>Programa de transparencia</span>
-            </Link>
-            <Link href={'/sobre-nosotros'} >
-                <span className={styles.header_page_link}>Quienes somos</span>
-            </Link>
-            <Link href={'https://app.crowd4flipping.com'}>
-                <span className={styles.header_page_link}>Acceso</span>
-            </Link>
+            {linksContent.map((item, key) => (
+                <motion.div
+                    key={key}
+                    whileHover={{y: -7  }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                >
+                    <Link 
+                    href={item.url} 
+                    >
+                        <h3>
+                            <span>{item.icon}</span>
+                            {item.span}
+                        </h3>
+                    </Link>
+                </motion.div>
+            ))}
+            <div className={styles.header_page_social_links_container}>
+                <motion.a 
+                    href='https://www.facebook.com/Crowd4Flipping' 
+                    target="_blank"
+                    rel="noreferrer" 
+                    whileHover={{y: -7  }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                >
+                    <FaFacebookSquare className={`${styles.icon} ${styles.face_icon}`}/>
+                </motion.a>
+                <motion.a
+                    href='https://www.instagram.com/crowd4flipping' 
+                    target="_blank"
+                    rel="noreferrer" 
+                    whileHover={{y: -7  }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                >
+                    <Image 
+                        src={InstagramIcon} 
+                        className={`${styles.insta_icon}`}
+                        width={40} 
+                        height={40} 
+                    />
+                </motion.a>
+            </div>
         </section>
         
         <section  className={styles.header_page_links_container_burger_container}>

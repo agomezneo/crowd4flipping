@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import Head from 'next/head';
+import Image from 'next/image';
 import styles from '../../styles/Layout.module.scss';
 import Header from '../headers/header_pages'
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { MdOutlineAccountCircle } from "react-icons/md";
-import { GiTeamIdea } from "react-icons/gi";
-import { SiBookstack } from "react-icons/si";
-import { TbMapSearch } from "react-icons/tb";
-
+import {linksContent} from '../headers/NavBarLinks';
+import { FaFacebookSquare, FaInstagram } from 'react-icons/fa'
+import InstagramIcon from '../../public/images/icons/instagramIcon.webp';
 
 function Layout({children}) {
 
@@ -38,23 +37,6 @@ function Layout({children}) {
     }
   };
 
-  const linksContent = [
-    {
-        span: 'Programa de transparencia',
-        url: '/transparencia',
-        icon: <TbMapSearch />
-    },
-    {
-        span: 'Quienes somos',
-        url: '/sobre-nosotros',
-        icon: <GiTeamIdea />
-    },
-    {
-        span: 'Acceso',
-        url: 'https://app.crowd4flipping.com',
-        icon: <MdOutlineAccountCircle />
-    },
-]
 
   
   return (
@@ -92,6 +74,31 @@ function Layout({children}) {
                 </motion.h3>
               </Link>
             ) )}
+
+                <motion.a 
+                    href='https://www.facebook.com/Crowd4Flipping' 
+                    target="_blank"
+                    rel="noreferrer" 
+                    whileHover={{y: -7  }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                >
+                    <FaFacebookSquare className={`${styles.icon} ${styles.face_icon}`}/>
+                </motion.a>
+                <motion.a
+                    href='https://www.instagram.com/crowd4flipping' 
+                    target="_blank"
+                    rel="noreferrer" 
+                    whileHover={{y: -7  }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                >
+                    {/* <FaInstagram className={`${styles.icon} ${styles.insta_icon}`}/> */}
+                    <Image 
+                        src={InstagramIcon} 
+                        className={`${styles.insta_icon}`}
+                        width={40} 
+                        height={40} 
+                    />
+                </motion.a>
           </motion.div>
     </div>
   )
