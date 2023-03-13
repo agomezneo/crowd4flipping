@@ -3,7 +3,6 @@ import styles from '../styles/Investor&Owner_pages.module.scss'
 import Head from 'next/head';
 import { useEffect, useRef, useState } from "react";
 import {  motion, useScroll, useSpring} from "framer-motion";
-import Header from '../components/headers/header_pages';
 import Section01 from '../components/investors_sections/_01';
 import Section02 from '../components/investors_sections/_02';
 import Section03 from '../components/investors_sections/_03';
