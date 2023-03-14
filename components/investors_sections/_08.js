@@ -10,7 +10,7 @@ import InstagramIcon from '../../public/images/icons/instagramIcon.webp';
 
 function HomeSection() {
   const fromWeb = 'fw'
-
+ 
   return (
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
@@ -20,7 +20,11 @@ function HomeSection() {
             <div className={styles.page_section_body_02}>
 
               <div className={styles.form_container}>
-                <InvestmentForm  type={'Investor'}/>
+                <InvestmentForm  
+                  type={'Investor'} 
+                  tag={'79'} 
+                  urlThanks={'/thanks-investment'}
+                />
               </div>
               <div className={styles.clientService_card_container}>
                 <div className={styles.clientService_card}>

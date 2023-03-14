@@ -9,10 +9,10 @@ import EllipsisLoader from '../loaders/ellipsisLoaderWhite';
 import axios from 'axios';
 import Router from 'next/router';
  
-const OwnerForm =  () => {
+const OwnerForm =  ({type, tag}) => {
 
-   /*  const api = 'http://localhost:5000/c4f-backend-c3e81/us-central1/app/api'; */
-    const api = 'https://us-central1-c4f-backend-c3e81.cloudfunctions.net/app/api';
+    /* const api = 'https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api';  */
+    const api = 'http://localhost:5000/crowd4flipping-app/us-central1/app/api'; 
     const [sendData, setSendData] = useState(false);
     const [state, setState] = useState({
         name: '', 
@@ -20,24 +20,24 @@ const OwnerForm =  () => {
         phone: '',
         created: new Date(),
         saleDate: '',
+        type: type, 
+        tag: tag,
         zip: '', 
         step: 0
     });
 
     const handleChange = (e) =>{
-        console.log(e.target.name)
         let value = e.target.value;
         setState({
             ...state,
             [e.target.name]: value,
             step: state.step === 0 ? state.step + 1 : state.step
         })
-        console.log(state)
     };
 
     const sendContact = async (data) =>{
         try {
-            let res = await axios.post(`${api}/owner-contact`, data);
+            let res = await axios.post(`${api}/contact`, data);
             console.log(res)
             if(res.data.status === 200){
                 setSendData(false)

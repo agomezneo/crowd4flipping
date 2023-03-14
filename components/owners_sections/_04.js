@@ -3,7 +3,7 @@ import styles from '../../styles/Investor&Owner_pages.module.scss'
 import InvestmentForm from '../../components/forms/InvestmentForm';
 import { RiWhatsappLine } from 'react-icons/ri'
 import { GiRotaryPhone } from 'react-icons/gi'
-import { FaFacebookSquare } from 'react-icons/fa'
+import { FaFacebookSquare } from 'react-icons/fa' 
 import Image from 'next/image';
 import InstagramIcon from '../../public/images/icons/instagramIcon.webp';
 
@@ -18,7 +18,11 @@ function HomeSection() {
             <div className={styles.page_section_body_02}>
 
               <div className={styles.form_container}>
-                <InvestmentForm  type={'owner'}/>
+                <InvestmentForm  
+                  type={'owner'} 
+                    tag={'80'} 
+                    urlThanks={'/thanks-owner'}
+                  />
               </div>
 
               <div className={styles.clientService_card_container}>

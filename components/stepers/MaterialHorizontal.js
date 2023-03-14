@@ -37,7 +37,7 @@ export default function HorizontalLabelPositionBelowStepper({data, active}) {
                     animate= {active ? "opened" : "closed"}
                     transition={{delay: `.${key+3}`, duration: `.${key+3}`,  type: 'spring', stiffness: 100}}
                 >
-                  <div className={styles.step_image}>
+                    <div className={styles.step_image}>
                         <Image src={item.image} width={100} height={100} alt={item.text} />
                     </div>
                   
@@ -53,4 +53,4 @@ export default function HorizontalLabelPositionBelowStepper({data, active}) {
       </Stepper>
     </Box>
   );
-}
+} 

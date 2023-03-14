@@ -20,6 +20,7 @@ function HomeSection() {
       <div className={styles.page_section}>
 
         <div className={styless.page_grid_container}>
+
             <motion.div
               initial={{ y: 25, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -46,7 +47,8 @@ function HomeSection() {
                   <div className={`${styless.back_btn} ${styless.principal_button}`}>Regístrate gratis</div>
                 </Link>
               </div>
-            </motion.div>   
+            </motion.div> 
+
             <motion.div
               initial={{ y: 25, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}

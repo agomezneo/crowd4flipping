@@ -6,20 +6,20 @@ import EllipsisLoader from '../loaders/ellipsisLoaderWhite';
 import ReCAPTCHA from "react-google-recaptcha";
 import Link from 'next/link';
 
-function InvestmentForm({type}) {
+function InvestmentForm({type, tag, urlThanks}) {
 
-    const api = 'https://us-central1-c4f-backend-c3e81.cloudfunctions.net/app/api';
-    /* const api = 'http://localhost:5000/c4f-backend-c3e81/us-central1/app/api'; */
+    const api = 'https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api'; 
     const [sendData, setSendData] = useState(false);
     const [captchaa, setCaptchaa] = useState(false);
     const captcha = useRef(null);
     const [state, setState] = useState({
         name: '',  
         email: '',
-        phone: '',
+        phone: '', 
         comments: '',
         termsAndConditions: false,
         type: type,
+        tag: tag,
         created: new Date()
     });
     
@@ -41,10 +41,10 @@ function InvestmentForm({type}) {
 
     const sendContact = async (data) =>{
         try {
-            let res = await axios.post(`${api}/investor-contact`, data);
+            let res = await axios.post(`${api}/contact`, data);
             if(res.data.status === 200){
                 setSendData(false)
-                Router.push('/thanks-investment')
+                Router.push(urlThanks)
             }
         } catch (error) {
             setSendData(false)
