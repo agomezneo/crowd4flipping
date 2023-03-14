@@ -19,7 +19,7 @@ function HomeSection() {
 
               <div className={styles.form_container}>
                 <InvestmentForm  
-                  type={'owner'} 
+                    type={'Propietario'} 
                     tag={'80'} 
                     urlThanks={'/thanks-owner'}
                   />
