@@ -16,9 +16,9 @@ function Header({setOpen}) {
         return
     }
     window.addEventListener("scroll", ()=>{ 
-        if(window.scrollY > 100){
+        if(window.scrollY > 500){
             setActiveFixedNav(true)
-        }else if(window.scrollY < 100){
+        }else if(window.scrollY < 500){
             setActiveFixedNav(false)
         }
     })

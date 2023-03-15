@@ -53,7 +53,7 @@ useEffect(() => {
 }, [])
 
   return (
-    <div className={styles.page_section}>
+    <div className={styles.page_section} id='steps_container'>
         <div className={`${styles.page_section_container} `}>
             <div className={`${styles.page_section_header}`}>
                 <h1><span>Sácale partido  a tu dinero </span> con estos sencillos pasos</h1>
@@ -61,7 +61,6 @@ useEffect(() => {
             <div className={styles.page_section_body_s2}>
               <motion.div 
                 className={active ? `${styles.steps_container} ${styles.steps_container_active}` : styles.steps_container} 
-                id='steps_container'
                 initial={active}
                 variants={effectVariants}
                 animate= {active ? "opened" : "closed"}
