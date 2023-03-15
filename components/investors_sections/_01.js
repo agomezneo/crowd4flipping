@@ -20,13 +20,12 @@ function HomeSection() {
 
   useEffect(() => {
         const parallax = document.getElementById('parallax_container');
-        const section2 = document.getElementById('2');
         const handleScroll = () => {
           window.addEventListener('scroll', () => {
             const scrollPosition = window.pageYOffset;
             parallax.style.transform = `translateY(${scrollPosition}px)`;
           });
-        if (window.scrollY >= section2) {
+        if (window.scrollY >= parallax) {
           setModalVisible(true);
         } else {
           setModalVisible(false);
@@ -39,8 +38,6 @@ function HomeSection() {
       };
   }, [divHeight]);
 
-  console.log(modalVisible)
-  
 
   return (
     <>
@@ -54,21 +51,28 @@ function HomeSection() {
           }}
           className={styles.s1_background}
         >
-          <motion.div 
+          <div 
             className={styles.content}
-            initial={{ x: -250, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{
-              delay: 0.2,
-              duration: 0.2,
-            }}
+            
           >
             <div class={styles.parallax_container} id='parallax_container'>
-              <div class={styles.parallax_background} />
-              <div class={styles.parallax_content}>
+              <div class={styles.parallax_background} >
+                <div className={styles.video_container}>
+                  <video src='/videos/video_01.mp4' autoPlay loop="loop" muted playsInline/>
+                </div>  
+              </div>
+              <div 
+                className={styles.parallax_content}
+                /* initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{
+                  delay: 0.2,
+                  duration: 1,
+                }} */
+              >
                 <div className={styles.text_container}>
                   <h1 className={styles.s1_pages_title}>Ahorradores que <span>invierten en inmuebles desde 500€ </span></h1>
-                  <p>Nuestra plataforma de <strong>préstamos colaborativos</strong> permite a nuestros usuarios <strong>invertir en proyectos inmobiliarios</strong> de alta calidad sin tener que comprometer grandes sumas de dinero. El equipo de expertos de <strong>Crowd4Flipping se encarga de la diligencia debida y el análisis de riesgos</strong> para asegurarse de presentar solo los mejores proyectos a los inversores.</p>
+                  <p>Nuestra plataforma de <strong>préstamos colaborativos</strong> permite a nuestros usuarios <strong>invertir en proyectos inmobiliarios de alta calidad </strong>sin tener que comprometer grandes sumas de dinero. El equipo de expertos de <strong>Crowd4Flipping se encarga de la diligencia debida y el análisis de riesgos</strong> para asegurarse de presentar solo los mejores proyectos a los inversores.</p>
                 </div>
                 <div className={styles.buttons_container}>
                   <Link
@@ -86,7 +90,7 @@ function HomeSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </motion.div> 
       </div>
     </>

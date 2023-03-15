@@ -22,7 +22,7 @@ function HomeSection() {
     let ele_hight = ele?.offsetTop;
     window.addEventListener("scroll", ()=>{
       if(window.scrollY < ele_hight){return setActive(false)}
-      if(window.scrollY > ele_hight - 200){
+      if(window.scrollY > ele_hight - 100){
         return setActive(true); 
       }
     })
