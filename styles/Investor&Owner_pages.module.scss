@@ -102,6 +102,20 @@
     } 
   }
 
+  .video_container_{
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(145deg, #00d1ff, #00b0e6);
+    box-shadow: inset 10px 10px 24px #00a4d6,
+    inset -10px -10px 24px #00e2ff;
+    border-radius: 10px;
+    & video{
+      width: 100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
+  }
+
   .modal_video_container{
     display: flex;
     justify-content: center;
@@ -276,6 +290,14 @@
       }
   }
 }
+
+.page_section_body_video_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
 .steps_container{
   grid-area: right_01;
   min-height: 50vh;
@@ -400,12 +422,27 @@
     } 
   }
 
+  .green_bg_button{
+    background: var(--green) !important;
+  }
+
   .s2, .s4, .s5,  .s7{
     background-color: var(--white);
   }
 
-  .s6, .s8{
+   .s8{
     background-color: var(--whitegray_);
+  
+  }
+
+  .s6{
+    background-color: var(--whitegray_);
+    background-image: url('../public/images/pages_images/news/12.png');
+    background-size: contain;
+    background-position-x: right;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
   }
 
   .s7{
@@ -427,8 +464,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url('../public/images/pages_images/news/10.png');
-    background-size: contain;
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: right;
@@ -439,8 +474,6 @@
   .empty_div{
     grid-area: right;
     width: 100%;
-    background-image: url('../public/images/pages_images/news/03.png');
-    background-size: contain;
     background-position-y: center;
     background-position-x: left;
     background-repeat: no-repeat;
@@ -449,12 +482,11 @@
 
   .empty_div_s4{
     grid-area: left_01;
-    background-image: url('../public/images/pages_images/news/12.png');
-    background-size: contain;
+   /*  background-size: contain;
     background-repeat: no-repeat;
     background-position-y: top;
-    background-position-x: left;
-    min-height: 35vh;
+    background-position-x: left; */
+   /*  min-height: 35vh; */
   }
 
   .acordion_container{
@@ -566,17 +598,17 @@
   }
 
 
-  .s8{
+  .s8, .videoSection{
     background: linear-gradient(145deg, #00d1ff, #00b0e6);
-
+    box-shadow: inset 10px 10px 24px #00a4d6,
+    inset -10px -10px 24px #00e2ff;
     & h1{
       & span{
         color: var(--white);
       }
     }
+  
   }
-
- 
  
   .clientService_card{
     width: 100%;
@@ -719,6 +751,13 @@
       }
     }
 
+    .video_container_{
+      width: fit-content;
+       & video{
+        height: 50vh;
+       }
+    }
+
     
     .modal_video_container{
       display: flex;
@@ -796,6 +835,7 @@
     .empty_div{
       background-size: 100%;
       background-position: center;
+      display: none;
     }
     .s3_empty_div{
       background-position-x: right;

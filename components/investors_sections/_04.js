@@ -5,6 +5,8 @@ import Steper from '../stepers/MaterialHorizontal';
 import Vsteper from '../stepers/VerticalMUI';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
+import Image from 'next/image';
+import Build3d from '../../public/images/pages_images/news/03.png'
 
 function HomeSection() {
 
@@ -69,7 +71,9 @@ function HomeSection() {
                   repeatType: "reverse", 
                   ease: "easeInOut",
                 }}
-              />
+              >
+                <Image src={Build3d} objectFit='cover' />
+              </motion.div>
               <motion.div 
                 id='steps_container_2'
                 className={styles.steps_container}

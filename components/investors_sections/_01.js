@@ -17,7 +17,7 @@ function HomeSection() {
   const [divHeight, setDivHeight] = useState(0);
 
  
-
+/* 
   useEffect(() => {
         const parallax = document.getElementById('parallax_container');
         const handleScroll = () => {
@@ -36,7 +36,7 @@ function HomeSection() {
       return () => {
         window.removeEventListener('scroll', handleScroll);
       };
-  }, [divHeight]);
+  }, [divHeight]); */
 
 
   return (
@@ -71,21 +71,28 @@ function HomeSection() {
                 }} */
               >
                 <div className={styles.text_container}>
-                  <h1 className={styles.s1_pages_title}>Ahorradores que <span>invierten en inmuebles desde 500€ </span></h1>
+                  <h1 className={styles.s1_pages_title}>Plataforma de inversión participativa para ahorradores. <span>Inicia desde 500€</span></h1>
                   <p>Nuestra plataforma de <strong>préstamos colaborativos</strong> permite a nuestros usuarios <strong>invertir en proyectos inmobiliarios de alta calidad </strong>sin tener que comprometer grandes sumas de dinero. El equipo de expertos de <strong>Crowd4Flipping se encarga de la diligencia debida y el análisis de riesgos</strong> para asegurarse de presentar solo los mejores proyectos a los inversores.</p>
                 </div>
                 <div className={styles.buttons_container}>
                   <Link
-                    href={'#2'}
+                    href={'#video_section'}
                   >
-                    <div 
+                    <motion.div 
                       className={`${styless.back_btn}`}
+                      whileHover={{y: -7  }}
+                      transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
                     >
                         Conoce Crowd<span>4</span>Flipping
-                    </div>
+                    </motion.div>
                   </Link>
                   <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
-                    <div className={`${styless.back_btn} ${styles.green_bg_button}`}>Regístrate gratis</div>
+                    <motion.div 
+                      className={`${styless.back_btn} ${styles.green_bg_button}`}
+                      whileHover={{y: -7  }}
+                      transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                    >Regístrate gratis
+                    </motion.div>
                   </Link>
                 </div>
               </div>

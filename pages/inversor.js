@@ -11,6 +11,7 @@ import Section05 from '../components/investors_sections/_05';
 import Section06 from '../components/investors_sections/_06';
 import Section07 from '../components/investors_sections/_07';
 import Section08 from '../components/investors_sections/_08';
+import VideoSection from '../components/investors_sections/VideoSection';
 import Footer from '../components/footers';
 import { RiWhatsappLine } from 'react-icons/ri'
 
@@ -66,6 +67,9 @@ export default function App({projectsInStudy, projectsFinished}) {
 
       <HomeSection id={1} css={styles.s1}> 
         <Section01 />
+      </HomeSection>
+      <HomeSection id='video_section' css={styles.videoSection}> 
+        <VideoSection />
       </HomeSection>
       <HomeSection id={2} css={styles.s2}>
         <Section02 />

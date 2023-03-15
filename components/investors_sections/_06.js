@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from '../../styles/Investor&Owner_pages.module.scss'
 import BasicAccordion from '../accordions/BasicAccordion';
-import {motion} from 'framer-motion'
+import {motion} from 'framer-motion';
+import Image from 'next/image';
+import Build3d from '../../public/images/pages_images/news/12.png'
 function HomeSection() {
   return (
     <div className={styles.page_section}>
@@ -22,7 +24,9 @@ function HomeSection() {
                   repeatType: "reverse", 
                   ease: "easeInOut",
                 }}
-              />
+              >
+                <Image src={Build3d} objectFit='contain' width={700} height={700}/>
+              </motion.div>
             </div>
             <div className={styles.page_section_footer}>
             </div>

@@ -4,14 +4,13 @@
 
 .parallax_container {
     position: relative;
-    height: 150vh; 
+    height: 100vh; 
   }
   
   .parallax_background {
     display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     width: 100%;
     height: 100vh;
     background: url('../../public/images/pages_images/news/11.png'); 
@@ -25,10 +24,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
     backdrop-filter: blur( 10px );
-    background-color: var(--blue);
+    background-color: #00000027;
     border-radius: 10px;
     padding: .2rem;
     width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .video_container{
@@ -54,13 +57,13 @@
     margin-bottom: 1rem;
     color: var(--black);
     & p{
-       /*  color: var(--white); */
+        color: var(--white);
         font-size: 1rem;
         font-weight: 400;
         padding: 5px;
 
         & strong{
-            color: var(--white);
+            color: var(--blue);
         }
     }
   }
@@ -74,6 +77,7 @@
     inset -7px -7px 14px #00e2ff;
     padding: 1rem;
     width: 100%;
+    text-align: center;
   }
 
 .buttons_container{
@@ -85,6 +89,7 @@
 
 .green_bg_button{
     background: var(--green) !important;
+    color: var(--white) !important;
 }
   
 @media only screen and (min-width: 992px){
@@ -97,11 +102,12 @@
     .parallax_background{
         background-size: cover;
 
+
     }
     .parallax_content {
       width: 55vw;
       top: 50%;
-      left: 30%;
+      left: 50%;
       padding: 1rem;
     }
 

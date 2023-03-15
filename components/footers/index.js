@@ -15,12 +15,15 @@ export default function index() {
                 <h4> 
                     <span> Obraplus S.L. </span> 
                     Todos los derechos reservados. 
-                    | <Link href={'/docs/politica-privacidad'}> Política de privacidad </Link>
-                    | <Link href={'/docs/aviso-legal'}> Aviso Legal </Link>
-                    | <Link href={'/docs/politica-cookies'}> Política de Cookies </Link>
-                    | <Link href={'/transparencia'}> Programa de transparencia </Link>
-                    | <Link href={`https://app.crowd4flipping.com`}>Acceso</Link>
-                    | 
+                    <br/>
+                    <br/>
+                     <ul>
+                        <Link href={'/docs/politica-privacidad'}> Política de privacidad </Link>
+                        <Link href={'/docs/aviso-legal'}> Aviso Legal </Link>
+                        <Link href={'/docs/politica-cookies'}> Política de Cookies </Link>
+                        <Link href={'/transparencia'}> Programa de transparencia </Link>
+                        <Link href={`https://app.crowd4flipping.com`}>Acceso</Link>
+                     </ul>
                 </h4>
             </div>
         </div>

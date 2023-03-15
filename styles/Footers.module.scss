@@ -1,20 +1,20 @@
 .footer{
     min-height: 50vh;
     width: 100%;
-    background-image: url('../public/images/brand/backgorund_buildings.png');
-    background-size: cover;
+    background-image: url('../public/images/pages_images/news/10.png');
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position-y: center;
+    background-position-y: bottom;
+    background-position-x: right;
     display: grid;
     place-items: center;
-    z-index: 10;
 }
  
 .footer_container{
     width: 80vw;
     height: 40vh;
     border-radius: 10px;
-    backdrop-filter: blur( 10px );
+    
     display: grid;
     place-content: center;
     grid-template: 
@@ -34,12 +34,19 @@
 
     & h4{
         font-size: 1rem;
-
         & span{
             color: var(--blue);
         }
 
-        & :hover{
+        & ul{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 1rem;
+
+        }
+
+        & a:hover{
             color: var(--blue);
         }
     }
@@ -47,6 +54,8 @@
 
 @media only screen and (min-width: 360px) and (max-width: 991px){
     .footer_container{
+        backdrop-filter: blur( 10px );
+        height: 45vh;
         grid-template: 
             "logo"
             "content" / 1fr
