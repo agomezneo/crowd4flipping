@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import styles from '../../styles/Investor&Owner_pages.module.scss'; 
+import React, {useState, useEffect} from 'react';
+import styles from '../../styles/investor_secctions/S1.module.scss' 
 import styless from '../../styles/Home.module.scss';
 import {motion} from 'framer-motion';
 import Logo from '../../public/images/brand/crowd4flipping/logo/Crowd4Flipping.png';
@@ -9,69 +9,86 @@ import Modal from '../modals';
 import ModalButton from '../buttons/ModalButton';
 
 function HomeSection() {
+
+
   const [showModal, setShowModal] = useState(false)
   const fromWeb = 'fw'
+  const [modalVisible, setModalVisible] = useState(false);
+  const [divHeight, setDivHeight] = useState(0);
+
+ 
+
+  useEffect(() => {
+        const parallax = document.getElementById('parallax_container');
+        const section2 = document.getElementById('2');
+        const handleScroll = () => {
+          window.addEventListener('scroll', () => {
+            const scrollPosition = window.pageYOffset;
+            parallax.style.transform = `translateY(${scrollPosition}px)`;
+          });
+        if (window.scrollY >= section2) {
+          setModalVisible(true);
+        } else {
+          setModalVisible(false);
+        }
+      };
+      
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+  }, [divHeight]);
+
+  console.log(modalVisible)
+  
 
   return (
     <>
-      <div className={styles.video_container}>
-        <video src='/videos/real_state.mp4' autoPlay loop="loop" muted playsInline/>
-      </div>
-      <div className={styles.page_section}>
-
-        <div className={styless.page_grid_container}>
-
-            <motion.div
-              initial={{ y: 25, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{
-                delay: 0.2,
-                duration: 0.75,
-              }}
-              className={`${styless.explore_page_hero_container} ${styless.left} ${styles.s1_background}`}
-            >
-              <div className={styless.logo_container}>
-                <Image src={Logo} width={700} height={300} alt='Crowd for Flipping' />
-                <div className={styless.text_container}>
-                <h1 className={styles.s1_pages_title}>Ahorradores que <span>invierten en inmuebles desde 500€ </span></h1>
+      <div className={styles.s1_container}>
+        <motion.div
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            duration: 0.75,
+          }}
+          className={styles.s1_background}
+        >
+          <motion.div 
+            className={styles.content}
+            initial={{ x: -250, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              duration: 0.2,
+            }}
+          >
+            <div class={styles.parallax_container} id='parallax_container'>
+              <div class={styles.parallax_background} />
+              <div class={styles.parallax_content}>
+                <div className={styles.text_container}>
+                  <h1 className={styles.s1_pages_title}>Ahorradores que <span>invierten en inmuebles desde 500€ </span></h1>
+                  <p>Nuestra plataforma de <strong>préstamos colaborativos</strong> permite a nuestros usuarios <strong>invertir en proyectos inmobiliarios</strong> de alta calidad sin tener que comprometer grandes sumas de dinero. El equipo de expertos de <strong>Crowd4Flipping se encarga de la diligencia debida y el análisis de riesgos</strong> para asegurarse de presentar solo los mejores proyectos a los inversores.</p>
+                </div>
+                <div className={styles.buttons_container}>
+                  <Link
+                    href={'#2'}
+                  >
+                    <div 
+                      className={`${styless.back_btn}`}
+                    >
+                        Conoce Crowd<span>4</span>Flipping
+                    </div>
+                  </Link>
+                  <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
+                    <div className={`${styless.back_btn} ${styles.green_bg_button}`}>Regístrate gratis</div>
+                  </Link>
                 </div>
               </div>
-              <div className={styless.buttons_container}>
-                <div 
-                  className={`${styless.back_btn}`}
-                  onClick={() => setShowModal(!showModal) }
-                >
-                    Conoce Crowd<span>4</span>Flipping
-                </div>
-                <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
-                  <div className={`${styless.back_btn} ${styless.principal_button}`}>Regístrate gratis</div>
-                </Link>
-              </div>
-            </motion.div> 
-
-            <motion.div
-              initial={{ y: 25, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{
-                delay: 0.2,
-                duration: 0.75,
-              }}
-              className={`${styless.explore_page_hero_container} ${styless.right}`}
-            >
-            </motion.div>   
-        </div>
-
-        {showModal && (
-          <Modal setShowModal={setShowModal}>
-            <div className={styles.modal_video_container} >
-              <video src="https://firebasestorage.googleapis.com/v0/b/c4f-backend-c3e81.appspot.com/o/videos-corporativos%2FCF4%20ANIMACION.mp4?alt=media&token=128f76af-c01b-41b8-94a1-61871b8d522a" controls autoPlay />
             </div>
-          </Modal>
-        )}
+          </motion.div>
+        </motion.div> 
       </div>
-
-      
-      
     </>
   )
 } 

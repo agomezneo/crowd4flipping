@@ -3,7 +3,7 @@
   height: 100%;
   display: grid;
   grid-template:
-    "left right " / 1fr 1fr
+    "left right" / 1fr 1fr
   ;
   width: 100vw;
 }
@@ -95,7 +95,7 @@
 .buttons_container{
   display: flex;
   width: 700px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .back_btn {
@@ -104,6 +104,7 @@
   background: var(--backgroundButton);
   color: white;
   font-size: 1.5rem;
+  font-weight: 500;
   cursor: pointer;
   min-width: 300px;
   border-radius: 5px;
@@ -144,11 +145,16 @@
 }
 
 .text_container{
+  text-align: center;
   & h1{
     color: var(--black);
     & span{
       color: var(--blue);
     }
+  }
+
+  & p{
+    color: var(--black);
   }
 }
 
@@ -205,6 +211,7 @@
 
   .explore_page_hero_container{
     padding: 0;
+    justify-content: flex-end;
   }
 
   .logo_container{
