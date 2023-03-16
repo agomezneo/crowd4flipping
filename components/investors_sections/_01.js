@@ -8,6 +8,8 @@ import Image from 'next/image';
 import Modal from '../modals';
 import ModalButton from '../buttons/ModalButton';
 
+import GreenButton from '../buttons/GreenButton'
+
 function HomeSection() {
 
 
@@ -87,12 +89,9 @@ function HomeSection() {
                     </motion.div>
                   </Link>
                   <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
-                    <motion.div 
-                      className={`${styless.back_btn} ${styles.green_bg_button}`}
-                      whileHover={{y: -7  }}
-                      transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
-                    >Regístrate gratis
-                    </motion.div>
+                    <GreenButton 
+                      Text={'Regístrate gratis'}
+                    />
                   </Link>
                 </div>
               </div>

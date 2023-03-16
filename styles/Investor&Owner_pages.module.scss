@@ -207,6 +207,26 @@
     ;
   }
 
+  .page_section_header_principal{
+      background: linear-gradient(145deg, #00d1ff, #00b0e6);
+      box-shadow: inset 10px 10px 24px #00a4d6,
+      inset -10px -10px 24px #00e2ff;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column;   
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      & h1{
+        color: var(--white) !important;
+      }
+      & p{
+        color: var(--black);
+        padding: .5rem;
+        text-align: left;
+      }
+  }
+
   .page_section_header{
     grid-area: header;
     margin-bottom: 1rem;
@@ -215,6 +235,7 @@
     align-items: center;
     padding-left: 5px;
     text-align: center;
+    width: 100%;
     & h1{
       color: var(--black);
       margin-bottom: 1rem;
@@ -402,6 +423,7 @@
     grid-area: footer;
     display: flex;
     justify-content: center;
+    
   }
 
   .modal_button_secundary{
@@ -682,7 +704,6 @@
     }
     .page_section_header{
       & h1{
-        text-align: left;
         font-size: 1.5rem;
       }
     }
@@ -734,16 +755,39 @@
     .page_section_container_s2{
       place-items: center;
     }
+
+    .page_section_header_principal{
+      background: linear-gradient(145deg, #00d1ff, #00b0e6);
+      box-shadow: inset 10px 10px 24px #00a4d6,
+      inset -10px -10px 24px #00e2ff;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column;   
+      justify-content: center;
+      align-items: center;
+      width: 80vw;
+      & h1{
+        color: var(--white);
+        & span{
+          color: var(--white);
+        }
+      }
+      & p{
+          padding: 1rem;
+          color: var(--black);
+      }
+    }
     
     .page_section_header{
-      text-align: left;
+      text-align: center;
+      justify-content: center;
       padding-left: 0;
-      justify-content: flex-start;
-      text-align: left;
+      
       & h1{
         font-size: 2rem;
       }
     }
+
 
     .modal_button_secundary{
       & span{
@@ -796,9 +840,11 @@
     }
 
     .page_section_footer{
-      grid-template: 
+      grid-template:
+      
       "footer_left_side footer_right_side" / 1fr 1fr
     ;
+    width: 80vw;
       & h1{
         font-size: 3rem;
       }

@@ -8,10 +8,12 @@ function HomeSection() {
   return (
     <div className={styles.page_section}>
         <div className={styles.page_section_container}>
-            <div className={styles.page_section_header}>
-                <h1>Sin complicaciones <span>ni letra pequeña</span>. <br/> Te lo podemos decir más alto, <span> pero no más claro. </span> [FAQS]</h1>
+            <div className={`${styles.page_section_header} ${styles.page_section_header_principal}`}>
+                <h1>Crowdlending inmobiliario transparente y sencillo. [FAQS]</h1>
+                <p>Olvídate de las complicaciones y sorpresas desagradables en la letra pequeña. <strong>Somos expertos en financiamiento colaborativo y estamos aquí para responder tus preguntas de forma clara y directa.</strong> ¿Tienes dudas? No te quedes con ellas, estamos a tu disposición. Te invitamos a revisar nuestras preguntas frecuentes para obtener más información o a <strong>contactarnos directamente para obtener una respuesta personalizada.</strong> ¡Confía en nosotros y aprovecha las oportunidades de inversión inmobiliaria! <strong>Asegúrate de tener toda la información necesaria antes de tomar una decisión de inversión.</strong></p>
             </div>
             <div className={styles.page_section_body}>
+              
               <div className={styles.acordion_container}>
                 <BasicAccordion />
               </div>
@@ -29,6 +31,7 @@ function HomeSection() {
               </motion.div>
             </div>
             <div className={styles.page_section_footer}>
+             
             </div>
         </div>
     </div>

@@ -69,6 +69,29 @@
     height: 100%;
 }
 
+
+.green_bg_button{
+    display: inline-block;
+    padding: 12px 18px;
+    background: var(--green);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    min-width: 300px;
+    border-radius: 10px;
+    box-shadow: -1.5px -1.5px 3px rgba(0, 0, 0, .5);  
+    text-align: center;
+    & span{
+      color: var(--white);
+    }
+
+    &:hover{
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);  
+        text-shadow: .5px .5px 1px rgba(0, 0, 0, .5) ;
+    }
+}
+
 @media only screen and (min-width: 360px) and (max-width: 991px){
     .modal_content{
         width: 100%;
@@ -76,5 +99,9 @@
 
     .modal_button{
         min-width: 250px;
+    }
+
+    .green_bg_button{
+        width: 100%;
     }
 }

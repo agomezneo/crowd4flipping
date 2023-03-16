@@ -24,13 +24,9 @@ function HomeSection() {
 
               <motion.div 
                 className={styles.s3_empty_div} 
-                animate={{ y: [-50, 20]}} 
-                transition={{
-                  duration: 2, 
-                  repeat: Infinity, 
-                  repeatType: "reverse", 
-                  ease: "easeInOut",
-                }}
+                whileHover={{y: 7  }}
+                initial={{y: 0}}
+                transition={{ duration: 0.5, type: "spring", stiffness: 500 }}
               >
                 <Image src={Build3d} objectFit='cover' />
               </motion.div>

@@ -5,6 +5,7 @@ import Steper from '../stepers/MaterialHorizontal';
 import Vsteper from '../stepers/VerticalMUI';
 import {motion} from 'framer-motion'
 import Link from 'next/link'; 
+import GreenButton from '../buttons/GreenButton';
 
 function HomeSection() {
 
@@ -80,11 +81,11 @@ useEffect(() => {
               </motion.div>
             </div>
             <div className={styles.page_section_footer}>
-                <div className={styles.modal_button_secundary}>
-                  <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
-                    <span>Regístrate gratis</span>
-                  </Link>
-                </div>
+                <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
+                  <GreenButton 
+                      Text={'Regístrate gratisss'}
+                  />
+                </Link>
             </div>
         </div>
     </div>

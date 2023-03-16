@@ -6,7 +6,7 @@ import Vsteper from '../stepers/VerticalMUI';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
 import Image from 'next/image';
-import Build3d from '../../public/images/pages_images/news/03.png'
+import Build3d from '../../public/images/pages_images/news/10.png'
 
 function HomeSection() {
 
@@ -97,11 +97,11 @@ function HomeSection() {
               </motion.div>
             </div>
             <div className={styles.page_section_footer}>
-              <div className={styles.modal_button_secundary}>
+              {/* <div className={styles.modal_button_secundary}>
                 <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}  >
                   <span>¡Descubrir la próxima oportunidad!</span>
                 </Link>
-              </div>
+              </div> */}
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styles from '../../styles/Investor&Owner_pages.module.scss';
 import {motion} from 'framer-motion'
 import Link from 'next/link'; 
-
+import GreenButton from '../buttons/GreenButton';
 function HomeSection() {
 
   const [eleTarget, setEletarget] = useState(null);
@@ -61,11 +61,11 @@ useEffect(() => {
                 </div>  
             </div>
             <div className={styles.page_section_footer}>
-                <div className={`${styles.modal_button_secundary} ${styles.green_bg_button}`}>
                   <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
-                    <span>Regístrate gratis</span>
+                    <GreenButton 
+                      Text={'Regístrate gratis'}
+                    />
                   </Link>
-                </div>
             </div>
         </div>
     </div>
