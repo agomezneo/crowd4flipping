@@ -11,19 +11,19 @@ function HomeSection() {
 
   const [eleTarget, setEletarget] = useState(null);
   const [active, setActive] = useState(false);
-  const [screen, setScreen] = useState(false)
+  const [screen, setScreen] = useState(false);
   const fromWeb = 'fw'
 
   useEffect(()=>{
     const doc = window.document;
-    setEletarget(doc.getElementById('steps_container'))
+    setEletarget(doc.getElementById('2'))
   },[]);
 
   const setElementEffect = (ele, setActive) =>{
-    let ele_hight = ele?.offsetTop;
-    window.addEventListener("scroll", ()=>{
+      let ele_hight = ele?.offsetTop;
+      window.addEventListener("scroll", ()=>{
       if(window.scrollY < ele_hight){return setActive(false)}
-      if(window.scrollY > ele_hight - 100){
+      if(window.scrollY > ele_hight){
         return setActive(true); 
       }
     })
@@ -53,6 +53,7 @@ useEffect(() => {
     }
 }, [])
 
+
   return (
     <div className={styles.page_section} id='steps_container'>
         <div className={`${styles.page_section_container} `}>
@@ -65,7 +66,7 @@ useEffect(() => {
                 initial={active}
                 variants={effectVariants}
                 animate= {active ? "opened" : "closed"}
-                transition={{delay: .5, duration: .5,  type: 'spring', stiffness: 100}}
+                transition={{delay: .1, duration: .1,  type: 'spring', stiffness: 100}}
               >
                 
                 {!screen ? 

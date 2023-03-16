@@ -65,14 +65,14 @@
     max-height: 9999px;
     transition: all 0.5s;
     background-color: var(--whitegray_);
-    color: var(--black);
     padding: .3rem 0 .3rem 1rem;
+    border-radius: 5px;
 }
 
 .showTextContent >p{
     margin-bottom: 10px !important;
     text-align: left;
-    color: var(--black) !important;
+    color: var(--black);
     font-size: .9rem;
     font-weight: 500;
 }
