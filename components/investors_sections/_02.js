@@ -81,11 +81,11 @@ useEffect(() => {
               </motion.div>
             </div>
             <div className={styles.page_section_footer}>
-                <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
+                <a href={`https://app.crowd4flipping.com/?${fromWeb}`}>
                   <GreenButton 
-                      Text={'Regístrate gratisss'}
+                      Text={'Regístrate gratis'}
                   />
-                </Link>
+                </a>
             </div>
         </div>
     </div>

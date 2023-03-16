@@ -61,11 +61,11 @@ useEffect(() => {
                 </div>  
             </div>
             <div className={styles.page_section_footer}>
-                  <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
-                    <GreenButton 
-                      Text={'Regístrate gratis'}
-                    />
-                  </Link>
+              <a href={`https://app.crowd4flipping.com/?${fromWeb}`}>
+                <GreenButton 
+                  Text={'Regístrate gratis'}
+                />
+              </a>
             </div>
         </div>
     </div>

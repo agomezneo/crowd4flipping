@@ -9,8 +9,6 @@
   
   .parallax_background {
     display: flex;
-    /* top: 0;
-    left: 0; */
     width: 100%;
     height: 100vh;
     background: url('../../public/images/pages_images/news/11.png'); 
@@ -20,7 +18,7 @@
   
   .parallax_content {
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     backdrop-filter: blur( 10px );
@@ -28,7 +26,7 @@
     border-radius: 10px;
     padding: .2rem;
     width: 100%;
-    height: 50vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

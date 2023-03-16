@@ -6,6 +6,7 @@ import EllipsisLoader from '../loaders/ellipsisLoaderWhite';
 import ReCAPTCHA from "react-google-recaptcha";
 import Link from 'next/link';
 import {motion} from 'framer-motion';
+
 function InvestmentForm({type, tag, urlThanks}) {
 
     const api = 'https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api'; 
@@ -108,14 +109,14 @@ function InvestmentForm({type, tag, urlThanks}) {
                     }
                 </div>
             </div>
-            <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}>
+            <a href={`https://app.crowd4flipping.com/?${fromWeb}`}>
                 <motion.div 
                     className={`${styles.button} ${styles.green_bg_button}`}
                     whileHover={{y: -7  }}
                     transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
                 >Regístrate gratis
                 </motion.div>
-            </Link>
+            </a>
 
         </div>
     </div>
