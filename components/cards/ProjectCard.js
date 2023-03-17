@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import {motion} from 'framer-motion';
 import styles from '../../styles/project_card.module.scss';
 import Image from 'next/image';
