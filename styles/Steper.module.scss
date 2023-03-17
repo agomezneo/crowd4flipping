@@ -1,8 +1,18 @@
+.steps_container{
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    width: 100%;
+}
+
 .HorizontalSteper_step{
   display: grid;
   grid-template-columns: 1fr 7fr;
   width: 100%;
+  gap: 1rem;
 }
+
+
 
 .image_container{
     height: 70px;
@@ -16,7 +26,7 @@
         font-size: 1rem;
         font-weight: 500;
         color: var(--blue);
-    text-align: left;
+        text-align: left;
 
     }
     & p{
@@ -29,9 +39,9 @@
  
 .step{
     position: relative;
-    border-right: .5px solid var(--blue);
-    min-height: 200px;
-
+    border: .5px solid var(--blue);
+    border-radius: 7px;
+    width: 250px;
 }
 
 .simple_step_container{
@@ -40,11 +50,16 @@
     display: flex;
     height: 100%;
 }
+
+.card_step_header{
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
 .simple_step{
-    height: fit-content;
+    height: 320px;
     position: relative;
-    border-right: .5px solid var(--white);
-    width: 220px;
+    width: 200px;
     text-align: center;
 }
 .step_no_border{
@@ -68,18 +83,20 @@
 }
 
 .step_p, .step_p_v{
-    text-align: center;
-    font-size: .9rem;
+    font-size: 1rem;
     color: var(--black);
     font-weight: 500;
 }
 
 .step_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
+    border-radius: 7px;
     top: -80px;
-    left: 35%;
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 220px;
 }
 
 .vertical_steper_container{
@@ -103,35 +120,50 @@
 .step_no_border_v{
     border-bottom: none !important;
 }
-/* 
-.arrow_steper_container{
-    position: absolute;
-    right: 0;
-    bottom: 10;
-}
- */
 
-@media only screen and (min-width: 360px) and (max-width: 991px){
-    .HorizontalSteper_step{
-        grid-template-columns: .7fr 3fr;
-        width: 100%;
+ .card_step{
+    background: linear-gradient(145deg, #00d1ff, #00b0e6);
+    box-shadow: inset 8px 8px 20px #00a2d4,
+                inset -8px -8px 20px #00e4ff;
+    min-height: 300px;
+    border-radius: 7px;
+    & .step_title{
+        color: var(--white);
+    }
+    & .step_p{
+        padding: 10px;
+        text-align: justify;
+    }
+ }
+
+@media only screen and (min-width: 320px) and (max-width: 991px){
+    .steps_container{
+        flex-wrap: wrap;
     }
     .image_container{
         height: 50px;
         width: 50px;
     }
     .step{
-        min-width: 250px;
+       width: 100%;
     }
     .step_image{
         top: -50px;
         width: 50px;
     }
 
+   
+    .step_title{
+        font-size: 1.5rem;
+    }
+
+
+    .card_step{
+        min-height: fit-content;
+        padding: 1rem 0 1rem 0;
+    }
+
     .vertical_steper_container{
         padding-left: 70px;
-    }
-    .step_p_v, .step_p{
-        font-size: .8rem;
     }
 }

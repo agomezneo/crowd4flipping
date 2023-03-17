@@ -4,27 +4,27 @@ const StepsData = [
     {
         image : '/images/icons/identificacion-biometrica.png',
         title: 'REGÍSTRATE',
-        text: 'Tendrás acceso a toda la información del proyecto y serás de los primeros en conocer oportunidades de inversión inmobiliaria.'
+        text: 'Únete a nuestra comunidad de inversores en línea y accede a información exclusiva sobre proyectos inmobiliarios rentables.'
     },
     {
         image : '/images/icons/ubicacion-del-mapa-01.png',
         title: 'DECÍDETE',
-        text: 'En nuestra plataforma, podrás consultar toda la información necesaria del proyecto a realizar para que tomes una decisión con total seguridad.'
+        text: 'Proporcionamos información detallada y transparente sobre los proyectos de inversión inmobiliaria disponibles para que puedas tomar una decisión informada y segura.'
     },
     {
         image : '/images/icons/plan-estrategico.png',
         title: 'INVIERTE',
-        text: 'A través de Internet, sin problemas ni burocracia, cualquiera puede acceder al sector inmobiliario y rentabilizar sus ahorros.'
+        text: 'Nuestra plataforma de préstamos colaborativos permite que cualquier persona invierta en proyectos inmobiliarios de alta calidad sin tener que invertir grandes sumas de dinero.'
     },
     {
         image : '/images/icons/informe-analisis.png',
         title: 'MONITOREA',
-        text: `Con nuestro programa de transparencia Crowd4Flipping, podrás ver toda la evolución del proyecto desde la misma plataforma o incluso asistir presencialmente si lo deseas para ver la evolución del proyecto en el cual has invertido.`
+        text: `Con nuestro innovador programa de transparencia, podrás seguir el progreso del proyecto en el que has invertido de forma clara y sencilla.`
     },
     {
         image : '/images/icons/tabla-de-crecimiento.png',
-        title: 'RETORNO DE LA INVERSIÓN',
-        text: 'Al final del proyecto, se devolverá el capital y se repartirán las plusvalías generadas.'
+        title: 'RENTABILIZA',
+        text: 'En el momento de la devolución del capital, recibirás también una parte de las plusvalías generadas. ¡Obtén una rentabilidad atractiva en tus inversiones y logra tus metas financieras de forma segura y eficaz!'
     },
 ]
 
@@ -32,7 +32,7 @@ const StepsData = [
 const HorizontalStepsData = [
     {
         image : '/images/icons/grafico-de-velas.png',
-        title: 'Análisis y viabilidad',
+        title: 'Análisis',
         text: 'Estudiamos la oportunidad y analizamos a cada detalle el proyecto para garantizar que cumpla los estándares de nuestros inversores.'
     },
     {
@@ -42,7 +42,7 @@ const HorizontalStepsData = [
     },
     {
         image : '/images/icons/archivo-de-datos.png',
-        title: 'Ejecución e información',
+        title: 'Ejecución',
         text: 'Una vez completada la financiación, el proyecto será ejecutado por Crowd4Flipping, proporcionando información puntual sobre su evolución.'
     },
     {

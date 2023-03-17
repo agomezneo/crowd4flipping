@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../../styles/Investor&Owner_pages.module.scss';
 import styless from '../../styles/Home.module.scss';
 import {motion} from 'framer-motion';
-import Logo from '../../public/images/brand/crowd4flipping/PNG_Files/Transparent_Logo_02.png';
+import Logo from '../../public/images/brand/crowd4flipping/logo/Crowd4Flipping.png';
 import Image from 'next/image';
 
 function HomeSection() { 
@@ -20,13 +20,13 @@ function HomeSection() {
                   delay: 0.2,
                   duration: 0.75,
                 }}
-                className={`${styless.explore_page_hero_container} ${styless.left}`}
+                className={`${styless.explore_page_hero_container} ${styless.left} ${styless.blue_container}`}
               >
                 <div className={styless.logo_container}>
-                  <Image src={Logo} width={700} height={300} alt='Crowd4Flipping logo' />
-                  <div className={styless.text_container}>
-                  <h1>Tanto si quieres vender como alquilar, <span> saca el máximo partido a tu propiedad.</span></h1>
-                  </div>
+                    <Image src={Logo} width={700} height={300} alt='Crowd4Flipping logo' className={``}/>
+                    <div className={styless.text_container}>
+                      <h1>Tanto si quieres vender como alquilar, <span> saca el máximo partido a tu propiedad.</span></h1>
+                    </div>
                 </div>
                 
                 <div className={styless.buttons_container}>

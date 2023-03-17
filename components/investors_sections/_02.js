@@ -68,17 +68,7 @@ useEffect(() => {
                 animate= {active ? "opened" : "closed"}
                 transition={{delay: .1, duration: .1,  type: 'spring', stiffness: 100}}
               >
-                
-                {!screen ? 
-                (
-                  <Steper data={StepsData} activeEffect={active} active={active}/> 
-                )
-                  :
-
-                (
-                  <Vsteper data={StepsData} />
-                )
-                }
+                <Steper data={StepsData} activeEffect={active} active={active}/> 
               </motion.div>
             </div>
             <div className={styles.page_section_footer}>

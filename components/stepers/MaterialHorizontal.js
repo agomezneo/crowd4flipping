@@ -21,12 +21,14 @@ export default function HorizontalLabelPositionBelowStepper({data, active}) {
 }
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Stepper activeStep={10} alternativeLabel 
-      >
+    <div 
+      className={styles.steps_container}
+    >
+      {/* <Stepper activeStep={10} alternativeLabel 
+      > */}
         {data.map((item, key) => {
             return(
-              <Step 
+              <div 
                   className={key === data.length - 1 ? `${styles.step} ${styles.step_no_border}` : styles.step}
                   key={key}
               >
@@ -36,21 +38,19 @@ export default function HorizontalLabelPositionBelowStepper({data, active}) {
                     variants={effectVariants}
                     animate= {active ? "opened" : "closed"}
                     transition={{delay: `.${key+1}`, duration: `.${key+2}`,  type: 'spring', stiffness: 100}}
+                    className={styles.card_step}
                 >
-                    <div className={styles.step_image}>
-                        <Image src={item.image} width={100} height={100} alt={item.text} />
+                    <div className={styles.card_step_header}>
+                        <Image src={item.image} width={80} height={80} alt={item.text} />
+                        <h3 className={styles.step_title}> {item.title} </h3>
                     </div>
-                  
-                    <StepLabel >
-                        <span className={styles.step_title}> {item.title} </span><br/>
-                        <p className={styles.step_p}> {item.text}</p>
-                    </StepLabel>
+                    <p className={styles.step_p}> {item.text}</p>
                 </motion.div>
 
-              </Step>
+              </div>
             )
         })}
-      </Stepper>
-    </Box>
+     {/*  </Stepper> */}
+    </div>
   );
 } 

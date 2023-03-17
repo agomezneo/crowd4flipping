@@ -326,6 +326,7 @@
   display: flex;
   position: relative;
   align-items: center;
+  
   & h2{
     color: var(--black);
     font-size: 1rem;
@@ -345,13 +346,8 @@
 }
 
 .steps_container::-webkit-scrollbar{
-    height: 3px !important;
+   display: none;
 }
-.steps_container::-webkit-scrollbar-thumb {
-  background-color: var(--blue) !important;
-  border-radius: 20px !important;
-}
-
 
   .s1{
     background-size: cover;
@@ -449,7 +445,7 @@
     background: var(--green) !important;
   }
 
-  .s2, .s4, .s5,  .s7{
+   .s2, .s4, .s5,  .s7{
     background-color: var(--white);
   }
 
@@ -505,11 +501,8 @@
 
   .empty_div_s4{
     grid-area: left_01;
-   /*  background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: top;
-    background-position-x: left; */
-   /*  min-height: 35vh; */
+    display: flex;
+    align-items: flex-end;
   }
 
   .acordion_container{
@@ -622,9 +615,7 @@
 
 
   .s8, .videoSection{
-    background: linear-gradient(145deg, #00d1ff, #00b0e6);
-    box-shadow: inset 10px 10px 24px #00a4d6,
-    inset -10px -10px 24px #00e2ff;
+    background: var(--blue);
     & h1{
       & span{
         color: var(--white);
@@ -756,6 +747,15 @@
     .page_section_container_s2{
       place-items: center;
     }
+
+
+
+    .blue_container{
+      background: linear-gradient(145deg, #00d1ff, #00b0e6);
+      box-shadow: inset 10px 10px 24px #00a4d6,
+      inset -10px -10px 24px #00e2ff;
+    }
+
 
     .page_section_header_principal{
       background: linear-gradient(145deg, #00d1ff, #00b0e6);

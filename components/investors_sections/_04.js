@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react'
 import styles from '../../styles/Investor&Owner_pages.module.scss'
 import {Data} from '../../data/cards/SimpleCardData';
 import Steper from '../stepers/MaterialHorizontal';
-import Vsteper from '../stepers/VerticalMUI';
-import Link from 'next/link';
 import {motion} from 'framer-motion';
 import Image from 'next/image';
 import Build3d from '../../public/images/pages_images/news/10.png'
@@ -13,18 +11,17 @@ function HomeSection() {
   const [eleTarget_, setEletarget_] = useState(null);
   const [active, setActive] = useState(false);
   const [screen, setScreen] = useState(false)
-  const fromWeb = 'fw'
 
   useEffect(()=>{
     const doc = window.document;
-    setEletarget_(doc.getElementById('steps_container_2'))
+    setEletarget_(doc.getElementById('4'))
   },[]);
 
   const setElementEffect = (ele, setActive) =>{
     let ele_hight = ele?.offsetTop;
     window.addEventListener("scroll", ()=>{
       if(window.scrollY < ele_hight){return setActive(false)}
-      if(window.scrollY > ele_hight - 200){
+      if(window.scrollY > ele_hight - 1200){
         return setActive(true);
       }
     })
@@ -80,28 +77,16 @@ function HomeSection() {
                 initial={active}
                 variants={effectVariants}
                 animate= {active ? "opened" : "closed"}
-                transition={{delay: .5, duration: .5,  type: 'spring', stiffness: 100}}
+                transition={{delay: .1, duration: .1,  type: 'spring', stiffness: 100}}
               >
-                {!screen ? 
-                  (
-                    <Steper 
-                      data={Data}
-                      active={active}
-                    />
-                  )
-                  :
-                  (
-                    <Vsteper data={Data} />
-                  )
-                }
+                <Steper 
+                  data={Data}
+                  active={active}
+                />
               </motion.div>
             </div>
             <div className={styles.page_section_footer}>
-              {/* <div className={styles.modal_button_secundary}>
-                <Link href={`https://app.crowd4flipping.com/?${fromWeb}`}  >
-                  <span>¡Descubrir la próxima oportunidad!</span>
-                </Link>
-              </div> */}
+             
             </div>
         </div>
     </div>
