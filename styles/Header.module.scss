@@ -1,6 +1,6 @@
 .header_page{
     height: 10vh;
-    width: 100%;
+    min-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,10 +24,11 @@
 }
 .display_active{
     transition: .2s all ease-in-out;
-    width: 27%;
+    min-width: 20%;
     height: 7vh;
     right: 0;
     border-bottom-left-radius: 7px;
+    gap: 1rem;
 }
 .back_btn {
     display: inline-block;
@@ -182,7 +183,6 @@
 
 @media only screen and (min-width: 300px) and (max-width: 991px){
     .display_active{
-      /*   display: none; */
         opacity: 0;
     }
     .header_page_links_container{

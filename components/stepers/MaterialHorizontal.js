@@ -16,7 +16,7 @@ export default function HorizontalLabelPositionBelowStepper({data, active}) {
     },
     closed: {
         opacity: 0, 
-        y: -700
+        y: 700
     },
 }
 
@@ -37,7 +37,7 @@ export default function HorizontalLabelPositionBelowStepper({data, active}) {
                     initial={active}
                     variants={effectVariants}
                     animate= {active ? "opened" : "closed"}
-                    transition={{delay: `.${key+1}`, duration: `.${key+2}`,  type: 'spring', stiffness: 100}}
+                    transition={{delay: `.${key+1}`, duration: `.${key+2}`,  type: 'just'}}
                     className={styles.card_step}
                 >
                     <div className={styles.card_step_header}>
