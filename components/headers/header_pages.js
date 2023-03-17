@@ -37,10 +37,10 @@ function Header({setOpen}) {
 
   return (
     <>
-    <nav className={ activeFixedNav ? `${styles.header_page} ${styles.display_none}` : styles.header_page }>
+    <nav className={ activeFixedNav ? `${styles.header_page} ${styles.display_active}` : styles.header_page }>
         <section className={styles.logo_container}>
             <Link href={'/'} >
-                <Image src={Logo} width={120} height={50} alt='crowd for flipping logo' />
+                <Image src={Logo} width={ activeFixedNav ? 100 : 120} height={activeFixedNav ? 40 : 50} alt='crowd for flipping logo' />
             </Link>
         </section>
         <section  className={styles.header_page_links_container}>
@@ -53,10 +53,12 @@ function Header({setOpen}) {
                     <Link 
                     href={item.url} 
                     >
-                        <h3>
-                            <span>{item.icon}</span>
-                            {item.span}
-                        </h3>
+                        <div className={styles.link_container}>
+                            <span className={styles.icon}>{item.icon}</span>
+                            <h3 className={activeFixedNav && `${styles.active_header}`}>
+                                {item.span}
+                            </h3>
+                        </div>
                     </Link>
                 </motion.div>
             ))}
