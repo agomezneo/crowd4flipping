@@ -7,6 +7,8 @@ import { GiRotaryPhone } from 'react-icons/gi'
 import { FaFacebookSquare } from 'react-icons/fa'
 import Image from 'next/image';
 import InstagramIcon from '../../public/images/icons/instagramIcon.webp';
+import BricsLoader  from '../../components/loaders/BricsLoader';
+import BlocksLoader  from '../../components/loaders/BlocksLoader';
 
 function HomeSection() {
   const fromWeb = 'fw'
@@ -27,8 +29,9 @@ function HomeSection() {
                 />
               </div>
               <div className={styles.clientService_card_container}>
-                <div className={styles.clientService_card}>
 
+              
+                <div className={styles.clientService_card}>
                   <div className="clientService_card_content">
                     <h1>Servicio al cliente</h1>
                     <p>De lunes a viernes, de 09:00h a 18:00h </p>

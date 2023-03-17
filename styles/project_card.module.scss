@@ -67,15 +67,15 @@
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-   
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .button{
     background: var(--blue);
     height: 100%;
-    width: 100%;
+    width:  320px;
     display: grid;
     place-items: center;
     border-radius: 7px;

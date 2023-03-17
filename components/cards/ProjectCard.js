@@ -5,6 +5,9 @@ import Image from 'next/image';
 import {MdLocationPin} from 'react-icons/md';
 import Carousel from 'react-material-ui-carousel' 
 import StudyImage from '../../public/images/pages_images/transparencia_cards/01.jpg'
+import {BlocksLoaderLittle} from '../loaders/BlocksLoader';
+import Router from 'next/router';
+import { useState } from 'react';
 
 function ProjectCard({id, imgs, name, location, quantityFunded, estimatedRentability, finalProfit, phase}) {
 
@@ -12,8 +15,12 @@ function ProjectCard({id, imgs, name, location, quantityFunded, estimatedRentabi
         style: 'currency',
         currency: 'EUR'
     });
+    const [loader, setLoader] = useState(false)
 
-
+    const go = (url) =>{
+        setLoader(true)
+        Router.push(url)
+    }
   return (
     <motion.div
         whileHover={{ 
@@ -80,14 +87,15 @@ function ProjectCard({id, imgs, name, location, quantityFunded, estimatedRentabi
         </div>
 
         <div className={styles.footer}>
-            <Link href={`/proyectos/${id}`}>
-                <div 
-                    className={styles.button}
-                >
-                    <span>Ver proyecto</span>
+            {loader ? (<BlocksLoaderLittle/>) : (
+                <div onClick={() => go(`/proyectos/${id}`)}>
+                    <div 
+                        className={styles.button}
+                    >
+                        <span>Ver proyecto</span>
+                    </div>
                 </div>
-            </Link>
-
+            ) }
         </div>
 
        

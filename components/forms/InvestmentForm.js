@@ -6,6 +6,7 @@ import EllipsisLoader from '../loaders/ellipsisLoaderWhite';
 import ReCAPTCHA from "react-google-recaptcha";
 import Link from 'next/link';
 import {motion} from 'framer-motion';
+import BlocksLoader from '../loaders/BlocksLoader';
 
 function InvestmentForm({type, tag, urlThanks}) {
 
@@ -98,26 +99,23 @@ function InvestmentForm({type, tag, urlThanks}) {
                 onChange={onChangeCaptcha}
             />,
             </div>
-            <div className={styles.input_container}>
-                <div className={styles.button} onClick={() => handleSubmit()} >
-                    {!sendData ? 
-                        'Enviar' 
-                    : 
-                    <>
-                        <EllipsisLoader/>
-                    </>
-                    }
-                </div>
-            </div>
-            <a href={`https://app.crowd4flipping.com/?${fromWeb}`}>
-                <motion.div 
-                    className={`${styles.button} ${styles.green_bg_button}`}
-                    whileHover={{y: -7  }}
-                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
-                >Regístrate gratis
-                </motion.div>
-            </a>
-
+            {sendData ? (<BlocksLoader />) : (
+                <>
+                    <div className={styles.input_container}>
+                        <div className={styles.button} onClick={() => handleSubmit()} >
+                            'Enviar' 
+                        </div>
+                    </div>
+                    <a href={`https://app.crowd4flipping.com/?${fromWeb}`}>
+                        <motion.div 
+                            className={`${styles.button} ${styles.green_bg_button}`}
+                            whileHover={{y: -7  }}
+                            transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                        >Regístrate gratis
+                        </motion.div>
+                    </a>
+                </>
+            )}
         </div>
     </div>
   )
