@@ -103,7 +103,7 @@ function InvestmentForm({type, tag, urlThanks}) {
                 <>
                     <div className={styles.input_container}>
                         <div className={styles.button} onClick={() => handleSubmit()} >
-                            'Enviar' 
+                            Enviar 
                         </div>
                     </div>
                     <a href={`https://app.crowd4flipping.com/?${fromWeb}`}>
