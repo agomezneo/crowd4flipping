@@ -123,19 +123,15 @@
 }
 
 .link_container{
+    width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
     gap: .2rem;
     z-index: 100;
     top: 10.3vh;
-    cursor: pointer;
-    width: fit-content;
-    & .icon{
-        color: var(--blue);
-        padding-top: 4px;
-        margin-right: 5px;
-        font-size: 1.5rem;
-    }
+    right: 0;
 
     & h3{
         font-size: 1rem;
@@ -146,14 +142,23 @@
         border-bottom-left-radius: 5px;
         background-color: var(--white);
         padding: .2rem .2rem .2rem .5rem;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        & span{
+            color: var(--blue);
+            padding-top: 4px;
+            margin-right: 5px;
+        }
+        
     }
 
-    .active_header{
-        display: none;
+    & .face_icon{
+        font-size: 30px;
+        color: #3b5998;
+        margin-right: 5px;
     }
 }
-
-
  
 @media only screen and (min-width: 360px) and (max-width: 991px){
     .links_list{

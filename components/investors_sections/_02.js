@@ -60,7 +60,7 @@ useEffect(() => {
             <div className={`${styles.page_section_header}`}>
                 <h1><span>Sácale partido  a tu dinero </span> con estos sencillos pasos</h1>
             </div>
-            <div className={styles.page_section_body_s2}>
+              <div className={`${styles.page_section_body_s2} ${styles.page_section_body_s2_flex}`}>
               <motion.div 
                 className={active ? `${styles.steps_container} ${styles.steps_container_active}` : styles.steps_container} 
                 initial={active}

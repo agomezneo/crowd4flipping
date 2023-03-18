@@ -64,7 +64,7 @@
   background-image: url('../public/images/brand/backgorund_buildings.png');
   background-size: contain;
   height: 50%;
-  /* background-repeat: no-repeat; */
+ 
 }
 
 .mountain {
@@ -217,6 +217,11 @@
       padding: 10px;
       margin-bottom: .5rem;
     }
+  }
+
+  .mountains{
+    background-repeat: no-repeat;
+    height: 22vh;
   }
 
   .explore_page_hero_container{

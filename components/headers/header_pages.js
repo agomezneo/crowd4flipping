@@ -6,9 +6,9 @@ import Link from 'next/link';
 import {linksContent} from './NavBarLinks';
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa'
 import InstagramIcon from '../../public/images/icons/instagramIcon.webp';
-import { motion } from 'framer-motion';
+import { isMotionComponent, motion } from 'framer-motion';
 
-function Header({setOpen}) {
+function Header() {
 
   const [activeFixedNav, setActiveFixedNav] = useState(false) 
     useEffect(() => {
@@ -26,11 +26,32 @@ function Header({setOpen}) {
 
     const [isOpen, setIsOpen] = useState(false);
 
+    const effects = { 
+        open: {
+          x: 0,
+          opacity: 1,
+          position: 'fixed',
+        },
+        close: {
+          x: -1000,
+          opacity: 0,
+          display: 'none'
+        }
+      };
+
+      const effectsLink = { 
+        open: {
+          opacity: 1,
+         
+        },
+        close: { 
+          opacity: 0,
+        }
+      };
    
    
     const open = () =>{
         setIsOpen(state => !state) 
-        setOpen(state => !state)
     }
 
 
@@ -97,9 +118,57 @@ function Header({setOpen}) {
                     <div className={styles.heder_page_btn_burger}></div>
             </div>
         </section>
-    </nav>
+        <motion.div 
+        className={styles.link_container}
+        initial={isOpen}
+        variants={effects}
+        animate={isOpen ? 'open' : 'close'}
 
-       
+        >
+            {linksContent.map((item, key) => (
+                <Link 
+                href={item.url}
+                key={key}
+                >
+                <motion.h3 
+                    initial={isOpen}
+                    variants={effectsLink}
+                    animate={isOpen ? 'open' : 'close'}
+                    transition={{delay: `.${key+3}`, duration: `.${key+3}`,  type: 'spring', stiffness: 100}}
+                > 
+                    <span>{item.icon}</span>
+                    {item.span}
+                </motion.h3>
+                </Link>
+            ))}
+
+
+                <motion.a 
+                    href='https://www.facebook.com/Crowd4Flipping' 
+                    target="_blank"
+                    rel="noreferrer" 
+                    whileHover={{y: -7  }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                >
+                    <FaFacebookSquare className={`${styles.icon} ${styles.face_icon}`}/>
+                </motion.a>
+                <motion.a
+                    href='https://www.instagram.com/crowd4flipping' 
+                    target="_blank"
+                    rel="noreferrer" 
+                    whileHover={{y: -7  }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                >
+                    <Image 
+                        src={InstagramIcon} 
+                        className={`${styles.insta_icon}`}
+                        width={40} 
+                        height={40} 
+                    />
+                </motion.a>
+        </motion.div>
+    </nav>
+        
     </>
   )
 }

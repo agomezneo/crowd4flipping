@@ -228,7 +228,7 @@
   }
 
   .page_section_header{
-    grid-area: header;
+    grid-area: header; 
     margin-bottom: 1rem;
     display: flex;
     justify-content: center;
@@ -273,6 +273,11 @@
       'right_02' 1fr
     ;
   } 
+
+  .page_section_body_s2_flex{
+    display: flex !important;
+    justify-content: center;
+  }
 
 .page_section_body_flex{
   grid-area: body;
