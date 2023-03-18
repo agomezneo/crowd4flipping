@@ -21,85 +21,83 @@ function ProjectCard({id, imgs, name, location, quantityFunded, estimatedRentabi
         Router.push(url)
     }
   return (
-    <motion.div
-        whileHover={{ 
-            y: -10,
-            boxShadow: '1px 1px 4px #131515',
-            zIndex: 1000
-        }}
-        transition={{ duration: 0.2, type: "spring", stiffness: 100 }}
-        className={styles.card}
-    > 
+    <>
+        {loader ? (<BlocksLoader/>) : (
+            <motion.div
+                whileHover={{ 
+                    y: -10,
+                    boxShadow: '1px 1px 4px #131515',
+                    zIndex: 1000
+                }}
+                transition={{ duration: 0.2, type: "spring", stiffness: 100 }}
+                className={styles.card}
+            > 
 
-        <div className={styles.header}>
-            <Carousel
-                 autoPlay
-                 className={styles.carousel}
-            >
-                {imgs?.map((img, i) => (
-                    <Image 
-                        key={i}
-                        src={img.link}
-                        layout='fill'
-                        objectFit='cover'
-                        className={styles.img}
-                    />
-                ))}
-            </Carousel> 
-        </div>
-
-        <div className={styles.body}>
-            <h1>{name}</h1>
-            <div className={styles.location}>  
-                <MdLocationPin />   
-                <span>{location}</span> 
-            </div>
-            <hr />
-            <div className={styles.financialInfo}>
-                {phase === 'IN_STUDY' ? (
-                    <>
-                        <h1>PROYECTO EN ESTUDIO</h1>
-                        <Image
-                            src={StudyImage}
-                            width={100}
-                            height={100}
-                        />
-                    </>
-                ) : 
-                (
-                   <>
-                   <div className={styles.financialInfo_item}>
-                        <h2>Fondo recaudado</h2>
-                        <p> {formatterEuro.format(quantityFunded)} </p>
-                    </div>
-                    <div className={styles.financialInfo_item}>
-                        <h2>Rentabilidad estimada</h2>
-                        <p> {estimatedRentability}% </p>
-                    </div>
-                    <div className={styles.financialInfo_item}>
-                        <h2>Rentabilidad obtenida</h2>
-                        <p> {finalProfit || 'En proceso'}{finalProfit && '%'}</p>
-                    </div>
-                   </> 
-                )}
-            </div>
-        </div>
-
-        <div className={styles.footer}>
-            {loader ? (<BlocksLoader/>) : (
-                <div onClick={() => go(`/proyectos/${id}`)}>
-                    <div 
-                        className={styles.button}
+                <div className={styles.header}>
+                    <Carousel
+                        autoPlay
+                        className={styles.carousel}
                     >
-                        <span>Ver proyecto</span>
+                        {imgs?.map((img, i) => (
+                            <Image 
+                                key={i}
+                                src={img.link}
+                                layout='fill'
+                                objectFit='cover'
+                                className={styles.img}
+                            />
+                        ))}
+                    </Carousel> 
+                </div>
+
+                <div className={styles.body}>
+                    <h1>{name}</h1>
+                    <div className={styles.location}>  
+                        <MdLocationPin />   
+                        <span>{location}</span> 
+                    </div>
+                    <hr />
+                    <div className={styles.financialInfo}>
+                        {phase === 'IN_STUDY' ? (
+                            <>
+                                <h1>PROYECTO EN ESTUDIO</h1>
+                                <Image
+                                    src={StudyImage}
+                                    width={100}
+                                    height={100}
+                                />
+                            </>
+                        ) : 
+                        (
+                        <>
+                        <div className={styles.financialInfo_item}>
+                                <h2>Fondo recaudado</h2>
+                                <p> {formatterEuro.format(quantityFunded)} </p>
+                            </div>
+                            <div className={styles.financialInfo_item}>
+                                <h2>Rentabilidad estimada</h2>
+                                <p> {estimatedRentability}% </p>
+                            </div>
+                            <div className={styles.financialInfo_item}>
+                                <h2>Rentabilidad obtenida</h2>
+                                <p> {finalProfit || 'En proceso'}{finalProfit && '%'}</p>
+                            </div>
+                        </> 
+                        )}
                     </div>
                 </div>
-            ) }
-        </div>
-
-       
-
-    </motion.div> 
+                <div className={styles.footer}>
+                    <div onClick={() => go(`/proyectos/${id}`)}>
+                        <div 
+                            className={styles.button}
+                        >
+                            <span>Ver proyecto</span>
+                        </div>
+                    </div>
+                </div>
+            </motion.div> 
+        )}
+    </>
   )
 }
 
