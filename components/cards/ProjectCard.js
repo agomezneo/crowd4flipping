@@ -4,7 +4,7 @@ import Image from 'next/image';
 import {MdLocationPin} from 'react-icons/md';
 import Carousel from 'react-material-ui-carousel' 
 import StudyImage from '../../public/images/pages_images/transparencia_cards/01.jpg'
-import {BlocksLoaderLittle} from '../loaders/BlocksLoader';
+import BlocksLoader from '../loaders/BlocksLoader';
 import Router from 'next/router';
 import { useState } from 'react';
 
@@ -86,7 +86,7 @@ function ProjectCard({id, imgs, name, location, quantityFunded, estimatedRentabi
         </div>
 
         <div className={styles.footer}>
-            {loader ? (<BlocksLoaderLittle/>) : (
+            {loader ? (<BlocksLoader/>) : (
                 <div onClick={() => go(`/proyectos/${id}`)}>
                     <div 
                         className={styles.button}

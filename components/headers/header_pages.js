@@ -76,7 +76,7 @@ function Header() {
                     <Link 
                     href={item.url} 
                     >
-                        <div className={styles.link_container}>
+                        <div className={styles.link_container_laptop}>
                             <span className={styles.icon}>{item.icon}</span>
                             <h3 className={activeFixedNav && `${styles.active_header}`}>
                                 {item.span}
@@ -85,6 +85,7 @@ function Header() {
                     </Link>
                 </motion.div>
             ))}
+
             <div className={styles.header_page_social_links_container}>
                 <motion.a 
                     href='https://www.facebook.com/Crowd4Flipping' 
@@ -120,6 +121,7 @@ function Header() {
                     <div className={styles.heder_page_btn_burger}></div>
             </div>
         </section>
+
         <motion.div 
             className={styles.link_container}
             initial={isOpen}
@@ -169,6 +171,7 @@ function Header() {
                     />
                 </motion.a>
         </motion.div>
+
     </nav>
         
     </>
