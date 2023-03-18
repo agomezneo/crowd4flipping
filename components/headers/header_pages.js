@@ -31,6 +31,7 @@ function Header() {
           x: 0,
           opacity: 1,
           position: 'fixed',
+          display: 'flex'
         },
         close: {
           x: -1000,
@@ -42,10 +43,11 @@ function Header() {
       const effectsLink = { 
         open: {
           opacity: 1,
-         
+          x: 0  
         },
         close: { 
           opacity: 0,
+          x: -1000
         }
       };
    
@@ -119,10 +121,10 @@ function Header() {
             </div>
         </section>
         <motion.div 
-        className={styles.link_container}
-        initial={isOpen}
-        variants={effects}
-        animate={isOpen ? 'open' : 'close'}
+            className={styles.link_container}
+            initial={isOpen}
+            variants={effects}
+            animate={isOpen ? 'open' : 'close'}
 
         >
             {linksContent.map((item, key) => (
@@ -134,7 +136,7 @@ function Header() {
                     initial={isOpen}
                     variants={effectsLink}
                     animate={isOpen ? 'open' : 'close'}
-                    transition={{delay: `.${key+3}`, duration: `.${key+3}`,  type: 'spring', stiffness: 100}}
+                    transition={{delay: `.${key+2}`, duration: `.${key+2}`,  type: 'spring', stiffness: 100}}
                 > 
                     <span>{item.icon}</span>
                     {item.span}
