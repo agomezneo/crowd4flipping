@@ -20,9 +20,11 @@ function ProjectCard({id, imgs, name, location, quantityFunded, estimatedRentabi
         setLoader(true)
         Router.push(url)
     }
-  return (
+  return ( 
     <>
-        {loader ? (<BlocksLoader/>) : (
+        {loader ? (<div style={{position: 'fixed', top:0, display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100vw', zIndex: 100, background: '#fff'}}>
+            <BlocksLoader/>
+        </div>) : (
             <motion.div
                 whileHover={{ 
                     y: -10,
