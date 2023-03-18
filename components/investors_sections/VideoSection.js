@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import styles from '../../styles/Investor&Owner_pages.module.scss';
 import {motion} from 'framer-motion'
-import Link from 'next/link'; 
 import GreenButton from '../buttons/GreenButton';
+
 function HomeSection() {
 
   const [eleTarget, setEletarget] = useState(null);
@@ -19,7 +19,7 @@ function HomeSection() {
     let ele_hight = ele?.offsetTop;
     window.addEventListener("scroll", ()=>{
       if(window.scrollY < ele_hight){return setActive(false)}
-      if(window.scrollY > ele_hight - 500){
+      if(window.scrollY >= ele_hight - 1000){
         return setActive(true); 
       }
     })
@@ -27,8 +27,17 @@ function HomeSection() {
 
   useEffect(()=>{
     if(eleTarget === null)return
-    setElementEffect(eleTarget, setActive)
+    setElementEffect(eleTarget, setActive);
   },[eleTarget])
+ 
+  useEffect(() => { 
+      let document = window.screen.width;
+      if(document < 991){
+          setScreen(true)
+          return
+      }
+  }, [])
+
 
   const effectVariants = {
     opened: {
@@ -41,14 +50,6 @@ function HomeSection() {
     },
 }
 
-useEffect(() => { 
-    let document = window.screen.width;
-    if(document < 991){
-        setScreen(true)
-        return
-    }
-}, [])
-
   return (
     <div className={styles.page_section}>
         <div className={`${styles.page_section_container} `}>
@@ -56,9 +57,15 @@ useEffect(() => {
                 <h1><span>Conoce de manera sencilla</span> como funciona Crowd4Flipping</h1>
             </div>
             <div className={`${styles.page_section_body_s2} ${styles.page_section_body_video_section}`}>
-                <div className={styles.video_container_}>
-                  <video src='https://firebasestorage.googleapis.com/v0/b/c4f-backend-c3e81.appspot.com/o/videos-corporativos%2FCF4%20ANIMACION_BAJO.mp4?alt=media&token=7d70d3e5-d84e-48eb-8172-ea4abf987b1f' playsInline controls/>
-                </div>  
+                <motion.div 
+                  className={styles.video_container_}
+                  initial={active}
+                  variants={effectVariants}
+                  animate= {active ? "opened" : "closed"}
+                  transition={{delay: .1, duration: .1,  type: 'spring', stiffness: 100}}
+                >
+                  <video src='https://firebasestorage.googleapis.com/v0/b/c4f-backend-c3e81.appspot.com/o/videos-corporativos%2FCF4%20ANIMACION_BAJO.mp4?alt=media&token=7d70d3e5-d84e-48eb-8172-ea4abf987b1f' playsInline controls poster='images/video_poster.png'/>
+                </motion.div>  
             </div>
             <div className={styles.page_section_footer}>
               <a href={`https://app.crowd4flipping.com/?${fromWeb}`}>

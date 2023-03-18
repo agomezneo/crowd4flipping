@@ -29,7 +29,7 @@ function HomeSection({id, css, children}) {
 }, [])
 
   return (
-    <section className={`${styles.section} ${css}`} id={id}>  
+    <section className={`${styles.section} ${css}`} id={id}>   
       <div ref={ref}>
           {children}
       </div>
