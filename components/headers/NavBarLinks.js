@@ -1,12 +1,23 @@
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { GiTeamIdea } from "react-icons/gi";
-import { TbMapSearch } from "react-icons/tb";
+import { TbMapSearch, TbHomeLink } from "react-icons/tb";
+import {BsBuildingFillCheck } from "react-icons/bs";
 
 export const linksContent = [
+    {
+        span: 'Encontrar oportunidades',
+        url: '/inversor',
+        icon: <BsBuildingFillCheck />
+    },
     {
         span: 'Programa de transparencia',
         url: '/transparencia',
         icon: <TbMapSearch />
+    },
+    {
+        span: 'Ofrece una oportunidad',
+        url: '/propietario',
+        icon: <TbHomeLink />
     },
     {
         span: 'Quienes somos',

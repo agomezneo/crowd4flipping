@@ -9,7 +9,7 @@ import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 import {FaExclamationTriangle} from "react-icons/fa";
 
-function PropertyForm({type, tag}) {
+function PropertyForm({type, tag, _setSendData}) {
     
     const api = 'https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api';
     const [captchaa, setCaptchaa] = useState(false);
@@ -39,6 +39,7 @@ function PropertyForm({type, tag}) {
             ...state,
             [name] : value
         })
+        setErrors(validate(state))
     }
 
     const onChangeCaptcha = () =>{
@@ -50,17 +51,22 @@ function PropertyForm({type, tag}) {
     const handleSubmit = () =>{
         setErrors(validate(state))
         setSendData(true)
+
     }
 
     const sendContact = async (data) =>{
+        _setSendData(true)
         try {
             let res = await axios.post(`${api}/contact`, data);
             if(res.data.status === 200){
-                Router.push('/thanks-owner');
+                Router.push('/thanks-owner-property');
                 setSendData(false)
+                _setSendData(false)
+
             }
         } catch (error) {
             setSendData(false)
+            _setSendData(false)
         }
     };
 
@@ -258,15 +264,16 @@ function PropertyForm({type, tag}) {
             />
             <p>Autorizo el tratamiento de mis datos para recibir una respuesta a mi consulta según la       <Link href='/docs/aviso-legal'>Política de Privacidad</Link>    
             </p>  
-            {errors.termsAndConditions && 
+           
+        </div>
+        {errors.termsAndConditions && 
                 <p 
                     className={styles.errorInput}
                 >
                     <FaExclamationTriangle/>
                     {errors.termsAndConditions}
                 </p>
-            }  
-        </div>
+            }   
         <div className={styles.input_container_checkbox}>
         <ReCAPTCHA
             ref={captcha}

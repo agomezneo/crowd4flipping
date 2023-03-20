@@ -7,7 +7,7 @@
     box-shadow: 1px 1px 2px var(--gray);
     position: fixed; 
     top: 0;
-    z-index: 100; 
+    z-index: 10000; 
     background-color: var(--white);
     padding-left: 1rem;
     padding-right: 1rem;
@@ -25,7 +25,6 @@
 .display_active{
     transition: .2s all ease-in-out;
     min-width: 20%;
-    height: 7vh;
     right: 0;
     border-bottom-left-radius: 7px;
     gap: 1rem;
@@ -115,6 +114,15 @@
     & .insta_icon:hover{
         filter: brightness(100%);
     }
+}
+
+.header_page_links_container_burder_active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
 }
 
 .header_page_title{

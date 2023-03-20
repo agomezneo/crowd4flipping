@@ -6,11 +6,17 @@ import Link from 'next/link';
 import {linksContent} from './NavBarLinks';
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa'
 import InstagramIcon from '../../public/images/icons/instagramIcon.webp';
-import { isMotionComponent, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import BurgerButton from '../buttons/BurgerButton';
+import Router from 'next/router';
 
 function Header() {
 
-  const [activeFixedNav, setActiveFixedNav] = useState(false) 
+    const [activeFixedNav, setActiveFixedNav] = useState(false) 
+    const [isOpen, setIsOpen] = useState(false);
+    const [_isOpen, _setIsOpen] = useState(false);
+    const [currentUrl, setCurrentUrl] = useState(null);
+
     useEffect(() => {
     if(!document){
         return
@@ -24,39 +30,61 @@ function Header() {
     })
     }, [])
 
-    const [isOpen, setIsOpen] = useState(false);
-
     const effects = { 
         open: {
-          x: 0,
+          y: 0,
           opacity: 1,
           position: 'fixed',
           display: 'flex'
         },
         close: {
-          x: -1000,
+          y: -1000,
           opacity: 0,
           display: 'none'
-        }
+        },
+        _open: {
+          y: 0,
+          opacity: 1,
+          position: 'fixed',
+          display: 'flex'
+        },
+        _close: {
+          y: 1000,
+          opacity: 0,
+          display: 'none'
+        },
       };
 
       const effectsLink = { 
         open: {
           opacity: 1,
-          x: 0  
+          y: 0  
         },
         close: { 
           opacity: 0,
-          x: -1000
+          y: -1000
+        },
+        _open: {
+          opacity: 1,
+          y: 0  
+        },
+        _close: { 
+          opacity: 0,
+          y: 1000
         }
       };
-   
    
     const open = () =>{
         setIsOpen(state => !state) 
     }
+    const _open = () =>{
+        _setIsOpen(state => !state) 
+    }
 
-
+    useEffect(() =>{
+        let currentUrl = Router.asPath;
+        setCurrentUrl(currentUrl);
+    }, [])
 
   return (
     <>
@@ -67,24 +95,71 @@ function Header() {
             </Link>
         </section>
         <section  className={styles.header_page_links_container}>
-            {linksContent.map((item, key) => (
-                <motion.div
-                    key={key}
-                    whileHover={{y: -7  }}
-                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+
+            {activeFixedNav ? (<>
+                <section  
+                    className={styles.header_page_links_container_burder_active}
+                    onClick={() => _open()}
                 >
-                    <Link 
-                    href={item.url} 
-                    >
-                        <div className={styles.link_container_laptop}>
-                            <span className={styles.icon}>{item.icon}</span>
-                            <h3 className={activeFixedNav && `${styles.active_header}`}>
-                                {item.span}
-                            </h3>
-                        </div>
-                    </Link>
+                    <BurgerButton
+                        _isOpen={_isOpen}
+                    />
+                </section>
+                <motion.div 
+                    className={styles.link_container}
+                    initial={_isOpen}
+                    variants={effects}
+                    animate={_isOpen ? '_open' : '_close'}
+                    transition={{delay: .1, duration: .1,  type: 'just', stiffness: 100}}
+
+                >
+                    <>
+                    {linksContent.map((item, key) =>{
+                        if(item.url === currentUrl) return
+                        return(
+                            <Link 
+                                href={item.url}
+                                key={key}
+                                >
+                                <motion.h3 
+                                    initial={_isOpen}
+                                    variants={effectsLink}
+                                    animate={_isOpen ? 'open' : 'close'}
+                                    transition={{delay: `.${key+2}`, duration: `.${key+2}`,  type: 'just', stiffness: 100}}
+                                > 
+                                    <span>{item.icon}</span>
+                                    {item.span}
+                                </motion.h3>
+                            </Link> 
+                        )
+                    } )}
+                    </>
+
                 </motion.div>
-            ))}
+            
+            </>) : (
+                <>
+                {linksContent.map((item, key) => {
+                    if(item.url === currentUrl)return
+                    return(
+                        <motion.div
+                            key={key}
+                            whileHover={{y: -7  }}
+                            transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                        >
+                            <Link 
+                                href={item.url} 
+                            >
+                                <h3 className={activeFixedNav && `${styles.active_header}`}>
+                                    <span className={styles.icon}>{item.icon}</span>
+                                    {item.span}
+                                </h3>
+                            </Link>
+                        </motion.div>
+                    )
+                } )}
+                </>
+            ) }
 
             <div className={styles.header_page_social_links_container}>
                 <motion.a 
@@ -113,13 +188,13 @@ function Header() {
             </div>
         </section>
         
-        <section  className={styles.header_page_links_container_burger_container}>
-            <div 
-                className={isOpen ? `${styles.header_page_burger} ${styles.open}` : styles.header_page_burger}
-                onClick={open}
-            >
-                    <div className={styles.heder_page_btn_burger}></div>
-            </div>
+        <section  
+            className={styles.header_page_links_container_burger_container}
+            onClick={() => open(!isOpen)}
+        >
+            <BurgerButton
+                _isOpen={isOpen}
+            />
         </section>
 
         <motion.div 
@@ -127,49 +202,52 @@ function Header() {
             initial={isOpen}
             variants={effects}
             animate={isOpen ? 'open' : 'close'}
-
+            transition={{delay: .1, duration: .1,  type: 'spring', stiffness: 100}}
         >
-            {linksContent.map((item, key) => (
-                <Link 
-                href={item.url}
-                key={key}
-                >
-                <motion.h3 
-                    initial={isOpen}
-                    variants={effectsLink}
-                    animate={isOpen ? 'open' : 'close'}
-                    transition={{delay: `.${key+2}`, duration: `.${key+2}`,  type: 'spring', stiffness: 100}}
-                > 
-                    <span>{item.icon}</span>
-                    {item.span}
-                </motion.h3>
-                </Link>
-            ))}
+            {linksContent.map((item, key) => {
+                if(item.url === currentUrl) return
+                return(
+                    <Link 
+                        href={item.url}
+                        key={key}
+                        >
+                        <motion.h3 
+                            initial={isOpen}
+                            variants={effectsLink}
+                            animate={isOpen ? 'open' : 'close'}
+                            transition={{delay: `.${key+2}`, duration: `.${key+2}`,  type: 'spring', stiffness: 100}}
+                        > 
+                            <span>{item.icon}</span>
+                            {item.span}
+                        </motion.h3>
+                        </Link>
+                    )
+                })
+            }
 
-
-                <motion.a 
-                    href='https://www.facebook.com/Crowd4Flipping' 
-                    target="_blank"
-                    rel="noreferrer" 
-                    whileHover={{y: -7  }}
-                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
-                >
-                    <FaFacebookSquare className={`${styles.icon} ${styles.face_icon}`}/>
-                </motion.a>
-                <motion.a
-                    href='https://www.instagram.com/crowd4flipping' 
-                    target="_blank"
-                    rel="noreferrer" 
-                    whileHover={{y: -7  }}
-                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
-                >
-                    <Image 
-                        src={InstagramIcon} 
-                        className={`${styles.insta_icon}`}
-                        width={40} 
-                        height={40} 
-                    />
-                </motion.a>
+            <motion.a 
+                href='https://www.facebook.com/Crowd4Flipping' 
+                target="_blank"
+                rel="noreferrer" 
+                whileHover={{y: -7  }}
+                transition={{ duration: 0.3, type: "just", stiffness: 300 }}
+            >
+                <FaFacebookSquare className={`${styles.icon} ${styles.face_icon}`}/>
+            </motion.a>
+            <motion.a
+                href='https://www.instagram.com/crowd4flipping' 
+                target="_blank"
+                rel="noreferrer" 
+                whileHover={{y: -7  }}
+                transition={{ duration: 0.3, type: "just", stiffness: 300 }}
+            >
+                <Image 
+                    src={InstagramIcon} 
+                    className={`${styles.insta_icon}`}
+                    width={40} 
+                    height={40} 
+                />
+            </motion.a>
         </motion.div>
 
     </nav>

@@ -1,12 +1,14 @@
-import React  from 'react';
+import React, { useState }  from 'react';
 import Head from 'next/head';
 import styles from '../styles/propiedades_form.module.scss';
 import Header from '../components/headers/header_pages_form';
 import Footer from '../components/footers/index';
 import PropertyForm from '../components/forms/Property';
 import WhatsAppButton from '../components/buttons/WhatsAppButton';
+import BlocksLoader from '../components/loaders/BlocksLoader';
 
 function Index() {
+    const [sendData, setSendData] = useState(false)
   return (
     <div className={styles.form_page}>
         <Head>
@@ -17,10 +19,19 @@ function Index() {
         />
 
         <WhatsAppButton />
-       <div className={styles.body}>
-        <PropertyForm type={'OwnerProperty'} tag={'c4f_owner_property'}/>
-       </div>
-       <Footer />
+        {sendData ? (
+            <div className={styles.body}>
+              <BlocksLoader />
+            </div> 
+        ) : (
+          <>
+            <div className={styles.body}>
+              <PropertyForm type={'OwnerProperty'} tag={'c4f_owner_property'} _setSendData={setSendData}/>
+            </div>
+            <Footer />
+          </>
+        )}
+       
     </div>
   )
 }
