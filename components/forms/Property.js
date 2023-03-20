@@ -11,8 +11,8 @@ import {FaExclamationTriangle} from "react-icons/fa";
 
 function PropertyForm({type, tag}) {
     
+    const api = 'https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api';
     const [captchaa, setCaptchaa] = useState(false);
-    const api = 'https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api'; 
     const captcha = useRef(null);
     const [sendData, setSendData] = useState(false);
     const [errors, setErrors] = useState({initial : 'initial'});
@@ -78,8 +78,6 @@ function PropertyForm({type, tag}) {
         }
         sendContact(state);
     },[sendData]);
-
-
 
   return (
     <div className={styles.form_container}>
@@ -258,7 +256,7 @@ function PropertyForm({type, tag}) {
                 value={state.termsAndConditions} 
                 onChange={handleStateChange} 
             />
-            <p>Autorizo el tratamiento de mis datos para recibir una respuesta a mi consulta según la <Link href='/docs/aviso-legal'>Política de Privacidad</Link>    
+            <p>Autorizo el tratamiento de mis datos para recibir una respuesta a mi consulta según la       <Link href='/docs/aviso-legal'>Política de Privacidad</Link>    
             </p>  
             {errors.termsAndConditions && 
                 <p 
