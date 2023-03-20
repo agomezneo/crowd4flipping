@@ -96,7 +96,7 @@ function InvestmentForm({type, tag, urlThanks}) {
                 ref={captcha}
                 sitekey="6LeW0vYiAAAAABvzPB2SSZrvaz3d7ptD70HNJak4"
                 onChange={onChangeCaptcha}
-            />,
+            />
             </div>
             {sendData ? (<BlocksLoader />) : (
                 <>
