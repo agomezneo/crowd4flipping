@@ -12,7 +12,7 @@ function HomeSection() {
           <video src='/videos/real_state_01.mp4' autoPlay loop="loop" muted playsInline/>
         </div>
         <div className={styles.page_section}>
-          <div className={styless.page_grid_container}>
+          <div className={styless.parallax_container}>
               <motion.div
                 initial={{ y: 25, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}

@@ -35,7 +35,7 @@ function HomeSection() {
   },[eleTarget])
 
   const effectVariants = {
-    opened: {
+    opened: { 
         opacity: 1,
         y: 0
     },

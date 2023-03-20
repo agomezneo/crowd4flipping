@@ -26,7 +26,7 @@ function Index() {
         ) : (
           <>
             <div className={styles.body}>
-              <PropertyForm type={'OwnerProperty'} tag={'c4f_owner_property'} _setSendData={setSendData}/>
+              <PropertyForm type={'PropertyWebinar'} tag={'80'} _setSendData={setSendData}/>
             </div>
             <Footer />
           </>

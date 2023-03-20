@@ -34,7 +34,7 @@ function HomeSection() {
                   <p>Nuestra plataforma de <strong>préstamos colaborativos</strong> permite a nuestros usuarios <strong>invertir en proyectos inmobiliarios de alta calidad </strong>sin tener que comprometer grandes sumas de dinero. El equipo de expertos de <strong>Crowd4Flipping se encarga de los trámites debidos y el análisis de riesgos</strong> para asegurarse de presentar solo los mejores proyectos a los inversores.</p>
                 </div>
                 <div className={styles.buttons_container}>
-                  <Link
+                  <a
                     href={'#video_section'}
                   >
                     <motion.div 
@@ -44,7 +44,7 @@ function HomeSection() {
                     >
                         Conoce Crowd<span>4</span>Flipping
                     </motion.div>
-                  </Link>
+                  </a>
                   <a href={`https://app.crowd4flipping.com/?${fromWeb}`}>
                     <GreenButton 
                       Text={'Regístrate gratis'}
