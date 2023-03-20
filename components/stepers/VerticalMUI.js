@@ -3,14 +3,9 @@ import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
-import {MaterialHorizontalData} from '../../data/cards/StepCardsData'
 import styles from '../../styles/Steper.module.scss';
 import Image from 'next/image';
-import SettingsIcon from '@mui/icons-material/Settings'; 
 import {motion} from 'framer-motion';
-
-
-import Typography from '@mui/material/Typography';
 
 export default function VerticalLinearStepper({data, active}) {
 
@@ -36,13 +31,19 @@ export default function VerticalLinearStepper({data, active}) {
                animate= {active ? "opened" : "closed"}
                transition={{delay: `.${key+1}`, duration: `.${key+2}`,  type: 'spring', stiffness: 100}}
             >
-              <div className={styles.v_step_imagen_container}>
-                  <Image src={step.image} width={50} height={50} alt={`${step.title} - Imagen`} className={styles.image}/>
-              </div>
+              
               <StepLabel
+
               >
-                <h1 className={styles.step_title} >{step.title}</h1>
-                <p className={styles.step_p_v} >{step.text}</p>
+                <div className={styles.vertical_card_step}>
+                  <div className={styles.steper_text_container}>
+                    <h1 className={styles.step_title} >{step.title}</h1>
+                    <p className={styles.step_p_v} >{step.text}</p>
+                  </div>
+                  <div className={styles.card_image_container}>
+                    <Image src={step.image} width={100} height={100} alt={`${step.title} - Imagen`} className={styles.image}/>
+                  </div>
+                </div>
               </StepLabel>
             </motion.div>
           </Step>

@@ -28,7 +28,6 @@ function InvestmentForm({type, tag, urlThanks}) {
     
     const handleChange = (e) =>{
         e.preventDefault();
-        console.log(e.target.type)
         const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
         setState({
             ...state,

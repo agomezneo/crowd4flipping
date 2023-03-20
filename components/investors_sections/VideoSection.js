@@ -5,31 +5,28 @@ import GreenButton from '../buttons/GreenButton';
 
 function HomeSection() {
 
-  const [eleTarget, setEletarget] = useState(null);
   const [active, setActive] = useState(false);
+  const [divHeight, setDivHeight] = useState(0);
   const [screen, setScreen] = useState(false)
   const fromWeb = 'fw'
 
-  useEffect(()=>{
-    const doc = window.document;
-    setEletarget(doc.getElementById('video_section'))
-  },[]);
-
-  const setElementEffect = (ele, setActive) =>{
-    let ele_hight = ele?.offsetTop;
-    window.addEventListener("scroll", ()=>{
-      if(window.scrollY < ele_hight){return setActive(false)}
-      if(window.scrollY >= ele_hight - 1000){
-        return setActive(true); 
+  useEffect(() => {
+    const handleScroll = () => {
+      const height = document.getElementById('video_section').offsetHeight;
+      setDivHeight(height);
+      if (window.scrollY >= divHeight) {
+        setActive(true);
+      } else {
+        setActive(false);
       }
-    })
-  }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [divHeight]);
 
-  useEffect(()=>{
-    if(eleTarget === null)return
-    setElementEffect(eleTarget, setActive);
-  },[eleTarget])
- 
   useEffect(() => { 
       let document = window.screen.width;
       if(document < 991){
@@ -49,6 +46,7 @@ function HomeSection() {
         y: 100
     },
 }
+
 
   return (
     <div className={styles.page_section}>

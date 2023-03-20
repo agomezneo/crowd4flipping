@@ -74,6 +74,24 @@
     }  
 }
 
+.errorInput{
+    font-size: .9rem;
+    color: #3dae2a;
+    margin-bottom: 10px !important;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+    background-color: #fe9f9f28;
+    width: 300px;
+    padding: .3rem !important;
+    border-radius: 7px;
+    margin-top: .3rem;
+}
+.errorInput > svg{
+    margin-right: 5px !important;
+}
+
 .button{
     height: 50px;
     width: 100%;

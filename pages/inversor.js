@@ -53,6 +53,7 @@ export default function App({projectsInStudy, projectsFinished}) {
           <title>Crowd4Flipping</title>
           <meta name="description" content="Invierte en proyectos inmobiliarios de las Islas Baleares desde tan solo 500€ " />        
       </Head>
+      
       <div className={styles.section_arrows_movil}> 
         <div className={styles.arrow_icon_container}>
           <a 

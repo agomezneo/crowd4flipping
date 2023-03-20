@@ -193,8 +193,7 @@
 
   .page_section{
     display: grid;
-    place-content: center;
-    position: relative;
+    place-content: center; 
   }
 
   .page_section_container{
@@ -508,6 +507,7 @@
     grid-area: left_01;
     display: flex;
     align-items: flex-end;
+    min-height: 40vh;
   }
 
   .acordion_container{

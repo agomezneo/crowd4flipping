@@ -10,8 +10,6 @@ function HomeSection() {
   
   const [eleTarget, setEletarget] = useState(null);
   const [active, setActive] = useState(false);
-  const [screen, setScreen] = useState(false);
-  const fromWeb = 'fw'
 
   useEffect(()=>{
     const doc = window.document;
