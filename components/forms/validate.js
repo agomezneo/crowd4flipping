@@ -18,15 +18,5 @@ export default function validate(values){
     if(!values.termsAndConditions){
         errors.termsAndConditions = 'Debes aceptar los terminos y condiciones.'
     }
-
-
-/* 
-   
-
-    if(!values.DescargoDeResponsabilidad){
-        errors.descargoDeResponsabilidad = 'Debes aceptar el aviso legal'
-    } */
-
-
-    return errors;
+   return errors;
 }

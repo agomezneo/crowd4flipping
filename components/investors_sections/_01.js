@@ -25,18 +25,10 @@ function HomeSection() {
             <div class={styles.parallax_container} id='parallax_container'>
               <div class={styles.parallax_background} >
                 <div className={styles.video_container}>
-                  <video src='/videos/video_01.mp4' autoPlay loop="loop" muted playsInline/>
+                  <video src='/videos/bg_video_s1.mp4' autoPlay loop="loop" muted playsInline/>
                 </div>  
               </div>
-              <div 
-                className={styles.parallax_content}
-                /* initial={{ x: 0, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{
-                  delay: 0.2,
-                  duration: 1,
-                }} */
-              >
+              <div className={styles.parallax_content}>
                 <div className={styles.text_container}>
                   <h1 className={styles.s1_pages_title}>Plataforma de inversión inmobiliaria participativa para ahorradores. <span>Inicia desde 500€</span></h1>
                   <p>Nuestra plataforma de <strong>préstamos colaborativos</strong> permite a nuestros usuarios <strong>invertir en proyectos inmobiliarios de alta calidad </strong>sin tener que comprometer grandes sumas de dinero. El equipo de expertos de <strong>Crowd4Flipping se encarga de los trámites debidos y el análisis de riesgos</strong> para asegurarse de presentar solo los mejores proyectos a los inversores.</p>
