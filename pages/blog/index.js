@@ -52,7 +52,8 @@ function Index() {
                 currentIndex = currentIndex >= 5 ? 0 : currentIndex + 1 ;
                 if(currentIndex === 5){
                   return(
-                    <Grid item  lg={4} xs={12}>
+
+                    <Grid item  lg={4} xs={12} key={'empty'}>
                       <BlogCard /* title={entry.title} content={entry.content} */ />
                       <h4>news letter</h4>
                     </Grid>
