@@ -31,6 +31,9 @@ body {
   --mustard: #ffaa00;
   --backgroundButton:  linear-gradient(145deg, #00d1ff, #00b0e6);
 
+  --boxShadowHeader: inset 10px 10px 24px #00a4d6,
+  inset -10px -10px 24px #00e2ff;
+
 }
 
 a {

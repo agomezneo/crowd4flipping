@@ -5,14 +5,14 @@ import {BsBuildingFillCheck } from "react-icons/bs";
 
 export const linksContent = [
     {
-        span: 'Encontrar oportunidades',
-        url: '/inversor',
-        icon: <BsBuildingFillCheck />
-    },
-    {
         span: 'Programa de transparencia',
         url: '/transparencia',
         icon: <TbMapSearch />
+    },
+    {
+        span: 'Encontrar oportunidades',
+        url: '/inversor',
+        icon: <BsBuildingFillCheck />
     },
     {
         span: 'Ofrece una oportunidad',
