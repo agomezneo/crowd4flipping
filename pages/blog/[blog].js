@@ -47,7 +47,7 @@ function Index() {
               <h1>Crowdfunding Inmobiliario: Cómo la Tecnología Blockchain Está Transformando el Crowdlending</h1>
               <div className={styles.blog_page_avatar_container}>
                 <Avatar />
-                <span> {/* autor?.name ? autor.name :  */'Avatar Name'} </span>
+                <span>Avatar Name</span>
               </div>
             </div>
             <div className={styles.blog_page_content}>
@@ -62,7 +62,7 @@ function Index() {
               <br/>
               <br/>
               <br/>
-              <h2>"crowdfunding inmobiliario" o "crowdlending"</h2>
+              <h2>Crowdfunding inmobiliario o crowdlending</h2>
               <br/>
               <br/>
               <br/>
@@ -71,7 +71,7 @@ function Index() {
               <br/>
               <br/>
               <br/>
-              <h2>"crowdfunding inmobiliario" o "crowdlending"</h2>
+              <h2>crowdfunding inmobiliario o crowdlending</h2>
               <br/>
               <br/>
               <br/>
@@ -79,7 +79,7 @@ function Index() {
               <br/>
               <br/>
               <br/>
-              <h2>"crowdfunding inmobiliario" o "crowdlending"</h2>
+              <h2>"rowdfunding inmobiliario o crowdlending</h2>
               <br/>
               <br/>
               <br/>
@@ -87,7 +87,7 @@ function Index() {
               <br/>
               <br/>
               <br/>
-              <h2>"crowdfunding inmobiliario" o "crowdlending"</h2>
+              <h2>crowdfunding inmobiliario o crowdlending</h2>
               <br/>
               <br/>
               <br/>
@@ -95,7 +95,7 @@ function Index() {
               <br/>
               <br/>
               <br/>
-              <h2>"crowdfunding inmobiliario" o "crowdlending"</h2>
+              <h2>crowdfunding inmobiliario o crowdlending</h2>
               <br/>
               <br/>
               <br/>
