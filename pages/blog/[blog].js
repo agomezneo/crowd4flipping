@@ -67,7 +67,7 @@ function Index() {
               <br/>
               <br/>
               <p>
-              Si estás interesado en invertir en el mercado inmobiliario, es posible que hayas oído hablar de los términos "crowdfunding inmobiliario" o "crowdlending". Ambos términos se refieren a la inversión en bienes raíces a través de plataformas en línea que permiten a los inversores individuales participar en proyectos inmobiliarios de manera colectiva. Sin embargo, lo que hace que estas plataformas sean tan interesantes es su uso de la tecnología blockchain para facilitar las transacciones.
+              Si estás interesado en invertir en el mercado inmobiliario, es posible que hayas oído hablar de los términos crowdfunding inmobiliario o crowdlending. Ambos términos se refieren a la inversión en bienes raíces a través de plataformas en línea que permiten a los inversores individuales participar en proyectos inmobiliarios de manera colectiva. Sin embargo, lo que hace que estas plataformas sean tan interesantes es su uso de la tecnología blockchain para facilitar las transacciones.
               <br/>
               <br/>
               <br/>
@@ -79,7 +79,7 @@ function Index() {
               <br/>
               <br/>
               <br/>
-              <h2>"rowdfunding inmobiliario o crowdlending</h2>
+              <h2>Crowdfunding inmobiliario o crowdlending</h2>
               <br/>
               <br/>
               <br/>
