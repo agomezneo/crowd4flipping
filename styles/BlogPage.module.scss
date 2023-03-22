@@ -1,6 +1,5 @@
 .blog_page{
     display: block;
-  /*   background: aqua; */
     min-height: 100vh;
     padding-top: 10.5vh;
     display: flex;
@@ -13,14 +12,12 @@
 }
 
 .blog_page_header{
-    background: linear-gradient(145deg, #00d1ff, #00b0e6);
-    box-shadow: var(--boxShadowHeader);
     border-radius: 10px;
     padding: .5rem 2rem .5rem 2rem;
     & h1{
-        font-size: 2.5rem;
+        font-size: 2.7rem;
         text-align: center;
-        color: var(--white);
+        color: var(--black);
     }
 }
 .blog_page_body{
@@ -29,16 +26,97 @@
     padding: 1.5rem 0rem;
 }
 
+.blog_page_child_container{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+.blog_page_child_left{
+    flex: 2;
+}
+.blog_page_child_center{
+    flex: 5;
+    position: relative;
+}
+
+.blog_page_social_container{
+    position: fixed;
+    top: 30vh;
+    left: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.blog_page_child_right{
+    flex: 2;
+    position: relative;
+    height: 100%;
+}
+
+.blog_page_cta_card_container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: fit-content;
+    position: fixed;
+    top: 10.5vh;
+    width: 20%;
+    right: 0;
+    padding: 1rem;
+
+    & input{
+        width: 100%;
+    }
+}
+
+.blog_page_blog_header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    & h1{
+        color: var(--black);
+        font-size: 2.7rem;
+    }
+}
+
+.blog_page_avatar_container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 991px){
     .blog_page_container{
         width: 100vw;
     }
     .blog_page_header{
         padding: .2rem;
+        border-radius: 0px;
         & h1{
             font-size: 1.5rem;
             text-align: center;
             color: var(--white);
         }
+    }
+
+    .blog_page_child_container{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .blog_page_blog_header{
+        & h1{
+            font-size: 1.5rem;
+        }
+    }
+    .blog_page_social_container{
+        display: none;
+    }
+    .blog_page_cta_card_container{
+        display: none;
     }
 }

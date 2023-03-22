@@ -5,6 +5,8 @@ import Logo from '../../public/images/brand/crowd4flipping/logo/Crowd4Flipping.p
 import Link from 'next/link';
 import {linksContent} from './NavBarLinks';
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa'
+import { MdOutlineAccountCircle } from "react-icons/md";
+
 import InstagramIcon from '../../public/images/icons/instagramIcon.webp';
 import { motion } from 'framer-motion';
 import BurgerButton from '../buttons/BurgerButton';
@@ -163,6 +165,15 @@ function Header() {
 
             <div className={styles.header_page_social_links_container}>
                 <motion.a 
+                    href='https://app.crowd4flipping.com' 
+                    target="_blank"
+                    rel="noreferrer" 
+                    whileHover={{y: -7  }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                >
+                    <MdOutlineAccountCircle className={`${styles.icon} ${styles.face_icon}`}/>
+                </motion.a>
+                <motion.a 
                     href='https://www.facebook.com/Crowd4Flipping' 
                     target="_blank"
                     rel="noreferrer" 
@@ -224,7 +235,15 @@ function Header() {
                     )
                 })
             }
-
+            <motion.a 
+                    href='https://app.crowd4flipping.com' 
+                    target="_blank"
+                    rel="noreferrer" 
+                    whileHover={{y: -7  }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                >
+                    <MdOutlineAccountCircle className={`${styles.icon} ${styles.face_icon}`}/>
+            </motion.a>
             <motion.a 
                 href='https://www.facebook.com/Crowd4Flipping' 
                 target="_blank"

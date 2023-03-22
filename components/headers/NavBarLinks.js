@@ -24,9 +24,9 @@ export const linksContent = [
         url: '/sobre-nosotros',
         icon: <GiTeamIdea />
     },
-    {
+    /* {
         span: 'Acceso',
         url: 'https://app.crowd4flipping.com',
         icon: <MdOutlineAccountCircle />
-    },
+    }, */
 ]

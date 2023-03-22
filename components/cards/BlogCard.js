@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import styles from  '../../styles/BlogCard.module.scss';
+import Link from 'next/link';
 import {motion} from 'framer-motion';
-import Image from 'next/image';
 import { Avatar } from '@mui/material';
+import CardMedia from '@mui/material/CardMedia';
 
-export default function BlogCard({title, description, imageUrl, lg, autor}) {
+export default function BlogCard({id, title, description, imageUrl, lg, autor}) {
 
     const [_description, setDescription] = useState('')
 
@@ -34,13 +35,12 @@ export default function BlogCard({title, description, imageUrl, lg, autor}) {
         transition={{ duration: 0.2, type: "spring", stiffness: 100 }}
     >
         <div className={styles.blog_card_image_container}>
-            <Image 
-                src={imageUrl} 
-                height={lg === 8 ? 200 : 250}  
-                width={lg === 8 ? 900 : 550} 
-                objectFit={'cover'} 
-                objectPosition={lg === 8 ? 'center' : 'top'}
-                className={styles.blog_card_image}
+            <CardMedia
+                className={styles.blog_card_media}
+                component="img"
+                alt="green iguana"
+                height="150"
+                image={imageUrl}
             />
         </div>
         <div className={styles.blog_card_text_container}> 
@@ -53,7 +53,10 @@ export default function BlogCard({title, description, imageUrl, lg, autor}) {
                 <span> {autor?.name ? autor.name : 'Avatar Name'} </span>
             </div>
             <div className={styles.blog_card_footer_cta}>
-                <span> leer más...</span>
+                <Link href={`/blog/${id}`}>
+                    <span> leer más...</span>
+                </Link>
+                
             </div>
         </div>
     </motion.div>

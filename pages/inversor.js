@@ -17,20 +17,9 @@ import { RiWhatsappLine } from 'react-icons/ri'
 
 
 function HomeSection({id, css, children}) {
-  const ref = useRef(null);
-  const [screen, setScreen] = useState(false)
-
-  useEffect(() => {
-    let screenWidth = window.screen.width;
-    if(screenWidth < 991){
-        setScreen(true)
-        return
-    }
-}, [])
-
   return (
     <section className={`${styles.section} ${css}`} id={id}>   
-      <div ref={ref}>
+      <div>
           {children}
       </div>
     </section>
@@ -101,11 +90,16 @@ export default function App({projectsInStudy, projectsFinished}) {
 }
 
 
-export async function getServerSideProps(){
+export async function getStaticProps(){
 
   const api = 'https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api/get-projects-by-phase'
-  const projectsInStudy = await fetch(`${api}/IN_STUDY`).then((res) => res.json());
-  const projectsFinished = await fetch(`${api}/FINISHED`).then((res) => res.json());
+ /*  const projectsInStudy = await fetch(`${api}/IN_STUDY`).then((res) => res.json());
+  const projectsFinished = await fetch(`${api}/FINISHED`).then((res) => res.json()); */
+
+  const [projectsInStudy, projectsFinished] = await Promise.all([
+    fetch(`${api}/IN_STUDY`).then((res) => res.json()),
+    fetch(`${api}/FINISHED`).then((res) => res.json())
+  ])
 
   return{
       props: {
