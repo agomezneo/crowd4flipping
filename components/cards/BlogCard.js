@@ -8,12 +8,23 @@ import CardMedia from '@mui/material/CardMedia';
 export default function BlogCard({id, title, description, imageUrl, lg, autor}) {
 
     const [_description, setDescription] = useState('')
+    const [_title, setTitle] = useState('')
+
+    function shortenStringTitle(str) {
+        console.log(str)
+        let words = str.split(" ");
+        if (words.length > 7) {
+          words = words.slice(0, 7);
+          words.push("...");
+        }
+        return words.join(" ");
+    }
 
     function shortenString(str) {
         console.log(str)
         let words = str.split(" ");
-        if (words.length > 20) {
-          words = words.slice(0, 20);
+        if (words.length > 10) {
+          words = words.slice(0, 10);
           words.push("...");
         }
         return words.join(" ");
@@ -21,8 +32,10 @@ export default function BlogCard({id, title, description, imageUrl, lg, autor}) 
 
     useEffect(() =>{
         if(!description)return
-        let shortString = shortenString(description);
-        setDescription(shortString);
+        let shortTitle = shortenStringTitle(title)
+        let shortDescription = shortenString(description);
+        setDescription(shortDescription);
+        setTitle(shortTitle);
     }, [description])
 
   return (
@@ -39,13 +52,13 @@ export default function BlogCard({id, title, description, imageUrl, lg, autor}) 
                 className={styles.blog_card_media}
                 component="img"
                 alt="green iguana"
-                height="150"
+                height={lg === 8 ? 300 : 150}
                 image={imageUrl}
             />
         </div>
         <div className={styles.blog_card_text_container}> 
-            <h2> {title} </h2>
-            <p>  {_description} </p>
+            <h2> { lg === 8 ? title : _title } </h2>
+            <p>  { lg === 8 ? description : _description} </p>
         </div>
         <div className={styles.blog_card_footer}>
             <div className={styles.blog_card_avatar_container}>
@@ -54,7 +67,7 @@ export default function BlogCard({id, title, description, imageUrl, lg, autor}) 
             </div>
             <div className={styles.blog_card_footer_cta}>
                 <Link href={`/blog/${id}`}>
-                    <span> leer más...</span>
+                    <span> Leer más...</span>
                 </Link>
                 
             </div>

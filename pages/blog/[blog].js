@@ -18,19 +18,16 @@ const blogEntries = [
   { id: '1', title: 'Mi segunda entrada de blog', description: 'Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...' , imageUrl: 'https://firebasestorage.googleapis.com/v0/b/crowd4flipping-app.appspot.com/o/blog-entry-images%2FnS4w5FrqH0QFXvqLZJ5TSPTU1FI3%2F04.png?alt=media&token=4223ab6b-b9b9-45ab-bcb0-0ae1a952bd52' },
 ]
 
-function Index() {
+function Index({blogEntry}) {
 
-  const router = useRouter();
-  const blogId = router.query.blog;
-
-
+  console.log(blogEntry)
 
   return (
     <Layout>
       <Head>
       <Head>
-          <title>Crowd4Flipping - Blog {}</title>
-          <meta name="description" content="Todo lo que necesitas saber sobre <strong>inversión inmobiliaria participativa, crowdlending y tecnología blockchain." />        
+          <title>Crowd4Flipping - {`${blogEntry.title}`}</title>
+          <meta name="description" content={`${blogEntry.description}`} />        
       </Head>
       </Head>
       <div className={styles.blog_page}>
@@ -44,7 +41,7 @@ function Index() {
               <span>Twiter</span>
             </div>
             <div className={styles.blog_page_blog_header}>
-              <h1>Crowdfunding Inmobiliario: Cómo la Tecnología Blockchain Está Transformando el Crowdlending</h1>
+              <h1>{blogEntry.title}</h1>
               <div className={styles.blog_page_avatar_container}>
                 <Avatar />
                 <span>Avatar Name</span>
@@ -57,51 +54,15 @@ function Index() {
                   component="img"
                   alt="green iguana"
                   height="250"
-                  image={'https://firebasestorage.googleapis.com/v0/b/crowd4flipping-app.appspot.com/o/blog-entry-images%2FnS4w5FrqH0QFXvqLZJ5TSPTU1FI3%2Fhigh-angle-architectural-objects-on-desk.jpg?alt=media&token=55b0025a-c114-4935-a4e5-3d6bc3cb8d75'}
+                  image={blogEntry.imageUrl}
               />
-              <br/>
-              <br/>
-              <br/>
-              <h2>Crowdfunding inmobiliario o crowdlending</h2>
-              <br/>
-              <br/>
-              <br/>
-              <p>
-              Si estás interesado en invertir en el mercado inmobiliario, es posible que hayas oído hablar de los términos crowdfunding inmobiliario o crowdlending. Ambos términos se refieren a la inversión en bienes raíces a través de plataformas en línea que permiten a los inversores individuales participar en proyectos inmobiliarios de manera colectiva. Sin embargo, lo que hace que estas plataformas sean tan interesantes es su uso de la tecnología blockchain para facilitar las transacciones.
-              <br/>
-              <br/>
-              <br/>
-              <h2>crowdfunding inmobiliario o crowdlending</h2>
-              <br/>
-              <br/>
-              <br/>
-              La tecnología blockchain permite que las plataformas de crowdfunding inmobiliario y crowdlending operen de manera más eficiente y transparente que los métodos de financiación tradicionales. Por ejemplo, los contratos inteligentes pueden ser programados en la cadena de bloques para que se ejecuten automáticamente cuando se cumplan ciertas condiciones, lo que reduce la necesidad de intermediarios y aumenta la eficiencia.
-              <br/>
-              <br/>
-              <br/>
-              <h2>Crowdfunding inmobiliario o crowdlending</h2>
-              <br/>
-              <br/>
-              <br/>
-              Además, la cadena de bloques también permite la tokenización de activos, lo que significa que los bienes raíces pueden ser divididos en tokens digitales y vendidos a inversores individuales en lugar de tener que comprar una propiedad completa. Esto significa que más personas pueden invertir en proyectos inmobiliarios, lo que a su vez puede aumentar la liquidez de los activos.
-              <br/>
-              <br/>
-              <br/>
-              <h2>crowdfunding inmobiliario o crowdlending</h2>
-              <br/>
-              <br/>
-              <br/>
-              Por último, la tokenización de activos también facilita los proyectos inmobiliarios participativos, que permiten a los inversores contribuir con cantidades más pequeñas de capital en proyectos inmobiliarios específicos. Esto significa que los inversores pueden diversificar sus inversiones inmobiliarias y tener una mayor participación en la dirección de los proyectos.
-              <br/>
-              <br/>
-              <br/>
-              <h2>crowdfunding inmobiliario o crowdlending</h2>
-              <br/>
-              <br/>
-              <br/>
-              En conclusión, la tecnología blockchain ha transformado el mercado inmobiliario mediante la mejora de la eficiencia y la transparencia del crowdfunding inmobiliario y crowdlending. Al permitir la tokenización de activos y la creación de contratos inteligentes, las plataformas de inversión inmobiliaria en línea pueden ofrecer a los inversores individuales más opciones y oportunidades de inversión. Si estás interesado en invertir en bienes raíces, te recomendamos que investigues las plataformas de crowdfunding inmobiliario y crowdlending que utilizan la tecnología blockchain.
 
-              </p>
+              <div className={styles.blog_page_entry_container}>
+                <div  
+                  dangerouslySetInnerHTML={{__html: blogEntry.body}} 
+                />
+              </div>
+              
             </div>
           </div>
           <div className={styles.blog_page_child_right}>
@@ -125,7 +86,7 @@ function Index() {
             <Grid container spacing={2} style={{placeContent: 'center'}}>
               {blogEntries.map((entry, index) => {
                 return(
-                  <Grid item key={index} /* lg={8} */ xs={12}>
+                  <Grid item key={index} lg={6} xs={12}>
                     <BlogCard id={entry.id} title={entry.title} description={entry.description} imageUrl={entry.imageUrl} lg={8} />
                   </Grid>
                 ) 
@@ -144,3 +105,17 @@ function Index() {
 }
 
 export default Index
+
+export async function getServerSideProps(context){
+
+  const id = context.query.blog;
+  const api = `http://localhost:5000/crowd4flipping-app/us-central1/app/api/create-blog-entry/${id}`
+  const blogEntry = await fetch(`${api}`).then((res) => res.json());
+
+  return{
+      props: {
+        blogEntry,
+      }
+  }
+
+}

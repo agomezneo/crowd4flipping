@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head';
 import Footer from '../../components/footers/index';
 import Box from '@mui/material/Box';
@@ -16,9 +16,11 @@ const blogEntries = [
   { id: '4', title: 'Mi primer entrada de blog', description: 'Lorem ipsum dolor sit amet...', imageUrl: 'https://firebasestorage.googleapis.com/v0/b/crowd4flipping-app.appspot.com/o/blog-entry-images%2FnS4w5FrqH0QFXvqLZJ5TSPTU1FI3%2Fhigh-angle-architectural-project-on-desk.jpg?alt=media&token=73d1fe66-0b4c-4067-a77f-14aedd8c0097'},
   { id: '5', title: 'Mi primer entrada de blog', description: 'Lorem ipsum dolor sit amet...', imageUrl: 'https://firebasestorage.googleapis.com/v0/b/crowd4flipping-app.appspot.com/o/blog-entry-images%2FnS4w5FrqH0QFXvqLZJ5TSPTU1FI3%2Fhigh-angle-architectural-project-on-desk.jpg?alt=media&token=73d1fe66-0b4c-4067-a77f-14aedd8c0097'},
 
-]
+];
 
-function Index() {
+function Index({BlogEntries}) {
+
+  const [blogEntries] = useState(BlogEntries[0].data)
   let currentIndex = 0;
 
   return (
@@ -35,13 +37,20 @@ function Index() {
           <div className={styles.blog_page_body}>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
-              {blogEntries.map((entry, index) => {
+              {blogEntries?.map((entry, index) => {
                 let lg = currentIndex === 0 ? 8 : currentIndex <= 4 ? 4 : 4;
                 currentIndex = currentIndex >= 4 ? 0 : currentIndex + 1 ;
                 return(
                   <>
                     <Grid item key={index} lg={lg} xs={12}>
-                      <BlogCard id={entry.id} title={entry.title} description={entry.description} imageUrl={entry.imageUrl} lg={lg} />
+                      <BlogCard 
+                        id={entry.id} 
+                        lg={lg}
+                        title={entry.title} 
+                        description={entry.description} i
+                        imageUrl={entry.imageUrl}  
+                        autor={entry.autor}
+                      />
                     </Grid>
 
                     {currentIndex === 4 && (
@@ -52,9 +61,7 @@ function Index() {
                   </>
                 ) 
               } )}
-              
             </Grid>
-            
           </Box>
           </div>
         </div>
@@ -65,4 +72,20 @@ function Index() {
   )
 }
 
-export default Index
+export default Index;
+
+export async function getStaticProps(){
+
+  const api = 'http://localhost:5000/crowd4flipping-app/us-central1/app/api/create-blog-entry'
+  const BlogEntries = await Promise.all([
+    fetch(`${api}`).then((res) => res.json())
+  ])
+
+  return{
+      props: {
+       BlogEntries
+      }
+  }
+
+}
+
