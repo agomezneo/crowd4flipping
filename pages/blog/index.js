@@ -8,16 +8,6 @@ import styles from '../../styles/BlogPage.module.scss';
 import BlogCard from '../../components/cards/BlogCard';
 import WhatsAppButton from '../../components/buttons/WhatsAppButton';
 
-const blogEntries = [
-  { id: '0', title: 'Mi primer entrada de blog', description: 'Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...', imageUrl: 'https://firebasestorage.googleapis.com/v0/b/crowd4flipping-app.appspot.com/o/blog-entry-images%2FnS4w5FrqH0QFXvqLZJ5TSPTU1FI3%2F02.png?alt=media&token=9a439869-78c5-4403-856e-a88692a1165a' },
-  { id: '1', title: 'Mi segunda entrada de blog', description: 'Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...' , imageUrl: 'https://firebasestorage.googleapis.com/v0/b/crowd4flipping-app.appspot.com/o/blog-entry-images%2FnS4w5FrqH0QFXvqLZJ5TSPTU1FI3%2F04.png?alt=media&token=4223ab6b-b9b9-45ab-bcb0-0ae1a952bd52' },
-  { id: '2', title: 'Mi tercera entrada de blog', description: 'Lorem ipsum dolor sit amet...', imageUrl: 'https://firebasestorage.googleapis.com/v0/b/crowd4flipping-app.appspot.com/o/blog-entry-images%2FnS4w5FrqH0QFXvqLZJ5TSPTU1FI3%2Fhigh-angle-architectural-project-on-desk.jpg?alt=media&token=73d1fe66-0b4c-4067-a77f-14aedd8c0097' },
-  { id: '3', title: 'Mi cuarta entrada de blog', description: 'Lorem ipsum dolor sit amet...', imageUrl: 'https://firebasestorage.googleapis.com/v0/b/crowd4flipping-app.appspot.com/o/blog-entry-images%2FnS4w5FrqH0QFXvqLZJ5TSPTU1FI3%2F04.png?alt=media&token=4223ab6b-b9b9-45ab-bcb0-0ae1a952bd52' },
-  { id: '4', title: 'Mi primer entrada de blog', description: 'Lorem ipsum dolor sit amet...', imageUrl: 'https://firebasestorage.googleapis.com/v0/b/crowd4flipping-app.appspot.com/o/blog-entry-images%2FnS4w5FrqH0QFXvqLZJ5TSPTU1FI3%2Fhigh-angle-architectural-project-on-desk.jpg?alt=media&token=73d1fe66-0b4c-4067-a77f-14aedd8c0097'},
-  { id: '5', title: 'Mi primer entrada de blog', description: 'Lorem ipsum dolor sit amet...', imageUrl: 'https://firebasestorage.googleapis.com/v0/b/crowd4flipping-app.appspot.com/o/blog-entry-images%2FnS4w5FrqH0QFXvqLZJ5TSPTU1FI3%2Fhigh-angle-architectural-project-on-desk.jpg?alt=media&token=73d1fe66-0b4c-4067-a77f-14aedd8c0097'},
-
-];
-
 function Index({BlogEntries}) {
 
   const [blogEntries] = useState(BlogEntries[0].data)
@@ -76,7 +66,7 @@ export default Index;
 
 export async function getStaticProps(){
 
-  const api = 'http://localhost:5000/crowd4flipping-app/us-central1/app/api/create-blog-entry'
+  const api = 'https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api/create-blog-entry'
   const BlogEntries = await Promise.all([
     fetch(`${api}`).then((res) => res.json())
   ])
