@@ -8,13 +8,16 @@ import styles from '../../styles/BlogPage.module.scss';
 import BlogCard from '../../components/cards/BlogCard';
 import WhatsAppButton from '../../components/buttons/WhatsAppButton';
 import NewsLetterSuscription from '../../components/forms/NewsLetterSuscription';
-
+import MiniBlockLoader from '../../components/loaders/MiniBlockLoader';
 function Index({BlogEntries}) {
   
-  const [blogEntries, setBlogEntries] = useState(BlogEntries[0].data)
+  const [blogEntries, setBlogEntries] = useState(BlogEntries[0].data);
   const [lastDoc, setLastDoc] = useState(BlogEntries[0].data[3].id);
-  const [message, setMessage] = useState(null)
+  const [message, setMessage] = useState(null);
+  const [loadingData, setloadingData] = useState(false);
+
   const loadMoreEntries = async () => {
+    setloadingData(true)
     try {
       const api = `https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api/create-blog-entry?lastDoc=${lastDoc}`;
       const response = await fetch(api);
@@ -23,11 +26,14 @@ function Index({BlogEntries}) {
       if (data.status === 200) {
         setBlogEntries([...blogEntries, ...data.data]);
         setLastDoc(data.data[data.data.length - 1].id);
+        setloadingData(false)
       } else {
-        setMessage(data.message)
+        setMessage(data.message);
+        setloadingData(false)
       }
     } catch (error) {
       console.log(error.message);
+      setloadingData(false)
     }
   }
 
@@ -76,7 +82,7 @@ function Index({BlogEntries}) {
                 <span>{message}</span>
               </div>
             ) : (
-              <button onClick={() => loadMoreEntries()}>Cargar más artículos</button>
+              loadingData ? (<MiniBlockLoader/>) : (<div onClick={() => loadMoreEntries()}>Cargar más artículos</div>)
             )}
           </Box>
           </div>
