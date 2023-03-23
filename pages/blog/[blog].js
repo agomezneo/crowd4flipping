@@ -2,12 +2,9 @@ import React from 'react';
 import Layout from '../../components/layouts/Layout';
 import styles from '../../styles/BlogPage.module.scss';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import {motion} from 'framer-motion';
-=======
->>>>>>> main
 import WhatsAppButton from '../../components/buttons/WhatsAppButton';
 import Footer from '../../components/footers/index';
 import { Avatar } from '@mui/material';
