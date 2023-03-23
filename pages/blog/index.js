@@ -9,12 +9,14 @@ import BlogCard from '../../components/cards/BlogCard';
 import WhatsAppButton from '../../components/buttons/WhatsAppButton';
 import NewsLetterSuscription from '../../components/forms/NewsLetterSuscription';
 import MiniBlockLoader from '../../components/loaders/MiniBlockLoader';
+import {ImDownload} from 'react-icons/im'
 function Index({BlogEntries}) {
   
   const [blogEntries, setBlogEntries] = useState(BlogEntries[0].data);
   const [lastDoc, setLastDoc] = useState(BlogEntries[0].data[3].id);
   const [message, setMessage] = useState(null);
   const [loadingData, setloadingData] = useState(false);
+  let currentIndex = 0;
 
   const loadMoreEntries = async () => {
     setloadingData(true)
@@ -37,7 +39,6 @@ function Index({BlogEntries}) {
     }
   }
 
-  let currentIndex = 0;
   return (
     <Layout>
       <Head>
@@ -62,7 +63,7 @@ function Index({BlogEntries}) {
                         id={entry.id} 
                         lg={lg}
                         title={entry.title} 
-                        description={entry.description} i
+                        description={entry.description} 
                         imageUrl={entry.imageUrl}  
                         autor={entry.author}
                       />
@@ -82,7 +83,14 @@ function Index({BlogEntries}) {
                 <span>{message}</span>
               </div>
             ) : (
-              loadingData ? (<MiniBlockLoader/>) : (<div onClick={() => loadMoreEntries()}>Cargar más artículos</div>)
+              loadingData ? (<MiniBlockLoader/>) : (
+                <div 
+                  className={styles.blog_page_more_articles_button}
+                  onClick={() => loadMoreEntries()}
+                >
+                  <span><ImDownload /> </span>
+                  <h4>Cargar más artículos</h4>
+                </div>)
             )}
           </Box>
           </div>

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import {motion} from 'framer-motion';
 import { Avatar } from '@mui/material';
 import CardMedia from '@mui/material/CardMedia';
+import {FaBookReader} from 'react-icons/fa';
 
 export default function BlogCard({id, title, description, imageUrl, lg, autor}) {
 
@@ -56,19 +57,19 @@ export default function BlogCard({id, title, description, imageUrl, lg, autor}) 
         </div>
         <div className={styles.blog_card_text_container}> 
             <h2> { lg === 8 ? title : _title } </h2>
-            <p>  { lg === 8 || lg === 6 ? description : _description} </p>
+            <p>  { lg === 8 || lg === 6  ? description : _description} </p>
         </div>
         <div className={styles.blog_card_footer}>
             <div className={styles.blog_card_avatar_container}>
                 <Avatar src={autor?.photo}/>
                 <span> {autor?.name ? autor.name : 'Avatar Name'} </span>
             </div>
-            <div className={styles.blog_card_footer_cta}>
-                <Link href={`/blog/${id}`}>
-                    <span> Leer más...</span>
-                </Link>
-                
-            </div>
+            <Link href={`/blog/${id}`}>
+                <div className={styles.blog_card_footer_cta}>
+                    <span><FaBookReader /></span>
+                    <h4> Leer más...</h4>
+                </div>
+            </Link>
         </div>
     </motion.div>
   )

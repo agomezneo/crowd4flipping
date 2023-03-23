@@ -5,6 +5,7 @@ import {MdLocationPin} from 'react-icons/md';
 import Carousel from 'react-material-ui-carousel' 
 import StudyImage from '../../public/images/pages_images/transparencia_cards/01.jpg'
 import BlocksLoader from '../loaders/BlocksLoader';
+import MiniBlockLoader from '../loaders/MiniBlockLoader';
 import Router from 'next/router';
 import { useState } from 'react';
 
@@ -22,9 +23,7 @@ function ProjectCard({id, imgs, name, location, quantityFunded, estimatedRentabi
     }
   return ( 
     <>
-        {loader ? (<div style={{position: 'fixed', top:0, display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100vw', zIndex: 100, background: '#fff'}}>
-            <BlocksLoader/>
-        </div>) : (
+        {loader ? (<MiniBlockLoader />) : (
             <motion.div
                 whileHover={{ 
                     y: -10,
