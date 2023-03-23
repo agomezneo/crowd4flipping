@@ -11,7 +11,6 @@ export default function BlogCard({id, title, description, imageUrl, lg, autor}) 
     const [_title, setTitle] = useState('')
 
     function shortenStringTitle(str) {
-        console.log(str)
         let words = str.split(" ");
         if (words.length > 7) {
           words = words.slice(0, 7);
@@ -21,7 +20,6 @@ export default function BlogCard({id, title, description, imageUrl, lg, autor}) 
     }
 
     function shortenString(str) {
-        console.log(str)
         let words = str.split(" ");
         if (words.length > 10) {
           words = words.slice(0, 10);

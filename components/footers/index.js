@@ -8,6 +8,7 @@ export default function index() {
   return (
     <div className={styles.footer}>
         <div className={styles.footer_container}>
+
             <div className={styles.footer_logo_container}>
                 <Image src={Logo} width={350} height={140} alt='logo crowd4flipping' />
             </div>
@@ -27,6 +28,7 @@ export default function index() {
                 </h4>
             </div>
         </div>
+        
     </div>
   )
-} 
+}  

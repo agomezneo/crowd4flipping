@@ -6,15 +6,31 @@ import Grid from '@mui/material/Grid';
 import Layout from '../../components/layouts/Layout';
 import styles from '../../styles/BlogPage.module.scss';
 import BlogCard from '../../components/cards/BlogCard';
-<<<<<<< HEAD
 import WhatsAppButton from '../../components/buttons/WhatsAppButton';
 import NewsLetterSuscription from '../../components/forms/NewsLetterSuscription';
-=======
-import WhatsAppButton from '../../components/buttons/WhatsAppButton'; 
->>>>>>> main
 
 function Index({BlogEntries}) {
-  const [blogEntries] = useState(BlogEntries[0].data)
+  
+  const [blogEntries, setBlogEntries] = useState(BlogEntries[0].data)
+  const [lastDoc, setLastDoc] = useState(BlogEntries[0].data[3].id);
+  const [message, setMessage] = useState(null)
+  const loadMoreEntries = async () => {
+    try {
+      const api = `https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api/create-blog-entry?lastDoc=${lastDoc}`;
+      const response = await fetch(api);
+      const data = await response.json();
+      console.log(data.lastDocId)
+      if (data.status === 200) {
+        setBlogEntries([...blogEntries, ...data.data]);
+        setLastDoc(data.data[data.data.length - 1].id);
+      } else {
+        setMessage(data.message)
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
   let currentIndex = 0;
   return (
     <Layout>
@@ -55,6 +71,13 @@ function Index({BlogEntries}) {
                 ) 
               } )}
             </Grid>
+            {message !== null ? (
+              <div>
+                <span>{message}</span>
+              </div>
+            ) : (
+              <button onClick={() => loadMoreEntries()}>Cargar más artículos</button>
+            )}
           </Box>
           </div>
         </div>
@@ -78,4 +101,5 @@ export async function getStaticProps(){
       }
   }
 }
+
 
