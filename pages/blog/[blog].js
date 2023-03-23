@@ -9,7 +9,6 @@ import { Avatar } from '@mui/material';
 import CardMedia from '@mui/material/CardMedia';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-
 import BlogCard from '../../components/cards/BlogCard';
 
 const blogEntries = [
