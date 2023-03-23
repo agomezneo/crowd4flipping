@@ -8,29 +8,28 @@ import { RiWhatsappLine } from 'react-icons/ri'
 function HomeSection() {
 
 
-  const [screen, setScreen] = useState(false)
-  const [eleTarget, setEletarget] = useState(null);
   const [active, setActive] = useState(false);
+  const [divHeight, setDivHeight] = useState(0);
+  const [screen, setScreen] = useState(false)
 
-  useEffect(()=>{
-    const doc = window.document;
-    setEletarget(doc.getElementById('target_element'))
-  },[]);
-
-  const setElementEffect = (ele, setActive) =>{
-    let ele_hight = ele?.offsetTop;
-    window.addEventListener("scroll", ()=>{
-      if(window.scrollY < ele_hight){return setActive(false)}
-      if(window.scrollY > ele_hight - 200){
-        return setActive(true);
+  useEffect(() => {
+    const handleScroll = () => {
+      const height = document.getElementById('ownerS3').offsetTop;
+      console.log(height)
+      setDivHeight(height);
+      if (window.scrollY >= divHeight) {
+        console.log('Y--->', window.scrollY)
+        setActive(true);
+      } else {
+        setActive(false);
       }
-    })
-  }
-
-  useEffect(()=>{
-    if(eleTarget === null)return
-    setElementEffect(eleTarget, setActive)
-  },[eleTarget])
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [divHeight]);
 
   useEffect(() => {
     let document = window.screen.width;
@@ -51,16 +50,7 @@ function HomeSection() {
                 <div className={styles.empty_div_s3_owner}>
                 </div>
                 <div id='target_element' className={styles.horizontal_steper_container} >
-                {!screen ? 
-                (
                   <Steper data={MaterialHorizontalData} activeEffect={active} active={active}/> 
-                )
-                  :
-
-                (
-                  <Vsteper data={MaterialHorizontalData} />
-                )
-                }
                 </div>
             </div>
             <div className={styles.page_section_footer}>

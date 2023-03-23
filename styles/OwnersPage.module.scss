@@ -69,7 +69,7 @@
 .page_section_container{
     display: grid;
     width: 100vw;
-    min-height: 70vh;
+    min-height: fit-content;
     grid-template:
         "header" 10vh
         "body"  auto
@@ -227,7 +227,7 @@
     flex-direction: column;
     justify-content: flex-end;
     overflow: scroll;
-    min-height: fit-content;
+    height: fit-content;
     padding: 15px;
 }
 .horizontal_steper_container::-webkit-scrollbar {
@@ -290,7 +290,7 @@
     }
 
     .horizontal_steper_container{
-        min-height: 40vh;
+        height: 100%;
     }
 
     .page_section_footer{
