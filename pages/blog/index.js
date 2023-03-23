@@ -58,7 +58,7 @@ function Index({BlogEntries}) {
                         title={entry.title} 
                         description={entry.description} i
                         imageUrl={entry.imageUrl}  
-                        autor={entry.autor}
+                        autor={entry.author}
                       />
                     </Grid>
 

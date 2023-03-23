@@ -60,7 +60,7 @@ export default function BlogCard({id, title, description, imageUrl, lg, autor}) 
         </div>
         <div className={styles.blog_card_footer}>
             <div className={styles.blog_card_avatar_container}>
-                <Avatar />
+                <Avatar src={autor?.photo}/>
                 <span> {autor?.name ? autor.name : 'Avatar Name'} </span>
             </div>
             <div className={styles.blog_card_footer_cta}>

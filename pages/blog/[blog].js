@@ -25,8 +25,6 @@ const blogEntries = [
 
 function Index({blogEntry}) {
 
-  console.log(blogEntry)
-
   return (
     <Layout>
       <Head>
@@ -76,8 +74,8 @@ function Index({blogEntry}) {
             <div className={styles.blog_page_blog_header}>
               <h1>{blogEntry.title}</h1>
               <div className={styles.blog_page_avatar_container}>
-                <Avatar />
-                <span>Avatar Name</span>
+                <Avatar src={blogEntry.author.photo}/>
+                <span>{blogEntry.author.name ? blogEntry.author.name : 'Avatar Name'}</span>
               </div>
             </div>
             <div className={styles.blog_page_content}>
