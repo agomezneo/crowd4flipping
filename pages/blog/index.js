@@ -6,14 +6,16 @@ import Grid from '@mui/material/Grid';
 import Layout from '../../components/layouts/Layout';
 import styles from '../../styles/BlogPage.module.scss';
 import BlogCard from '../../components/cards/BlogCard';
+<<<<<<< HEAD
 import WhatsAppButton from '../../components/buttons/WhatsAppButton';
 import NewsLetterSuscription from '../../components/forms/NewsLetterSuscription';
+=======
+import WhatsAppButton from '../../components/buttons/WhatsAppButton'; 
+>>>>>>> main
 
 function Index({BlogEntries}) {
-
   const [blogEntries] = useState(BlogEntries[0].data)
   let currentIndex = 0;
-
   return (
     <Layout>
       <Head>
@@ -66,17 +68,14 @@ function Index({BlogEntries}) {
 export default Index;
 
 export async function getStaticProps(){
-
   const api = 'https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api/create-blog-entry'
   const BlogEntries = await Promise.all([
     fetch(`${api}`).then((res) => res.json())
   ])
-
   return{
       props: {
        BlogEntries
       }
   }
-
 }
 

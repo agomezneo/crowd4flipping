@@ -8,7 +8,7 @@ import Steper from '../stepers/VerticalMUI';
 
 
 function HomeSection() { 
-  
+   
   const [active, setActive] = useState(false);
   const [divHeight, setDivHeight] = useState(0);
   const [screen, setScreen] = useState(false)
@@ -16,9 +16,11 @@ function HomeSection() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const height = document.getElementById('ownerS1').offsetHeight;
+      const height = document.getElementById('ownerS2').offsetTop;
+      console.log(height)
       setDivHeight(height);
       if (window.scrollY >= divHeight) {
+        console.log('Y--->', window.scrollY)
         setActive(true);
       } else {
         setActive(false);
@@ -50,6 +52,8 @@ function HomeSection() {
         y: 100
     },
 }
+
+console.log(active);
 
   return (
     <div className={styles.page_section}>

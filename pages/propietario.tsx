@@ -45,10 +45,10 @@ export default function App() {
         <HomeSection id={1} css={styles.s1}>
           <Section01 />
         </HomeSection>
-        <HomeSection id={'ownerS1'} css={styles.s2}>
+        <HomeSection id='ownerS2' css={styles.s2}>
           <Section02 />
         </HomeSection>
-        <HomeSection id={3} css={styles.s3}>
+        <HomeSection id='ownerS3' css={styles.s3}>
           <Section03 />
         </HomeSection>
         <HomeSection id={4} css={styles.s4}>

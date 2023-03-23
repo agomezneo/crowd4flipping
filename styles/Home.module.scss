@@ -61,7 +61,7 @@
   bottom: 0;
   bottom: -5vh;
   z-index: 0;
-  background-image: url('../public/images/brand/backgorund_buildings.png');
+  background-image: url('../public/images/brand/backgorund_buildings.png'); 
   background-size: contain;
   height: 50%;
  
@@ -98,13 +98,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: -1;
+  z-index: 1;
 }
 
 .buttons_container{
   display: flex;
   width: 700px;
   justify-content: space-between;
+}
+
+.buttons_container_owner_page{
+  width: 100%;
+  justify-content: center;
 }
 
 .back_btn {
@@ -151,6 +156,19 @@
   height: fit-content;
   width: fit-content;
   margin-bottom: 1rem;
+}
+
+.logo_container_owner_page{
+  backdrop-filter: blur(15px);
+  background-color: #0000;
+  padding: 1rem;
+  border-radius: 7px;
+  box-shadow: var(--box);
+  & .text_container{
+    & h1{
+      color: var(--white);
+    }
+  }
 }
 
 .text_container{
