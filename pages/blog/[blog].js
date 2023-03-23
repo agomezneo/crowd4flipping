@@ -2,7 +2,9 @@ import React from 'react';
 import Layout from '../../components/layouts/Layout';
 import styles from '../../styles/BlogPage.module.scss';
 import Head from 'next/head';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
+import {motion} from 'framer-motion';
 import WhatsAppButton from '../../components/buttons/WhatsAppButton';
 import Footer from '../../components/footers/index';
 import { Avatar } from '@mui/material';
@@ -10,6 +12,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import BlogCard from '../../components/cards/BlogCard';
+import NewsLetterSuscription from '../../components/forms/NewsLetterSuscription';
+import { FaFacebookSquare, FaInstagram } from 'react-icons/fa'
+import { MdOutlineAccountCircle } from "react-icons/md";
+import InstagramIcon from '../../public/images/icons/instagramIcon.webp';
 
 const blogEntries = [
   { id: '0', title: 'Mi primer entrada de blog', description: 'Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet... Lorem ipsum dolor sit amet...', imageUrl: 'https://firebasestorage.googleapis.com/v0/b/crowd4flipping-app.appspot.com/o/blog-entry-images%2FnS4w5FrqH0QFXvqLZJ5TSPTU1FI3%2F02.png?alt=media&token=9a439869-78c5-4403-856e-a88692a1165a' },
@@ -34,10 +40,38 @@ function Index({blogEntry}) {
           <div className={styles.blog_page_child_left}></div>
           <div className={styles.blog_page_child_center}>
             <div className={styles.blog_page_social_container}>
-              <span>Facebook</span>
-              <span>Instagram</span>
-              <span>Linkedin</span>
-              <span>Twiter</span>
+                <motion.a 
+                    href='https://app.crowd4flipping.com' 
+                    target="_blank"
+                    rel="noreferrer" 
+                    whileHover={{y: -7  }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                >
+                    <MdOutlineAccountCircle className={`${styles.icon}`}/>
+                </motion.a>
+                <motion.a 
+                    href='https://www.facebook.com/Crowd4Flipping' 
+                    target="_blank"
+                    rel="noreferrer" 
+                    whileHover={{y: -7  }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                >
+                    <FaFacebookSquare className={`${styles.icon} ${styles.face_icon}`}/>
+                </motion.a>
+                <motion.a
+                    href='https://www.instagram.com/crowd4flipping' 
+                    target="_blank"
+                    rel="noreferrer" 
+                    whileHover={{y: -7  }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                >
+                    <Image 
+                        src={InstagramIcon} 
+                        className={`${styles.insta_icon}`}
+                        width={50} 
+                        height={50} 
+                    />
+                </motion.a>
             </div>
             <div className={styles.blog_page_blog_header}>
               <h1>{blogEntry.title}</h1>
@@ -66,13 +100,7 @@ function Index({blogEntry}) {
           </div>
           <div className={styles.blog_page_child_right}>
             <div className={styles.blog_page_cta_card_container}>
-              <h1>Contactanos</h1>
-              <input 
-                placeholder='Teléfono'
-              />
-              <input 
-                type={'button'}
-              />
+              <NewsLetterSuscription width={'blog_page'}/>
             </div>
           </div>
         </div>

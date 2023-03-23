@@ -36,7 +36,7 @@
     flex: 2;
 }
 .blog_page_child_center{
-    flex: 5;
+    flex: 6;
     position: relative;
 }
 
@@ -46,8 +46,22 @@
     left: 200px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
+
+    & .icon{
+        font-size: 45px;
+        color: var(--blue);
+        transition: .2s all ease-in-out;
+    }
+    
+    & .face_icon{
+        color: #3b5998;
+        font-size: 40px;
+    }
 }
+
+
 
 .blog_page_child_right{
     flex: 2;

@@ -39,6 +39,10 @@
             color: var(--black);
         }
 
+        &::placeholder{
+            color: var(--white);
+        }
+
     }
 
     input:-webkit-autofill,
@@ -63,6 +67,9 @@
 
         &:active { 
             border: none;
+        }
+        &::placeholder{
+            color: var(--white);
         }
     }
 

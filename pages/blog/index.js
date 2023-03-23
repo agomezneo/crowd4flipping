@@ -7,6 +7,7 @@ import Layout from '../../components/layouts/Layout';
 import styles from '../../styles/BlogPage.module.scss';
 import BlogCard from '../../components/cards/BlogCard';
 import WhatsAppButton from '../../components/buttons/WhatsAppButton';
+import NewsLetterSuscription from '../../components/forms/NewsLetterSuscription';
 
 function Index({BlogEntries}) {
 
@@ -45,7 +46,7 @@ function Index({BlogEntries}) {
 
                     {currentIndex === 4 && (
                       <Grid item  lg={4} xs={12} key={'empty'}>
-                        <h4>news letter</h4>
+                        <NewsLetterSuscription />
                       </Grid>
                     )}
                   </>

@@ -20,7 +20,7 @@ function InvestmentForm({type, tag, urlThanks}) {
         email: '',
         phone: '', 
         comments: '',
-        termsAndConditions: false,
+        termsAndConditions: false, 
         type: type,
         tag: tag,
         created: new Date()
