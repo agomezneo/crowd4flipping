@@ -22,14 +22,14 @@ function HomeSection() {
                 }}
                 className={`${styless.explore_page_hero_container} ${styless.left} ${styless.blue_container}`}
               >
-                <div className={styless.logo_container}>
+                <div className={`${styless.logo_container} ${styless.logo_container_owner_page}`}>
                     <Image src={Logo} width={700} height={300} alt='Crowd4Flipping logo' className={``}/>
                     <div className={styless.text_container}>
                       <h1>Tanto si quieres vender como alquilar, <span> saca el máximo partido a tu propiedad.</span></h1>
                     </div>
                 </div>
                 
-                <div className={styless.buttons_container}>
+                <div className={`${styless.buttons_container} ${styless.buttons_container_owner_page}`}>
                     <a href={`#4`}>
                       <div className={`${styless.back_btn} ${styless.principal_button}`}>Solicitar información</div>
                     </a>
