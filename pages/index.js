@@ -47,13 +47,15 @@ const Hero = () => {
                   <div className={styles.buttons_container}>
                     <div 
                       onClick={() => go("/propietario")}
+                      className={styles.back_btn}
                     >
-                      <a className={styles.back_btn}>Ofrece tu propiedad</a>
+                      <span>Ofrece tu propiedad</span>
                     </div>
                     <div 
+                      className={`${styles.back_btn} ${styles.principal_button}`}
                       onClick={() => go("/inversor")}
                     >
-                      <a className={`${styles.back_btn} ${styles.principal_button}`}>Quiero invertir</a>
+                      <span>Quiero invertir</span>
                     </div>
                   </div>
                 </motion.div>   
