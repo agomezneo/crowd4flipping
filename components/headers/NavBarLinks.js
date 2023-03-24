@@ -21,7 +21,7 @@ export const linksContent = [
         icon: <TbHomeLink />
     },
     {
-        span: 'Quienes somos',
+        span: 'Quiénes somos',
         url: '/sobre-nosotros',
         icon: <GiTeamIdea />
     },

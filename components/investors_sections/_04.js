@@ -18,12 +18,13 @@ function HomeSection() {
   },[]);
 
   const setElementEffect = (ele, setActive) =>{
-    let ele_hight = ele?.offsetTop;
+    let eleHight = ele?.offsetTop;
+    let activeHight = eleHight - 500;
     window.addEventListener("scroll", ()=>{
-      if(window.scrollY < ele_hight){return setActive(false)}
-      if(window.scrollY > ele_hight - 1200){
-        return setActive(true);
+      if(window.scrollY > (activeHight)){
+        return setActive(true); 
       }
+      if(window.scrollY < eleHight){return setActive(false)}
     })
   }
 

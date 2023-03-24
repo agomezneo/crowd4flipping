@@ -97,7 +97,7 @@
     padding: 15px;
     grid-template: 
         "box"   1fr
-        "image" 1fr
+        "image" .3fr
     ;
     & h1{
         color: var(--black);

@@ -52,7 +52,7 @@ function HomeSection() {
     <div className={styles.page_section}>
         <div className={`${styles.page_section_container} `}>
             <div className={`${styles.page_section_header}`}>
-                <h1><span>Conoce de manera sencilla</span> como funciona Crowd4Flipping</h1>
+                <h1><span>Conoce de manera sencilla</span> cómo funciona Crowd4Flipping</h1>
             </div>
             <div className={`${styles.page_section_body_s2} ${styles.page_section_body_video_section}`}>
                 <motion.div 

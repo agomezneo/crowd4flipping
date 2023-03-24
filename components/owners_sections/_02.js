@@ -10,28 +10,32 @@ import Steper from '../stepers/VerticalMUI';
 function HomeSection() { 
    
   const [active, setActive] = useState(false);
-  const [divHeight, setDivHeight] = useState(0);
+  const [eleTarget, setEletarget] = useState(null);
   const [screen, setScreen] = useState(false)
   const fromWeb = 'fw'
+  
+  useEffect(()=>{
+    const doc = window.document;
+    setEletarget(doc.getElementById('ownerS2'))
+  },[]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const height = document.getElementById('ownerS2').offsetTop;
-      console.log(height)
-      setDivHeight(height);
-      if (window.scrollY >= divHeight) {
-        console.log('Y--->', window.scrollY)
-        setActive(true);
-      } else {
-        setActive(false);
-      }
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [divHeight]);
+  const setElementEffect = (ele, setActive) =>{
+      let eleHight = ele?.offsetTop;
+      let activeHight = eleHight - 500;
+      window.addEventListener("scroll", ()=>{
+        if(window.scrollY > (activeHight)){
+          return setActive(true); 
+        }
+        if(window.scrollY < eleHight){return setActive(false)}
+    })
+  }
+
+  useEffect(()=>{
+    if(eleTarget === null)return
+    setElementEffect(eleTarget, setActive)
+  },[eleTarget]);
+
+
 
   useEffect(() => { 
       let document = window.screen.width;

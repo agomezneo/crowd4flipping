@@ -9,27 +9,30 @@ function HomeSection() {
 
 
   const [active, setActive] = useState(false);
-  const [divHeight, setDivHeight] = useState(0);
+  const [eleTarget, setEletarget] = useState(null);
   const [screen, setScreen] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const height = document.getElementById('ownerS3').offsetTop;
-      console.log(height)
-      setDivHeight(height);
-      if (window.scrollY >= divHeight) {
-        console.log('Y--->', window.scrollY)
-        setActive(true);
-      } else {
-        setActive(false);
-      }
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [divHeight]);
+  useEffect(()=>{
+    const doc = window.document;
+    setEletarget(doc.getElementById('ownerS3'))
+  },[]);
+
+  const setElementEffect = (ele, setActive) =>{
+      let eleHight = ele?.offsetTop;
+      let activeHight = eleHight - 500;
+      window.addEventListener("scroll", ()=>{
+        if(window.scrollY > (activeHight)){
+          return setActive(true); 
+        }
+        if(window.scrollY < eleHight){return setActive(false)}
+    })
+  }
+
+  useEffect(()=>{
+    if(eleTarget === null)return
+    setElementEffect(eleTarget, setActive)
+  },[eleTarget]);
+
 
   useEffect(() => {
     let document = window.screen.width;

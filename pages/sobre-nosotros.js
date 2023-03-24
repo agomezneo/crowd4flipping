@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Layout from '../components/layouts/Layout';
 import Header from '../components/headers/header_pages';
 import styles from '../styles/about_page.module.scss';
@@ -23,9 +23,37 @@ import Footer from '../components/footers';
 
 
 export default function About() {
+
+  const [active, setActive] = useState(false);
+  const [eleTarget, setEletarget] = useState(null);
+  const [screen, setScreen] = useState(false);
+  const fromWeb = 'fw'
+
+  useEffect(()=>{
+    const doc = window.document;
+    setEletarget(doc.getElementById('about'))
+  },[]);
+
+  const setElementEffect = (ele, setActive) =>{
+      let eleHight = ele?.offsetTop;
+      let activeHight = eleHight - 100;
+      window.addEventListener("scroll", ()=>{
+        if(window.scrollY > (activeHight)){
+          return setActive(true); 
+        }
+        if(window.scrollY < eleHight){return setActive(false)}
+    })
+  }
+
+  useEffect(()=>{
+    if(eleTarget === null)return
+    setElementEffect(eleTarget, setActive)
+  },[eleTarget]);
+
+
   return (
     <Layout>
-      <div className={styles.about_page}>
+      <div className={styles.about_page} id='about'>
         <section className={`${styles.about_page_section} ${styles.about_page_s1}`}>
           <div className={styles.left}>
             <motion.div
@@ -61,7 +89,7 @@ export default function About() {
                 <h1>Nuestros Valores</h1>
               </div>
               <div className={styles.s2_box_container}>
-                <Vsteper data={Data} />
+                <Vsteper data={Data} active={active}/>
               </div>
             </div>
           </div>
