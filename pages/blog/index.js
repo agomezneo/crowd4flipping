@@ -51,13 +51,6 @@ function Index({BlogEntries}) {
     }
   }, []);
 
-
-
-  console.log(blogEntries);
-
-
-
-
   const [query, setQuery] = useState('');
   const keys = ['title', 'description'];
 
@@ -103,32 +96,6 @@ function Index({BlogEntries}) {
           </div>
           <div className={styles.blog_page_body}>
           <Box sx={{ flexGrow: 1 }}>
-           {/*  <Grid container spacing={2} style={{padding: '5px'}}>
-              {blogEntries?.map((entry, index) => {
-                let lg = currentIndex === 0 ? 8 : currentIndex <= 4 ? 4 : 4;
-                currentIndex = currentIndex >= 4 ? 0 : currentIndex + 1;
-                return(
-                  <>
-                    <Grid item key={index} lg={lg} xs={12}>
-                      <BlogCard 
-                        id={entry.id} 
-                        lg={screen ? 12 : lg}
-                        title={entry.title} 
-                        description={entry.description} 
-                        imageUrl={entry.imageUrl}  
-                        autor={entry.author}
-                      />
-                    </Grid>
-
-                    {currentIndex === 4 && (
-                      <Grid item  lg={4} xs={12} key={'empty'}>
-                        <NewsLetterSuscription />
-                      </Grid>
-                    )}
-                  </>
-                ) 
-              } )}
-            </Grid> */}
             <Grid container spacing={2} style={{padding: '5px'}}>
               {blogEntries && (
                 search().map((entry, index) => {
@@ -173,36 +140,6 @@ function Index({BlogEntries}) {
                   </div>)}
               </div>
             )}
-          </Box>
-          <Box sx={{ flexGrow: 1 }}>
-           {/*  <Grid container spacing={2} style={{padding: '5px'}}>
-              {blogEntries && (
-                search().map((entry, index) => {
-                  let lg = currentIndex === 0 ? 8 : currentIndex <= 4 ? 4 : 4;
-                  currentIndex = currentIndex >= 4 ? 0 : currentIndex + 1;
-                  return(
-                    <>
-                      <Grid item key={index} lg={lg} xs={12}>
-                        <BlogCard 
-                          id={entry.id} 
-                          lg={screen ? 12 : lg}
-                          title={entry.title} 
-                          description={entry.description} 
-                          imageUrl={entry.imageUrl}  
-                          autor={entry.author}
-                        />
-                      </Grid>
-
-                      {currentIndex === 4 && (
-                        <Grid item  lg={4} xs={12} key={'empty'}>
-                          <NewsLetterSuscription />
-                        </Grid>
-                      )}
-                    </>
-                  ) 
-                })
-              )}
-            </Grid> */}
           </Box>
           </div>
         </div>

@@ -131,17 +131,26 @@ function Index({blogEntry, BlogEntries}) {
       <Footer />
       <WhatsAppButton />
     </Layout>
+
   )
 }
 
 export default Index
 
-export async function getServerSideProps(context){
+export async function getStaticPaths() {
+  const api = `https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api/create-blog-entry`;
+  const entries = await fetch(`${api}`).then((res) => res.json());
+  const paths = entries.data.map((entry) => ({ params: { blog: entry.id } }));
 
-  const id = context.query.blog;
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps(context){
+
+  const blog = context.params.blog;
   const api = `https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api/create-blog-entry`
   const [blogEntry, BlogEntries] = await Promise.all([
-    fetch(`${api}/${id}`).then((res) => res.json()),
+    fetch(`${api}/${blog}`).then((res) => res.json()),
     fetch(`${api}`).then((res) => res.json()),
   ])
 
