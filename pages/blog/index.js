@@ -9,7 +9,9 @@ import BlogCard from '../../components/cards/BlogCard';
 import WhatsAppButton from '../../components/buttons/WhatsAppButton';
 import NewsLetterSuscription from '../../components/forms/NewsLetterSuscription';
 import MiniBlockLoader from '../../components/loaders/MiniBlockLoader';
-import {ImDownload} from 'react-icons/im'
+import {ImDownload} from 'react-icons/im';
+import {TbListSearch} from 'react-icons/tb';
+
 function Index({BlogEntries}) {
   
   const [blogEntries, setBlogEntries] = useState(BlogEntries[0].data);
@@ -52,7 +54,34 @@ function Index({BlogEntries}) {
 
 
   console.log(blogEntries);
-  
+
+
+
+
+  const [query, setQuery] = useState('');
+  const keys = ['title', 'description'];
+
+  const handleFilterChange = (event)  =>{
+    setConsult(event.target.value); 
+  }
+
+  const search = () =>{
+    let filteredEntries = blogEntries;
+    /* if (consult !== 'all') {
+      filteredUsers = filteredUsers.filter(user => {
+        if (consult === 'validated') {
+          return user?.verifiedAccount;
+        } else if (consult === 'unvalidated') {
+          return !user?.verifiedAccount;
+        }
+      });
+    }
+ */
+    return filteredEntries?.filter((item) =>
+      keys.some((key) => item[key].toLowerCase().includes(query))
+    )
+  }
+   
 
   return (
     <Layout>
@@ -64,10 +93,17 @@ function Index({BlogEntries}) {
         <div className={styles.blog_page_container}>
           <div className={styles.blog_page_header}>
             <h1>Todo lo que necesitas saber sobre <strong>inversión inmobiliaria participativa, crowdlending y tecnología blockchain.</strong></h1>
+            <div className={styles.blog_page_searcher_container}> 
+              <h2>Busca lo que te interesa entre nuestros artículos:</h2>
+              <div className={styles.blog_page_input_container}>
+                <input type='text' placeholder='Buscar...' onChange={(e) => setQuery(e.target.value)}/>  
+                <TbListSearch />
+              </div>  
+            </div>
           </div>
           <div className={styles.blog_page_body}>
           <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2} style={{padding: '5px'}}>
+           {/*  <Grid container spacing={2} style={{padding: '5px'}}>
               {blogEntries?.map((entry, index) => {
                 let lg = currentIndex === 0 ? 8 : currentIndex <= 4 ? 4 : 4;
                 currentIndex = currentIndex >= 4 ? 0 : currentIndex + 1;
@@ -92,6 +128,34 @@ function Index({BlogEntries}) {
                   </>
                 ) 
               } )}
+            </Grid> */}
+            <Grid container spacing={2} style={{padding: '5px'}}>
+              {blogEntries && (
+                search().map((entry, index) => {
+                  let lg = currentIndex === 0 ? 8 : currentIndex <= 4 ? 4 : 4;
+                  currentIndex = currentIndex >= 4 ? 0 : currentIndex + 1;
+                  return(
+                    <>
+                      <Grid item key={index} lg={lg} xs={12}>
+                        <BlogCard 
+                          id={entry.id} 
+                          lg={screen ? 12 : lg}
+                          title={entry.title} 
+                          description={entry.description} 
+                          imageUrl={entry.imageUrl}  
+                          autor={entry.author}
+                        />
+                      </Grid>
+
+                      {currentIndex === 4 && (
+                        <Grid item  lg={4} xs={12} key={'empty'}>
+                          <NewsLetterSuscription />
+                        </Grid>
+                      )}
+                    </>
+                  ) 
+                })
+              )}
             </Grid>
             {message !== null ? (
               <div className={styles.blog_page_more_articles_container}>
@@ -109,6 +173,36 @@ function Index({BlogEntries}) {
                   </div>)}
               </div>
             )}
+          </Box>
+          <Box sx={{ flexGrow: 1 }}>
+           {/*  <Grid container spacing={2} style={{padding: '5px'}}>
+              {blogEntries && (
+                search().map((entry, index) => {
+                  let lg = currentIndex === 0 ? 8 : currentIndex <= 4 ? 4 : 4;
+                  currentIndex = currentIndex >= 4 ? 0 : currentIndex + 1;
+                  return(
+                    <>
+                      <Grid item key={index} lg={lg} xs={12}>
+                        <BlogCard 
+                          id={entry.id} 
+                          lg={screen ? 12 : lg}
+                          title={entry.title} 
+                          description={entry.description} 
+                          imageUrl={entry.imageUrl}  
+                          autor={entry.author}
+                        />
+                      </Grid>
+
+                      {currentIndex === 4 && (
+                        <Grid item  lg={4} xs={12} key={'empty'}>
+                          <NewsLetterSuscription />
+                        </Grid>
+                      )}
+                    </>
+                  ) 
+                })
+              )}
+            </Grid> */}
           </Box>
           </div>
         </div>
