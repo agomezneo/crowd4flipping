@@ -16,7 +16,7 @@ function ProjectCard({id, imgs, name, location, quantityFunded, estimatedRentabi
         currency: 'EUR'
     });
     const [loader, setLoader] = useState(false)
-
+ 
     const go = (url) =>{
         setLoader(true)
         Router.push(url)

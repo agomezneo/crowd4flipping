@@ -1,94 +1,3 @@
-.little_boxes {
-    --size: 20px;
-    --duration: 800ms;
-    height: calc(var(--size) * 2);
-    width: calc(var(--size) * 3);
-    position: relative;
-    transform-style: preserve-3d;
-    transform-origin: 50% 50%;
-    margin-top: calc(var(--size) * 1.5 * -1);
-    transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
-  }
-  .little_boxes .box {
-    width: var(--size);
-    height: var(--size);
-    top: 0;
-    left: 0;
-    position: absolute;
-    transform-style: preserve-3d;
-  }
-  
-  .little_boxes .box:nth-child(1) {
-    transform: translate(100%, 0);
-    -webkit-animation: box1 var(--duration) linear infinite;
-    animation: box1 var(--duration) linear infinite;
-  }
-  
-  .little_boxes .box:nth-child(2) {
-    transform: translate(0, 100%);
-    -webkit-animation: box2 var(--duration) linear infinite;
-    animation: box2 var(--duration) linear infinite;
-  }
-  
-  .little_boxes .box:nth-child(3) {
-    transform: translate(100%, 100%);
-    -webkit-animation: box3 var(--duration) linear infinite;
-    animation: box3 var(--duration) linear infinite;
-  }
-  
-  .little_boxes .box:nth-child(4) {
-    transform: translate(200%, 0);
-    -webkit-animation: box4 var(--duration) linear infinite;
-    animation: box4 var(--duration) linear infinite;
-  }
-  
-  .little_boxes .box > div {
-    --background: #5C8DF6;
-    --top: auto;
-    --right: auto;
-    --bottom: auto;
-    --left: auto;
-    --translateZ: calc(var(--size) / 2);
-    --rotateY: 0deg;
-    --rotateX: 0deg;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--background);
-    top: var(--top);
-    right: var(--right);
-    bottom: var(--bottom);
-    left: var(--left);
-    transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
-  }
-  
-  .little_boxes .box > div:nth-child(1) {
-    --top: 0;
-    --left: 0;
-  }
-  
-  .little_boxes .box > div:nth-child(2) {
-    --background: #145af2;
-    --right: 0;
-    --rotateY: 90deg;
-  }
-  
-  .little_boxes .box > div:nth-child(3) {
-    --background: #447cf5;
-    --rotateX: -90deg;
-  }
-  
-  .little_boxes .box > div:nth-child(4) {
-    --background: #DBE3F4;
-    --top: 0;
-    --left: 0;
-    --translateZ: calc(var(--size) * 3 * -1);
-  }
-
-
-// BIG - BOXEX
-
-
 .boxes {
   --size: 70px;
   --duration: 800ms;
@@ -134,7 +43,7 @@
 }
 
 .boxes .box > div {
-  --background: #5C8DF6;
+  --background: var(--blue);
   --top: auto;
   --right: auto;
   --bottom: auto;
@@ -159,7 +68,7 @@
 }
 
 .boxes .box > div:nth-child(2) {
-  --background: #145af2;
+  --background: var(--blue);
   --right: 0;
   --rotateY: 90deg;
 }
@@ -170,7 +79,7 @@
 }
 
 .boxes .box > div:nth-child(4) {
-  --background: #DBE3F4;
+  --background: var(--grayform);
   --top: 0;
   --left: 0;
   --translateZ: calc(var(--size) * 3 * -1);

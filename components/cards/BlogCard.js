@@ -35,7 +35,7 @@ export default function BlogCard({id, title, description, imageUrl, lg, autor}) 
         let shortDescription = shortenString(description);
         setDescription(shortDescription);
         setTitle(shortTitle);
-    }, [description])
+    }, [description]);
 
   return (
     <motion.div 
@@ -57,7 +57,7 @@ export default function BlogCard({id, title, description, imageUrl, lg, autor}) 
         </div>
         <div className={styles.blog_card_text_container}> 
             <h2> { lg === 8 ? title : _title } </h2>
-            <p>  { lg === 8 || lg === 6  ? description : _description} </p>
+            <p>  { lg === 8 ? description : _description} </p>
         </div>
         <div className={styles.blog_card_footer}>
             <div className={styles.blog_card_avatar_container}>

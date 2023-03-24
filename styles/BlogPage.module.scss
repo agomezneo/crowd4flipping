@@ -103,6 +103,14 @@
     gap: 1rem;
 }
 
+.blog_page_more_articles_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
 .blog_page_more_articles_button{
     width: fit-content;
     display: flex;

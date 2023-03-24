@@ -1,8 +1,6 @@
 import React from 'react'
 import styles from '../../styles/BlockLoader.module.scss'
 
-
-
 function BlocksLoader() {
   return (
     <div className={styles.boxes}>
@@ -35,34 +33,3 @@ function BlocksLoader() {
 }
 
 export default BlocksLoader
-
-export function BlocksLoaderLittle() {
-    return (
-      <div className={styles.little_boxes}>
-          <div className={styles.box}>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-          </div>
-          <div className={styles.box}>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-          </div>
-          <div className={styles.box}>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-          </div>
-          <div className={styles.box}>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-          </div>
-      </div>
-    )
-  }

@@ -12,14 +12,14 @@
 }
 
 .blog_card_media{
-    border-radius: 10px !important;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .blog_card_text_container{
     background-color: var(--blue);
     box-shadow: var(--boxShadowHeader);
-    padding-left: .5rem;
-    padding-top: 5px;
+    padding: 7px;
     height: 20vh;
 
     & h2{
@@ -50,10 +50,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 40%; 
+    width: fit-content; 
     gap: .2rem;
     padding: 10px;
-    
     & span{
         font-size: 1.2rem;
         color: var(--blue);
@@ -63,6 +62,11 @@
 @media only screen and (min-width: 320px) and (max-width: 991px){
     .blog_card{
         box-shadow: 1px 1px 4px #131515;
-        width: 98%;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .blog_card_text_container{
+        height: fit-content;
     }
 }

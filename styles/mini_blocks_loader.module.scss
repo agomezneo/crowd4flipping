@@ -44,7 +44,7 @@
   }
   
   .boxes .box > div {
-    --background: #5C8DF6;
+    --background: var(--blue);
     --top: auto;
     --right: auto;
     --bottom: auto;
@@ -69,7 +69,7 @@
   }
   
   .boxes .box > div:nth-child(2) {
-    --background: #145af2;
+    --background: var(--blue);
     --right: 0;
     --rotateY: 90deg;
   }
@@ -80,7 +80,7 @@
   }
   
   .boxes .box > div:nth-child(4) {
-    --background: #DBE3F4;
+    --background: var(--grayform);
     --top: 0;
     --left: 0;
     --translateZ: calc(var(--size) * 3 * -1);

@@ -16,6 +16,7 @@ function Index({BlogEntries}) {
   const [lastDoc, setLastDoc] = useState(BlogEntries[0].data[3].id);
   const [message, setMessage] = useState(null);
   const [loadingData, setloadingData] = useState(false);
+  const [screen, setScreen] = useState(false);
   let currentIndex = 0;
 
   const loadMoreEntries = async () => {
@@ -39,6 +40,14 @@ function Index({BlogEntries}) {
     }
   }
 
+  useEffect(() => { 
+    let document = window.screen.width;
+    if(document < 991){
+        setScreen(true)
+        return
+    }
+  }, []);
+
   return (
     <Layout>
       <Head>
@@ -52,16 +61,16 @@ function Index({BlogEntries}) {
           </div>
           <div className={styles.blog_page_body}>
           <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} style={{padding: '5px'}}>
               {blogEntries?.map((entry, index) => {
                 let lg = currentIndex === 0 ? 8 : currentIndex <= 4 ? 4 : 4;
-                currentIndex = currentIndex >= 4 ? 0 : currentIndex + 1 ;
+                currentIndex = currentIndex >= 4 ? 0 : currentIndex + 1;
                 return(
                   <>
                     <Grid item key={index} lg={lg} xs={12}>
                       <BlogCard 
                         id={entry.id} 
-                        lg={lg}
+                        lg={screen ? 12 : lg}
                         title={entry.title} 
                         description={entry.description} 
                         imageUrl={entry.imageUrl}  
@@ -79,18 +88,20 @@ function Index({BlogEntries}) {
               } )}
             </Grid>
             {message !== null ? (
-              <div>
+              <div className={styles.blog_page_more_articles_container}>
                 <span>{message}</span>
               </div>
             ) : (
-              loadingData ? (<MiniBlockLoader/>) : (
-                <div 
-                  className={styles.blog_page_more_articles_button}
-                  onClick={() => loadMoreEntries()}
-                >
-                  <span><ImDownload /> </span>
-                  <h4>Cargar más artículos</h4>
-                </div>)
+              <div className={styles.blog_page_more_articles_container}>
+                  {loadingData ? (<MiniBlockLoader/>) : (
+                  <div 
+                    className={styles.blog_page_more_articles_button}
+                    onClick={() => loadMoreEntries()}
+                  >
+                    <span><ImDownload /> </span>
+                    <h4>Cargar más artículos</h4>
+                  </div>)}
+              </div>
             )}
           </Box>
           </div>
