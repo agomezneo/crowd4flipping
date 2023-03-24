@@ -25,7 +25,6 @@ function Index({BlogEntries}) {
       const api = `https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api/create-blog-entry?lastDoc=${lastDoc}`;
       const response = await fetch(api);
       const data = await response.json();
-      console.log(data.lastDocId)
       if (data.status === 200) {
         setBlogEntries([...blogEntries, ...data.data]);
         setLastDoc(data.data[data.data.length - 1].id);
@@ -40,6 +39,8 @@ function Index({BlogEntries}) {
     }
   }
 
+
+
   useEffect(() => { 
     let document = window.screen.width;
     if(document < 991){
@@ -48,11 +49,16 @@ function Index({BlogEntries}) {
     }
   }, []);
 
+
+
+  console.log(blogEntries);
+  
+
   return (
     <Layout>
       <Head>
           <title>Crowd4Flipping - Blog</title>
-          <meta name="description" content="Todo lo que necesitas saber sobre <strong>inversión inmobiliaria participativa, crowdlending y tecnología blockchain." />        
+          <meta name="description" content="Todo lo que necesitas saber sobre inversión inmobiliaria participativa, crowdlending y tecnología blockchain." />        
       </Head>
       <div className={styles.blog_page}>
         <div className={styles.blog_page_container}>

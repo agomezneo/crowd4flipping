@@ -97,10 +97,18 @@
     }
 }
 
+.blog_page_entry{
+    color: var(--black);
+    & p{
+        font-size: 1.2rem !important;
+    }
+}
+
+
 .blog_page_avatar_container{
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .5rem;
 }
 
 .blog_page_more_articles_container{
@@ -158,5 +166,12 @@
     }
     .blog_page_cta_card_container{
         display: none;
+    }
+
+    .blog_page_entry{
+        & img{
+            width: 100% !important;
+            height: auto !important;
+        }
     }
 }

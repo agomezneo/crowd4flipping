@@ -84,6 +84,7 @@ function Index({blogEntry, BlogEntries}) {
               />
               <div className={styles.blog_page_entry_container}>
                 <div  
+                  className={styles.blog_page_entry}
                   dangerouslySetInnerHTML={{__html: blogEntry.body}} 
                 />
               </div>
