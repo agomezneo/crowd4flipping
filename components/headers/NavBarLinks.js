@@ -25,9 +25,9 @@ export const linksContent = [
         url: '/sobre-nosotros',
         icon: <GiTeamIdea />
     },
-    {
+   /*  {
         span: 'Blog',
         url: '/blog',
         icon: <ImBlog />
-    },
+    }, */
 ]
