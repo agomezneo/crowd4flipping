@@ -73,6 +73,9 @@ function Index({blogEntry, BlogEntries}) {
                 <Avatar src={blogEntry.author.photo}/>
                 <span>{blogEntry.author.name ? blogEntry.author.name : 'Avatar Name'}</span>
               </div>
+              <div className={styles.blog_page_avatar_container}>
+                  {blogEntry.tags?.map((item, key) => (<span key={key}> #{item}</span>))}
+              </div>
             </div>
             <div className={styles.blog_page_content}>
               <CardMedia
