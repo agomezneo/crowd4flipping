@@ -67,7 +67,7 @@ useEffect(() => {
                 initial={active}
                 variants={effectVariants}
                 animate= {active ? "opened" : "closed"}
-                transition={{delay: .1, duration: .1,  type: 'spring', stiffness: 100}}
+                transition={{delay: .01, duration: .01,  type: 'spring', stiffness: 100}}
               >
                 <Steper data={StepsData} activeEffect={active} active={active}/> 
               </motion.div>
