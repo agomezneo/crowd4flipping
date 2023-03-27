@@ -121,7 +121,13 @@ function Index({BlogEntries}) {
                 </div>
               </div>  
             </div>
-            <span onClick={() => setConsult('all')}>Limpiar busqueda</span>
+            <span onClick={() => {
+               setMessage(null)
+               setConsult('all')
+              }}
+            >
+              Limpiar busqueda
+            </span>
           </div>
           <div className={styles.blog_page_body}>
           <Box sx={{ flexGrow: 1 }}>
