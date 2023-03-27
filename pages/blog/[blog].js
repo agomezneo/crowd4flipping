@@ -115,6 +115,7 @@ function Index({blogEntry, BlogEntries}) {
                       title={entry.title} 
                       description={entry.description} 
                       imageUrl={entry.imageUrl} 
+                      autor={entry.author}
                       lg={6} 
                     />
                   </Grid>
