@@ -63,6 +63,29 @@
     }
 
 }
+
+.blog_page_tags{
+    & h2{
+        margin-bottom: .5rem;
+    }
+}
+
+.blog_page_tags_container{
+    display: flex;
+    justify-content: space-around;
+    gap: .5rem;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    & span{
+        font-size: 1rem;
+        color: var(--black);
+        cursor: pointer;
+        border: .5px solid;
+        padding: 0 5px 0 5px;
+        border-radius: 7px;
+    }
+}
 .blog_page_body{
     width: 100%;
     min-height: 100vh;

@@ -19,6 +19,10 @@ function Index({BlogEntries}) {
   const [message, setMessage] = useState(null);
   const [loadingData, setloadingData] = useState(false);
   const [screen, setScreen] = useState(false);
+  const [query, setQuery] = useState('');
+  const keys = ['title', 'description'];
+  const [tags, setTags] = useState(null)
+  const [consult, setConsult] = useState('all')
   let currentIndex = 0;
 
   const loadMoreEntries = async () => {
@@ -41,8 +45,6 @@ function Index({BlogEntries}) {
     }
   }
 
-
-
   useEffect(() => { 
     let document = window.screen.width;
     if(document < 991){
@@ -51,8 +53,7 @@ function Index({BlogEntries}) {
     }
   }, []);
 
-  const [query, setQuery] = useState('');
-  const keys = ['title', 'description'];
+
 
   const handleFilterChange = (event)  =>{
     setConsult(event.target.value); 
@@ -60,21 +61,34 @@ function Index({BlogEntries}) {
 
   const search = () =>{
     let filteredEntries = blogEntries;
-    /* if (consult !== 'all') {
-      filteredUsers = filteredUsers.filter(user => {
-        if (consult === 'validated') {
-          return user?.verifiedAccount;
-        } else if (consult === 'unvalidated') {
-          return !user?.verifiedAccount;
-        }
+    if (consult !== 'all') {
+      filteredEntries = filteredEntries.filter(entry => {
+          return entry?.tags.includes(consult);
       });
     }
- */
+
     return filteredEntries?.filter((item) =>
       keys.some((key) => item[key].toLowerCase().includes(query))
     )
   }
-   
+
+  const getAllTagsFromBlogEntries = () =>{
+    const tags = new Set();
+    blogEntries.forEach((doc) => {
+      const blogEntry = doc;
+      blogEntry.tags.forEach((tag) => {
+        tags.add(tag);
+      });
+    });
+    return setTags(Array.from(tags));
+  }
+
+  useEffect(() =>{
+    if(!blogEntries)return
+    getAllTagsFromBlogEntries();
+  }, [blogEntries])
+
+  console.log(tags)
 
   return (
     <Layout>
@@ -93,6 +107,21 @@ function Index({BlogEntries}) {
                 <TbListSearch />
               </div>  
             </div>
+            <div className={styles.blog_page_searcher_container}> 
+              <div className={styles.blog_page_tags} >
+                <h2>Filtrar por etiquetas:</h2>
+                <div className={styles.blog_page_tags_container}>
+                  {tags?.map((item, key) => (
+                    <span 
+                        key={key}
+                        onClick={() => setConsult(item)}
+                    >
+                      #{item} 
+                    </span>))}
+                </div>
+              </div>  
+            </div>
+            <span onClick={() => setConsult('all')}>Limpiar busqueda</span>
           </div>
           <div className={styles.blog_page_body}>
           <Box sx={{ flexGrow: 1 }}>
