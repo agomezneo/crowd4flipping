@@ -15,7 +15,7 @@ import {TbListSearch} from 'react-icons/tb';
 function Index({BlogEntries}) {
   
   const [blogEntries, setBlogEntries] = useState(BlogEntries[0].data);
-  const [lastDoc, setLastDoc] = useState(BlogEntries[0].data[3].id);
+  const [lastDoc, setLastDoc] = useState(blogEntries.length > 4 ? BlogEntries[0].data[3].id : BlogEntries[0].lastDocId);
   const [message, setMessage] = useState(null);
   const [loadingData, setloadingData] = useState(false);
   const [screen, setScreen] = useState(false);
@@ -54,7 +54,6 @@ function Index({BlogEntries}) {
   }, []);
 
 
-
   const handleFilterChange = (event)  =>{
     setConsult(event.target.value); 
   }
@@ -88,7 +87,6 @@ function Index({BlogEntries}) {
     getAllTagsFromBlogEntries();
   }, [blogEntries])
 
-  console.log(tags)
 
   return (
     <Layout>
@@ -107,7 +105,7 @@ function Index({BlogEntries}) {
                 <TbListSearch />
               </div>  
             </div>
-            {tags.length > 0 && (
+            {tags !== null && (
               <>
               <div className={styles.blog_page_searcher_container}> 
                 <div className={styles.blog_page_tags} >
