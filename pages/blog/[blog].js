@@ -146,7 +146,7 @@ export async function getStaticPaths() {
   const entries = await fetch(`${api}`).then((res) => res.json());
   const paths = entries.data.map((entry) => ({ params: { blog: entry.id } }));
 
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 }
 
 export async function getStaticProps(context){
