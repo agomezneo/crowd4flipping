@@ -19,9 +19,9 @@ import InstagramIcon from '../../public/images/icons/instagramIcon.webp';
 
 
 function Index({blogEntry, BlogEntries}) {
-
-  const [blogEntries, setBlogEntries] = useState(BlogEntries.data);
-
+  const [blogEntries, setBlogEntries] = useState(BlogEntries?.data);
+  console.log(blogEntry)
+  if(!blogEntry) return
   return (
     <Layout>
       <Head>
@@ -110,7 +110,7 @@ function Index({blogEntry, BlogEntries}) {
           <br/>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2} style={{placeContent: 'center'}}>
-              {blogEntries.map((entry, index) => {
+              {blogEntries?.map((entry, index) => {
                 return(
                   <Grid item key={index} lg={6} xs={12}>
                     <BlogCard 
@@ -163,7 +163,7 @@ export async function getStaticProps(context){
         blogEntry,
         BlogEntries
       },
-      revalidate: 30
+      revalidate: 60
   }
 
 }
