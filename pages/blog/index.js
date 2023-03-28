@@ -197,7 +197,8 @@ export async function getStaticProps(){
   return{
       props: {
        BlogEntries
-      }
+      },
+      revalidate: 30
   }
 }
 
