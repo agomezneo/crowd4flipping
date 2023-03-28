@@ -76,7 +76,7 @@ function Index({BlogEntries}) {
     const tags = new Set();
     blogEntries.forEach((doc) => {
       const blogEntry = doc;
-      blogEntry.tags.forEach((tag) => {
+      blogEntry.tags?.forEach((tag) => {
         tags.add(tag);
       });
     });
@@ -107,27 +107,31 @@ function Index({BlogEntries}) {
                 <TbListSearch />
               </div>  
             </div>
-            <div className={styles.blog_page_searcher_container}> 
-              <div className={styles.blog_page_tags} >
-                <h2>Filtrar por etiquetas:</h2>
-                <div className={styles.blog_page_tags_container}>
-                  {tags?.map((item, key) => (
-                    <span 
-                        key={key}
-                        onClick={() => setConsult(item)}
-                    >
-                      #{item} 
-                    </span>))}
-                </div>
-              </div>  
-            </div>
-            <span onClick={() => {
-               setMessage(null)
-               setConsult('all')
-              }}
-            >
-              Limpiar busqueda
-            </span>
+            {tags.length > 0 && (
+              <>
+              <div className={styles.blog_page_searcher_container}> 
+                <div className={styles.blog_page_tags} >
+                  <h2>Filtrar por etiquetas:</h2>
+                  <div className={styles.blog_page_tags_container}>
+                    {tags?.map((item, key) => (
+                      <span 
+                          key={key}
+                          onClick={() => setConsult(item)}
+                      >
+                        #{item} 
+                      </span>))}
+                  </div>
+                </div>  
+              </div>
+              <span onClick={() => {
+                setMessage(null)
+                setConsult('all')
+                }}
+              >
+                Limpiar busqueda
+              </span>
+              </>
+            )}
           </div>
           <div className={styles.blog_page_body}>
           <Box sx={{ flexGrow: 1 }}>
