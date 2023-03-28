@@ -20,7 +20,6 @@ import InstagramIcon from '../../public/images/icons/instagramIcon.webp';
 
 function Index({blogEntry, BlogEntries}) {
   const [blogEntries, setBlogEntries] = useState(BlogEntries?.data);
-  console.log(blogEntry)
   if(!blogEntry) return
   return (
     <Layout>
