@@ -26,7 +26,7 @@ function Index() {
         ) : (
           <>
             <div className={styles.body}>
-              <PropertyForm type={'PropertyWebinar'} tag={'80'} _setSendData={setSendData}/>
+              <PropertyForm type={'/solicitar-asesoria'} tag={'85'} _setSendData={setSendData}/>
             </div>
             <Footer />
           </>

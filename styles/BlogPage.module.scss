@@ -168,6 +168,11 @@
     & p{
         font-size: 1.2rem !important;
     }
+
+    & ol, ul{
+        padding-left: 2rem;
+        margin-top: 1rem;
+    }
 }
 
 
@@ -203,6 +208,7 @@
         color: var(--black);
     }
 }
+
 
 @media only screen and (min-width: 320px) and (max-width: 991px){
     .blog_page_container{
