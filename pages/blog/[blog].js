@@ -139,6 +139,8 @@ function Index({blogEntry, BlogEntries}) {
 
 export default Index
 
+import {loadPosts} from '../../lib/load-posts';
+
 export async function getStaticPaths() {
   const api = `https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api/create-blog-entry`;
   const entries = await fetch(`${api}`).then((res) => res.json());
@@ -150,12 +152,8 @@ export async function getStaticPaths() {
 export async function getStaticProps(context){
 
   const blog = context.params.blog;
-  const api = `https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api/create-blog-entry`
-  const [blogEntry, BlogEntries] = await Promise.all([
-    fetch(`${api}/${blog}`).then((res) => res.json()),
-    fetch(`${api}`).then((res) => res.json()),
-  ])
-
+  const {blogEntry, BlogEntries} = await loadPosts(blog);
+ 
   return{
       props: {
         blogEntry,
