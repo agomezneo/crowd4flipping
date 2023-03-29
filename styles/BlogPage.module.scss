@@ -86,6 +86,17 @@
         border-radius: 7px;
     }
 }
+
+.blog_page_searcher_cleaner_button{
+    border: 1px solid;
+    border-radius: 7px;
+    padding: 0 1rem 0 1rem;
+    box-shadow: -.5px -.5px 1px var(--black);
+    cursor: pointer;
+}
+.blog_page_searcher_cleaner_button:hover{
+    box-shadow: 0px 0px 0px var(--black);
+}
 .blog_page_body{
     width: 100%;
     min-height: 100vh;

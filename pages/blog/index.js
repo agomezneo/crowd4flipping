@@ -46,7 +46,7 @@ function Index({BlogEntries}) {
   }
 
   useEffect(() => { 
-    let document = window.screen.width;
+    let document = window.screen.width; 
     if(document < 991){
         setScreen(true)
         return
@@ -101,7 +101,12 @@ function Index({BlogEntries}) {
             <div className={styles.blog_page_searcher_container}> 
               <h2>Busca lo que te interesa entre nuestros artículos:</h2>
               <div className={styles.blog_page_input_container}>
-                <input type='text' placeholder='Buscar...' onChange={(e) => setQuery(e.target.value)}/>  
+                <input 
+                  type='text' 
+                  placeholder='Buscar...' 
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                />  
                 <TbListSearch />
               </div>  
             </div>
@@ -121,10 +126,13 @@ function Index({BlogEntries}) {
                   </div>
                 </div>  
               </div>
-              <span onClick={() => {
+              <span 
+                onClick={() => {
                 setMessage(null)
                 setConsult('all')
+                setQuery('')
                 }}
+                className={styles.blog_page_searcher_cleaner_button}
               >
                 Limpiar busqueda
               </span>
