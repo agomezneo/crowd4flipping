@@ -3,7 +3,6 @@ import Layout from '../../components/layouts/Layout';
 import styles from '../../styles/BlogPage.module.scss';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import {motion} from 'framer-motion';
 import WhatsAppButton from '../../components/buttons/WhatsAppButton';
 import Footer from '../../components/footers/index';
@@ -13,7 +12,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import BlogCard from '../../components/cards/BlogCard';
 import NewsLetterSuscription from '../../components/forms/NewsLetterSuscription';
-import { FaFacebookSquare, FaInstagram } from 'react-icons/fa'
+import { FaFacebookSquare } from 'react-icons/fa'
 import { MdOutlineAccountCircle } from "react-icons/md";
 import InstagramIcon from '../../public/images/icons/instagramIcon.webp';
 
