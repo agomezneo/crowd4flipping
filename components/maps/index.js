@@ -19,4 +19,4 @@ export default function Index({lat, lng}) {
     </GoogleMap>
   )
 }
- 
+  

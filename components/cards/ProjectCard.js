@@ -21,7 +21,7 @@ function ProjectCard({id, imgs, name, location, quantityFunded, estimatedRentabi
         setLoader(true)
         Router.push(url)
     }
-  return ( 
+  return (  
     <>
         {loader ? (<MiniBlockLoader />) : (
             <motion.div

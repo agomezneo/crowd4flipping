@@ -153,7 +153,6 @@ export async function getStaticProps(context){
 
   const blog = context.params.blog;
   const {blogEntry, BlogEntries} = await loadPosts(blog);
- 
   return{
       props: {
         blogEntry,
@@ -161,5 +160,4 @@ export async function getStaticProps(context){
       },
       revalidate: 60
   }
-
 }
