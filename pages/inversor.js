@@ -88,9 +88,7 @@ export default function App({projectsInStudy, projectsFinished}) {
     </Layout>
   );
 }
-
 export async function getStaticProps(){
-
   const api = 'https://us-central1-crowd4flipping-app.cloudfunctions.net/app/api/get-projects-by-phase'
   const [projectsInStudy, projectsFinished] = await Promise.all([
     fetch(`${api}/IN_STUDY`).then((res) => res.json()),
